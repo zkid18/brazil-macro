@@ -1,0 +1,239 @@
+# source_map.yml
+# Resolution layer on top of registry/brazil_macro_data_allocation_metrics.csv
+# Keyed by the registry's own metric_id. Each entry records WHERE the series
+# is actually fetched from. The registry CSV stays the source of truth for
+# semantics (theme, grain, formula, notes); this file records resolution.
+#
+# tiers:
+#   T1  -> pullable NOW from Dateno structured timeseries (ns: wb | ilostat)
+#   T2  -> high-frequency native API (BCB/IBGE/ComexStat/ONS). Dateno = discovery only.
+#   T3  -> manual / geospatial / portal-file / paid. Not auto-ingested.
+#
+# Dateno gotcha: WDI series use ISO-2 country suffix (.BR); the WB Poverty&Equity
+# database uses ISO-3 (.BRA). Each ts_id below was validated by an export call.
+
+defaults:
+  country_iso2: BR
+  country_iso3: BRA
+
+# ---------------------------------------------------------------------------
+# TIER 1 — Dateno-native pull (World Bank annual backbone via ns=wb)
+# Each maps a registry metric_id to a concrete Dateno timeseries.
+# `note` flags where the WB series is an annual PROXY for a higher-freq native one.
+# ---------------------------------------------------------------------------
+tier1:
+  gdp_real_growth:
+    ns: wb
+    ts_id: NY.GDP.MKTP.KD.ZG.BR
+    unit: annual_pct
+    note: Direct match. Native = IBGE quarterly.
+  ipca_headline:
+    ns: wb
+    ts_id: FP.CPI.TOTL.ZG.BR
+    unit: annual_pct
+    note: Annual CPI proxy for IPCA. Native = IBGE SIDRA monthly.
+  gdp_agriculture_share:
+    ns: wb
+    ts_id: NV.AGR.TOTL.ZS.BR
+    unit: pct_gdp
+    note: Supports registry gdp_by_sector (agri leg).
+  gdp_industry_share:
+    ns: wb
+    ts_id: NV.IND.TOTL.ZS.BR
+    unit: pct_gdp
+    note: Supports registry gdp_by_sector (industry leg).
+  gdp_services_share:
+    ns: wb
+    ts_id: NV.SRV.TOTL.ZS.BR
+    unit: pct_gdp
+    note: Supports registry gdp_by_sector (services leg).
+  investment_rate_gdp:
+    ns: wb
+    ts_id: NE.GDI.FTOT.ZS.BR
+    unit: pct_gdp
+    note: Gross fixed capital formation % GDP. Native = IBGE. Feeds investment_rate_gap.
+  current_account_gdp:
+    ns: wb
+    ts_id: BN.CAB.XOKA.GD.ZS.BR
+    unit: pct_gdp
+    note: Native = BCB SGS.
+  fdi_idp:
+    ns: wb
+    ts_id: BX.KLT.DINV.WD.GD.ZS.BR
+    unit: pct_gdp
+    note: FDI net inflows % GDP. Feeds fdi_coverage_current_account_deficit.
+  fx_reserves:
+    ns: wb
+    ts_id: FI.RES.TOTL.CD.BR
+    unit: usd
+    note: Total reserves incl. gold (current USD). Native = BCB.
+  gross_public_debt_gdp:
+    ns: wb
+    ts_id: GC.DOD.TOTL.GD.ZS.BR
+    unit: pct_gdp
+    note: Central govt debt % GDP. Native = BCB. Feeds debt_stabilizing_primary_surplus_gap.
+  exports_total:
+    ns: wb
+    ts_id: NE.EXP.GNFS.ZS.BR
+    unit: pct_gdp
+    note: Exports of goods & services % GDP. Native = ComexStat (monthly, by NCM).
+  imports_total:
+    ns: wb
+    ts_id: NE.IMP.GNFS.ZS.BR
+    unit: pct_gdp
+    note: Imports of goods & services % GDP. Native = ComexStat.
+  unemployment_rate:
+    ns: wb
+    ts_id: SL.UEM.TOTL.ZS.BR
+    unit: pct_labor_force
+    note: ILO-modelled. Native = IBGE PNAD.
+  labor_participation_rate:
+    ns: wb
+    ts_id: SL.TLF.CACT.ZS.BR
+    unit: pct
+    note: Labor force participation. Native = IBGE.
+  fertility_rate:
+    ns: wb
+    ts_id: SP.DYN.TFRT.IN.BR
+    unit: births_per_woman
+    note: Core to 'demographic window closing' research line.
+  working_age_share:
+    ns: wb
+    ts_id: SP.POP.1564.TO.ZS.BR
+    unit: pct_population
+    note: Population ages 15-64 % of total.
+  dependency_ratio:
+    ns: wb
+    ts_id: SP.POP.DPND.BR
+    unit: pct_working_age
+    note: Age dependency ratio.
+  renewable_share_electricity_matrix:
+    ns: wb
+    ts_id: EG.ELC.RNEW.ZS.BR
+    unit: pct
+    note: Renewable electricity output %. Native annual = EPE BEN.
+  renewable_share_total_energy_matrix:
+    ns: wb
+    ts_id: EG.FEC.RNEW.ZS.BR
+    unit: pct
+    note: Renewables % of final energy consumption.
+  forest_area_km2:
+    ns: wb
+    ts_id: AG.LND.FRST.K2.BR
+    unit: km2
+    note: Forest area. Annual proxy bearing on amazon_deforestation / virtual-water line.
+  cereal_production:
+    ns: wb
+    ts_id: AG.PRD.CREL.MT.BR
+    unit: metric_tons
+    note: Cereal production. Annual proxy for Conab grain_harvest_total.
+  gni_per_capita:
+    ns: wb
+    ts_id: NY.GNP.PCAP.CD.BR
+    unit: usd
+    note: Supports 'Brazil vs China' and real-income research lines.
+
+# ---------------------------------------------------------------------------
+# TIER 2 — native high-frequency. Dateno carries NO pullable timeseries.
+# Fetch from the native API declared in the registry; Dateno used only to
+# discover/validate the source. Adapters are stubbed in ingest/native_stubs.py.
+# ---------------------------------------------------------------------------
+tier2:
+  # Implemented native adapters (native is the BASE; Dateno is cross-check only):
+  #   ingest/bcb_sgs.py      -> policy/credit/fiscal/external (daily & monthly)
+  #   ingest/bcb_focus.py    -> focus_ipca_12m/selic_12m/gdp_growth/fx (Olinda OData)
+  #   ingest/comexstat.py    -> exports/imports totals + soy/oil/iron_ore/beef/
+  #                             coffee/sugar exports + fertilizer imports (NCM, monthly)
+  #   ingest/tesouro_bonds.py-> gov_real_yield_10y, gov_nominal_yield_5y (constant-maturity)
+  #   ingest/ons_energy.py   -> generation shares, load, thermal dispatch, stored EAR (daily)
+  #   ingest/ibge_sidra.py   -> real_average_income, employed_population (PNAD, monthly)
+  #   ingest/ipeadata.py     -> embi_brazil (ends 2024-07), ibovespa_level (daily),
+  #                             oil_production (ANP12_PDPET12, kbbl/d). Gas skipped (unit scale unclear).
+  # ComexStat note: `period` is a year-range x month-range GRID (month bound must be 12).
+  # ComexStat extras verified: niobium 72029300 (~US$240-290M/mo), potash 31042010/090.
+  #   Skipped (no/empty native data): lithium carbonate, rare-earth 28461000.
+  # All codes verified against known current reality before inclusion.
+  # NFSP series: positive = financing need = deficit (pipeline flips for balances).
+  bcb_sgs:
+    selic_target:             { code: 432,   freq: daily,   unit: pct_pa }
+    brl_usd:                  { code: 1,     freq: daily,   unit: brl_per_usd }
+    fx_reserves:              { code: 13621, freq: daily,   unit: usd_mn }   # native base; WB->_wb_annual
+    ipca_monthly:             { code: 433,   freq: monthly, unit: pct_mom }
+    ipca_12m:                 { code: 13522, freq: monthly, unit: pct_yoy }
+    ibc_br:                   { code: 24363, freq: monthly, unit: index }
+    credit_gdp:               { code: 20622, freq: monthly, unit: pct_gdp }
+    delinquency_rate:         { code: 21082, freq: monthly, unit: pct }
+    household_debt_income:    { code: 29037, freq: monthly, unit: pct_income }
+    household_credit_balance: { code: 20570, freq: monthly, unit: brl_mn }  # -> household_credit_growth
+    corporate_credit_balance: { code: 20571, freq: monthly, unit: brl_mn }  # -> corporate_credit_growth
+    gross_public_debt_gdp:    { code: 13762, freq: monthly, unit: pct_gdp }  # native base; WB->_wb_annual
+    net_public_debt_gdp:      { code: 4503,  freq: monthly, unit: pct_gdp }
+    nominal_deficit_gdp:      { code: 5727,  freq: monthly, unit: pct_gdp_nfsp }
+    primary_result_nfsp:      { code: 5793,  freq: monthly, unit: pct_gdp_nfsp }  # -> primary_balance_gdp, interest_bill_gdp
+  # rejected after verification (wrong concept/units): 28763, 19882(stale), 4469(R$),
+  #   22701(US$ flow), 23703/23704(US$ stock), 29034(404), 4513(=67%, not net debt)
+  metric_ids:
+    - credit_gdp
+    - household_credit_growth
+    - corporate_credit_growth
+    - household_debt_service_ratio
+    - delinquency_rate
+    - net_public_debt_gdp
+    - primary_balance_gdp
+    - nominal_deficit_gdp
+    - interest_bill_gdp
+    - focus_ipca_12m          # bcb_focus weekly
+    - focus_selic_12m
+    - focus_gdp_growth
+    - focus_fx
+    - ipca_services           # ibge_sidra monthly
+    - ipca_administered_prices
+    - trade_balance           # comexstat monthly by NCM
+    - exports_by_product
+    - exports_by_destination
+    - soy_exports
+    - oil_exports
+    - iron_ore_exports
+    - beef_exports
+    - electricity_generation_by_source  # ons daily/monthly
+    - stored_energy_ear
+    - hydro_generation_share
+
+# ---------------------------------------------------------------------------
+# TIER 3 — manual / geospatial / portal-file / paid. Out of automated scope.
+# ---------------------------------------------------------------------------
+tier3:
+  metric_ids:
+    - amazon_deforestation        # inpe TerraBrasilis WFS (geospatial)
+    - cerrado_deforestation
+    - deter_alerts_amazon
+    - oil_production              # anp excel/BI
+    - gas_production
+    - grain_harvest_total         # conab portal files
+    - soy_production
+    - niobium_global_reserves_share  # usgs pdf
+    - cds_5y_brazil               # paid vendor
+    - pe_vs_em_latam              # paid vendor
+    - ibovespa_level              # b3 portal files
+
+# ---------------------------------------------------------------------------
+# DERIVED — computed in derive.py from the metrics above (annual-feasible only).
+# ---------------------------------------------------------------------------
+derived:
+  real_policy_rate:
+    inputs: [ipca_headline]   # annual proxy: ex-post real rate uses lending rate; see note
+    note: v1 annual proxy only; true metric needs selic_target + focus_ipca_12m (T2).
+    feasible_t1: false
+  r_g_spread:
+    inputs: [gdp_real_growth]
+    note: Needs a real interest rate; partial in T1. Computed as -real GDP growth placeholder until T2 rate lands.
+    feasible_t1: partial
+  investment_rate_gap:
+    inputs: [investment_rate_gdp]
+    formula: target_investment_rate - investment_rate_gdp
+    params: { target_investment_rate: 20.0 }
+    feasible_t1: true
+  fdi_coverage_current_account_deficit:
+    inputs: [fdi_idp, current_account_gdp]
+    formula: fdi_idp / abs(current_account_gdp) when current_account_gdp < 0
+    feasible_t1: true

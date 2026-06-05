@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# Generated warehouse artifacts — regenerate with: python3 pipeline.py && python3 dashboard.py
+warehouse/silver/
+warehouse/gold/
+warehouse/*.duckdb
+warehouse/dashboard.html
+
+# Kept in VCS:
+#  - warehouse/bronze/  (captured raw source snapshots: rate-limited ComexStat,
+#    discontinued IPEAData EMBI feed, etc. — preserves reproducibility)
+#  - registry/, ingest/, *.py, dq/, README.md, registry_coverage.csv
