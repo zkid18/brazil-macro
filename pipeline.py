@@ -566,6 +566,9 @@ def main():
     for name, df in (("catalog", cat), ("observations", obs), ("reconciliation", rec)):
         con.register("df_" + name, df)
         con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM df_{name}")
+    ex_p = GOLD / "excluded_series.parquet"
+    if ex_p.exists():  # curated-out survey one-offs, with reason
+        con.execute(f"CREATE OR REPLACE TABLE excluded_series AS SELECT * FROM read_parquet('{ex_p}')")
     dims_p = ROOT / "warehouse" / "export" / "observations_dims.parquet"
     if dims_p.exists():  # ILO disaggregations (sex, age, ...) behind the headline series
         con.execute(f"CREATE OR REPLACE TABLE observations_dims AS SELECT * FROM read_parquet('{dims_p}')")

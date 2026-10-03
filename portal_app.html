@@ -78,6 +78,9 @@ a.iconbtn{text-decoration:none}
 .node .tw{width:.9rem;flex:none;color:var(--ink-3);transition:transform .15s}
 .node[aria-expanded="true"] .tw{transform:rotate(90deg)}
 .node .lbl{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node.two{align-items:flex-start}
+.node.two .ic{margin-top:.2rem}
+.node .lbl small{display:block;font-size:.6875rem;color:var(--ink-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .node .ct{color:var(--ink-3);font-size:.75rem;font-variant-numeric:tabular-nums}
 .node .tag{font-size:.6875rem;color:var(--ink-3);border:1px solid var(--rule);border-radius:4px;padding:0 .3rem}
 .tree ul ul{padding-left:.9rem}
@@ -282,7 +285,7 @@ async function series(id){
 function groupBy(arr, f){ const m = new Map(); arr.forEach(s => { const k = f(s) || 'Other'; if (!m.has(k)) m.set(k, []); m.get(k).push(s); }); return m; }
 function leaf(s, depth){
   const cur = location.hash === '#' + toHash(s.id);
-  return `<li class="leaf"><a class="node" href="#${toHash(s.id)}" aria-current="${cur}" title="${esc(s.t)}">${ICON_T}<span class="lbl">${esc(s.t)}</span>` +
+  return `<li class="leaf"><a class="node two" href="#${toHash(s.id)}" aria-current="${cur}" title="${esc(s.t)}&#10;${esc(s.dset)}">${ICON_T}<span class="lbl">${esc(s.t)}<small>${esc(s.dset)} · ${esc(s.f)} · ${esc(s.a.slice(0, 4))}–${esc(s.b.slice(0, 4))}</small></span>` +
     (s.r === 'alternate' ? '<span class="tag">alt</span>' : '') + `</a><button class="plus" data-plot="${esc(s.id)}" aria-label="Add ${esc(s.t)} to the chart" title="Add to chart">+</button></li>`;
 }
 function branch(key, label, items, sub){
@@ -294,9 +297,11 @@ function renderTree(){
   const el = $('#tree');
   if (q) {
     const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const hits = CAT.map(s => { const hay = (s.t + ' ' + s.id + ' ' + s.tp + ' ' + s.src + ' ' + s.ent + ' ' + s.m + ' ' + s.ds).toLowerCase();
-      if (!terms.every(t => hay.includes(t))) return null; return [s, terms.reduce((a, t) => a + (s.t.toLowerCase().includes(t) ? 3 : 1), 0)]; })
-      .filter(Boolean).sort((a, b) => b[1] - a[1] || b[0].n - a[0].n);
+    const hits = CAT.map(s => { const hay = (s.t + ' ' + s.id + ' ' + s.tp + ' ' + s.src + ' ' + s.dset + ' ' + s.ent + ' ' + s.m + ' ' + s.ds).toLowerCase();
+      if (!terms.every(t => hay.includes(t))) return null;
+      const tl = s.t.toLowerCase(); const txt = terms.reduce((a, t) => a + (tl.startsWith(t) ? 4 : tl.includes(t) ? 3 : 1), 0);
+      return [s, txt * (1 + s.rk) - tl.length / 200]; })
+      .filter(Boolean).sort((a, b) => b[1] - a[1]);
     el.innerHTML = `<p class="note" style="padding:.4rem .5rem">${hits.length.toLocaleString('en')} datasets match “${esc(q)}”</p><ul>` +
       hits.slice(0, 300).map(([s]) => leaf(s)).join('') + '</ul>';
     return;
@@ -310,11 +315,12 @@ function renderTree(){
   const keys = [...top.keys()].sort((a, b) => top.get(b).length - top.get(a).length);
   el.innerHTML = '<ul>' + keys.map(k => {
     const items = top.get(k);
-    const subKey = s => tab === 'sources' ? (s.db || s.tp) : s.ent;
+    const subKey = s => tab === 'sources' ? s.dset : (s.ent !== 'Brazil' ? s.ent : s.dset);
     const subs = groupBy(items, subKey);
     const useSub = subs.size > 1 && items.length > 12;
+    items.sort((a, b) => b.rk - a.rk);
     return branch(tab + ':' + k, k, items, useSub ? () => [...subs.keys()].sort((a, b) => subs.get(b).length - subs.get(a).length)
-      .map(sk => branch(tab + ':' + k + ':' + sk, sk, subs.get(sk).sort((a, b) => a.t.localeCompare(b.t)))).join('') : null);
+      .map(sk => branch(tab + ':' + k + ':' + sk, sk, subs.get(sk).sort((a, b) => b.rk - a.rk))).join('') : null);
   }).join('') + '</ul>';
 }
 
@@ -428,17 +434,17 @@ function renderPlotbar(){
 function pickSearch(qq){
   const terms = qq.toLowerCase().split(/\s+/).filter(Boolean); if (!terms.length) return [];
   return CAT.map(x => { const hay = (x.t + ' ' + x.id + ' ' + x.src + ' ' + x.tp + ' ' + x.ent).toLowerCase();
-    return terms.every(t => hay.includes(t)) ? [x, terms.reduce((a, t) => a + (x.t.toLowerCase().includes(t) ? 3 : 1), 0) + Math.min(x.n, 500) / 1000] : null; })
+    return terms.every(t => hay.includes(t)) ? [x, terms.reduce((a, t) => a + (x.t.toLowerCase().includes(t) ? 3 : 1), 0) * (1 + x.rk)] : null; })
     .filter(Boolean).sort((a, b) => b[1] - a[1]).slice(0, 10).map(r => r[0]).filter(x => !plotIds.includes(x.id));
 }
 async function showSeries(id){
   const s = BY.get(id), v = $('#view');
   if (!s) { crumbs([['Datasets']]); v.innerHTML = `<h1>Dataset not found</h1><p class="lede">No series <code>${esc(id)}</code> in this build. Search the catalogue on the left.</p>`; return; }
-  crumbs([[s.src, null], [s.tp, null], [s.t]]);
+  crumbs([[s.dset, null], [s.tp, null], [s.t]]);
   const inC = compare.includes(id);
   const twins = s.c ? CAT.filter(x => x.c === s.c && x.id !== id) : [];
   v.innerHTML = `<div class="head"><div class="headrow"><h1>${esc(s.t)}</h1></div>
-    <div class="badges"><span class="badge mono">${esc(s.id)}</span><span class="badge">${esc(s.src)}</span><span class="badge">${esc(s.f)}</span>
+    <div class="badges"><span class="badge mono">${esc(s.id)}</span><span class="badge" title="Dataset">${esc(s.dset)}</span><span class="badge">${esc(s.f)}</span>
       <span class="badge">${esc(s.ent)}</span><span class="pill ${s.st}">${esc(s.st)}</span>${s.r !== 'canonical' ? `<span class="pill ${s.r}">${esc(s.r)}</span>` : ''}
       <div class="actions"><button class="btn" data-add="${esc(id)}" aria-pressed="${inC}">${inC ? 'In compare' : '+ Compare'}</button>
       <button class="btn" id="copyCsv">Copy CSV</button><button class="btn primary" data-prompt="${esc(id)}">Copy prompt</button></div></div>
@@ -461,7 +467,7 @@ async function showSeries(id){
       <tr><td class="mono">series_id</td><td class="mono">varchar</td><td>Always <code>${esc(s.id)}</code> for this dataset</td></tr>
       <tr><td class="mono">date</td><td class="mono">date</td><td>${esc(s.f)} observation date${s.f === 'annual' ? ' (year end)' : s.f === 'monthly' ? ' (first of month)' : s.f === 'quarterly' ? ' (quarter end)' : ''}</td></tr>
       <tr><td class="mono">value</td><td class="mono">double</td><td>${esc(s.u || '—')}</td></tr></tbody></table></div></div>
-    <div class="panel"><div class="panel-h"><h3>About</h3></div><div class="tbl"><table><tbody>${[['Source', s.src + (s.db ? ' · ' + s.db : '')], ['Topic', s.tp], ['Entity', s.ent], ['Frequency', s.f],
+    <div class="panel"><div class="panel-h"><h3>About</h3></div><div class="tbl"><table><tbody>${[['Dataset', s.dset], ['Publisher', s.src], ['Topic', s.tp], ['Entity', s.ent], ['Frequency', s.f],
       ['Unit', s.u || '—'], ['Coverage', s.a + ' → ' + s.b], ['Observations', s.n.toLocaleString('en')], ['Latest', fmt(s.lv) + ' (' + s.b + ')'], ['Role', s.r + (s.c ? ' · concept ' + s.c : '')],
       ['Used in tests', s.used || '—'], ['Source code', s.m]].map(([k, val]) => `<tr><th style="width:11rem">${k}</th><td class="wrap">${esc(val)}</td></tr>`).join('')}</tbody></table></div></div>
     </div>
@@ -647,7 +653,7 @@ async function boot(){
   setTab(tab); route();
 }
 document.addEventListener('input', e => { if (e.target.id !== 'pickq') return; const res = pickSearch(e.target.value), ul = $('#pickres');
-  ul.hidden = !res.length; ul.innerHTML = res.map((x, i) => `<li><button data-pick="${esc(x.id)}" class="${i ? '' : 'hl'}">${esc(x.t)}<small>${esc(x.src)} · ${esc(x.f)} · ${esc(x.u)} · ${esc(x.a.slice(0, 4))}–${esc(x.b.slice(0, 4))}</small></button></li>`).join(''); });
+  ul.hidden = !res.length; ul.innerHTML = res.map((x, i) => `<li><button data-pick="${esc(x.id)}" class="${i ? '' : 'hl'}">${esc(x.t)}<small>${esc(x.dset)} · ${esc(x.f)} · ${esc(x.u)} · ${esc(x.a.slice(0, 4))}–${esc(x.b.slice(0, 4))}</small></button></li>`).join(''); });
 document.addEventListener('keydown', e => { if (e.target.id !== 'pickq') return;
   if (e.key === 'Enter') { const b = $('#pickres button'); if (b) addToPlot(b.dataset.pick); }
   if (e.key === 'Escape') { $('#picker').hidden = true; $('#addbtn').hidden = false; } });

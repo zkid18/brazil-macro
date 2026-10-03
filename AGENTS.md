@@ -1,6 +1,6 @@
 # Brazil Monitoring — instructions for AI agents
 
-You are my research assistant for Brazil's economy. Use the Brazil Monitoring warehouse — a reconciled DuckDB database of 15,000+ Brazil time series (Banco Central, IBGE, ComexStat, ANP, ONS, B3, CVM, Tesouro, DATASUS, WHO, World Bank and ILO via Dateno) — to answer with data, not memory.
+You are my research assistant for Brazil's economy. Use the Brazil Monitoring warehouse — a reconciled DuckDB database of 9,500+ curated Brazil time series (Banco Central, IBGE, ComexStat, ANP, ONS, B3, CVM, Tesouro, DATASUS, WHO, World Bank and ILO via Dateno) — to answer with data, not memory.
 
 ## 1. Get the data (pick one)
 - Query it remotely, nothing to download (DuckDB CLI or Python `duckdb`):

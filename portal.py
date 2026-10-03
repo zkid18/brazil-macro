@@ -151,14 +151,14 @@ def main():
     # ---- catalog
     def s(x):
         return "" if x is None or (not isinstance(x, (list, dict)) and pd.isna(x)) else str(x)
-    keys = ["id", "t", "tp", "src", "ns", "ent", "f", "u", "a", "b", "n", "lv", "st", "r", "c", "used", "ds", "db", "ch", "m"]
+    keys = ["id", "t", "tp", "src", "ns", "ent", "f", "u", "a", "b", "n", "lv", "st", "r", "c", "used", "ds", "db", "ch", "m", "dset", "rk"]
     rows = []
     for r in cat.itertuples():
         rows.append([r.series_id, s(r.title), s(r.topic), s(r.source), s(r.ns), s(r.entity_name), s(r.freq),
                      UNIT.get(s(r.unit), s(r.unit)), s(r.first)[:10], s(r.last)[:10], int(r.n_obs or 0),
                      _num(r.last_value), s(r.status), s(r.role), s(r.concept), s(r.used_in_tests),
                      s(r.description)[:280], s(getattr(r, "database", "")), chunk_of.get(r.series_id, -1),
-                     s(r.metric_id)])
+                     s(r.metric_id), s(r.dataset), float(r.rank or 0)])
     (DATA / "catalog.json").write_text(json.dumps({"keys": keys, "rows": rows}, separators=(",", ":"),
                                                  ensure_ascii=False, allow_nan=False))
 

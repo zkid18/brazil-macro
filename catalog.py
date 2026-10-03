@@ -77,6 +77,7 @@ SOURCE_NAME = {
 }
 ENTITY_NAME = {"BR": "Brazil", "PETR": "Petrobras", "VALE": "Vale", "AXIA": "Axia (ex-Eletrobras)",
                "SUZB": "Suzano", "PRIO": "PRIO", "ITUB": "Itaú Unibanco", "IBOV": "Ibovespa"}
+MIN_OBS = 5  # World Bank / ILO series with fewer observations are survey one-offs, not time series
 STALE_DAYS = {"daily": 10, "weekly": 21, "monthly": 100, "quarterly": 200, "annual": 1300, "event": 4000}
 
 # Concepts measured by both a native source and Dateno (World Bank / ILO). Native first.
@@ -214,7 +215,10 @@ def dateno_part(as_of) -> tuple[pd.DataFrame, pd.DataFrame]:
     sub = c.set_index(c.ns + "/" + c.ts_id)["topic"] if "topic" in cols else pd.Series(dtype=str)
     db = cat.set_index("series_id")["database"].astype(str)
     cat["subtopic"] = cat.series_id.map(sub).fillna("")
-    folded = [fold_topic(f"{cat.subtopic.iat[i]} | {db.iat[i]} | {cat.title.iat[i]}") for i in range(len(cat))]
+    # most specific first: the part of the publisher label after the last ':' (WDI labels
+    # read "Social Protection & Labor: Unemployment"), then the title, then the full label
+    folded = [fold_topic(str(cat.subtopic.iat[i]).split(":")[-1]) or fold_topic(str(cat.title.iat[i]))
+              or fold_topic(f"{cat.subtopic.iat[i]} | {db.iat[i]}") for i in range(len(cat))]
     cat["topic"] = [f or t for f, t in zip(folded, cat.topic)]
     cat["role"] = "canonical"
     return cat, o
@@ -263,6 +267,38 @@ def reconcile(cat, obs) -> pd.DataFrame:
     return rec
 
 
+# Dataset = the named product a series belongs to (publisher database for World Bank /
+# ILO; the publisher's system for native series). Shown next to every series.
+NATIVE_DATASET = {
+    "Banco Central (SGS)": "Banco Central — SGS time series", "Banco Central (Focus)": "Banco Central — Focus survey",
+    "Banco Central (Pix)": "Banco Central — Pix statistics", "IBGE (SIDRA)": "IBGE — SIDRA (PNAD, PMC, PNS)",
+    "ComexStat (MDIC)": "ComexStat — foreign trade", "IPEAData": "IPEAData", "ANP": "ANP — oil & gas production",
+    "ONS": "ONS — power system operator", "Tesouro Direto": "Tesouro Direto — bond prices",
+    "B3": "B3 — prices, dividends, Ibovespa", "CVM": "CVM — company filings (ITR/DFP)",
+    "DATASUS (SIM)": "DATASUS — mortality register (SIM)", "WHO Mortality Database": "WHO Mortality Database",
+    "Derived": "Brazil Monitoring — derived",
+}
+
+
+def add_dataset_and_rank(cat: pd.DataFrame) -> pd.DataFrame:
+    """dataset name + an importance rank used to order search results and lists:
+    official native series first, then World Development Indicators / ILO headline, then
+    other World Bank databases; longer, fresher series rank higher; sparse survey
+    breakdowns (a handful of observations) sink."""
+    db = cat["database"].astype("string").fillna("") if "database" in cat else pd.Series("", index=cat.index)
+    cat["dataset"] = np.where(db.str.len() > 0, db, cat.source.map(NATIVE_DATASET).fillna(cat.source))
+    base = np.select(
+        [(cat.ns == "native") & (cat.role == "canonical"), cat.ns == "native",
+         cat.dataset.eq("World Development Indicators"), cat.ns == "ilostat"],
+        [4.0, 3.0, 2.5, 1.8], default=1.0)
+    years = (pd.to_datetime(cat["last"], errors="coerce") - pd.to_datetime(cat["first"], errors="coerce")).dt.days / 365.25
+    depth = np.log1p(cat.n_obs.fillna(0).astype(float)) + np.log1p(years.fillna(0).clip(lower=0))
+    fresh = np.where(cat.status == "fresh", 1.0, 0.75)
+    alt = np.where(cat.role == "alternate", 0.8, 1.0)
+    cat["rank"] = (base * depth * fresh * alt).round(3)
+    return cat
+
+
 def build(as_of: str | None = None, used_in: dict | None = None):
     as_of = pd.Timestamp(as_of or pd.Timestamp.today().normalize())
     silver = pd.read_parquet(SILVER)
@@ -283,7 +319,19 @@ def build(as_of: str | None = None, used_in: dict | None = None):
     cols = ["series_id", "title", "topic", "source", "ns", "entity_id", "entity_name", "metric_id",
             "freq", "unit", "first", "last", "n_obs", "last_value", "status", "role", "concept",
             "used_in_tests", "resolved_source", "description"] + [x for x in ("database", "subtopic") if x in cat]
-    cat = cat[cols].sort_values(["topic", "title"]).reset_index(drop=True)
+    cat = add_dataset_and_rank(cat)
+    # Curation: one-off survey items are not time series. Drop World Bank / ILO series with
+    # fewer than MIN_OBS observations or questionnaire-coded titles; native series are never
+    # dropped. Excluded rows are kept (with the reason) in excluded_series for transparency.
+    coded = cat.title.astype(str).str.match(r"^\d{2,3}_|.*_#[A-Z]")
+    sparse = (cat.ns != "native") & (cat.n_obs.fillna(0) < MIN_OBS)
+    drop = (cat.ns != "native") & (sparse | coded)
+    excluded = cat[drop].assign(reason=np.where(coded[drop], "questionnaire item", f"fewer than {MIN_OBS} observations"))
+    excluded[["series_id", "title", "dataset", "n_obs", "reason"]].to_parquet(GOLD / "excluded_series.parquet", index=False)
+    cat = cat[~drop]
+    obs = obs[obs.series_id.isin(set(cat.series_id))]
+    cols += ["dataset", "rank"]
+    cat = cat[cols].sort_values(["topic", "rank"], ascending=[True, False]).reset_index(drop=True)
     # World Bank metadata carries U+FFFD where a typographic apostrophe was mangled upstream
     for c in ("title", "description", "unit", "database"):
         if c in cat:

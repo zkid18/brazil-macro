@@ -25,7 +25,7 @@ Brazil Monitoring does that work once, and keeps doing it:
   usable by people and AI agents alike.
 - **Serve.** A browsable site, a remote-queryable DuckDB file, and Parquet exports.
 
-The result: about 15,000 series and 4.5 million observations from 1960 to today. The coverage
+The result: about 9,500 curated time series (plus 4.3 million labour-market breakdowns) from 1960 to today. One-off survey items are excluded but listed in `excluded_series`. The coverage
 spans macro, prices, rates, fiscal, trade, labour, households, energy, health, education,
 social protection, financial inclusion, and the largest resource companies.
 
