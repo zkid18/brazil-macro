@@ -25,7 +25,7 @@ Brazil Monitoring does that work once, and keeps doing it:
   usable by people and AI agents alike.
 - **Serve.** A browsable site, a remote-queryable DuckDB file, and Parquet exports.
 
-The result: about 9,500 curated time series (plus 4.3 million labour-market breakdowns) from 1960 to today. One-off survey items are excluded but listed in `excluded_series`. The coverage
+The result: about 8,000 curated time series (plus 4.3 million labour-market breakdowns) from 1960 to today. Duplicates across sources, one-off survey items and statistical by-products are removed but listed in `excluded_series`; ILO tables that differ only by breakdown are merged into one series with selectable breakdowns. The coverage
 spans macro, prices, rates, fiscal, trade, labour, households, energy, health, education,
 social protection, financial inclusion, and the largest resource companies.
 
@@ -92,22 +92,25 @@ python3 portal.py        # -> warehouse/portal/ (the site)
 python3 -m http.server -d warehouse/portal 8000   # open http://localhost:8000/standalone.html
 ```
 
-**Refresh from the sources.** This needs network access. Every Brazilian source is public and
-keyless; Dateno needs a key.
+**Refresh from the sources (the ETL).** Every Brazilian source is public and keyless;
+Dateno needs a key (`echo "DATENO_API_KEY=..." > .env`).
 
 ```bash
-echo "DATENO_API_KEY=..." > .env      # only for ingest/dateno_*.py
-./scripts/refresh.sh                  # Brazilian sources, then rebuild
-./scripts/refresh.sh --weekly         # + full World Bank and ILO history
+./scripts/refresh.sh              # daily   — Brazilian sources, then rebuild
+./scripts/refresh.sh --weekly     # weekly  — + full World Bank and ILO history
+./scripts/refresh.sh --monthly    # monthly — everything: bulk caches re-downloaded, ILO labels,
+                                  #           Dateno tier-1 pull and discovery, gap check
 ```
 
-Each source has its own adapter in `ingest/`. A failed adapter is logged and skipped, and the
-build always runs on the latest good snapshot.
+Every run is safe to repeat: one run at a time (lock), a failing source is logged and skipped
+(the build uses its last good snapshot), and the warehouse and site are built into staging files
+and swapped in only if the build succeeds and the catalogue did not shrink by more than 10%.
+Each run writes `logs/last_run.json` (status, failed sources) and per-source logs in `logs/`.
 
 **Deploy.** Production runs on a single Ubuntu droplet:
 - nginx serves `warehouse/portal/` as the site, the DuckDB file under `/data/`, and the Parquet
   files under `/export/`.
-- Cron runs `scripts/refresh.sh` every day and `--weekly` on Sundays.
+- Cron runs `scripts/refresh.sh` daily, `--weekly` on Sundays and `--monthly` on the 1st.
 - Plan for about 2.5 GB of memory during the build.
 
 ## Layout

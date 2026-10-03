@@ -25,10 +25,14 @@ Gotchas:
     re-code 'undetermined intent' deaths).
   * Rows are "Janeiro/1996" (or "..Janeiro/1996"), interleaved with year subtotal rows
     "1996" and a final "Total" row — both skipped. "-" means zero.
+  * Month-row indentation differs by year: "..Janeiro/2020" but "  Janeiro/2021" (spaces).
+    Until 2026-10-03 the regex only allowed dots, so ALL of 2021 was silently dropped
+    (series jumped 2020-12 -> 2022-01). parse() now asserts 12 months per complete year,
+    and main() runs ingest/_checks.check_gaps on every series.
   * One POST for all 31 yearly files takes ~15 s.
 
 Sanity (2026-10-03): homicides 1996 = 38,894; 2024 = 39,9xx (≈39,946 expected);
-deaths_total 2024 = 1,532,015 — WHO MDB 2023 total is 1,465,610.
+deaths_total 2021 = 1,832,649 (COVID peak); deaths_total 2024 = 1,532,015 — WHO MDB 2023 total is 1,465,610.
 Cross-check vs WHO MDB homicides is printed by ingest/who_mortality.py.
 
 Writes bronze/native/<metric_id>.csv, theme=health, source_id=datasus_sim, unit=deaths.
@@ -39,6 +43,7 @@ import re, sys, html, pathlib, datetime, urllib.parse
 import pandas as pd
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from _http import get_bytes, write_bronze, NATIVE  # noqa: E402
+from _checks import check_gaps  # noqa: E402
 
 URL = "http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sim/cnv/obt10uf.def"
 FIRST_YEAR = 1996
@@ -81,13 +86,23 @@ def parse(page: str) -> pd.DataFrame:
         raise RuntimeError("TabNet response has no <PRE> block: " + page[-500:])
     recs = []
     for line in html.unescape(m.group(1)).splitlines():
-        mm = re.match(r'^"\.*([A-Za-zçÇ]+)/(\d{4})";(.+)$', line.strip())
+        # month rows are indented with ".." for most years but with SPACES for 2021
+        # ("  Janeiro/2021") — accept any mix of dots/whitespace, else 2021 vanishes.
+        mm = re.match(r'^"[.\s]*([A-Za-zçÇ]+)/(\d{4})";(.+)$', line.strip())
         if not mm or mm.group(1) not in MONTHS:
             continue  # header, year subtotal, Total
         v = mm.group(3).strip()
         recs.append(dict(date=f"{mm.group(2)}-{MONTHS[mm.group(1)]:02d}-01",
                          value=0.0 if v == "-" else float(v)))
-    return pd.DataFrame(recs).sort_values("date").reset_index(drop=True)
+    df = pd.DataFrame(recs).sort_values("date").reset_index(drop=True)
+    # every year subtotal row in the response must be matched by 12 month rows (bar the
+    # current, partial year) — a silent parse miss once dropped all of 2021.
+    years = re.findall(r'^"(\d{4})";', html.unescape(m.group(1)), re.M)
+    got = df.date.str[:4].value_counts()
+    short = [y for y in years[:-1] if got.get(y, 0) != 12]
+    if short:
+        raise RuntimeError(f"TabNet parse: years without 12 months: {short}")
+    return df
 
 
 def drop_incomplete(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
@@ -102,6 +117,7 @@ def drop_incomplete(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
 
 
 def main():
+    fails = 0
     years = range(FIRST_YEAR, datetime.date.today().year + 1)
     for mid, (filters, name) in SERIES.items():
         df, dropped = drop_incomplete(parse(query(filters, years)))
@@ -112,7 +128,10 @@ def main():
             ann = df.assign(y=df.date.str[:4]).groupby("y").value.sum()
             print(f"[ok]   {mid:<20} {n} obs ({df.date.min()}..{df.date.max()}) "
                   f"latest={df.value.iloc[-1]:.0f}  2024={ann.get('2024', float('nan')):.0f}  "
-                  f"dropped_incomplete={dropped}")
+                  f"dropped_incomplete={dropped}  2021={ann.get('2021', float('nan')):.0f}")
+            fails += not check_gaps(df, mid, "monthly")
+    if fails:
+        sys.exit(f"[FAIL] {fails} series with internal gaps")
 
 
 if __name__ == "__main__":

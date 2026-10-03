@@ -15,20 +15,32 @@ SELECT series_id, title, topic, source, entity_name, unit, freq,
        CAST(last AS DATE) AS date, last_value AS value, status, role
 FROM catalog;
 
--- Every series on an annual basis: mean of the year's observations (annual series
--- pass through). Use for cross-series comparison at a common frequency.
+-- Every series on an annual basis, using its roll-up rule (catalog.agg): flows are summed
+-- (exports, deaths, revenue), stocks and running totals take the year's last value (debt,
+-- balances, reserves, 12-month sums), rates/prices/indices are averaged. is_complete marks
+-- past years with a full set of observations (12 months, 4 quarters, ~50 weeks, ~200 days);
+-- the current year is never complete.
 CREATE OR REPLACE VIEW v_annual AS
-SELECT series_id, title, unit, topic, source, entity_name,
-       EXTRACT(year FROM date)::INTEGER AS year,
-       AVG(value) AS value, COUNT(*) AS n_obs_in_year
-FROM v_observations
-GROUP BY ALL;
+WITH y AS (
+  SELECT o.series_id, o.title, o.unit, o.topic, o.source, o.entity_name, o.freq, c.agg,
+         EXTRACT(year FROM o.date)::INTEGER AS year, o.date, o.value
+  FROM v_observations o JOIN catalog c USING (series_id))
+SELECT series_id, title, unit, topic, source, entity_name, agg, year,
+       CASE agg WHEN 'sum' THEN SUM(value) WHEN 'last' THEN arg_max(value, date) ELSE AVG(value) END AS value,
+       COUNT(*) AS n_obs_in_year,
+       year < EXTRACT(year FROM current_date)          -- the current year is never complete
+       AND CASE freq WHEN 'monthly' THEN COUNT(*) >= 12 WHEN 'quarterly' THEN COUNT(*) >= 4
+                     WHEN 'weekly' THEN COUNT(*) >= 50 WHEN 'daily' THEN COUNT(*) >= 200 ELSE TRUE END AS is_complete
+FROM y
+GROUP BY series_id, title, unit, topic, source, entity_name, freq, agg, year;
 
--- Year-on-year % change for every annual-basis series.
+-- Year-on-year % change between CONSECUTIVE complete years only.
 CREATE OR REPLACE VIEW v_annual_yoy AS
-SELECT series_id, title, unit, year, value,
-       100 * (value / LAG(value) OVER (PARTITION BY series_id ORDER BY year) - 1) AS yoy_pct
-FROM v_annual;
+WITH a AS (
+  SELECT *, LAG(value) OVER w AS prev_value, LAG(year) OVER w AS prev_year, LAG(is_complete) OVER w AS prev_complete
+  FROM v_annual WINDOW w AS (PARTITION BY series_id ORDER BY year))
+SELECT series_id, title, unit, year, value, 100 * (value / prev_value - 1) AS yoy_pct
+FROM a WHERE is_complete AND prev_complete AND prev_year = year - 1 AND abs(prev_value) > 1e-9;
 
 -- Each observation tagged with the president in office and their lean.
 CREATE OR REPLACE VIEW v_politics AS
@@ -62,3 +74,18 @@ CREATE OR REPLACE VIEW v_search AS
 SELECT series_id, title, topic, subtopic, source, database, entity_name, freq, unit,
        CAST(first AS DATE) AS first_date, CAST(last AS DATE) AS last_date, n_obs, role, description
 FROM catalog;
+
+-- Related datasets: up to 10 per series, ranked, with the reason and a one-line explanation
+-- (same_concept | lineage | company | entity | curated | comove | family | text).
+CREATE OR REPLACE VIEW v_related AS
+SELECT r.series_id, r.pos, r.related_id, c.title AS related_title, c.dataset AS related_dataset,
+       r.reason, r.score, r.explanation
+FROM related_series r JOIN catalog c ON c.series_id = r.related_id;
+
+-- ILO breakdowns with readable labels (sex, age, occupation, economic activity, ...).
+CREATE OR REPLACE VIEW v_observations_dims AS
+SELECT d.series_id, CAST(d.date AS DATE) AS date, d.value, d.classif1,
+       l1.label AS sex_or_dim1, d.classif2,
+       (SELECT string_agg(coalesce(l.label, x), ' | ') FROM unnest(string_split(d.classif2, '|')) AS u(x)
+        LEFT JOIN dim_labels l ON l.code = x) AS breakdown
+FROM observations_dims d LEFT JOIN dim_labels l1 ON l1.code = d.classif1;

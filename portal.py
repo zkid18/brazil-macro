@@ -15,13 +15,13 @@ Output: warehouse/portal/
 Run:  python3 portal.py   (after pipeline.py)
 """
 from __future__ import annotations
-import json, math, pathlib
+import json, math, os, pathlib
 import numpy as np
 import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parent
 GOLD = ROOT / "warehouse" / "gold"
-OUT = ROOT / "warehouse" / "portal"
+OUT = pathlib.Path(os.environ.get("BRAZIL_MACRO_PORTAL", ROOT / "warehouse" / "portal"))  # staging-aware
 DATA = OUT / "data"
 CHUNK_BYTES = 1_500_000
 PLOTLY = "https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly-basic.min.js"
@@ -45,6 +45,7 @@ UNIT = {  # bronze unit -> readable unit
     "brl": "R$", "brl_per_share": "R$ per share", "births_per_woman": "births per woman",
     "pct_working_age": "% of working-age pop.", "pct_population": "% of population",
     "pct_labor_force": "% of labour force", "metric_tons": "tonnes", "km2": "km²", "ratio": "ratio",
+    "per_100k": "per 100,000 people", "pct_adults": "% of adults",
 }
 
 # Curated collections: overview pages in the centre panel. Each chart lists the series it
@@ -54,8 +55,9 @@ CO = ["PETR", "VALE", "AXIA", "SUZB", "PRIO", "ITUB"]
 CURATED = [
     dict(id="overview", title="Brazil at a glance",
          desc="Policy rate, inflation, jobs, the currency and public debt: the headline macro series, each from its official publisher.",
-         kpis=["selic_target", "ipca_12m", "unemployment_rate", "brl_usd", "gross_public_debt_gdp", "wb/NY.GDP.MKTP.KD.ZG.BR"],
+         kpis=["selic_target", "real_policy_rate", "ipca_12m", "unemployment_rate", "brl_usd", "gross_public_debt_gdp"],
          charts=[dict(t="Policy rate vs inflation", d="Selic target against 12-month IPCA inflation and the market's expected IPCA (Focus survey).", s=["selic_target", "ipca_12m", "focus_ipca_12m"]),
+                 dict(t="Real policy rate", d="Selic minus the market's expected 12-month inflation (ex-ante real rate).", s=["real_policy_rate"]),
                  dict(t="Real per US dollar", d="Official BRL/USD rate (BCB) and the market's year-ahead expectation.", s=["brl_usd", "focus_fx"]),
                  dict(t="Unemployment", d="PNAD rolling-quarter rate (IBGE) with the World Bank / ILO annual series as cross-check.", s=["unemployment_rate", "wb/SL.UEM.TOTL.ZS.BR"]),
                  dict(t="Public debt", d="Gross and net general-government debt, % of GDP (BCB).", s=["gross_public_debt_gdp", "net_public_debt_gdp"])]),
@@ -65,7 +67,7 @@ CURATED = [
          charts=[dict(t="Oil production", d="National (IPEAData/ANP) and offshore (ANP), thousand barrels a day.", s=["oil_production", "oil_production_offshore_kbd"]),
                  dict(t="Pre-salt share of oil output", d="ANP well-level classification.", s=["presalt_share"]),
                  dict(t="Power generation mix", d="Shares of national (SIN) generation, ONS.", s=["hydro_generation_share", "thermal_generation_share", "wind_solar_generation_share"]),
-                 dict(t="Reservoirs and the cost of power", d="Stored energy (EAR, %) and the marginal operating cost (CMO, R$/MWh) — different units, so shown rebased.", s=["stored_energy_ear", "cmo_power_cost"]),
+                 dict(t="Reservoirs and the cost of power", d="Stored energy (EAR, %) and the marginal operating cost (CMO, R$/MWh), one panel each on a shared timeline.", s=["stored_energy_ear", "cmo_power_cost"]),
                  dict(t="Brent", d="US$ per barrel, daily (EIA via IPEAData).", s=["brent_usd"])]),
     dict(id="companies", title="Resource companies",
          desc="Petrobras, Vale, Axia (ex-Eletrobras), Suzano and PRIO, with Itaú as the non-resource control: returns, revenue and physical output.",
@@ -84,7 +86,7 @@ CURATED = [
                  dict(t="Export prices per tonne", d="FOB value ÷ net weight (derived).", s=["oil_export_unit_value", "iron_ore_unit_value", "pulp_unit_value"])]),
     dict(id="prices", title="Prices & markets",
          desc="Inflation by component, government bond yields, country risk and the stock market.",
-         kpis=["ipca_12m", "focus_ipca_12m", "gov_real_yield_10y", "gov_nominal_yield_5y", "embi_brazil", "ibovespa_level"],
+         kpis=["ipca_12m", "focus_ipca_12m", "gov_real_yield_10y", "gov_nominal_yield_5y", "real_policy_rate", "ibovespa_level"],
          charts=[dict(t="Inflation components", d="Monthly % change: headline, services, administered prices (IBGE via BCB).", s=["ipca_monthly", "ipca_services", "ipca_administered_prices"]),
                  dict(t="Government bond yields", d="NTN-B real ~10y and LTN nominal ~5y (Tesouro Direto).", s=["gov_real_yield_10y", "gov_nominal_yield_5y"]),
                  dict(t="Ibovespa in reais and dollars", d="Index level and the index in US dollars — rebased.", s=["ibovespa_level", "ibovespa_usd"])]),
@@ -93,14 +95,14 @@ CURATED = [
          kpis=["unemployment_rate", "caged_net_hires", "real_average_income", "household_debt_service_ratio", "delinquency_rate", "retail_sales_volume"],
          charts=[dict(t="Formal job creation", d="Novo CAGED net hires, monthly (not seasonally adjusted).", s=["caged_net_hires"]),
                  dict(t="Household debt burden", d="Debt service and debt-to-income, % of income (BCB).", s=["household_debt_service_ratio", "household_debt_income"]),
-                 dict(t="Spending", d="Retail volume (PMC), vehicle sales and Pix payments — rebased.", s=["retail_sales_volume", "vehicle_sales", "pix_transactions_value"]),
-                 dict(t="Real income and the wage bill", d="PNAD, rebased.", s=["real_average_income", "real_wage_bill"])]),
+                 dict(t="Spending", d="Retail volume (PMC), vehicle sales and Pix payments, one panel each.", s=["retail_sales_volume", "vehicle_sales", "pix_transactions_value"]),
+                 dict(t="Real income and the wage bill", d="PNAD, one panel each.", s=["real_average_income", "real_wage_bill"])]),
     dict(id="fiscal", title="Public finances",
          desc="Debt, deficits, the interest bill and the r − g arithmetic.",
          kpis=["gross_public_debt_gdp", "primary_balance_gdp", "interest_bill_gdp", "implicit_interest_rate", "nominal_gdp_growth", "r_minus_g"],
          charts=[dict(t="Primary balance and the interest bill", d="% of GDP, 12-month (BCB, NFSP).", s=["primary_balance_gdp", "interest_bill_gdp"]),
                  dict(t="Interest rate on debt vs nominal growth", d="Implicit rate on gross debt and nominal GDP growth, % a year.", s=["implicit_interest_rate", "nominal_gdp_growth"]),
-                 dict(t="Gross debt: BCB vs World Bank", d="General government (BCB) vs central government (World Bank via Dateno).", s=["gross_public_debt_gdp", "wb/GC.DOD.TOTL.GD.ZS.BR"])]),
+                 dict(t="Gross debt: general government (BCB) vs central government (World Bank)", d="Two definitions of public debt: general government (BCB) and central government only (World Bank via Dateno).", s=["gross_public_debt_gdp", "wb/GC.DOD.TOTL.GD.ZS.BR"])]),
     dict(id="health", title="Health",
          desc="Deaths by cause from Brazil's mortality register (DATASUS SIM) and the WHO Mortality Database.",
          kpis=["deaths_total", "homicide_rate", "suicide_rate", "traffic_death_rate", "ncd_death_share", "adult_smoking_prevalence"],
@@ -108,6 +110,76 @@ CURATED = [
                  dict(t="Death rates per 100,000", d="WHO Mortality Database counts over IBGE population.", s=["homicide_rate", "suicide_rate", "traffic_death_rate", "lung_cancer_rate_male", "lung_cancer_rate_female"]),
                  dict(t="Ageing and chronic disease", d="Share of deaths at 65+ and from non-communicable causes, %.", s=["deaths_65plus_share", "ncd_death_share"])]),
 ]
+
+
+def write_dims(cat: pd.DataFrame) -> dict:
+    """One file per ILO series with breakdowns: data/dims/<n>.json =
+    {"tables": [{"label", "dims": [{"name", "codes", "labels", "schemes"}], "rows": [[[code idx per dim], [days], [values]]]}]}.
+    A merged ILO family (gold/series_members) carries one table per member ("by sex", "by sex and age", ...).
+    Returns {series_id: file number}. Labels come from registry/ilo_labels.csv."""
+    dp = ROOT / "warehouse" / "export" / "observations_dims.parquet"
+    out_dir = DATA / "dims"
+    if out_dir.exists():
+        for f in out_dir.glob("*.json"):
+            f.unlink()
+    if not dp.exists():
+        return {}
+    out_dir.mkdir(parents=True, exist_ok=True)
+    lab_p = ROOT / "registry" / "ilo_labels.csv"
+    lab = pd.read_csv(lab_p) if lab_p.exists() else pd.DataFrame(columns=["code", "dimension", "label"])
+    L = dict(zip(lab.code, lab.label)); DN = dict(zip(lab.code, lab.dimension))
+    mem_p = GOLD / "series_members.parquet"
+    mem = pd.read_parquet(mem_p) if mem_p.exists() else pd.DataFrame(columns=["series_id", "member_id", "breakdown", "n_dims"])
+    have = set(cat.series_id)
+    tables_of = {}
+    for r in mem.sort_values(["series_id", "n_dims", "member_id"]).itertuples():
+        if r.series_id in have:
+            tables_of.setdefault(r.series_id, []).append((r.member_id, r.breakdown))
+    d = pd.read_parquet(dp)
+    for col in ("series_id", "classif1", "classif2"):  # parquet may come back categorical
+        d[col] = d[col].astype(object).where(d[col].notna(), "").astype(str)
+    wanted = have | {m for v in tables_of.values() for m, _ in v}
+    d = d[d.series_id.isin(wanted)].copy()
+    d["days"] = ((pd.to_datetime(d.date) - EPOCH).dt.days).astype(int)
+    groups = {sid: g for sid, g in d.groupby("series_id", sort=False)}
+
+    def table(g, label):
+        cols = [g.classif1.to_numpy()]
+        c2 = g.classif2.str.split("|", expand=True)
+        for j in c2.columns:
+            cols.append(c2[j].fillna("").to_numpy())
+        cols = [c for c in cols if any(x for x in c)]
+        if not cols:
+            return None
+        dims = []
+        for c in cols:
+            codes = sorted({x for x in c if x}, key=lambda x: (0 if x.endswith(("_T", "TOTAL", "YGE15")) else 1, x))
+            schemes = [x.split("_")[1] if x.count("_") >= 2 else "" for x in codes]
+            dims.append(dict(name=DN.get(codes[0], codes[0].split("_")[0]), codes=codes,
+                             labels=[L.get(x, x) for x in codes], schemes=schemes))
+        index = [{code: i for i, code in enumerate(dm["codes"])} for dm in dims]
+        key = list(zip(*[[index[k].get(x, -1) for x in c] for k, c in enumerate(cols)]))
+        rows = []
+        for combo, gg in g.assign(_k=key).groupby("_k", sort=False):
+            gg = gg.sort_values("days")
+            rows.append([list(combo), gg.days.tolist(), [_num(v) for v in gg.value]])
+        return dict(label=label, dims=dims, rows=rows)
+
+    ids, n = {}, 0
+    for sid in sorted(have):
+        members = tables_of.get(sid) or ([(sid, "")] if sid in groups else [])
+        tabs = [t for m, lbl in members if m in groups and (t := table(groups[m], lbl))]
+        if not tabs:
+            continue
+        (out_dir / f"{n}.json").write_text(json.dumps(dict(tables=tabs), separators=(",", ":"), ensure_ascii=False))
+        ids[sid] = n
+        n += 1
+    return ids
+
+
+def _cut(text: str, n: int) -> str:
+    """Shorten at a word boundary, with an ellipsis."""
+    return text if len(text) <= n else text[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
 def _num(v):
@@ -151,16 +223,29 @@ def main():
     # ---- catalog
     def s(x):
         return "" if x is None or (not isinstance(x, (list, dict)) and pd.isna(x)) else str(x)
-    keys = ["id", "t", "tp", "src", "ns", "ent", "f", "u", "a", "b", "n", "lv", "st", "r", "c", "used", "ds", "db", "ch", "m", "dset", "rk"]
+    dims_ids = write_dims(cat)
+    keys = ["id", "t", "tp", "src", "ns", "ent", "f", "u", "a", "b", "n", "lv", "st", "r", "c", "used", "ds", "db", "ch", "m", "dset", "rk", "hd"]
     rows = []
     for r in cat.itertuples():
         rows.append([r.series_id, s(r.title), s(r.topic), s(r.source), s(r.ns), s(r.entity_name), s(r.freq),
                      UNIT.get(s(r.unit), s(r.unit)), s(r.first)[:10], s(r.last)[:10], int(r.n_obs or 0),
                      _num(r.last_value), s(r.status), s(r.role), s(r.concept), s(r.used_in_tests),
-                     s(r.description)[:280], s(getattr(r, "database", "")), chunk_of.get(r.series_id, -1),
-                     s(r.metric_id), s(r.dataset), float(r.rank or 0)])
+                     _cut(s(r.description), 420), s(getattr(r, "database", "")), chunk_of.get(r.series_id, -1),
+                     s(r.metric_id), s(r.dataset), float(r.rank or 0), dims_ids.get(r.series_id, -1)])
     (DATA / "catalog.json").write_text(json.dumps({"keys": keys, "rows": rows}, separators=(",", ":"),
                                                  ensure_ascii=False, allow_nan=False))
+    # related datasets: {catalog row index: [[related row index, reason code, score*100, explanation], ...]}
+    rel_p = GOLD / "related_series.parquet"
+    if rel_p.exists():
+        pos = {sid: i for i, sid in enumerate(cat.series_id)}
+        rel = pd.read_parquet(rel_p).sort_values(["series_id", "pos"])
+        RC = {"same_concept": 0, "lineage": 1, "company": 2, "entity": 3, "curated": 4, "comove": 5, "family": 6, "text": 7,
+              "neighbor": 8}
+        out = {}
+        for r in rel.itertuples():
+            if r.series_id in pos and r.related_id in pos:
+                out.setdefault(pos[r.series_id], []).append([pos[r.related_id], RC[r.reason], int(r.score * 100), r.explanation])
+        (DATA / "related.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False))
 
     # ---- meta: reconciliation, missing metrics + Dateno candidates, tests, build facts
     cov = pd.read_csv(ROOT / "registry_coverage.csv") if (ROOT / "registry_coverage.csv").exists() else pd.DataFrame()
@@ -198,7 +283,8 @@ def main():
     (DATA / "meta.json").write_text(json.dumps(meta, separators=(",", ":"), ensure_ascii=False))
 
     # agent instructions: the copied prompt, /llms.txt, and AGENTS.md in the repo share one text
-    prompt = (ROOT / "semantic" / "agent_prompt.md").read_text()
+    prompt = (ROOT / "semantic" / "agent_prompt.md").read_text().replace(
+        "9,500+", f"{len(cat) // 500 * 500:,}+")
     meta_p = DATA / "meta.json"
     m = json.loads(meta_p.read_text()); m["agent_prompt"] = prompt
     meta_p.write_text(json.dumps(m, separators=(",", ":"), ensure_ascii=False))
@@ -208,8 +294,12 @@ def main():
     (OUT / "semantic").mkdir(exist_ok=True)
     for f in ("model.yml", "views.sql"):
         (OUT / "semantic" / f).write_text((ROOT / "semantic" / f).read_text())
-    body = (ROOT / "portal_app.html").read_text().replace("{{PLOTLY}}", PLOTLY).replace("{{ALASQL}}", ALASQL)
-    head = (f"<title>Brazil Monitoring</title>\n<link rel='preconnect' href='https://fonts.googleapis.com'>"
+    # build id: every data request carries it, so a browser can never mix a cached catalogue
+    # from an older build with the newly chunked observation files
+    build_id = pd.Timestamp.now(tz="UTC").strftime("%Y%m%d%H%M%S")
+    body = (ROOT / "portal_app.html").read_text().replace("{{PLOTLY}}", PLOTLY).replace("{{ALASQL}}", ALASQL) \
+        .replace("{{BUILD}}", build_id)
+    head = (f"<title>Brazil Monitoring</title>\n<link rel='icon' href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Crect width='28' height='20' rx='3' fill='%23009c3b'/%3E%3Cpath d='M14 2.6 25.4 10 14 17.4 2.6 10Z' fill='%23ffdf00'/%3E%3Ccircle cx='14' cy='10' r='4.3' fill='%23002776'/%3E%3C/svg%3E\">\n<link rel='preconnect' href='https://fonts.googleapis.com'>"
             f"<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link rel='stylesheet' href='{FONTS}'>\n")
     (OUT / "index.html").write_text(head + body)
     (OUT / "standalone.html").write_text(

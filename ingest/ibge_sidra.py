@@ -60,7 +60,7 @@ def main():
                 continue  # '...', '-' etc.
             if freq == "annual":
                 y = r.get(year_dim, "")
-                if len(y) == 4 and int(y) <= datetime.date.today().year:
+                if len(y) == 4 and int(y) < datetime.date.today().year:   # projections for the current year onward are not data
                     recs.append(dict(date=f"{y}-12-31", value=val))  # annual convention: year end
             elif len(code) == 6:
                 recs.append(dict(date=f"{code[:4]}-{code[4:6]}-01", value=val))

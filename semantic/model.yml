@@ -49,6 +49,7 @@ tables:
       role: "canonical | alternate | derived. Prefer canonical; alternates are other sources for the same concept"
       concept: "shared concept id linking a canonical series and its alternates"
       description: "definition from the publisher (World Bank / ILO) when available"
+      agg: "how the series rolls up to a year: sum (flows) | last (stocks, running totals) | mean (rates, prices, indices)"
   observations:
     description: "All values. Headline only for ILO (all-sexes, all-ages totals)."
     columns: {series_id: "-> catalog.series_id", date: "ISO date (string; cast to DATE)", value: "double, in catalog.unit"}
@@ -76,12 +77,14 @@ views:   # the semantic layer — query these first (semantic/views.sql)
   v_search: "find series: SELECT * FROM v_search WHERE title ILIKE '%inflation%' OR description ILIKE '%inflation%'"
   v_observations: "observations joined to catalog (title, unit, topic, source, entity)"
   v_latest: "latest value per series"
-  v_annual: "every series as yearly means — the common frequency for cross-series work"
-  v_annual_yoy: "yearly values with year-on-year % change"
+  v_annual: "every series on a yearly basis using catalog.agg (sum for flows, last for stocks, mean for rates/prices); is_complete flags full past years (the current year is never complete)"
+  v_annual_yoy: "year-on-year % change between consecutive complete years"
   v_politics: "observations tagged with president, party and lean"
   v_by_term: "series averages by presidential term"
   v_company_quarterly: "company fundamentals by quarter"
   v_reconciliation: "source agreement for overlapping concepts"
+  v_related: "up to 10 related series per series, with reason and explanation (same concept, inputs, exposed companies, co-movement, family)"
+  v_observations_dims: "ILO breakdowns (sex, age, occupation, economic activity...) with readable labels"
 
 metrics:   # named measures and how to compute them
   real_policy_rate: "selic_target − focus_ipca_12m (ex-ante, % a year)"

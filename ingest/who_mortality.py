@@ -19,6 +19,7 @@ Codes / layout:
   Deaths26 = age unknown.
 
 Gotchas:
+  * Annual observations are dated YYYY-12-31 (project convention for annual = period end).
   * 1996–2002 also carry sub-national rows (Admin1 901/902) → keep Admin1 empty only.
   * IBGE projection starts in 2000 and the WHO pop file has no national Brazil population for
     1996–1999 → rates are 2000–2023; counts/shares are 1996–2023.
@@ -42,6 +43,7 @@ import sys, pathlib, zipfile
 import pandas as pd
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from _http import cached, get_json, write_bronze, NATIVE  # noqa: E402
+from _checks import check_gaps  # noqa: E402
 
 BASE = "https://cdn.who.int/media/docs/default-source/world-health-data-platform/mortality-raw-data"
 PARTS = range(1, 7)
@@ -131,14 +133,16 @@ def main():
         "ncd_death_share": count("ncd") / allc * 100,
         "deaths_65plus_share": tot[[f"Deaths{k}" for k in range(19, 26)]].sum().sum(axis=1) / allc * 100,
     }
+    gap_fail = []
     for mid, s in out.items():
         name, unit = META[mid]
         s = s.dropna().round(4 if unit != "deaths" else 0)
-        b = pd.DataFrame({"date": [f"{y}-01-01" for y in s.index], "value": s.values}).assign(
+        b = pd.DataFrame({"date": [f"{y}-12-31" for y in s.index], "value": s.values}).assign(
             metric_id=mid, metric_name=name, theme="health", source_id="who_mdb", freq="annual", unit=unit)
         n = write_bronze(b, NATIVE / f"{mid}.csv")
         if n:
             print(f"[ok]   {mid:<24} {n} obs ({b.date.min()}..{b.date.max()}) latest={b.value.iloc[-1]}")
+            gap_fail += [] if check_gaps(b, mid, "annual", quiet=True) else [mid]
 
     hom = count("homicide")
     print("[chk]  counts: total2023={:.0f} homicides 2010/2017/2023={:.0f}/{:.0f}/{:.0f} "
@@ -154,6 +158,10 @@ def main():
         rel = ((t[yrs] - hom[yrs]).abs() / hom[yrs])
         print(f"[chk]  homicides WHO vs TabNet 2010-2023: max rel diff = {rel.max():.4%} "
               f"(year {rel.idxmax()}: WHO {hom[rel.idxmax()]:.0f} vs TabNet {t[rel.idxmax()]:.0f})")
+        if 2021 in hom.index:
+            print(f"[chk]  homicides 2021: WHO {hom[2021]:.0f} vs TabNet {t.get(2021, float('nan')):.0f}")
+    if gap_fail:
+        sys.exit(f"[FAIL] internal gaps in: {gap_fail}")
 
 
 if __name__ == "__main__":

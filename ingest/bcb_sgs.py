@@ -18,7 +18,8 @@ Gotchas:
   * Empty <VALOR/> rows (weekends for daily series) are dropped.
   * Many codes per call work; a single bad code faults the whole batch, so main()
     falls back to one-call-per-code if a batch fails.
-  * Daily ranges are capped at ~10 years by BCB; monthly from 2000.
+  * Daily ranges are capped at 10 years by BCB; daily series are pulled in <=9-year
+    windows from 2000-01-03 and concatenated; monthly from 2000 in one call.
 
 Verification (2026-10-03, every code checked with getUltimoValorVO name/unit/
 periodicity + magnitude vs known reality; see `python3 ingest/bcb_sgs.py --meta`):
@@ -48,13 +49,16 @@ import pandas as pd
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from _http import get_bytes, write_bronze, NATIVE  # noqa: E402
+from _checks import check_gaps  # noqa: E402
 
 URL = "https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS"
 NS = "https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS"
 TODAY = dt.date.today()
 END = TODAY.strftime("%d/%m/%Y")
-# Daily history back to 2010 so "since the book (2012)" USD conversions have FX coverage.
-DAILY_START = "04/01/2010"
+# Daily history back to 2000 (Selic 26.5% 2003 peak, BRL ~3.5-3.9 in 2002-03).
+# BCB caps daily requests at 10 years, so daily pulls are chunked (DAILY_CHUNK_YEARS).
+DAILY_START = "03/01/2000"
+DAILY_CHUNK_YEARS = 9
 MONTHLY_START = "01/01/2000"
 
 # registry metric_id -> SGS series spec.
@@ -203,18 +207,29 @@ def meta(code: int) -> dict:
                 last_date=f"{val(last, 'ano')}-{int(val(last, 'mes')):02d}-{int(val(last, 'dia')):02d}")
 
 
-def _pull(codes: list[int], start: str) -> dict[int, list]:
+def _pull(codes: list[int], start: str, end: str = END) -> dict[int, list]:
     try:
-        return fetch_values(codes, start)
+        return fetch_values(codes, start, end)
     except Exception as e:  # noqa: BLE001 — one bad code faults the batch
-        print(f"[warn] batch {codes} failed ({e}); retrying one code per call")
+        print(f"[warn] batch {codes} {start}-{end} failed ({e}); retrying one code per call")
         out = {}
         for c in codes:
             try:
-                out.update(fetch_values([c], start))
+                out.update(fetch_values([c], start, end))
             except Exception as e2:  # noqa: BLE001
-                print(f"[FAIL] SGS {c} :: {e2}")
+                print(f"[FAIL] SGS {c} {start}-{end} :: {e2}")
         return out
+
+
+def _windows(start: str, years: int) -> list[tuple[str, str]]:
+    """Split start..END into consecutive windows of at most `years` years."""
+    s = dt.datetime.strptime(start, "%d/%m/%Y").date()
+    out = []
+    while s <= TODAY:
+        e = min(dt.date(s.year + years, 1, 1) - dt.timedelta(days=1), TODAY)
+        out.append((s.strftime("%d/%m/%Y"), e.strftime("%d/%m/%Y")))
+        s = e + dt.timedelta(days=1)
+    return out
 
 
 def _codes(s: dict) -> tuple:
@@ -231,11 +246,16 @@ def main():
         return
     NATIVE.mkdir(parents=True, exist_ok=True)
     data: dict[int, list] = {}
-    for freq, start in (("daily", DAILY_START), ("monthly", MONTHLY_START)):
+    plans = (("daily", _windows(DAILY_START, DAILY_CHUNK_YEARS)), ("monthly", [(MONTHLY_START, END)]))
+    for freq, windows in plans:
         codes = [c for s in SERIES.values() if s["freq"] == freq for c in _codes(s)]
         for i in range(0, len(codes), 8):
-            data.update(_pull(codes[i:i + 8], start))
+            for start, end in windows:
+                for c, rows in _pull(codes[i:i + 8], start, end).items():
+                    data.setdefault(c, []).extend(rows)
+    data = {c: sorted(set(rows)) for c, rows in data.items()}
     ok = 0
+    gap_fail = []
     for metric_id, s in SERIES.items():
         parts = [pd.DataFrame(data.get(c) or [], columns=["date", "value"]).set_index("date")["value"]
                  for c in _codes(s)]
@@ -250,9 +270,13 @@ def main():
             ok += 1
             print(f"[ok]   {metric_id:<28} SGS {'+'.join(map(str, _codes(s))):<6} {s['freq']:<7} {n:>5} obs  "
                   f"{df.date.min()} .. {df.date.max()}  latest={df.value.iloc[-1]:g}")
+            if not check_gaps(df, metric_id, s["freq"], quiet=True):
+                gap_fail.append(metric_id)
         else:
             print(f"[FAIL] {metric_id:<28} SGS {s['code']} :: no data")
     print(f"\nPulled {ok}/{len(SERIES)} native series -> {NATIVE}  (end={END})")
+    if gap_fail:
+        sys.exit(f"[FAIL] internal gaps in: {gap_fail}")
 
 
 if __name__ == "__main__":

@@ -77,22 +77,42 @@ SOURCE_NAME = {
 }
 ENTITY_NAME = {"BR": "Brazil", "PETR": "Petrobras", "VALE": "Vale", "AXIA": "Axia (ex-Eletrobras)",
                "SUZB": "Suzano", "PRIO": "PRIO", "ITUB": "Itaú Unibanco", "IBOV": "Ibovespa"}
+# CCDR republishes the Worldwide Governance Indicators already carried by WDI
+CCDR_WGI = re.compile(r"^wb/(CC|GE|PV|RL|RQ|VA)\.(EST|SC|PER\.RNK)\.BRA$")
+JUNK_TITLE = (r"^p-value|standard error|lower bound|upper bound|confidence interval|number of sources|"
+              r"\bstd\.? ?err|margin of error")
+# Brazilian-source series that duplicate another Brazilian-source series (dropped -> kept)
+NATIVE_DUPS = {"gas_production": "gas_production_mm3d"}
+# topic fixes for native series whose bronze theme is too broad
+TOPIC_OVERRIDE = {"population": "Population", "ibc_br": "Output & activity", "retail_sales_volume": "Output & activity",
+                  "vehicle_sales": "Output & activity", "vehicle_production": "Output & activity",
+                  "pix_transactions_count": "Output & activity", "pix_transactions_value": "Output & activity"}
+UNIT_OK = re.compile(r"(%|percent|us\$|lcu|\$|usd|number|people|persons|tonnes|tons|kilotonnes|kg|index|ratio|years|"
+                     r"days|hours|per |km|hectares|kwh|gwh|mw|liters|litres|metric|currency|rate|score|scale|share|"
+                     r"births|deaths|cases|units|thousands|millions|billions|ppp|constant|current|real|nominal)", re.I)
+
+
+def clean_unit(u):
+    if u is None or (isinstance(u, float) and np.isnan(u)) or u is pd.NA:
+        return None
+    u = str(u).strip()
+    u = re.sub(r"^[A-Z]{2,4}, ", "", u)          # "DOD, current US$" -> "current US$"
+    return u if UNIT_OK.search(u) and len(u) <= 60 else None
+
+
 MIN_OBS = 5  # World Bank / ILO series with fewer observations are survey one-offs, not time series
 STALE_DAYS = {"daily": 10, "weekly": 21, "monthly": 100, "quarterly": 200, "annual": 1300, "event": 4000}
 
 # Concepts measured by both a native source and Dateno (World Bank / ILO). Native first.
 # (concept, native series_id, native->annual rule, Dateno ts_id candidates)
 CONCEPTS = [
-    ("inflation_annual", "ipca_12m", "dec", ["wb/FP.CPI.TOTL.ZG.BR"]),
     ("unemployment_rate", "unemployment_rate", "mean", ["wb/SL.UEM.TOTL.ZS.BR", "wb/SL.UEM.TOTL.NE.ZS.BR"]),
     ("fx_reserves_usd", "fx_reserves", "dec_x1e6", ["wb/FI.RES.TOTL.CD.BR", "wb/FI.RES.XGLD.CD.BR"]),
-    ("gross_public_debt_gdp", "gross_public_debt_gdp", "dec", ["wb/GC.DOD.TOTL.GD.ZS.BR"]),
     ("brl_per_usd", "brl_usd", "mean", ["wb/PA.NUS.FCRF.BR"]),
     ("current_account_usd", "current_account_usd", "sum_x1e6", ["wb/BN.CAB.XOKA.CD.BR"]),
     ("real_gdp_growth", "gdp_real_growth", "dec", ["wb/NY.GDP.MKTP.KD.ZG.BR"]),
     ("exports_goods_usd", "bop_goods_exports", "sum_x1e6", ["wb/BX.GSR.MRCH.CD.BR", "wb/TX.VAL.MRCH.CD.WT.BR"]),
     ("imports_goods_usd", "bop_goods_imports", "sum_x1e6", ["wb/BM.GSR.MRCH.CD.BR", "wb/TM.VAL.MRCH.CD.WT.BR"]),
-    ("lending_rate_vs_selic", "selic_target", "mean", ["wb/FR.INR.LEND.BR"]),
     ("labor_participation", "labor_participation_rate", "dec", ["wb/SL.TLF.CACT.ZS.BR"]),
 ]
 
@@ -191,6 +211,8 @@ def dateno_part(as_of) -> tuple[pd.DataFrame, pd.DataFrame]:
     dims = dims[dims.classif1.notna() | dims.classif2.notna()]
     dims.to_parquet(EXPORT / "observations_dims.parquet", index=False, compression="zstd")
     o = o[headline_mask(o).to_numpy()].drop_duplicates(["series_id", "date"])[["series_id", "date", "value"]]
+    # annual values for the current (incomplete) or future years are partial sums or projections
+    o = o[~(o.date >= f"{as_of.year}-01-01")]
     agg = o.sort_values("date").groupby("series_id").agg(
         first=("date", "first"), last=("date", "last"), n_obs=("value", "size"), last_value=("value", "last"))
     cols = {k: k for k in c.columns}
@@ -280,6 +302,36 @@ NATIVE_DATASET = {
 }
 
 
+# How a series rolls up to a year (v_annual): flows are summed, stocks / running totals take the
+# last value, everything else (rates, prices, indices, averages) is averaged.
+FLOW_NATIVE = re.compile(r"^(exports_.*|imports_.*|.*_exports(_kg)?|.*_imports|beef_exports_to_china|trade_balance|"
+                         r"current_account_usd|bop_goods_.*|caged_net_hires|deaths_.*|homicide_deaths|suicide_deaths|"
+                         r"traffic_deaths|infant_deaths|vehicle_.*|pix_transactions_.*|revenue_.*|ebit_brl|net_income_.*|"
+                         r"capex_brl|dividends_paid_brl|dividend_per_share_brl|generation_gwh)$")
+STOCK_NATIVE = re.compile(r"(balance$|_gdp$|_debt_brl|net_debt|gross_public_debt|net_public_debt|cash_brl|fx_reserves|"
+                          r"_12m_brl$|share_close|total_return|ibovespa_level|^population$)")
+
+
+def agg_rule(row) -> str:
+    sid = str(row.series_id).split("@")[0]
+    if row.freq == "annual":
+        return "mean"
+    if row.ns == "native":
+        if FLOW_NATIVE.match(sid):
+            return "sum"
+        return "last" if STOCK_NATIVE.search(sid) else "mean"
+    if re.match(r"wb/DP\.DOD\.", sid):            # quarterly public sector debt outstanding (PSD titles)
+        return "last"
+    if re.match(r"wb/NYGDPMKTP(SA|NS)?(CD|CN|KD|KN)_Q\.", sid):   # quarterly GDP, not annualised
+        return "sum"
+    t = (str(row.title) + " " + str(row.unit or "")).lower()   # GEM keeps "Price" in the unit
+    if re.search(r"\b(exports?|imports?)\b", t) and not re.search(r"price|index|share|%|unit value|cover|months", t):
+        return "sum"
+    if re.search(r"reserves|stock|outstanding|debt", t):
+        return "last"
+    return "mean"
+
+
 def add_dataset_and_rank(cat: pd.DataFrame) -> pd.DataFrame:
     """dataset name + an importance rank used to order search results and lists:
     official native series first, then World Development Indicators / ILO headline, then
@@ -299,6 +351,224 @@ def add_dataset_and_rank(cat: pd.DataFrame) -> pd.DataFrame:
     return cat
 
 
+
+# ---- duplicate removal -----------------------------------------------------------------
+# The same statistic often reaches the warehouse twice: a World Bank (GEM, WDI) or ILO copy
+# of an official Brazilian series, or the same indicator in two World Bank databases. Twins
+# are detected on VALUES, not titles, and only one copy is kept:
+#   official Brazilian (native) > World Development Indicators > ILO > other World Bank.
+DUP_RULES = {  # basis: (min overlapping points, min correlation, max |ratio-1| after 10^k scaling)
+    "annual": (8, 0.97, 0.05), "quarterly": (12, 0.97, 0.05), "monthly": (24, 0.97, 0.05),
+    "intl_annual": (10, 0.995, 0.01),
+}
+
+
+FLOW_UNITS = {"usd_fob", "usd_mn", "usd", "brl_mn", "brl_bn", "deaths", "units", "jobs", "million_tx",
+              "thousand_tonnes", "gwh", "persons"}
+QUALIFIERS = {"female", "male", "women", "men", "youth", "rural", "urban", "basic", "advanced", "intermediate",
+              "aged", "financial", "east", "asia", "pacific", "europe", "america", "china", "neet", "poorest",
+              "richest", "quintile", "constant", "underemployment", "combined", "services"}
+_STOP = {"total", "rate", "annual", "current", "brazil", "the", "and", "for", "with", "from",
+         "monthly", "quarterly", "index", "percent", "value", "data", "share", "per", "years", "year", "all",
+         "estimate", "modeled", "national", "series", "level", "balance", "amount", "number", "average"}
+_SYN = {"imports": "import", "exports": "export", "unemployment": "unemploy", "unemployed": "unemploy",
+        "inflation": "price", "prices": "price", "cpi": "price", "ipca": "price", "consumer": "price",
+        "reserves": "reserve", "renewables": "renewable", "homicides": "homicide", "goods": "goods",
+        "electricity": "electric", "electric": "electric", "deaths": "death", "gdp": "gdp", "bop": "bop"}
+
+
+def _tokens(t: str) -> set:
+    import re as _re
+    w = _re.findall(r"[a-z]{3,}", t.lower())
+    return {_SYN.get(x, x) for x in w if x not in _STOP}
+
+
+def _priority(cat: pd.DataFrame) -> pd.Series:
+    db = cat["database"].astype("string").fillna("") if "database" in cat else ""
+    return pd.Series(np.select([cat.ns == "native", db == "World Development Indicators", cat.ns == "ilostat"],
+                               [0, 1, 2], default=3), index=cat.index)
+
+
+def _matrix(obs, ids, rule, how="mean"):
+    """date-bucketed matrix (bucket x series) for the given ids."""
+    o = obs[obs.series_id.isin(ids)]
+    if o.empty:
+        return pd.DataFrame()
+    dt = pd.to_datetime(o.date)
+    key = {"annual": dt.dt.year, "quarterly": dt.dt.to_period("Q").astype(str), "monthly": dt.dt.to_period("M").astype(str)}[rule]
+    g = o.assign(k=key.to_numpy()).groupby(["k", "series_id"], observed=True).value
+    return (g.mean() if how == "mean" else g.sum()).unstack()
+
+
+def _match(A: pd.DataFrame, B: pd.DataFrame, n_min, r_min, tol, scale=True):
+    """Pairs (a, b, n, corr, ratio) where column a of A and column b of B agree."""
+    if A.empty or B.empty:
+        return []
+    idx = A.index.union(B.index)
+    A, B = A.reindex(idx), B.reindex(idx)
+    Bv = B.to_numpy(dtype=float)
+    out = []
+    for a in A.columns:
+        x = A[a].to_numpy(dtype=float)
+        m = ~np.isnan(Bv) & ~np.isnan(x)[:, None]
+        n = m.sum(0)
+        ok = n >= n_min
+        if not ok.any():
+            continue
+        X = np.where(m, x[:, None], np.nan); Y = np.where(m, Bv, np.nan)
+        with np.errstate(all="ignore"):
+            xm, ym = np.nanmean(X, 0), np.nanmean(Y, 0)
+            cov = np.nanmean((X - xm) * (Y - ym), 0)
+            corr = cov / (np.nanstd(X, 0) * np.nanstd(Y, 0))
+            ratio = np.nanmedian(Y / X, 0)
+            # changes must agree too: kills coincidental co-trending series
+            dX, dY = np.diff(X, axis=0), np.diff(Y, axis=0)
+            dxm, dym = np.nanmean(dX, 0), np.nanmean(dY, 0)
+            dcorr = np.nanmean((dX - dxm) * (dY - dym), 0) / (np.nanstd(dX, 0) * np.nanstd(dY, 0))
+        k = np.where(scale & np.isfinite(ratio) & (ratio > 0), np.round(np.log10(np.abs(ratio))), 0)
+        near = np.abs(ratio / 10.0 ** k - 1) <= tol
+        hit = ok & (corr >= r_min) & near & (dcorr >= min(0.9, r_min))
+        for j in np.flatnonzero(hit):
+            out.append((a, B.columns[j], int(n[j]), float(corr[j]), float(ratio[j])))
+    return out
+
+
+PROTECT: set = set()
+
+
+def remove_duplicates(cat: pd.DataFrame, obs: pd.DataFrame):
+    """Return (cat, obs, removed, pairs). Never removes a native series."""
+    pri = _priority(cat).set_axis(cat.series_id)
+    nat = cat[(cat.ns == "native") & (cat.entity_id == "BR")].series_id
+    intl = cat[cat.ns != "native"]
+    pairs = []
+    for rule in ("annual", "quarterly", "monthly"):
+        tgt = intl[intl.freq == rule].series_id
+        if tgt.empty:
+            continue
+        B = _matrix(obs, set(tgt), rule)
+        n_min, r_min, tol = DUP_RULES[rule]
+        unit = cat.set_index("series_id").unit.astype(str)
+        flows = {x for x in nat if unit.get(x, "") in FLOW_UNITS}
+        for how in (("mean", "sum") if rule != "monthly" else ("mean",)):
+            # flows (US$, R$, counts) aggregate by sum; rates, levels and indices by mean
+            ids = flows if how == "sum" else set(nat) - (flows if rule != "monthly" else set())
+            A = _matrix(obs, ids, rule, how)
+            pairs += [(b, a, n, c, r, f"{rule} {how}") for a, b, n, c, r in _match(A, B, n_min, r_min, tol)]
+    # international twins of World Development Indicators (same scale, stricter)
+    wdi = intl[(intl.freq == "annual") & (pri.reindex(intl.series_id).to_numpy() == 1)].series_id
+    rest = intl[(intl.freq == "annual") & (pri.reindex(intl.series_id).to_numpy() > 1)].series_id
+    if len(wdi) and len(rest):
+        n_min, r_min, tol = DUP_RULES["intl_annual"]
+        pairs += [(b, a, n, c, r, "annual vs WDI") for a, b, n, c, r in
+                  _match(_matrix(obs, set(wdi), "annual"), _matrix(obs, set(rest), "annual"), n_min, r_min, tol, scale=False)]
+    # same title among international series: identical values = duplicate regardless of database
+    norm = intl.assign(_t=intl.title.astype(str).str.lower().str.replace(r"[^a-z0-9]+", " ", regex=True).str.strip())
+    for t, g in norm.groupby("_t"):
+        if len(g) < 2:
+            continue
+        for rule in set(g.freq):
+            ids = list(g[g.freq == rule].series_id)
+            if len(ids) < 2 or rule not in ("annual", "quarterly", "monthly"):
+                continue
+            M = _matrix(obs, set(ids), rule)
+            pairs += [(b, a, n, c, r, f"{rule} same title") for a, b, n, c, r in _match(M, M, 5, 0.8, 0.35, scale=False) if a != b]
+    if not pairs:
+        return cat, obs, pd.DataFrame(columns=["series_id", "kept", "basis"]), pd.DataFrame()
+    P = pd.DataFrame(pairs, columns=["dup", "keep", "n", "corr", "ratio", "basis"])
+    P = P[P.dup != P.keep]
+    # titles must name the same thing: >= 2 meaningful shared words
+    title = cat.set_index("series_id").title.astype(str)
+    shared = [len(_tokens(title.get(a, "")) & _tokens(title.get(b, ""))) for a, b in zip(P.dup, P.keep)]
+    # >= 2 shared words between international copies; >= 1 when the kept copy is a native
+    # series (its short Brazilian title, e.g. "Unemployment rate (PNAD)", names the concept once)
+    need = np.where(P.keep.map(pri).to_numpy() == 0, 1, 2)
+    P = P[(np.array(shared) >= need) | P.basis.str.endswith("same title").to_numpy()]
+    # a subgroup / different-concept word on one side only means it is not the same statistic
+    qual = [bool((_tokens(title.get(a, "")) ^ _tokens(title.get(b, ""))) & QUALIFIERS) for a, b in zip(P.dup, P.keep)]
+    P = P[~np.array(qual, dtype=bool)]
+    # a percentage is never a scaled copy of a count: no 10^k allowance when the kept unit is a rate
+    unit = cat.set_index("series_id").unit.astype(str)
+    pct_keep = P.keep.map(unit).fillna("").str.startswith(("pct", "annual_pct"))
+    P = P[~(pct_keep & (np.abs(np.log10(P.ratio.abs().clip(lower=1e-12))) > 0.03))]
+    rk = cat.set_index("series_id")["rank"] if "rank" in cat else pd.Series(dtype=float)
+    kp, dp_, kr, dr = P.keep.map(pri), P.dup.map(pri), P.keep.map(rk).fillna(0), P.dup.map(rk).fillna(0)
+    better = (kp < dp_) | ((kp == dp_) & ((kr > dr) | ((kr == dr) & (P.keep < P.dup))))
+    P = P[better]                      # keep the higher-priority (then higher-ranked) copy
+    P = P.sort_values(["dup", "corr"], ascending=[True, False]).drop_duplicates("dup")
+    # do not delete a series that is itself kept as the twin of another
+    P = P[~P.dup.isin(set(P.keep))]
+    P = P[~P.dup.isin(PROTECT)]   # merged ILO families carry breakdown tables: never drop them
+    removed = P.rename(columns={"dup": "series_id", "keep": "kept"})
+    cat = cat[~cat.series_id.isin(set(removed.series_id))]
+    obs = obs[~obs.series_id.isin(set(removed.series_id))]
+    return cat, obs, removed, P
+
+
+
+# ---- ILO table families -----------------------------------------------------------------
+# ILO publishes one statistic as several tables that differ only in breakdowns, e.g.
+# EAR_EMTA_SEX_NB / _SEX_AGE_NB / _SEX_OCU_NB / _SEX_AGE_CUR_NB ("Average monthly earnings of
+# employees by sex / by sex and age / ..."). They are merged into one series: the table with
+# the fewest breakdowns represents the family (title without the "by ..." clause) and every
+# member's breakdowns stay selectable on the site ("Breakdown table"). Tokens that are not
+# breakdown dimensions (measure variants such as SKN/SKS, EC2) keep families apart.
+ILO_DIMS = {"SEX", "AGE", "ECO", "OCU", "EDU", "GEO", "CUR", "STE", "IFL", "INS", "EST", "CBR", "MTS", "HHT",
+            "DSB", "NOC", "LMS", "NAT", "MJH", "WKT", "IND", "HOW", "DUR", "CAT", "REL", "JOB", "TEN", "MIG", "HHS", "DIS"}
+
+
+def _ilo_family(series_id: str):
+    code = series_id.split("/", 1)[1].rsplit(".", 1)[0]
+    suf = ""
+    m = re.match(r"(.*?)(_[QM])$", code)
+    if m:
+        code, suf = m.groups()
+    t = code.split("_")
+    if len(t) < 3:
+        return None, []
+    mid, unit = t[2:-1], t[-1]
+    dims = [x for x in mid if x in ILO_DIMS]
+    other = [x for x in mid if x not in ILO_DIMS]
+    return "_".join(t[:2] + other + [unit]) + suf, dims
+
+
+def merge_ilo_families(cat: pd.DataFrame, obs: pd.DataFrame):
+    """Return (cat, obs, members) with one representative per ILO table family."""
+    ilo = cat[cat.ns == "ilostat"]
+    fam = {}
+    for sid in ilo.series_id:
+        key, dims = _ilo_family(sid)
+        if key:
+            fam.setdefault(key, []).append((sid, dims))
+    rows, drop = [], set()
+    title = cat.set_index("series_id").title.astype(str)
+    for key, mem in fam.items():
+        if len(mem) < 2:
+            continue
+        mem.sort(key=lambda x: (len(x[1]), "CUR" in x[1], x[0]))
+        rep = mem[0][0]
+        for sid, dims in mem:
+            t = title.get(sid, "")
+            label = ("by " + t.split(" by ", 1)[1]) if " by " in t else t
+            rows.append((rep, sid, label, len(dims)))
+            if sid != rep:
+                drop.add(sid)
+        base = title.get(rep, "")
+        unit = re.search(r"\(([^()]*)\)\s*$", base)
+        cat.loc[cat.series_id == rep, "title"] = base.split(" by ")[0].strip() + (f" ({unit.group(1)})" if unit and " by " in base else "")
+    members = pd.DataFrame(rows, columns=["series_id", "member_id", "breakdown", "n_dims"])
+    reps = members.series_id.unique()
+    ci = cat.set_index("series_id")
+    rt = ci.title
+    clash = ci.loc[ci.index.isin(reps), ["title", "freq"]]
+    clash = clash[clash.duplicated(keep=False)]   # same title AND frequency
+    for sid in clash.index:   # e.g. two "Employment (thousands)" families differing by measure variant
+        cat.loc[cat.series_id == sid, "title"] = title.get(sid, rt[sid])
+    cat = cat[~cat.series_id.isin(drop)]
+    obs = obs[~obs.series_id.isin(drop)]
+    return cat, obs, members
+
+
 def build(as_of: str | None = None, used_in: dict | None = None):
     as_of = pd.Timestamp(as_of or pd.Timestamp.today().normalize())
     silver = pd.read_parquet(SILVER)
@@ -314,6 +584,11 @@ def build(as_of: str | None = None, used_in: dict | None = None):
     co = (cat.entity_id != "BR") & ~cat.apply(lambda r: str(r.title).startswith(str(r.entity_name).split(" (")[0]), axis=1)
     cat.loc[co, "title"] = cat.loc[co, "entity_name"].str.split(" \\(").str[0] + ": " + cat.loc[co, "title"]
     cat["status"] = [_freshness(f, l, as_of) for f, l in zip(cat.freq, cat["last"])]
+    # DATASUS publishes with a long preliminary lag: incomplete recent months are dropped at
+    # ingest, so judge freshness against ~6 months, not a month
+    ds_m = cat.source.eq("DATASUS (SIM)")
+    cat.loc[ds_m, "status"] = [("fresh" if (as_of - pd.Timestamp(l)).days <= 200 else "stale") for l in cat.loc[ds_m, "last"]]
+    cat = cat[~cat.series_id.isin(["ibov_resource_energy_weight"])]   # one-point snapshot, not a series
     cat["used_in_tests"] = cat.series_id.map(used_in or {}).fillna("")
     rec = reconcile(cat, obs)
     cols = ["series_id", "title", "topic", "source", "ns", "entity_id", "entity_name", "metric_id",
@@ -323,14 +598,78 @@ def build(as_of: str | None = None, used_in: dict | None = None):
     # Curation: one-off survey items are not time series. Drop World Bank / ILO series with
     # fewer than MIN_OBS observations or questionnaire-coded titles; native series are never
     # dropped. Excluded rows are kept (with the reason) in excluded_series for transparency.
-    coded = cat.title.astype(str).str.match(r"^\d{2,3}_|.*_#[A-Z]")
+    coded = cat.title.astype(str).str.match(r"^\d{2,3}_|.*_#[A-Z]") | cat.title.astype(str).str.contains(
+        JUNK_TITLE, case=False, regex=True)
     sparse = (cat.ns != "native") & (cat.n_obs.fillna(0) < MIN_OBS)
-    drop = (cat.ns != "native") & (sparse | coded)
-    excluded = cat[drop].assign(reason=np.where(coded[drop], "questionnaire item", f"fewer than {MIN_OBS} observations"))
+    drop = (cat.ns != "native") & (sparse | coded | cat.series_id.str.match(CCDR_WGI.pattern))
+    excluded = cat[drop].assign(reason=np.where(coded[drop], "questionnaire item or statistical by-product (p-value, standard error, bound)", f"fewer than {MIN_OBS} observations"))
     excluded[["series_id", "title", "dataset", "n_obs", "reason"]].to_parquet(GOLD / "excluded_series.parquet", index=False)
     cat = cat[~drop]
     obs = obs[obs.series_id.isin(set(cat.series_id))]
-    cols += ["dataset", "rank"]
+    for k, v in TOPIC_OVERRIDE.items():
+        cat.loc[cat.series_id == k, "topic"] = v
+    cat.loc[cat.ns != "native", "unit"] = cat.loc[cat.ns != "native", "unit"].map(clean_unit)
+    gem = cat.dataset.astype(str).eq("Global Economic Monitor") if "dataset" in cat else cat.title.str.contains(",,", na=False)
+    gem = gem | cat.title.astype(str).str.contains(r"^[^(]*,[^ ]", regex=True) & (cat.ns == "wb")
+    def gem_split(t):   # "GDP,current US$,millions,seas. adj.," -> ("GDP (seas. adj.)", "current US$, millions")
+        parts = [x.strip() for x in str(t).split(",") if x.strip()]
+        if len(parts) < 2:
+            return str(t), None
+        head, rest = parts[0], parts[1:]
+        adj = [x for x in rest if "adj" in x.lower()]
+        unit = ", ".join(x for x in rest if "adj" not in x.lower())
+        return head + (f" ({adj[0]})" if adj else ""), unit or None
+    if gem.any():
+        tu = cat.loc[gem, "title"].map(gem_split)
+        cat.loc[gem, "title"] = [a for a, _ in tu]
+        cat.loc[gem & cat.unit.isna(), "unit"] = [u for (_, u), g in zip(tu, cat.loc[gem, "unit"].isna()) if g]
+    blank = (cat.ns != "native") & cat.unit.isna()
+    cat.loc[blank, "unit"] = cat.loc[blank, "title"].astype(str).str.findall(r"\(([^()]*)\)").map(
+        lambda xs: next((u for u in (clean_unit(x) for x in reversed(xs)) if u), None))
+    # Global Economic Monitor annual series duplicate their monthly versions and some aggregate
+    # badly (e.g. months of import cover as reserves / annual imports): keep the monthly one
+    ids = set(cat.series_id)
+    gem_annual = [x for x in ids if x.startswith("wb/") and x.endswith(".BRA") and x[:-4] + "_M.BRA" in ids]
+    cat, obs = cat[~cat.series_id.isin(gem_annual)], obs[~obs.series_id.isin(gem_annual)]
+    excluded = pd.concat([excluded, pd.DataFrame({"series_id": gem_annual, "title": gem_annual, "dataset": "", "n_obs": None,
+                          "reason": "annual copy of a monthly Global Economic Monitor series"})], ignore_index=True)
+    cat["title"] = cat.title.astype(str).str.replace(r"^\d{2,3}\.\s?", "", regex=True)          # "044.Share of ..." -> "Share of ..."
+    cat.loc[(cat.ns != "native") & cat.title.str.contains(r"\breserves\b", case=False), "topic"] = "External sector"
+    cat.loc[cat.topic.eq("Other") & cat.title.str.contains("DAC|aid|ODA|grant", case=False, na=False), "topic"] = "External sector"
+    nd = [k for k in NATIVE_DUPS if k in set(cat.series_id) and NATIVE_DUPS[k] in set(cat.series_id)]
+    cat, obs = cat[~cat.series_id.isin(nd)], obs[~obs.series_id.isin(nd)]
+    excluded = pd.concat([excluded, pd.DataFrame({"series_id": nd, "title": nd, "dataset": "", "n_obs": None,
+                          "reason": ["duplicate of " + NATIVE_DUPS[k] + " (same Brazilian statistic, two publishers)" for k in nd]})],
+                         ignore_index=True)
+    # ILO table families -> one series per statistic, breakdown tables kept as members
+    cat, obs, members = merge_ilo_families(cat, obs)
+    PROTECT.clear(); PROTECT.update(members.series_id.unique())
+    members.to_parquet(GOLD / "series_members.parquet", index=False)
+    merged = members[members.series_id != members.member_id]
+    excluded = pd.concat([excluded[["series_id", "title", "dataset", "n_obs", "reason"]],
+                          pd.DataFrame({"series_id": merged.member_id, "title": merged.breakdown, "dataset": "",
+                                        "n_obs": None, "reason": "merged into " + merged.series_id + " (breakdown table)"})],
+                         ignore_index=True)
+    excluded.to_parquet(GOLD / "excluded_series.parquet", index=False)
+    print(f"ILO families merged: {merged.series_id.nunique()} series absorb {len(merged)} breakdown tables")
+    # duplicates: keep one copy of each statistic (see remove_duplicates); log the rest
+    cat, obs, removed, pairs = remove_duplicates(cat, obs)
+    if len(removed):
+        t = cat.set_index("series_id").title
+        dup_rows = pd.DataFrame({"series_id": removed.series_id, "title": removed.series_id, "dataset": "",
+                                 "n_obs": removed.n, "reason": "duplicate of " + removed.kept + " (" + removed.basis
+                                 + ", ρ=" + removed["corr"].round(3).astype(str) + ")"})
+        excluded = pd.concat([excluded[["series_id", "title", "dataset", "n_obs", "reason"]], dup_rows], ignore_index=True)
+        excluded.to_parquet(GOLD / "excluded_series.parquet", index=False)
+        dup_rec = pd.DataFrame({"concept": "duplicate:" + removed.kept, "canonical": removed.kept, "alternate": removed.series_id,
+                                "overlap_years": removed.n, "first_year": None, "last_year": None, "mean_abs_diff": None,
+                                "median_rel_diff_pct": ((removed.ratio / 10.0 ** np.round(np.log10(removed.ratio.abs().clip(lower=1e-12))) - 1).abs() * 100).round(2),
+                                "correlation": removed["corr"],
+                                "annualization": removed.basis})
+        rec = pd.concat([rec, dup_rec], ignore_index=True)
+        print(f"duplicates removed: {len(removed)}")
+    cat["agg"] = [agg_rule(r) for r in cat.itertuples()]
+    cols += ["dataset", "rank", "agg"]
     cat = cat[cols].sort_values(["topic", "rank"], ascending=[True, False]).reset_index(drop=True)
     # World Bank metadata carries U+FFFD where a typographic apostrophe was mangled upstream
     for c in ("title", "description", "unit", "database"):

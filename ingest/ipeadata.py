@@ -2,6 +2,11 @@
 
 embi_brazil : EMBI+ Brazil country-risk spread (J.P. Morgan), daily, in bps.
 Series code JPM366_EMBI366. Used as the open substitute for sovereign CDS.
+              DISCONTINUED: IPEA marks it "EMBI + Risco-Brasil - INATIVA" (SERSTATUS=I,
+              "série interrompida por descontinuidade de fornecimento"), last obs
+              2024-07-30. Checked 2026-10-03: full Metadados catalog (3,606 series)
+              has no other EMBI / country-risk / CDS / JP Morgan series -> no IPEA
+              replacement exists; a current spread needs another source.
 brent_usd   : Brent spot (EIA via IPEA), EIA366_PBRENT366, daily US$/bbl since 2000.
               Verified 2026-10-03: last obs 2026-09-29; weekends/holidays are
               null in the feed and dropped.
@@ -17,8 +22,10 @@ and keep the most recent window in pandas. Writes canonical bronze to bronze/nat
 Run:  python3 ingest/ipeadata.py
 """
 from __future__ import annotations
-import json, ssl, time, pathlib, urllib.request
+import sys, json, ssl, time, pathlib, urllib.request
 import pandas as pd
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from _checks import check_gaps  # noqa: E402
 try:
     import certifi
     _CTX = ssl.create_default_context(cafile=certifi.where())
@@ -58,6 +65,7 @@ def fetch(code):
 
 def main():
     NATIVE.mkdir(parents=True, exist_ok=True)
+    gap_fail = []
     for mid, (code, name, theme, unit, freq, *opt) in SERIES.items():
         mult = opt[0] if opt else 1
         try:
@@ -76,6 +84,10 @@ def main():
         (NATIVE / f"{mid}.csv").write_text("\n".join(out) + "\n")
         print(f"[ok]   {mid:<14} {len(df)} obs ({df.date.min()}..{df.date.max()}) "
               f"latest={float(df.iloc[-1].VALVALOR):.2f} {unit}")
+        if not check_gaps(df, mid, freq, quiet=True):
+            gap_fail.append(mid)
+    if gap_fail:
+        sys.exit(f"[FAIL] internal gaps in: {gap_fail}")
 
 
 if __name__ == "__main__":

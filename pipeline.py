@@ -20,13 +20,16 @@ import os, pathlib, datetime as dt
 import duckdb, yaml, pandas as pd
 import hypotheses
 import catalog
+import related
+from portal import CURATED
 
 ROOT = pathlib.Path(__file__).resolve().parent
 BRONZE = ROOT / "warehouse" / "bronze"
 SILVER = ROOT / "warehouse" / "silver"
 GOLD = ROOT / "warehouse" / "gold"
 DQ = ROOT / "dq"
-DB = ROOT / "warehouse" / "brazil_macro.duckdb"
+# BRAZIL_MACRO_DB lets scripts/refresh.sh build into a staging file and swap on success
+DB = pathlib.Path(os.environ.get("BRAZIL_MACRO_DB", ROOT / "warehouse" / "brazil_macro.duckdb"))
 REGISTRY_CSV = ROOT / "registry" / "brazil_macro_data_allocation_metrics.csv"
 SOURCE_MAP = ROOT / "registry" / "source_map.yml"
 # As-of date for freshness checks. Injectable for reproducible rebuilds
@@ -196,6 +199,12 @@ def derive_native_series(silver) -> list:
     if ibov is not None and fx is not None:
         out.append(_emit(silver, "ibovespa_usd", "Ibovespa in USD", "market_repricing",
                          "index_usd", (ibov / fx).dropna(), freq="daily"))
+    # real_policy_rate = Selic target - Focus expected IPCA 12m (ex-ante), monthly means
+    sel, fip = _series(silver, "selic_target"), _series(silver, "focus_ipca_12m")
+    if sel is not None and fip is not None:
+        rr = (sel.resample("MS").mean() - fip.resample("MS").mean()).dropna()
+        out.append(_emit(silver, "real_policy_rate", "Real policy rate (Selic − expected IPCA 12m)",
+                         "macro_policy", "pct_pa", rr))
     # oil_production_yoy = YoY % change of monthly oil production
     oil = _series(silver, "oil_production")
     if oil is not None and len(oil) > 12:
@@ -574,6 +583,16 @@ def main():
         con.execute(f"CREATE OR REPLACE TABLE observations_dims AS SELECT * FROM read_parquet('{dims_p}')")
     for name in ("political_terms", "political_events"):  # registry/<name>.csv, public record
         con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM read_csv_auto('{ROOT / 'registry' / (name + '.csv')}')")
+    rel = related.build(cat, obs, rec, CURATED)  # related-datasets graph (related.py)
+    rel.to_parquet(GOLD / "related_series.parquet", index=False)
+    con.register("df_related", rel)
+    con.execute("CREATE OR REPLACE TABLE related_series AS SELECT * FROM df_related")
+    mem_p = GOLD / "series_members.parquet"
+    if mem_p.exists():  # merged ILO table families: representative series -> its breakdown tables
+        con.execute(f"CREATE OR REPLACE TABLE series_members AS SELECT * FROM read_parquet('{mem_p}')")
+    lab_p = ROOT / "registry" / "ilo_labels.csv"
+    if lab_p.exists():
+        con.execute(f"CREATE OR REPLACE TABLE dim_labels AS SELECT * FROM read_csv_auto('{lab_p}')")
     con.execute((ROOT / "semantic" / "views.sql").read_text())  # semantic layer (model.yml)
     con.execute("CREATE OR REPLACE VIEW latest AS SELECT c.series_id, c.title, c.topic, c.source, "
                 "c.unit, c.last AS date, c.last_value AS value, c.status FROM catalog c")

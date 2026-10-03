@@ -1,0 +1,623 @@
+code,dimension,label
+AGE_10YRBANDS_Y15-24,Age,15-24
+AGE_10YRBANDS_Y25-34,Age,25-34
+AGE_10YRBANDS_Y35-44,Age,35-44
+AGE_10YRBANDS_Y45-54,Age,45-54
+AGE_10YRBANDS_Y55-64,Age,55-64
+AGE_10YRBANDS_YGE15,Age,15+
+AGE_10YRBANDS_YGE65,Age,65+
+AGE_5YRBANDS_Y15-19,Age,15-19
+AGE_5YRBANDS_Y20-24,Age,20-24
+AGE_5YRBANDS_Y25-29,Age,25-29
+AGE_5YRBANDS_Y30-34,Age,30-34
+AGE_5YRBANDS_Y35-39,Age,35-39
+AGE_5YRBANDS_Y40-44,Age,40-44
+AGE_5YRBANDS_Y45-49,Age,45-49
+AGE_5YRBANDS_Y50-54,Age,50-54
+AGE_5YRBANDS_Y55-59,Age,55-59
+AGE_5YRBANDS_Y60-64,Age,60-64
+AGE_5YRBANDS_YGE15,Age,15+
+AGE_5YRBANDS_YGE65,Age,65+
+AGE_AGGREGATE_Y15-24,Age,15-24
+AGE_AGGREGATE_Y25-54,Age,25-54
+AGE_AGGREGATE_Y55-64,Age,55-64
+AGE_AGGREGATE_YGE15,Age,15+
+AGE_AGGREGATE_YGE65,Age,65+
+AGE_CLDVERSION_Y00-04,Age,'0-4
+AGE_CLDVERSION_Y00-14,Age,'0-14
+AGE_CLDVERSION_Y05-09,Age,'5-9
+AGE_CLDVERSION_Y10-14,Age,10-14
+AGE_CLDVERSION_Y15-17,Age,15-17
+AGE_YTHADULT_Y15-24,Age,15-24
+AGE_YTHADULT_Y15-64,Age,15-64
+AGE_YTHADULT_YGE15,Age,15+
+AGE_YTHADULT_YGE25,Age,25+
+AGE_YTHBANDS_Y15-19,Age,15-19
+AGE_YTHBANDS_Y15-24,Age,15-24
+AGE_YTHBANDS_Y15-29,Age,15-29
+AGE_YTHBANDS_Y20-24,Age,20-24
+AGE_YTHBANDS_Y25-29,Age,25-29
+CAR_CARE_CWCS,Car,Care workers employed in care sectors
+CAR_CARE_CWNCS,Car,Care workers employed in non-care sectors
+CAR_CARE_DW,Car,Domestic workers employed by households
+CAR_CARE_NCWCS,Car,Non-care workers employed in care sectors
+CAR_CARE_NCWNCS,Car,Not care workers nor in the care sector
+CAR_CARE_TOTAL,Car,Total
+CAT_UNE_FJS,Cat,Unemployed seeking their first job
+CAT_UNE_PRE,Cat,Unemployed previously employed
+CAT_UNE_TOTAL,Cat,Total
+CBR_BIR_FOREIGN,Place of birth,Foreign-born
+CBR_BIR_NATIVE,Place of birth,Native-born
+CBR_BIR_TOTAL,Place of birth,Total
+CBR_BIR_X,Place of birth,Status unknown
+CHL_AGET6_NO,Chl,No
+CHL_AGET6_TOTAL,Chl,Total
+CHL_AGET6_YES,Chl,Yes
+CHL_NUMLT6_0,Chl,0
+CHL_NUMLT6_1,Chl,1
+CHL_NUMLT6_2,Chl,2
+CHL_NUMLT6_GE3,Chl,3+
+CHL_NUMLT6_TOTAL,Chl,Total
+CLA_ECOCLA_CAT1,Cla,Extremely poor < USD 3 PPP
+CLA_ECOCLA_CAT2,Cla,Moderately poor >= USD 3 and < USD 4.2 PPP
+CLA_ECOCLA_CAT3,Cla,Near poor >= USD 4.2 and < USD 8.3 PPP
+CLA_ECOCLA_CAT34,Cla,>= USD 4.2 PPP
+CLA_ECOCLA_CAT4,Cla,>= USD 8.3 PPP
+CLA_ECOCLA_TOTAL,Cla,Total
+COI_COICOP_CP01,Coi,1. Food and non-alcoholic beverages
+COI_COICOP_CP01T12,Coi,General - Individual consumption expenditure of households
+COI_COICOP_CP02,Coi,"2. Alcoholic beverages, tobacco and narcotics"
+COI_COICOP_CP03,Coi,3. Clothing and footwear
+COI_COICOP_CP04,Coi,"4. Housing, water, electricity, gas and other fuels"
+COI_COICOP_CP05,Coi,"5. Furnishings, household equipment and routine household maintenance"
+COI_COICOP_CP06,Coi,6. Health
+COI_COICOP_CP07,Coi,7. Transport
+COI_COICOP_CP08,Coi,8. Communication
+COI_COICOP_CP09,Coi,9. Recreation and culture
+COI_COICOP_CP10,Coi,10. Education
+COI_COICOP_CP11,Coi,11. Restaurants and hotels
+COI_COICOP_CP12,Coi,12. Miscellaneous goods and services
+CUR_NATL_CURRENT,Currency,Current
+CUR_TYPE_LCU,Currency,Local currency
+CUR_TYPE_PPP,Currency,2021 PPP $
+CUR_TYPE_USD,Currency,U.S. dollars
+DCL_DECILE_01,Dcl,Decile 1
+DCL_DECILE_02,Dcl,Decile 2
+DCL_DECILE_03,Dcl,Decile 3
+DCL_DECILE_04,Dcl,Decile 4
+DCL_DECILE_05,Dcl,Decile 5
+DCL_DECILE_06,Dcl,Decile 6
+DCL_DECILE_07,Dcl,Decile 7
+DCL_DECILE_08,Dcl,Decile 8
+DCL_DECILE_09,Dcl,Decile 9
+DCL_DECILE_10,Dcl,Decile 10
+DSB_STATUS_DIS,Disability,Persons with disability
+DSB_STATUS_NODIS,Disability,Persons without disability
+DSB_STATUS_TOTAL,Disability,Total
+DSB_STATUS_X,Disability,Not elsewhere classified
+DUR_AGGREGATE_MGE12,Dur,12 months or more
+DUR_AGGREGATE_MGE6LT12,Dur,6 months to less than 12 months
+DUR_AGGREGATE_MLT6,Dur,Less than 6 months
+DUR_AGGREGATE_TOTAL,Dur,Total
+DUR_AGGREGATE_X,Dur,X - Not elsewhere classified
+DUR_DETAILS_MGE12LT24,Dur,12 months to less than 24 months
+DUR_DETAILS_MGE1LT3,Dur,1 month to less than 3 months
+DUR_DETAILS_MGE24,Dur,24 months or more
+DUR_DETAILS_MGE3LT6,Dur,3 months to less than 6 months
+DUR_DETAILS_MGE6LT12,Dur,6 months to less than 12 months
+DUR_DETAILS_MLT1,Dur,Less than 1 month
+DUR_DETAILS_TOTAL,Dur,Total
+DUR_DETAILS_X,Dur,X - Not elsewhere classified
+EC2_ISIC3_A01,Ec2,"01 - Agriculture, hunting and related service activities"
+EC2_ISIC3_A02,Ec2,"02 - Forestry, logging and related service activities"
+EC2_ISIC3_B05,Ec2,"05 - Fishing, aquaculture and service activities incidental to fishing"
+EC2_ISIC3_C10,Ec2,10 - Mining of coal and lignite; extraction of peat
+EC2_ISIC3_C11,Ec2,"11 - Extraction of crude petroleum and natural gas; service activities incidental to oil and gas extraction, excluding surveying"
+EC2_ISIC3_C13,Ec2,13 - Mining of metal ores
+EC2_ISIC3_C14,Ec2,14 - Other mining and quarrying
+EC2_ISIC3_D15,Ec2,15 - Manufacture of food products and beverages
+EC2_ISIC3_D16,Ec2,16 - Manufacture of tobacco products
+EC2_ISIC3_D17,Ec2,17 - Manufacture of textiles
+EC2_ISIC3_D18,Ec2,18 - Manufacture of wearing apparel; dressing and dyeing of fur
+EC2_ISIC3_D19,Ec2,"19 - Tanning and dressing of leather; manufacture of luggage, handbags, saddlery, harness and footwear"
+EC2_ISIC3_D20,Ec2,"20 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials"
+EC2_ISIC3_D21,Ec2,21 - Manufacture of paper and paper products
+EC2_ISIC3_D22,Ec2,"22 - Publishing, printing and reproduction of recorded media"
+EC2_ISIC3_D23,Ec2,"23 - Manufacture of coke, refined petroleum products and nuclear fuel"
+EC2_ISIC3_D24,Ec2,24 - Manufacture of chemicals and chemical products
+EC2_ISIC3_D25,Ec2,25 - Manufacture of rubber and plastics products
+EC2_ISIC3_D26,Ec2,26 - Manufacture of other non-metallic mineral products
+EC2_ISIC3_D27,Ec2,27 - Manufacture of basic metals
+EC2_ISIC3_D28,Ec2,"28 - Manufacture of fabricated metal products, except machinery and equipment"
+EC2_ISIC3_D29,Ec2,29 - Manufacture of machinery and equipment n.e.c.
+EC2_ISIC3_D30,Ec2,"30 - Manufacture of office, accounting and computing machinery"
+EC2_ISIC3_D31,Ec2,31 - Manufacture of electrical machinery and apparatus n.e.c.
+EC2_ISIC3_D32,Ec2,"32 - Manufacture of radio, television and communication equipment and apparatus"
+EC2_ISIC3_D33,Ec2,"33 - Manufacture of medical, precision and optical instruments, watches and clocks"
+EC2_ISIC3_D34,Ec2,"34 - Manufacture of motor vehicles, trailers and semi-trailers"
+EC2_ISIC3_D35,Ec2,35 - Manufacture of other transport equipment
+EC2_ISIC3_D36,Ec2,36 - Manufacture of furniture; manufacturing n.e.c.
+EC2_ISIC3_D37,Ec2,37 - Recycling
+EC2_ISIC3_E40,Ec2,"40 - Electricity, gas, steam and hot water supply"
+EC2_ISIC3_E41,Ec2,"41 - Collection, purification and distribution of water"
+EC2_ISIC3_F45,Ec2,45 - Construction
+EC2_ISIC3_G50,Ec2,"50 - Sale, maintenance and repair of motor vehicles and motorcycles; retail sale of automotive fuel"
+EC2_ISIC3_G52,Ec2,"52 - Retail trade, except of motor vehicles and motorcycles; repair of personal and household goods"
+EC2_ISIC3_H55,Ec2,55 - Hotels and restaurants
+EC2_ISIC3_I60,Ec2,60 - Land transport; transport via pipelines
+EC2_ISIC3_I61,Ec2,61 - Water transport
+EC2_ISIC3_I62,Ec2,62 - Air transport
+EC2_ISIC3_I63,Ec2,63 - Supporting and auxiliary transport activities; activities of travel agencies
+EC2_ISIC3_I64,Ec2,64 - Post and telecommunications
+EC2_ISIC3_J65,Ec2,"65 - Financial intermediation, except insurance and pension funding"
+EC2_ISIC3_J66,Ec2,"66 - Insurance and pension funding, except compulsory social security"
+EC2_ISIC3_J67,Ec2,67 - Activities auxiliary to financial intermediation
+EC2_ISIC3_K70,Ec2,70 - Real estate activities
+EC2_ISIC3_K71,Ec2,71 - Renting of machinery and equipment without operator and of personal and household goods
+EC2_ISIC3_K72,Ec2,72 - Computer and related activities
+EC2_ISIC3_K73,Ec2,73 - Research and development
+EC2_ISIC3_K74,Ec2,74 - Other business activities
+EC2_ISIC3_L75,Ec2,75 - Public administration and defence; compulsory social security
+EC2_ISIC3_M80,Ec2,80 - Education
+EC2_ISIC3_N85,Ec2,85 - Health and social work
+EC2_ISIC3_O90,Ec2,"90 - Sewage and refuse disposal, sanitation and similar activities"
+EC2_ISIC3_O91,Ec2,91 - Activities of membership organizations n.e.c.
+EC2_ISIC3_O92,Ec2,"92 - Recreational, cultural and sporting activities"
+EC2_ISIC3_O93,Ec2,93 - Other service activities
+EC2_ISIC3_P95,Ec2,95 - Activities of private households as employers of domestic staff
+EC2_ISIC3_Q99,Ec2,99 - Extraterritorial organizations and bodies
+EC2_ISIC3_TOTAL,Ec2,Total
+EC2_ISIC3_X,Ec2,X - Not elsewhere classified
+EC2_ISIC4_A01,Ec2,"01 - Crop and animal production, hunting and related service activities"
+EC2_ISIC4_A02,Ec2,02 - Forestry and logging
+EC2_ISIC4_A03,Ec2,03 - Fishing and aquaculture
+EC2_ISIC4_B05,Ec2,05 - Mining of coal and lignite
+EC2_ISIC4_B06,Ec2,06 - Extraction of crude petroleum and natural gas
+EC2_ISIC4_B07,Ec2,07 - Mining of metal ores
+EC2_ISIC4_B08,Ec2,08 - Other mining and quarrying
+EC2_ISIC4_B09,Ec2,09 - Mining support service activities
+EC2_ISIC4_C10,Ec2,10 - Manufacture of food products
+EC2_ISIC4_C11,Ec2,11 - Manufacture of beverages
+EC2_ISIC4_C12,Ec2,12 - Manufacture of tobacco products
+EC2_ISIC4_C13,Ec2,13 - Manufacture of textiles
+EC2_ISIC4_C14,Ec2,14 - Manufacture of wearing apparel
+EC2_ISIC4_C15,Ec2,15 - Manufacture of leather and related products
+EC2_ISIC4_C16,Ec2,"16 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials"
+EC2_ISIC4_C17,Ec2,17 - Manufacture of paper and paper products
+EC2_ISIC4_C18,Ec2,18 - Printing and reproduction of recorded media
+EC2_ISIC4_C19,Ec2,19 - Manufacture of coke and refined petroleum products
+EC2_ISIC4_C20,Ec2,20 - Manufacture of chemicals and chemical products
+EC2_ISIC4_C21,Ec2,"21 - Manufacture of pharmaceuticals, medicinal chemical and botanical products"
+EC2_ISIC4_C22,Ec2,22 - Manufacture of rubber and plastics products
+EC2_ISIC4_C23,Ec2,23 - Manufacture of other non-metallic mineral products
+EC2_ISIC4_C24,Ec2,24 - Manufacture of basic metals
+EC2_ISIC4_C25,Ec2,"25 - Manufacture of fabricated metal products, except machinery and equipment"
+EC2_ISIC4_C26,Ec2,"26 - Manufacture of computer, electronic and optical products"
+EC2_ISIC4_C27,Ec2,27 - Manufacture of electrical equipment
+EC2_ISIC4_C28,Ec2,28 - Manufacture of machinery and equipment n.e.c.
+EC2_ISIC4_C29,Ec2,"29 - Manufacture of motor vehicles, trailers and semi-trailers"
+EC2_ISIC4_C30,Ec2,30 - Manufacture of other transport equipment
+EC2_ISIC4_C31,Ec2,31 - Manufacture of furniture
+EC2_ISIC4_C32,Ec2,32 - Other manufacturing
+EC2_ISIC4_C33,Ec2,33 - Repair and installation of machinery and equipment
+EC2_ISIC4_D35,Ec2,"35 - Electricity, gas, steam and air conditioning supply"
+EC2_ISIC4_E36,Ec2,"36 - Water collection, treatment and supply"
+EC2_ISIC4_E37,Ec2,37 - Sewerage
+EC2_ISIC4_E38,Ec2,"38 - Waste collection, treatment and disposal activities; materials recovery"
+EC2_ISIC4_E39,Ec2,39 - Remediation activities and other waste management services
+EC2_ISIC4_F41,Ec2,41 - Construction of buildings
+EC2_ISIC4_F42,Ec2,42 - Civil engineering
+EC2_ISIC4_F43,Ec2,43 - Specialized construction activities
+EC2_ISIC4_G45,Ec2,45 - Wholesale and retail trade and repair of motor vehicles and motorcycles
+EC2_ISIC4_G46,Ec2,"46 - Wholesale trade, except of motor vehicles and motorcycles"
+EC2_ISIC4_G47,Ec2,"47 - Retail trade, except of motor vehicles and motorcycles"
+EC2_ISIC4_H49,Ec2,49 - Land transport and transport via pipelines
+EC2_ISIC4_H50,Ec2,50 - Water transport
+EC2_ISIC4_H51,Ec2,51 - Air transport
+EC2_ISIC4_H52,Ec2,52 - Warehousing and support activities for transportation
+EC2_ISIC4_H53,Ec2,53 - Postal and courier activities
+EC2_ISIC4_I55,Ec2,55 - Accommodation
+EC2_ISIC4_I56,Ec2,56 - Food and beverage service activities
+EC2_ISIC4_J58,Ec2,58 - Publishing activities
+EC2_ISIC4_J59,Ec2,"59 - Motion picture, video and television programme production, sound recording and music publishing activities"
+EC2_ISIC4_J60,Ec2,60 - Programming and broadcasting activities
+EC2_ISIC4_J61,Ec2,61 - Telecommunications
+EC2_ISIC4_J62,Ec2,"62 - Computer programming, consultancy and related activities"
+EC2_ISIC4_J63,Ec2,63 - Information service activities
+EC2_ISIC4_K64,Ec2,"64 - Financial service activities, except insurance and pension funding"
+EC2_ISIC4_K65,Ec2,"65 - Insurance, reinsurance and pension funding, except compulsory social security"
+EC2_ISIC4_K66,Ec2,66 - Activities auxiliary to financial service and insurance activities
+EC2_ISIC4_L68,Ec2,68 - Real estate activities
+EC2_ISIC4_M69,Ec2,69 - Legal and accounting activities
+EC2_ISIC4_M70,Ec2,70 - Activities of head offices; management consultancy activities
+EC2_ISIC4_M71,Ec2,71 - Architectural and engineering activities; technical testing and analysis
+EC2_ISIC4_M72,Ec2,72 - Scientific research and development
+EC2_ISIC4_M73,Ec2,73 - Advertising and market research
+EC2_ISIC4_M74,Ec2,"74 - Other professional, scientific and technical activities"
+EC2_ISIC4_M75,Ec2,75 - Veterinary activities
+EC2_ISIC4_N77,Ec2,77 - Rental and leasing activities
+EC2_ISIC4_N78,Ec2,78 - Employment activities
+EC2_ISIC4_N79,Ec2,"79 - Travel agency, tour operator, reservation service and related activities"
+EC2_ISIC4_N80,Ec2,80 - Security and investigation activities
+EC2_ISIC4_N81,Ec2,81 - Services to buildings and landscape activities
+EC2_ISIC4_N82,Ec2,"82 - Office administrative, office support and other business support activities"
+EC2_ISIC4_O84,Ec2,84 - Public administration and defence; compulsory social security
+EC2_ISIC4_P85,Ec2,85 - Education
+EC2_ISIC4_Q86,Ec2,86 - Human health activities
+EC2_ISIC4_Q87,Ec2,87 - Residential care activities
+EC2_ISIC4_Q88,Ec2,88 - Social work activities without accommodation
+EC2_ISIC4_R90,Ec2,"90 - Creative, arts and entertainment activities"
+EC2_ISIC4_R91,Ec2,"91 - Libraries, archives, museums and other cultural activities"
+EC2_ISIC4_R92,Ec2,92 - Gambling and betting activities
+EC2_ISIC4_R93,Ec2,93 - Sports activities and amusement and recreation activities
+EC2_ISIC4_S94,Ec2,94 - Activities of membership organizations
+EC2_ISIC4_S95,Ec2,95 - Repair of computers and personal and household goods
+EC2_ISIC4_S96,Ec2,96 - Other personal service activities
+EC2_ISIC4_T97,Ec2,97 - Activities of households as employers of domestic personnel
+EC2_ISIC4_TOTAL,Ec2,Total
+EC2_ISIC4_U99,Ec2,99 - Activities of extraterritorial organizations and bodies
+EC2_ISIC4_X,Ec2,X - Not elsewhere classified
+ECO_AGGREGATE_AGR,Economic activity,Agriculture
+ECO_AGGREGATE_CON,Economic activity,Construction
+ECO_AGGREGATE_MAN,Economic activity,Manufacturing
+ECO_AGGREGATE_MEL,Economic activity,"Mining and quarrying; Electricity, gas and water supply"
+ECO_AGGREGATE_MKT,Economic activity,"Trade, Transportation, Accommodation and Food, and Business and Administrative Services"
+ECO_AGGREGATE_PUB,Economic activity,"Public Administration, Community, Social and other Services and Activities"
+ECO_AGGREGATE_TOTAL,Economic activity,Total
+ECO_AGGREGATE_X,Economic activity,X - Not elsewhere classified
+ECO_ISIC2_2,Economic activity,2. Mining and Quarrying
+ECO_ISIC2_3,Economic activity,3. Manufacturing
+ECO_ISIC2_5,Economic activity,5. Construction
+ECO_ISIC2_7,Economic activity,"7. Transport, Storage and Communication"
+ECO_ISIC2_TOTAL,Economic activity,Total
+ECO_ISIC3_A,Economic activity,"A. Agriculture, hunting and forestry"
+ECO_ISIC3_B,Economic activity,B. Fishing
+ECO_ISIC3_C,Economic activity,C. Mining and quarrying
+ECO_ISIC3_D,Economic activity,D. Manufacturing
+ECO_ISIC3_E,Economic activity,"E. Electricity, gas and water supply"
+ECO_ISIC3_F,Economic activity,F. Construction
+ECO_ISIC3_G,Economic activity,"G. Wholesale and retail trade; repair of motor vehicles, motorcycles and personal and household goods"
+ECO_ISIC3_H,Economic activity,H. Hotels and restaurants
+ECO_ISIC3_I,Economic activity,"I. Transport, storage and communications"
+ECO_ISIC3_J,Economic activity,J. Financial intermediation
+ECO_ISIC3_K,Economic activity,"K. Real estate, renting and business activities"
+ECO_ISIC3_L,Economic activity,L. Public administration and defence; compulsory social security
+ECO_ISIC3_M,Economic activity,M. Education
+ECO_ISIC3_N,Economic activity,N. Health and social work
+ECO_ISIC3_O,Economic activity,"O. Other community, social and personal service activities"
+ECO_ISIC3_P,Economic activity,P. Activities of private households as employers and undifferentiated production activities of private households
+ECO_ISIC3_Q,Economic activity,Q. Extraterritorial organizations and bodies
+ECO_ISIC3_TOTAL,Economic activity,Total
+ECO_ISIC3_X,Economic activity,X - Not elsewhere classified
+ECO_ISIC4_A,Economic activity,A. Agriculture; forestry and fishing
+ECO_ISIC4_B,Economic activity,B. Mining and quarrying
+ECO_ISIC4_C,Economic activity,C. Manufacturing
+ECO_ISIC4_D,Economic activity,"D. Electricity; gas, steam and air conditioning supply"
+ECO_ISIC4_DE,Economic activity,"D,E. Utilities"
+ECO_ISIC4_E,Economic activity,"E. Water supply; sewerage, waste management and remediation activities"
+ECO_ISIC4_F,Economic activity,F. Construction
+ECO_ISIC4_G,Economic activity,G. Wholesale and retail trade; repair of motor vehicles and motorcycles
+ECO_ISIC4_H,Economic activity,H. Transportation and storage
+ECO_ISIC4_HJ,Economic activity,"H,J. Transport; storage and communication"
+ECO_ISIC4_I,Economic activity,I. Accommodation and food service activities
+ECO_ISIC4_J,Economic activity,J. Information and communication
+ECO_ISIC4_K,Economic activity,K. Financial and insurance activities
+ECO_ISIC4_L,Economic activity,L. Real estate activities
+ECO_ISIC4_LMN,Economic activity,"L,M,N. Real estate; business and administrative activities"
+ECO_ISIC4_M,Economic activity,"M. Professional, scientific and technical activities"
+ECO_ISIC4_N,Economic activity,N. Administrative and support service activities
+ECO_ISIC4_O,Economic activity,O. Public administration and defence; compulsory social security
+ECO_ISIC4_P,Economic activity,P. Education
+ECO_ISIC4_Q,Economic activity,Q. Human health and social work activities
+ECO_ISIC4_R,Economic activity,"R. Arts, entertainment and recreation"
+ECO_ISIC4_RSTU,Economic activity,"R,S,T,U. Other services"
+ECO_ISIC4_S,Economic activity,S. Other service activities
+ECO_ISIC4_T,Economic activity,T. Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use
+ECO_ISIC4_TOTAL,Economic activity,Total
+ECO_ISIC4_U,Economic activity,U. Activities of extraterritorial organizations and bodies
+ECO_ISIC4_X,Economic activity,X - Not elsewhere classified
+ECO_SECTOR_AGR,Economic activity,Agriculture
+ECO_SECTOR_IND,Economic activity,Industry
+ECO_SECTOR_NAG,Economic activity,Non-agriculture
+ECO_SECTOR_SER,Economic activity,Services
+ECO_SECTOR_TOTAL,Economic activity,Total
+ECO_SECTOR_X,Economic activity,X - Not elsewhere classified
+EDU_AGGREGATE_ADV,Education,Advanced
+EDU_AGGREGATE_BAS,Education,Basic
+EDU_AGGREGATE_INT,Education,Intermediate
+EDU_AGGREGATE_LTB,Education,Less than basic
+EDU_AGGREGATE_TOTAL,Education,Total
+EDU_AGGREGATE_X,Education,Level not stated
+EDU_ISCED97_0,Education,0. Pre-primary education
+EDU_ISCED97_1,Education,1. Primary education or first stage of basic education
+EDU_ISCED97_2,Education,2. Lower secondary or second stage of basic education
+EDU_ISCED97_3,Education,3. Upper secondary education
+EDU_ISCED97_4,Education,4. Post-secondary non-tertiary education
+EDU_ISCED97_5,Education,5. First stage of tertiary education (not leading directly to an advanced research qualification)
+EDU_ISCED97_5A,Education,5A. First stage of tertiary education - theoretically based
+EDU_ISCED97_6,Education,6. Second stage of tertiary education (leading to an advanced research qualification)
+EDU_ISCED97_TOTAL,Education,Total
+EDU_ISCED97_UNK,Education,Level not stated
+EDU_ISCED97_X,Education,X. No schooling
+EST_AGGREGATE_S1-4,Establishment,1-4 persons
+EST_AGGREGATE_S5-49,Establishment,5-49 persons
+EST_AGGREGATE_SGE50,Establishment,50+ persons
+EST_AGGREGATE_TOTAL,Establishment,Total
+EST_AGGREGATE_X,Establishment,X - Not elsewhere classified
+EST_DETAILS_S1,Establishment,1 person
+EST_DETAILS_S10-19,Establishment,10-19 persons
+EST_DETAILS_S2-4,Establishment,2-4 persons
+EST_DETAILS_S20-49,Establishment,20-49 persons
+EST_DETAILS_S5-9,Establishment,5-9 persons
+EST_DETAILS_SGE50,Establishment,50+ persons
+EST_DETAILS_TOTAL,Establishment,Total
+EST_DETAILS_X,Establishment,X - Not elsewhere classified
+GAI_GRADIENT_1,Gai,"1 - Low exposure, high task 
+variability"
+GAI_GRADIENT_2,Gai,"2 - Moderate exposure, high 
+task variability"
+GAI_GRADIENT_3,Gai,"3 - Significant exposure, high 
+task variability"
+GAI_GRADIENT_4,Gai,"4 - Highest exposure, low task 
+variability"
+GAI_GRADIENT_5,Gai,"Minimal exposure, 
+moderate task variability"
+GAI_GRADIENT_TOTAL,Gai,Total
+GAI_GRADIENT_X,Gai,X - Not elsewhere classified
+GEO_COV_NAT,Rural / urban,National
+GEO_COV_RUR,Rural / urban,Rural
+GEO_COV_URB,Rural / urban,Urban
+GOV_LVL_GG,Gov,General government
+GOV_LVL_GGCENTRAL,Gov,General government - Central
+GOV_LVL_GGLOCAL,Gov,General government - Local
+GOV_LVL_GGREGION,Gov,General government - Regional
+GOV_LVL_PRV,Gov,Private sector
+GOV_LVL_PSE,Gov,Total public sector
+GOV_LVL_PUBCORP,Gov,Public corporations
+GOV_LVL_TOTAL,Gov,Total employment
+GOV_LVL_X,Gov,X - Not elsewhere classified
+HHT_AGGREGATE_C,Household type,Couple without children
+HHT_AGGREGATE_E,Household type,Extended family
+HHT_AGGREGATE_K,Household type,Couple with children
+HHT_AGGREGATE_L,Household type,Lone parent
+HHT_AGGREGATE_O,Household type,One person
+HHT_AGGREGATE_TOTAL,Household type,Total
+HOW_BANDS_H00,How,No hours actually worked
+HOW_BANDS_H01-14,How,1-14
+HOW_BANDS_H15-29,How,15-29
+HOW_BANDS_H30-34,How,30-34
+HOW_BANDS_H35-39,How,35-39
+HOW_BANDS_H40-48,How,40-48
+HOW_BANDS_HGE49,How,49+
+HOW_BANDS_TOTAL,How,Total
+IFL_NATURE_FORMAL,Informality,Persons with formal main job
+IFL_NATURE_INFORMAL,Informality,Persons with informal main job
+IFL_NATURE_TOTAL,Informality,Total
+IND_SECTOR_AGRICULTURE,Industry,"Agriculture, plantations, other rural sectors"
+IND_SECTOR_CHEMICAL,Industry,Chemical industries
+IND_SECTOR_COMMERCE,Industry,Commerce
+IND_SECTOR_CONSTRUCTION,Industry,Construction
+IND_SECTOR_EDUCATION,Industry,Education and research
+IND_SECTOR_ENGINEERING,Industry,Mechanical and electrical engineering
+IND_SECTOR_EQUIPMENT,Industry,Transport equipment manufacturing
+IND_SECTOR_FINANCE,Industry,"Financial services, professional services"
+IND_SECTOR_FOOD,Industry,"Food, drink, tobacco"
+IND_SECTOR_HEALTH,Industry,Health services
+IND_SECTOR_MARITIME,Industry,"Shipping, ports, fisheries, inland waterways"
+IND_SECTOR_MEDIA,Industry,"Media, culture, graphical"
+IND_SECTOR_METAL,Industry,Basic metal production
+IND_SECTOR_MINING,Industry,"Mining ~ coal, other mining"
+IND_SECTOR_PETROL,Industry,"Oil and gas production, oil refining"
+IND_SECTOR_PUBLIC,Industry,Public service
+IND_SECTOR_TELECOM,Industry,Postal and telecommunications services
+IND_SECTOR_TEXTILE,Industry,"Textiles, clothing, leather, footwear"
+IND_SECTOR_TOTAL,Industry,Total
+IND_SECTOR_TOURISM,Industry,"Hotels, catering, tourism"
+IND_SECTOR_TRANSPORT,Industry,"Transport (including civil aviation, road transport and railways)"
+IND_SECTOR_UTILITIES,Industry,"Utilities ~ water, gas, electricity"
+IND_SECTOR_WOOD,Industry,"Forestry, wood, pulp and paper"
+IND_SECTOR_X,Industry,Not elsewhere classified
+INJ_INCAPACITY_PRM,Inj,Permanent incapacity
+INJ_INCAPACITY_TMP,Inj,Temporary incapacity
+INJ_INCAPACITY_TOTAL,Inj,Total
+INS_SECTOR_PRI,Institutional sector,Private
+INS_SECTOR_PUB,Institutional sector,Public
+INS_SECTOR_TOTAL,Institutional sector,Total
+JBC_CONTRACT_PERM,Jbc,Permanent
+JBC_CONTRACT_TEMP,Jbc,Temporary
+JBC_CONTRACT_TOTAL,Jbc,Total
+JBC_CONTRACT_X,Jbc,X - Not elsewhere classified
+JBF_FTE_FTE40,Jbf,Based on 40 hours per week
+JBF_FTE_FTE48,Jbf,Based on 48 hours per week
+JBT_TIME_FULL,Jbt,Full-time
+JBT_TIME_PART,Jbt,Part-time
+JBT_TIME_TOTAL,Jbt,Total
+LMS_STATUS_EIP,Labour market status,Outside the labour force
+LMS_STATUS_EMP,Labour market status,Employed
+LMS_STATUS_TOTAL,Labour market status,Total
+LMS_STATUS_UNE,Labour market status,Unemployed
+MIG_STATUS_TOTAL,Mig,Total
+MJH_AGGREGATE_MULTI,Multiple jobs,More than one job
+MJH_AGGREGATE_ONE,Multiple jobs,One job only
+MJH_AGGREGATE_TOTAL,Multiple jobs,Total
+MTS_AGGREGATE_1,Marital status,Single / Widowed / Divorced
+MTS_AGGREGATE_2,Marital status,Married / Union / Cohabiting
+MTS_AGGREGATE_TOTAL,Marital status,Total
+MTS_AGGREGATE_X,Marital status,Not elsewhere classified
+MTS_DETAILS_MRD,Marital status,Married
+MTS_DETAILS_SEP,Marital status,Divorced or legally separated
+MTS_DETAILS_SGLE,Marital status,Single
+MTS_DETAILS_TOTAL,Marital status,Total
+MTS_DETAILS_UNION,Marital status,Union / Cohabiting
+MTS_DETAILS_WID,Marital status,Widowed
+MTS_DETAILS_X,Marital status,Not elsewhere classified
+OC2_ISCO08_01,Oc2,01 - Commissioned armed forces officers
+OC2_ISCO08_02,Oc2,02 - Non-commissioned armed forces officers
+OC2_ISCO08_03,Oc2,"03 - Armed forces occupations, other ranks"
+OC2_ISCO08_11,Oc2,"11 - Chief executives, senior officials and legislators"
+OC2_ISCO08_12,Oc2,12 - Administrative and commercial managers
+OC2_ISCO08_13,Oc2,13 - Production and specialised services managers
+OC2_ISCO08_14,Oc2,"14 - Hospitality, retail and other services managers"
+OC2_ISCO08_21,Oc2,21 - Science and engineering professionals
+OC2_ISCO08_22,Oc2,22 - Health professionals
+OC2_ISCO08_23,Oc2,23 - Teaching professionals
+OC2_ISCO08_24,Oc2,24 - Business and administration professionals
+OC2_ISCO08_25,Oc2,25 - Information and communications technology professionals
+OC2_ISCO08_26,Oc2,"26 - Legal, social and cultural professionals"
+OC2_ISCO08_31,Oc2,31 - Science and engineering associate professionals
+OC2_ISCO08_32,Oc2,32 - Health associate professionals
+OC2_ISCO08_33,Oc2,33 - Business and administration associate professionals
+OC2_ISCO08_34,Oc2,"34 - Legal, social, cultural and related associate professionals"
+OC2_ISCO08_35,Oc2,35 - Information and communications technicians
+OC2_ISCO08_41,Oc2,41 - General and keyboard clerks
+OC2_ISCO08_42,Oc2,42 - Customer services clerks
+OC2_ISCO08_43,Oc2,43 - Numerical and material recording clerks
+OC2_ISCO08_44,Oc2,44 - Other clerical support workers
+OC2_ISCO08_51,Oc2,51 - Personal service workers
+OC2_ISCO08_52,Oc2,52 - Sales workers
+OC2_ISCO08_53,Oc2,53 - Personal care workers
+OC2_ISCO08_54,Oc2,54 - Protective services workers
+OC2_ISCO08_61,Oc2,61 - Market-oriented skilled agricultural workers
+OC2_ISCO08_62,Oc2,"62 - Market-oriented skilled forestry, fishery and hunting workers"
+OC2_ISCO08_71,Oc2,"71 - Building and related trades workers, excluding electricians"
+OC2_ISCO08_72,Oc2,"72 - Metal, machinery and related trades workers"
+OC2_ISCO08_73,Oc2,73 - Handicraft and printing workers
+OC2_ISCO08_74,Oc2,74 - Electrical and electronic trades workers
+OC2_ISCO08_75,Oc2,"75 - Food processing, wood working, garment and other craft and related trades workers"
+OC2_ISCO08_81,Oc2,81 - Stationary plant and machine operators
+OC2_ISCO08_82,Oc2,82 - Assemblers
+OC2_ISCO08_83,Oc2,83 - Drivers and mobile plant operators
+OC2_ISCO08_91,Oc2,91 - Cleaners and helpers
+OC2_ISCO08_92,Oc2,"92 - Agricultural, forestry and fishery labourers"
+OC2_ISCO08_93,Oc2,"93 - Labourers in mining, construction, manufacturing and transport"
+OC2_ISCO08_94,Oc2,94 - Food preparation assistants
+OC2_ISCO08_95,Oc2,95 - Street and related sales and service workers
+OC2_ISCO08_96,Oc2,96 - Refuse workers and other elementary workers
+OC2_ISCO08_TOTAL,Oc2,Total
+OC2_ISCO08_X,Oc2,X - Not elsewhere classified
+OC2_ISCO88_01,Oc2,01 - Armed forces
+OC2_ISCO88_11,Oc2,11 - Legislators and senior officials
+OC2_ISCO88_12,Oc2,12 - Corporate managers
+OC2_ISCO88_13,Oc2,13 - General managers
+OC2_ISCO88_21,Oc2,"21 - Physical, mathematical and engineering science professionals"
+OC2_ISCO88_22,Oc2,22 - Life science and health professionals
+OC2_ISCO88_23,Oc2,23 - Teaching professionals
+OC2_ISCO88_24,Oc2,24 - Other professionals
+OC2_ISCO88_31,Oc2,31 - Physical and engineering science associate professionals
+OC2_ISCO88_32,Oc2,32 - Life science and health associate professionals
+OC2_ISCO88_33,Oc2,33 - Teaching associate professionals
+OC2_ISCO88_34,Oc2,34 - Other associate professionals
+OC2_ISCO88_41,Oc2,41 - Office clerks
+OC2_ISCO88_42,Oc2,42 - Customer services clerks
+OC2_ISCO88_51,Oc2,51 - Personal and protective services workers
+OC2_ISCO88_52,Oc2,"52 - Models, salespersons and demonstrators"
+OC2_ISCO88_61,Oc2,61 - Market-oriented skilled agricultural and fishery workers
+OC2_ISCO88_62,Oc2,62 - Subsistence agricultural and fishery workers
+OC2_ISCO88_71,Oc2,71 - Extraction and building trades workers
+OC2_ISCO88_72,Oc2,"72 - Metal, machinery and related trades workers"
+OC2_ISCO88_73,Oc2,"73 - Precision, handicraft, printing and related trades workers"
+OC2_ISCO88_74,Oc2,74 - Other craft and related trades workers
+OC2_ISCO88_81,Oc2,81 - Stationary-plant and related operators
+OC2_ISCO88_82,Oc2,82 - Machine operators and assemblers
+OC2_ISCO88_83,Oc2,83 - Drivers and mobile-plant operators
+OC2_ISCO88_91,Oc2,91 - Sales and services elementary occupations
+OC2_ISCO88_93,Oc2,"93 - Labourers in mining, construction, manufacturing and transport"
+OC2_ISCO88_TOTAL,Oc2,Total
+OC2_ISCO88_X,Oc2,X - Not elsewhere classified
+OCU_ISCO08_0,Occupation,0. Armed forces occupations
+OCU_ISCO08_1,Occupation,1. Managers
+OCU_ISCO08_2,Occupation,2. Professionals
+OCU_ISCO08_3,Occupation,3. Technicians and associate professionals
+OCU_ISCO08_4,Occupation,4. Clerical support workers
+OCU_ISCO08_5,Occupation,5. Service and sales workers
+OCU_ISCO08_6,Occupation,"6. Skilled agricultural, forestry and fishery workers"
+OCU_ISCO08_7,Occupation,7. Craft and related trades workers
+OCU_ISCO08_8,Occupation,"8. Plant and machine operators, and assemblers"
+OCU_ISCO08_9,Occupation,9. Elementary occupations
+OCU_ISCO08_96,Occupation,"96. Elementary occupations and skilled agricultural, forestry and fishery workers"
+OCU_ISCO08_TOTAL,Occupation,Total
+OCU_ISCO08_X,Occupation,X. Not elsewhere classified
+OCU_ISCO68_0-1,Occupation,"0/1. Professional, technical and related workers"
+OCU_ISCO68_3,Occupation,3. Clerical and related workers
+OCU_ISCO68_4,Occupation,4. Sales workers
+OCU_ISCO68_5,Occupation,5. Service workers
+OCU_ISCO68_6,Occupation,"6. Agriculture, animal husbandry and forestry workers, fishermen and hunters"
+OCU_ISCO68_7-9,Occupation,"7,8,9. Production and related workers, transport equipment operators and labourers"
+OCU_ISCO68_TOTAL,Occupation,Total
+OCU_ISCO68_X,Occupation,X. Not elsewhere classified
+OCU_ISCO88_0,Occupation,0. Armed forces
+OCU_ISCO88_1,Occupation,"1. Legislators, senior officials and managers"
+OCU_ISCO88_2,Occupation,2. Professionals
+OCU_ISCO88_3,Occupation,3. Technicians and associate professionals
+OCU_ISCO88_4,Occupation,4. Clerks
+OCU_ISCO88_5,Occupation,5. Service workers and shop and market sales workers
+OCU_ISCO88_6,Occupation,6. Skilled agricultural and fishery workers
+OCU_ISCO88_7,Occupation,7. Craft and related trades workers
+OCU_ISCO88_8,Occupation,8. Plant and machine operators and assemblers
+OCU_ISCO88_9,Occupation,9. Elementary occupations
+OCU_ISCO88_TOTAL,Occupation,Total
+OCU_ISCO88_X,Occupation,X. Not elsewhere classified
+OCU_SKILL_L1,Occupation,Skill level 1 ~ low
+OCU_SKILL_L2,Occupation,Skill level 2 ~ medium
+OCU_SKILL_L3-4,Occupation,Skill levels 3 and 4 ~ high
+OCU_SKILL_TOTAL,Occupation,Total
+OCU_SKILL_X,Occupation,X - Not elsewhere classified
+SEX_F,Sex,Female
+SEX_M,Sex,Male
+SEX_T,Sex,Total
+SKN_NORM_MATCH,Skn,Matched
+SKN_NORM_OVER,Skn,Overeducated
+SKN_NORM_TOTAL,Skn,Total
+SKN_NORM_UNDER,Skn,Undereducated
+SKN_NORM_X,Skn,Not elsewhere classified
+SKS_STAT_MATCH,Sks,Matched
+SKS_STAT_OVER,Sks,Overeducated
+SKS_STAT_TOTAL,Sks,Total
+SKS_STAT_UNDER,Sks,Undereducated
+SKS_STAT_X,Sks,Not elsewhere classified
+SOC_CONTIG_CHILD,Soc,Children/households receiving child/family cash benefits
+SOC_CONTIG_DISAB,Soc,Persons with severe disabilities collecting disability social protection benefits
+SOC_CONTIG_INJ,Soc,Labour force covered in the event of work injury
+SOC_CONTIG_MAT,Soc,Mothers with newborns receiving maternity benefits
+SOC_CONTIG_PENSION,Soc,Persons above retirement age receiving a pension
+SOC_CONTIG_POOR,Soc,Poor persons covered by social protection systems
+SOC_CONTIG_TOTAL,Soc,Population covered by at least one social protection benefit
+SOC_CONTIG_UNE,Soc,Unemployed receiving unemployment benefits
+SOC_CONTIG_VULN,Soc,Vulnerable persons covered by social assistance
+STE_AGGREGATE_EES,Status in employment,Employees
+STE_AGGREGATE_SLF,Status in employment,Self-employed
+STE_AGGREGATE_TOTAL,Status in employment,Total
+STE_AGGREGATE_X,Status in employment,Workers not classifiable by status
+STE_ICSE93_1,Status in employment,1. Employees
+STE_ICSE93_2,Status in employment,2. Employers
+STE_ICSE93_3,Status in employment,3. Own-account workers
+STE_ICSE93_5,Status in employment,5. Contributing family workers
+STE_ICSE93_6,Status in employment,6. Workers not classifiable by status
+STE_ICSE93_TOTAL,Status in employment,Total
+STU_EDU_NO,Stu,Not attending
+STU_EDU_TOTAL,Stu,Total
+STU_EDU_X,Stu,Not elsewhere classified
+STU_EDU_YES,Stu,Attending
+TRA_FORMS_1,Tra,1 - School leavers in stable employment
+TRA_FORMS_2,Tra,"2 - School leavers in satisfactory temporary or self-employment, not wanting to change job"
+TRA_FORMS_3,Tra,3 - Students in the labour force
+TRA_FORMS_4,Tra,4 - Unemployed school leavers
+TRA_FORMS_5,Tra,"5 - School leavers in non-stable or non-satisfactory employment, wanting to change job"
+TRA_FORMS_6,Tra,6 - Outside the labour force - school leavers in potential labour force or aiming to look for work later
+TRA_FORMS_7,Tra,7 - Outside the labour force - students
+TRA_FORMS_8,Tra,8 - Outside the labour force - school leavers with no intention of looking for work
+TRA_FORMS_9,Tra,9 - Not elsewhere classified
+TRA_FORMS_TOTAL,Tra,Total
+TRS_STAGE_1,Trs,1 - Transited
+TRS_STAGE_2,Trs,2 - In transition
+TRS_STAGE_3,Trs,3 - Transition not yet started
+TRS_STAGE_4,Trs,X - Not elsewhere classified
+TRS_STAGE_TOTAL,Trs,Total
+VOL_TYPE_TOTAL,Vol,Total
+WBL_AGGREGATE_TOTAL,Wbl,Total
+WBL_AGGREGATE_X,Wbl,X - Not elsewhere classified
+WBL_DETAILS_TOTAL,Wbl,Total trainees
+WBL_DETAILS_X,Wbl,X - Not elsewhere classified
+WBL_PMT_NO,Wbl,Unpaid
+WBL_PMT_TOTAL,Wbl,Total trainees
+WBL_PMT_YES,Wbl,Paid

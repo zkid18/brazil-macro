@@ -54,7 +54,6 @@ code,.mono{font-family:var(--mono);font-size:.9em}
 .side-top{padding:.75rem .75rem .5rem;display:grid;gap:.6rem;border-bottom:1px solid var(--rule)}
 .brandrow{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
 .brand{font:700 1.05rem/1 var(--serif);color:var(--ink);text-decoration:none}
-.brand span{color:var(--accent)}
 .brand{display:inline-flex;align-items:center;gap:.5rem}
 .flag{width:1.55rem;height:1.1rem;flex:none;filter:drop-shadow(0 1px 1px rgb(0 0 0 / .18))}
 .iconbtn{background:none;border:1px solid transparent;border-radius:6px;width:2rem;height:2rem;display:grid;place-items:center;color:var(--ink-2)}
@@ -145,7 +144,11 @@ a.iconbtn{text-decoration:none}
 .kpi strong{display:block;font:600 1.45rem/1.15 var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .kpi .k{font-size:.75rem;color:var(--ink-2);margin-top:.3rem}
 .kpi .d{font-size:.6875rem;color:var(--ink-3);margin-top:.15rem}
-.up{color:var(--ok)} .down{color:var(--no)}
+.chg{color:var(--ink)}
+.minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:.75rem 1.25rem;min-height:0}
+.mini-t{font-size:.75rem;color:var(--ink-2);display:flex;gap:.4rem;align-items:center;margin:.2rem 0 0}
+.mini-t i{width:.6rem;height:.6rem;border-radius:2px;flex:none}
+.mini-t span{color:var(--ink-3)}
 
 .panel{border:1px solid var(--rule);border-radius:10px;background:var(--card);margin-top:1.25rem;overflow:hidden}
 .panel-h{padding:.85rem 1rem .25rem}
@@ -163,6 +166,23 @@ a.iconbtn{text-decoration:none}
 .stabs button{background:none;border:0;border-bottom:2px solid transparent;padding:.55rem 0;font-weight:600;font-size:.9rem;color:var(--ink-3);margin-bottom:-1px}
 .stabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
 .stabs + div > .panel:first-child{margin-top:1rem}
+.dimbar{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;padding:.25rem 1rem .5rem;font-size:.8rem}
+.dimbar label{display:inline-flex;align-items:center;gap:.4rem;color:var(--ink-3)}
+.dimbar select{background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.25rem .4rem;max-width:min(16rem,100%);font-size:.8rem}
+.dimbar label{flex-wrap:wrap;max-width:100%}
+.panel-h{flex-wrap:wrap}
+@media (max-width:30rem){.ranges{flex-wrap:wrap}.modes{flex-wrap:wrap;border-radius:10px}.crumbs{font-size:.72rem}}
+.dimbar .split select{border-color:var(--accent)}
+.related{display:grid;gap:1rem;padding:.25rem 1rem 1rem}
+.rgroup h4{font:600 .75rem/1.2 var(--sans);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);margin:.25rem 0 .4rem}
+.ritems{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:.5rem}
+.ritem{display:flex;gap:.5rem;align-items:flex-start;border:1px solid var(--rule);border-radius:8px;padding:.55rem .6rem;background:var(--paper)}
+.ritem a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.82rem;line-height:1.3}
+.ritem a:hover{text-decoration:underline}
+.ritem small{display:block;color:var(--ink-3);font-size:.7rem;margin-top:.15rem}
+.ritem .why{color:var(--accent-ink)}
+.ritem .rplus{margin-left:auto;flex:none;width:1.6rem;height:1.6rem;border-radius:6px;border:1px solid var(--rule);background:var(--card);color:var(--ink);font-weight:700}
+.ritem .rplus[aria-pressed="true"]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent-ink)}
 .ranges{display:flex;gap:.25rem}
 .ranges button{background:none;border:1px solid var(--rule);border-radius:6px;padding:.12rem .5rem;font-size:.75rem;font-weight:600;color:var(--ink-2)}
 .ranges button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
@@ -208,10 +228,12 @@ pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;paddin
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
+<script>try{if((localStorage.getItem("bmd-theme")||"\"dark\"")!=="\"light\"")document.documentElement.classList.add("theme-dark")}catch(e){document.documentElement.classList.add("theme-dark")}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Crect width='28' height='20' rx='3' fill='%23009c3b'/%3E%3Cpath d='M14 2.6 25.4 10 14 17.4 2.6 10Z' fill='%23ffdf00'/%3E%3Ccircle cx='14' cy='10' r='4.3' fill='%23002776'/%3E%3C/svg%3E">
 <div class="app" id="app">
   <aside class="side" id="side" aria-label="Data catalogue">
     <div class="side-top">
-      <div class="brandrow"><a class="brand" href="#c-overview"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="2.5" fill="#009c3b"/><path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.3" fill="#002776"/><path d="M9.9 9.1c2.7-.6 5.6-.3 8.1.9" stroke="#fff" stroke-width=".8" fill="none"/></svg>Brazil <span>Monitoring</span></a>
+      <div class="brandrow"><a class="brand" href="#c-overview"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="2.5" fill="#009c3b"/><path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.3" fill="#002776"/><path d="M9.9 9.1c2.7-.6 5.6-.3 8.1.9" stroke="#fff" stroke-width=".8" fill="none"/></svg>Brazil Monitoring</a>
         <button class="iconbtn" id="collapse" aria-label="Hide catalogue" title="Hide catalogue"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button></div>
       <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <input id="q" type="search" placeholder="Search datasets" autocomplete="off" aria-label="Search all datasets"></label>
@@ -223,7 +245,6 @@ pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;paddin
     </div>
     <nav class="tree" id="tree" aria-label="Datasets"></nav>
     <div class="side-foot">
-      <a href="#compare" data-foot="compare">Compare <span id="cmpCount"></span></a>
       <a href="#politics" data-foot="politics">Political calendar</a>
       <a href="#reconcile" data-foot="reconcile">Reconciliation</a>
       <a href="#missing" data-foot="missing">Not yet ingested</a>
@@ -270,11 +291,12 @@ const ICON_T = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="
 const ICON_C = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13l4-5 3 3 5-7"/></svg>';
 
 let CAT = [], BY = new Map(), META = {}, chunks = new Map(), CUR = [];
-let tab = store.get('tab', 'curated'), q = '', compare = store.get('compare', []);
+let tab = store.get('tab', 'curated'), q = '';
 const open = new Set(store.get('open', []));
 const redraws = new Set();
 
-async function getJSON(p){ const r = await fetch(p); if (!r.ok) throw new Error(p + ': HTTP ' + r.status); return r.json(); }
+const BUILD = '{{BUILD}}';   // set by portal.py; busts caches across rebuilds
+async function getJSON(p){ const r = await fetch(p + (p.includes('?') ? '&' : '?') + 'v=' + BUILD); if (!r.ok) throw new Error(p + ': HTTP ' + r.status); return r.json(); }
 async function series(id){
   const s = BY.get(id); if (!s || s.ch < 0) return null;
   if (!chunks.has(s.ch)) chunks.set(s.ch, getJSON('data/obs-' + String(s.ch).padStart(3, '0') + '.json'));
@@ -283,6 +305,34 @@ async function series(id){
 
 // ------------------------------------------------------------------ sidebar tree
 function groupBy(arr, f){ const m = new Map(); arr.forEach(s => { const k = f(s) || 'Other'; if (!m.has(k)) m.set(k, []); m.get(k).push(s); }); return m; }
+// ---- search: whole-word prefixes, PT/EN + concept synonyms, Brazilian sources first
+const SYN = {inflation: ['inflation', 'ipca', 'cpi', 'consumer price'], inflacao: ['inflation', 'ipca'], 'inflação': ['inflation', 'ipca'],
+  desemprego: ['unemployment'], women: ['female', 'women'], woman: ['female', 'women'], men: ['male', 'men'], mulheres: ['female'],
+  deficit: ['deficit', 'nfsp', 'primary balance', 'primary result'], 'déficit': ['deficit', 'nfsp'], activity: ['ibc-br', 'activity'],
+  atividade: ['ibc-br', 'activity'], core: ['core', 'diffusion', 'services'], debt: ['debt'], emprego: ['employment', 'caged'], salario: ['earnings', 'wage', 'income'], 'salário': ['earnings', 'wage', 'income'],
+  juros: ['selic', 'interest'], selic: ['selic'], cambio: ['exchange rate', 'brl'], 'câmbio': ['exchange rate', 'brl'], dolar: ['brl', 'exchange rate'],
+  divida: ['debt'], 'dívida': ['debt'], exportacoes: ['exports'], 'exportações': ['exports'], importacoes: ['imports'], petroleo: ['oil'], 'petróleo': ['oil'],
+  minerio: ['iron ore'], 'minério': ['iron ore'], energia: ['energy', 'power', 'electricity'], reservoir: ['stored energy', 'ear', 'reservoir', 'hydro'], reservatorio: ['stored energy', 'ear'], 'reservatório': ['stored energy', 'ear'], drought: ['stored energy', 'hydro stress', 'ear'], homicidio: ['homicide'], 'homicídio': ['homicide'],
+  pib: ['gdp', 'ibc-br'], gdp: ['gdp', 'ibc-br'], fx: ['exchange rate', 'brl'], rates: ['selic', 'interest rate', 'yield'], wages: ['earnings', 'wage']};
+function searchCat(query, limit){
+  const STOPQ = new Set(['to', 'of', 'the', 'and', 'de', 'da', 'do', 'in', 'por', 'e', 'a']);
+  const terms = query.toLowerCase().split(/\s+/).filter(t => t && !STOPQ.has(t)); if (!terms.length) return [];
+  const alts = terms.map(t => (SYN[t] || [t]).map(a => new RegExp('(^|[^a-z0-9])' + a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')));
+  const out = [];
+  const score = (s, needAll) => {
+    const hay = (s.t + ' ' + s.id + ' ' + s.tp + ' ' + s.dset + ' ' + s.ent + ' ' + s.m + ' ' + s.ds);
+    let sc = 0, hit = 0;
+    for (const group of alts) { let best = 0;
+      for (const re of group) { if (re.test(s.t)) best = Math.max(best, 4); else if (re.test(hay)) best = Math.max(best, 1); }
+      if (!best && needAll) return null; if (best) hit++; sc += best; }
+    if (!hit) return null;
+    return sc * hit * (1 + s.rk) * (s.ns === 'native' ? 1.6 : 1) - s.t.length / 300;
+  };
+  for (const s of CAT) { const v = score(s, true); if (v != null) out.push([s, v]); }
+  if (!out.length && alts.length > 1)   // nothing matches every word: rank by how many words match
+    for (const s of CAT) { const v = score(s, false); if (v != null) out.push([s, v]); }
+  return out.sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
 function leaf(s, depth){
   const cur = location.hash === '#' + toHash(s.id);
   return `<li class="leaf"><a class="node two" href="#${toHash(s.id)}" aria-current="${cur}" title="${esc(s.t)}&#10;${esc(s.dset)}">${ICON_T}<span class="lbl">${esc(s.t)}<small>${esc(s.dset)} · ${esc(s.f)} · ${esc(s.a.slice(0, 4))}–${esc(s.b.slice(0, 4))}</small></span>` +
@@ -296,13 +346,8 @@ function branch(key, label, items, sub){
 function renderTree(){
   const el = $('#tree');
   if (q) {
-    const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const hits = CAT.map(s => { const hay = (s.t + ' ' + s.id + ' ' + s.tp + ' ' + s.src + ' ' + s.dset + ' ' + s.ent + ' ' + s.m + ' ' + s.ds).toLowerCase();
-      if (!terms.every(t => hay.includes(t))) return null;
-      const tl = s.t.toLowerCase(); const txt = terms.reduce((a, t) => a + (tl.startsWith(t) ? 4 : tl.includes(t) ? 3 : 1), 0);
-      return [s, txt * (1 + s.rk) - tl.length / 200]; })
-      .filter(Boolean).sort((a, b) => b[1] - a[1]);
-    el.innerHTML = `<p class="note" style="padding:.4rem .5rem">${hits.length.toLocaleString('en')} datasets match “${esc(q)}”</p><ul>` +
+    const hits = searchCat(q, 300);
+    el.innerHTML = `<p class="note" style="padding:.4rem .5rem">${hits.length >= 300 ? '300+' : hits.length.toLocaleString('en')} datasets match “${esc(q)}”</p><ul>` +
       hits.slice(0, 300).map(([s]) => leaf(s)).join('') + '</ul>';
     return;
   }
@@ -312,14 +357,15 @@ function renderTree(){
     return;
   }
   const top = groupBy(CAT, s => tab === 'sources' ? s.src : s.tp);
-  const keys = [...top.keys()].sort((a, b) => top.get(b).length - top.get(a).length);
+  const keys = [...top.keys()].sort((a, b) => (tab === 'sources' ? (top.get(b).some(x => x.ns === 'native') - top.get(a).some(x => x.ns === 'native')) : 0) || top.get(b).length - top.get(a).length);
   el.innerHTML = '<ul>' + keys.map(k => {
     const items = top.get(k);
     const subKey = s => tab === 'sources' ? s.dset : (s.ent !== 'Brazil' ? s.ent : s.dset);
     const subs = groupBy(items, subKey);
     const useSub = subs.size > 1 && items.length > 12;
     items.sort((a, b) => b.rk - a.rk);
-    return branch(tab + ':' + k, k, items, useSub ? () => [...subs.keys()].sort((a, b) => subs.get(b).length - subs.get(a).length)
+    const nat = g => subs.get(g).some(x => x.ns === 'native') ? 1 : 0;
+    return branch(tab + ':' + k, k, items, useSub ? () => [...subs.keys()].sort((a, b) => nat(b) - nat(a) || subs.get(b).length - subs.get(a).length)
       .map(sk => branch(tab + ':' + k + ':' + sk, sk, subs.get(sk).sort((a, b) => b.rk - a.rk))).join('') : null);
   }).join('') + '</ul>';
 }
@@ -363,23 +409,57 @@ function overlay(L, traces, xs){
 function polLegend(){ return politics ? `<p class="pol-legend"><span><i style="background:${css('--left')}"></i>Left president</span><span><i style="background:${css('--centre')}"></i>Centre</span>` +
   `<span><i style="background:${css('--right')}"></i>Right / centre-right</span><span>◆ event (hover) · <span style="color:${css('--accent')}">◆</span> election</span></p>` : ''; }
 function rebase(d, t0){ const k = d.x.findIndex(v => v >= t0); const b = k < 0 ? null : d.y[k]; return {x: d.x, y: d.y.map(v => v == null || !b ? null : v / b * 100)}; }
+const famU = u => /^%|percent|percentage points|% of|% a year|% year/i.test(u || '') ? '%' : (u || '');
+// one pipeline for every chart: unit-aware scale mode, time window, y fitted to what is visible
+function buildChart(items, opt){
+  // items: [{name, x, y, u, color}]; opt: {mode: auto|level|index|yoy, range: All|5Y|10Y|20Y|1995, h}
+  const units = new Set(items.map((t, i) => famU(t.u) || '?' + i));   // a blank unit matches nothing
+  let mode = opt.mode === 'auto' ? (units.size > 1 ? 'index' : 'level') : opt.mode, note = '';
+  if (mode === 'level' && units.size > 1) { mode = 'index'; note = 'Level needs one unit; these series differ, so they are shown as an index.'; }
+  else if (opt.mode === 'auto' && mode === 'index') note = 'Units differ, so series are rebased to 100.';
+  const lastD = items.map(t => t.x[t.x.length - 1]).filter(Boolean).sort().pop() || '';
+  let from = null;
+  if (opt.range === '1995') from = '1995-01-01';
+  else if (opt.range && opt.range !== 'All' && lastD) { const f = new Date(lastD); f.setFullYear(f.getFullYear() - {'5Y': 5, '10Y': 10, '20Y': 20}[opt.range]); from = f.toISOString().slice(0, 10); }
+  const t0 = [from || '', ...items.map(t => t.x[0])].sort().pop();
+  const allPct = [...units].every(u => u === '%');
+  const tr = items.map(t => { let w = {x: t.x, y: t.y};
+    if (mode === 'index') w = rebase(t, t0);
+    if (mode === 'yoy') { const pts = famU(t.u) === '%';
+      w = {x: t.x, y: t.x.map((x, j) => { const p = new Date(x); p.setFullYear(p.getFullYear() - 1); const iso = p.toISOString().slice(0, 10);
+        for (let k = j; k >= 0; k--) if (t.x[k] <= iso) return t.y[k] == null || t.y[j] == null ? null : pts ? t.y[j] - t.y[k] : t.y[k] ? (t.y[j] / t.y[k] - 1) * 100 : null; return null; })}; }
+    return {type: 'scatter', mode: w.x.length < 80 ? 'lines+markers' : 'lines', x: w.x, y: w.y, name: t.name,
+      line: {color: t.color, width: 2}, marker: {size: 4, color: t.color}, hovertemplate: '%{y:,.4~g}<extra>' + esc(t.name).slice(0, 40) + '</extra>'}; });
+  const ytitle = mode === 'index' ? `Index, ${t0.slice(0, 7)} = 100` : mode === 'yoy' ? (allPct ? 'Change on a year earlier, pts' : [...units].includes('%') ? 'Change on a year earlier (% or pts for rates)' : '% change on a year earlier')
+    : (units.size === 1 ? (items.length > 1 && [...units][0] === '%' ? '%' : items[0]?.u || '') : '');
+  const L = layout(opt.h || 360, ytitle); L.hovermode = 'x unified';
+  if (from && lastD) { L.xaxis.range = [from, lastD];
+    const yv = tr.flatMap(t => t.x.map((x, i) => x >= from ? t.y[i] : null)).filter(v => v != null && isFinite(v));
+    if (yv.length) { const lo = Math.min(...yv), hi = Math.max(...yv), pad = (hi - lo) * .06 || Math.abs(hi) * .05 || 1; L.yaxis.range = [lo - pad, hi + pad]; } }
+  return {tr, L, note, mode};
+}
 async function multiChart(el, ids, h){
   const data = await Promise.all(ids.map(series));
-  const fam = u => /^%|percentage points|% of/.test(u || '') ? '%' : u;
-  const units = new Set(ids.map(id => fam(BY.get(id).u)));
-  const rebased = units.size > 1;
-  const t0 = rebased ? data.filter(Boolean).map(d => d.x[0]).sort().pop() : null;
+  const units = new Set(ids.map((id, i) => famU(BY.get(id).u) || '?' + i));
+  const split = units.size > 1;   // mixed units on a curated chart -> small multiples, one axis each
   const draw = () => {
     if (!window.Plotly || !el.isConnected) return;
-    const tr = data.map((d, i) => { if (!d) return null; const z = rebased ? rebase(d, t0) : d;
-      return {type: 'scatter', mode: z.x.length < 60 ? 'lines+markers' : 'lines', x: z.x, y: z.y, name: BY.get(ids[i]).t,
-        line: {color: css(SLOTS[i % SLOTS.length]), width: 1.9}, marker: {size: 4}, hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(ids[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
-    const L = layout(h, rebased ? `Index, ${t0.slice(0, 7)} = 100` : ([...units][0] === '%' && ids.length > 1 ? '%' : BY.get(ids[0]).u));
-    Plotly.react(el, overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
+    if (split) {
+      el.classList.add('minis'); el.innerHTML = ids.map((id, i) => `<div class="mini"><p class="mini-t"><i style="background:${css(SLOTS[i % SLOTS.length])}"></i>${esc(BY.get(id).t)} <span>${esc(BY.get(id).u)}</span></p><div id="${el.id}_m${i}"></div></div>`).join('');
+      ids.forEach((id, i) => { const d = data[i]; if (!d) return;
+        const {tr, L} = buildChart([{name: BY.get(id).t, x: d.x, y: d.y, u: BY.get(id).u, color: css(SLOTS[i % SLOTS.length])}], {mode: 'level', range: 'All', h: 210});
+        L.margin = {l: 48, r: 8, t: 4, b: 26};
+        const xs = data.filter(Boolean); L.xaxis.range = [xs.map(z => z.x[0]).sort()[0], xs.map(z => z.x[z.x.length - 1]).sort().pop()];   // one timeline
+        Plotly.react(el.id + '_m' + i, overlay(L, tr, [d.x[0], d.x[d.x.length - 1]]), L, {displayModeBar: false, responsive: true}); });
+    } else {
+      const items = ids.map((id, i) => data[i] && {name: BY.get(id).t, x: data[i].x, y: data[i].y, u: BY.get(id).u, color: css(SLOTS[i % SLOTS.length])}).filter(Boolean);
+      const {tr, L} = buildChart(items, {mode: 'level', range: 'All', h});
+      Plotly.react(el, overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
+    }
     const lg = el.parentElement.querySelector('.pol-slot'); if (lg) lg.innerHTML = polLegend();
   };
   draw(); redraws.add(draw);
-  return rebased;
+  return split;
 }
 function onTheme(){ redraws.forEach(f => f()); }
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', onTheme);
@@ -392,9 +472,11 @@ async function kpiHTML(id){
   const s = BY.get(id); const d = await series(id); let ch = '';
   if (d && d.x.length > 2) { const last = new Date(d.x[d.x.length - 1]); last.setFullYear(last.getFullYear() - 1); const iso = last.toISOString().slice(0, 10);
     let j = -1; for (let k = d.x.length - 1; k >= 0; k--) if (d.x[k] <= iso) { j = k; break; }
-    if (j >= 0 && d.y[j] != null && s.lv != null) { const pctU = /%|percentage/.test(s.u + ' ' + s.t); const delta = pctU ? s.lv - d.y[j] : (s.lv / d.y[j] - 1) * 100;
-      ch = `<span class="${delta >= 0 ? 'up' : 'down'}">${delta >= 0 ? '+' : ''}${delta.toFixed(pctU ? 2 : 1)}${pctU ? ' pts' : '%'}</span> vs a year earlier`; } }
-  return `<a class="kpi" href="#${toHash(id)}"><strong>${fmt(s.lv)}</strong><p class="k">${esc(s.t)}</p><p class="d">${esc(s.u)} · ${esc(s.b)}</p>${ch ? `<p class="d">${ch}</p>` : ''}</a>`;
+    if (j >= 0 && d.y[j] != null && s.lv != null) { const pctU = famU(s.u) === '%' || /%/.test(s.t); const delta = pctU ? s.lv - d.y[j] : (s.lv / d.y[j] - 1) * 100;
+      ch = `<span class="chg">${delta >= 0 ? '+' : ''}${delta.toFixed(pctU ? 2 : 1)}${pctU ? ' pts' : '%'}</span> vs a year earlier`; } }
+  const prelim = /^DATASUS/.test(s.src);   // latest months are preliminary: no year-on-year comparison
+  if (prelim) ch = 'latest months preliminary';
+  return `<a class="kpi" href="#${toHash(id)}"><strong>${fmt(s.lv)}</strong><p class="k">${esc(s.t)}</p><p class="d">${esc(s.u)} · ${esc(s.f === 'annual' ? s.b.slice(0, 4) : s.b)}${s.st === 'stale' ? ' · <span class="pill stale">stale</span>' : ''}</p>${ch ? `<p class="d">${ch}</p>` : ''}</a>`;
 }
 async function showCurated(id){
   const c = CUR.find(x => x.id === id) || CUR[0];
@@ -408,17 +490,80 @@ async function showCurated(id){
       <div class="chart" id="cc${i}" role="img" aria-label="${esc(ch.t)}"></div><div class="pol-slot"></div><p class="note" id="cn${i}"></p></div>
       <div class="panel-f">${chips(ch.s)}</div></div>`).join('');
   $('#kpis').innerHTML = (await Promise.all(c.kpis.map(kpiHTML))).join('');
-  c.charts.forEach(async (ch, i) => { const r = await multiChart($('#cc' + i), ch.s, 320); if (r) $('#cn' + i).textContent = 'Units differ, so every series is rebased to 100 at the latest common start.'; });
+  c.charts.forEach(async (ch, i) => { const r = await multiChart($('#cc' + i), ch.s, 320); if (r) $('#cn' + i).textContent = 'Different units, so each series has its own panel.'; });
 }
-let stab = 'chart', plotIds = [], plotDraw = null, plotMode = 'auto';
+let stab = 'chart', plotIds = [], plotDraw = null, plotMode = 'auto', dimState = null;
+const DIM_NAME = {Ec2: 'Economic activity (detailed)', Oc2: 'Occupation (detailed)', How: 'Hours worked', Jbt: 'Job type', Skn: 'Skill',
+  Wbl: 'Working-age band', Chl: 'Children in household', Ins: 'Institutional sector', Ste: 'Status in employment', Ifl: 'Informality'};
+const SCHEME_NAME = {ISCO08: 'ISCO-08', ISCO88: 'ISCO-88', ISIC4: 'ISIC Rev. 4', ISIC3: 'ISIC Rev. 3', SKILL: 'skill level', SECTOR: 'broad sector',
+  AGGREGATE: 'aggregate', YTHADULT: 'youth / adult', '10YRBANDS': '10-year bands', '5YRBANDS': '5-year bands', YTHBANDS: 'youth bands', NORM: 'standard'};
+const dimName = n => DIM_NAME[n] || n;
+const schemeName = x => SCHEME_NAME[x] || x.toLowerCase();
+const SCHEME_ORDER = ['ISCO08', 'ISIC4', 'ISCO88', 'ISIC3', 'SKILL', 'SECTOR', 'AGGREGATE', 'YTHADULT', '10YRBANDS', 'YTHBANDS'];
+async function loadDims(s){
+  let D; try { D = await getJSON('data/dims/' + s.hd + '.json'); } catch (e) { return; }
+  if (curSeries() !== s.id) return;
+  const pickScheme = dm => { const sc = [...new Set(dm.schemes)].filter(Boolean);
+    return sc.sort((a, b) => (SCHEME_ORDER.indexOf(a) + 99) % 99 - (SCHEME_ORDER.indexOf(b) + 99) % 99)[0] || ''; };
+  dimState = {T: D.tables, tab: 0, active: false};
+  setTable(0);
+  renderDimbar();
+}
+function setTable(i){
+  const D = dimState.T[i]; dimState.tab = i; dimState.D = D; dimState.split = -1;
+  const pickScheme = dm => { const sc = [...new Set(dm.schemes)].filter(Boolean);
+    return sc.sort((a, b) => (SCHEME_ORDER.indexOf(a) + 99) % 99 - (SCHEME_ORDER.indexOf(b) + 99) % 99)[0] || ''; };
+  dimState.scheme = D.dims.map(pickScheme);
+  dimState.sel = D.dims.map((dm, k) => { const j = dm.codes.findIndex((c, x) => dm.schemes[x] === dimState.scheme[k] || !dm.schemes[x]); return j < 0 ? 0 : j; });
+}
+function renderDimbar(){
+  const el = $('#dimbar'); if (!el || !dimState) return; const {D, T} = dimState; el.hidden = false;
+  const tabSel = T.length > 1 ? `<label>Breakdown table <select data-dtab="1">${T.map((t, i) => `<option value="${i}" ${i === dimState.tab ? 'selected' : ''}>${esc(t.label || 'default')}</option>`).join('')}</select></label>` : '<strong style="color:var(--ink-2)">Breakdown</strong>';
+  el.innerHTML = tabSel + D.dims.map((dm, k) => {
+    const sc = [...new Set(dm.schemes)].filter(Boolean);
+    const schemeSel = sc.length > 1 ? `<select data-dscheme="${k}" aria-label="${esc(dimName(dm.name))} classification">${sc.map(x => `<option value="${esc(x)}" ${x === dimState.scheme[k] ? 'selected' : ''}>${esc(schemeName(x))}</option>`).join('')}</select>` : '';
+    const opts = dm.codes.map((c, j) => dm.schemes[j] === dimState.scheme[k] || !dm.schemes[j] ? `<option value="${j}" ${j === dimState.sel[k] ? 'selected' : ''}>${esc(dm.labels[j])}</option>` : '').join('');
+    return `<label>${esc(dimName(dm.name))} ${schemeSel}<select data-dval="${k}" ${dimState.split === k ? 'disabled' : ''}>${opts}</select></label>`;
+  }).join('') + `<label class="split">Split by <select data-dsplit="1"><option value="-1">—</option>${D.dims.map((dm, k) => dm.name === 'Currency' ? '' :
+    `<option value="${k}" ${dimState.split === k ? 'selected' : ''}>${esc(dimName(dm.name))}</option>`).join('')}</select></label>`;
+}
+function currencyLabel(){   // the selected Currency breakdown overrides the series unit
+  if (!dimState) return ''; const {D, sel, split} = dimState;
+  const k = D.dims.findIndex(dm => dm.name === 'Currency'); if (k < 0 || k === split) return '';
+  return D.dims[k].labels[sel[k]] || '';
+}
+function dimItems(){
+  const {D, split, sel, scheme} = dimState;
+  const want = r => r[0].every((ci, k) => k === split ? (D.dims[k].schemes[ci] === scheme[k] || !D.dims[k].schemes[ci]) : ci === sel[k]);
+  let rows = D.rows.filter(want), more = 0;
+  if (split >= 0) { const isTot = r => /(_T|TOTAL|YGE15)$/.test(D.dims[split].codes[r[0][split]]);
+    rows = rows.filter(isTot).concat(rows.filter(r => !isTot(r))); more = Math.max(0, rows.length - 12); rows = rows.slice(0, 12); }
+  const items = rows.map(r => ({name: split >= 0 ? D.dims[split].labels[r[0][split]] : D.dims.map((dm, k) => dm.labels[r[0][k]]).join(' · '),
+    x: r[1].map(day), y: r[2]}));
+  return {items, more, empty: !rows.length};
+}
+const RLABEL = ['Same statistic, other source', 'Built from · feeds into', 'Companies & drivers', 'Same company', 'Charted together', 'Moves with', 'Variants', 'Similar', 'Same dataset & topic'];
+let REL = null;
+async function renderRelated(s){
+  const el = $('#related'); if (!el) return;
+  try { if (!REL) REL = await getJSON('data/related.json'); } catch (e) { el.innerHTML = '<p class="note">Related datasets are not available in this build.</p>'; return; }
+  if (curSeries() !== s.id) return;
+  const idx = CAT.indexOf(s), list = REL[idx] || [];
+  if (!list.length) { el.innerHTML = '<p class="note">No related datasets found yet for this series.</p>'; return; }
+  const groups = {}; list.forEach(([j, rc, sc, ex]) => (groups[rc] = groups[rc] || []).push([CAT[j], ex]));
+  el.innerHTML = Object.keys(groups).sort((a, b) => a - b).map(rc => `<div class="rgroup"><h4>${RLABEL[rc]}</h4><div class="ritems">${groups[rc].map(([r, ex]) =>
+    `<div class="ritem"><div><a href="#${toHash(r.id)}">${esc(r.t)}</a><small>${esc(r.dset)} · ${esc(r.f)} · ${esc(r.a.slice(0, 4))}–${esc(r.b.slice(0, 4))}</small><small class="why">${esc(ex)}</small></div>` +
+    `<button class="rplus" data-plot="${esc(r.id)}" aria-pressed="${plotIds.includes(r.id)}" aria-label="Add ${esc(r.t)} to the chart" title="Add to chart">${plotIds.includes(r.id) ? '✓' : '+'}</button></div>`).join('')}</div></div>`).join('');
+}
 const plotExtra = store.get('plotExtra', {});   // series page id -> extra ids drawn with it
 function curSeries(){ const h = location.hash.slice(1); return h.startsWith('s-') ? fromHash(h) : null; }
 function addToPlot(x){
   const base = curSeries();
-  if (!base) { toggleCompare(x); location.hash = 'compare'; return; }
+  if (!base) { location.hash = toHash(x); return; }
   if (x === base) return;
   const ex = plotExtra[base] || []; if (!ex.includes(x)) plotExtra[base] = [...ex, x].slice(-6);
   store.set('plotExtra', plotExtra); plotIds = [base, ...plotExtra[base]];
+  const rb = document.querySelector(`.rplus[data-plot="${CSS.escape(x)}"]`); if (rb) { rb.textContent = '✓'; rb.setAttribute('aria-pressed', 'true'); }
   if (plotDraw) { stab = 'chart'; const c = $('#sp-chart'); if (c) { c.hidden = false; $('#sp-details').hidden = true;
     document.querySelectorAll('.stabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.stab === 'chart')); } plotDraw(); }
 }
@@ -431,31 +576,25 @@ function renderPlotbar(){
     (plotIds.length < 7 ? `<span class="picker" id="picker" hidden><input id="pickq" placeholder="Search a dataset to add…" autocomplete="off" aria-label="Search a dataset to add"><ul id="pickres" hidden></ul></span>
       <button class="addbtn" id="addbtn" aria-expanded="false">+ Add series</button>` : '<span class="note">Up to 7 series</span>');
 }
-function pickSearch(qq){
-  const terms = qq.toLowerCase().split(/\s+/).filter(Boolean); if (!terms.length) return [];
-  return CAT.map(x => { const hay = (x.t + ' ' + x.id + ' ' + x.src + ' ' + x.tp + ' ' + x.ent).toLowerCase();
-    return terms.every(t => hay.includes(t)) ? [x, terms.reduce((a, t) => a + (x.t.toLowerCase().includes(t) ? 3 : 1), 0) * (1 + x.rk)] : null; })
-    .filter(Boolean).sort((a, b) => b[1] - a[1]).slice(0, 10).map(r => r[0]).filter(x => !plotIds.includes(x.id));
-}
+function pickSearch(qq){ return searchCat(qq, 14).map(r => r[0]).filter(x => !plotIds.includes(x.id)).slice(0, 10); }
 async function showSeries(id){
   const s = BY.get(id), v = $('#view');
   if (!s) { crumbs([['Datasets']]); v.innerHTML = `<h1>Dataset not found</h1><p class="lede">No series <code>${esc(id)}</code> in this build. Search the catalogue on the left.</p>`; return; }
   crumbs([[s.dset, null], [s.tp, null], [s.t]]);
-  const inC = compare.includes(id);
+  plotMode = 'auto'; stab = 'chart';
   const twins = s.c ? CAT.filter(x => x.c === s.c && x.id !== id) : [];
   v.innerHTML = `<div class="head"><div class="headrow"><h1>${esc(s.t)}</h1></div>
     <div class="badges"><span class="badge mono">${esc(s.id)}</span><span class="badge" title="Dataset">${esc(s.dset)}</span><span class="badge">${esc(s.f)}</span>
       <span class="badge">${esc(s.ent)}</span><span class="pill ${s.st}">${esc(s.st)}</span>${s.r !== 'canonical' ? `<span class="pill ${s.r}">${esc(s.r)}</span>` : ''}
-      <div class="actions"><button class="btn" data-add="${esc(id)}" aria-pressed="${inC}">${inC ? 'In compare' : '+ Compare'}</button>
-      <button class="btn" id="copyCsv">Copy CSV</button><button class="btn primary" data-prompt="${esc(id)}">Copy prompt</button></div></div>
+</div>
     ${s.ds ? `<p class="lede">${esc(s.ds)}</p>` : ''}</div>
     <div class="stabs-slot"></div><div id="sp-chart" role="tabpanel" aria-labelledby="st-chart" ${stab === 'chart' ? '' : 'hidden'}>
-    <div class="panel"><div class="plotbar" id="plotbar"></div><div class="panel-h" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.25rem">
-      <div class="modes" role="group" aria-label="Scale" style="margin-left:0">${[['auto', 'Auto'], ['level', 'Level'], ['index', 'Index = 100'], ['yoy', '1-year %']].map(([m, l]) =>
-        `<button data-pmode="${m}" aria-pressed="${plotMode === m}">${l}</button>`).join('')}</div>
-      <div class="ranges" role="group" aria-label="Time range">${['5Y', '10Y', '20Y', 'All'].map(r => `<button data-r="${r}" aria-pressed="${r === 'All'}">${r}</button>`).join('')}</div></div>
+    <div class="panel"><div class="plotbar" id="plotbar"></div><div class="dimbar" id="dimbar" hidden></div><div class="panel-h" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.25rem">
+      <div class="modes" role="group" aria-label="Scale" style="margin-left:0">${[['auto', 'Auto'], ['level', 'Level'], ['index', 'Index = 100'], ['yoy', '1-year change']].map(([m, l]) =>
+        `<button data-pmode="${m}" aria-pressed="${m === 'auto'}">${l}</button>`).join('')}</div>
+      <div class="ranges" role="group" aria-label="Time range">${['5Y', '10Y', '20Y', 'All'].map(r => `<button data-r="${r}" aria-pressed="${r === 'All' && !(/local currency|\bLCU\b/i.test(s.t + ' ' + s.u) && s.a < '1995')}">${r}</button>`).join('')}</div></div>
       <div class="panel-b"><div class="chart" id="sChart" role="img" aria-label="${esc(s.t)} over time"></div><div id="sPol"></div></div></div>
-    ${twins.length ? `<div class="panel"><div class="panel-h"><h3>Same concept, other sources</h3></div><div class="panel-f">${chips(twins.map(t => t.id))}</div></div>` : ''}
+    <div class="panel" id="relPanel"><div class="panel-h"><h3>Related datasets</h3><p>Picked from across the catalogue: the same statistic elsewhere, inputs, exposed companies, series that move together.</p></div><div class="related" id="related"><p class="note">Loading…</p></div></div>
     </div>
     <div class="stabs" role="tablist" aria-label="Dataset views">
       <button role="tab" id="st-chart" aria-selected="${stab === 'chart'}" aria-controls="sp-chart" data-stab="chart">Chart</button>
@@ -476,73 +615,46 @@ async function showSeries(id){
   const bar = v.querySelector('.stabs'); v.querySelector('.stabs-slot').replaceWith(bar);
   const d = await series(id);
   if (!d) { $('#sChart').innerHTML = '<p class="empty">No observations in this build.</p>'; $('#sTable').innerHTML = ''; return; }
-  let range = 'All';
+  // Brazil changed currency five times before the real (Jul 1994): local-currency values
+  // before then are not comparable, so such series open from 1995 with a note.
+  const oldCur = /local currency|current LCU|\bLCU\b/i.test(s.t + ' ' + s.u) && !/constant/i.test(s.t + ' ' + s.u) && s.a < '1995';
+  let range = oldCur ? '1995' : 'All';
   plotIds = [id, ...(plotExtra[id] || [])].filter(x => BY.has(x)).slice(0, 7);
   const cache = new Map([[id, d]]);
+  dimState = null;
+  if (s.hd >= 0) loadDims(s);
+  renderRelated(s);
   const draw = async () => { if (!window.Plotly || !$('#sChart')) return;
     for (const x of plotIds) if (!cache.has(x)) cache.set(x, await series(x));
     renderPlotbar();
-    const data = plotIds.map(x => cache.get(x));
-    const fam = u => /^%|percentage points|% of/.test(u || '') ? '%' : u;
-    const units = new Set(plotIds.map(x => fam(BY.get(x).u)));
-    const mode = plotMode === 'auto' ? (units.size > 1 ? 'index' : 'level') : plotMode;
-    const t0 = data.filter(Boolean).map(z => z.x[0]).sort().pop();
-    const tr = data.map((z, i) => { if (!z) return null; let w = z;
-      if (mode === 'index') w = rebase(z, t0);
-      if (mode === 'yoy') w = {x: z.x, y: z.x.map((x, j) => { const p = new Date(x); p.setFullYear(p.getFullYear() - 1); const iso = p.toISOString().slice(0, 10);
-        for (let k = j; k >= 0; k--) if (z.x[k] <= iso) return z.y[k] ? (z.y[j] / z.y[k] - 1) * 100 : null; return null; })};
-      return {type: 'scatter', mode: w.x.length < 80 ? 'lines+markers' : 'lines', x: w.x, y: w.y, name: BY.get(plotIds[i]).t,
-        line: {color: css(SLOTS[i]), width: i ? 1.8 : 2.2}, marker: {size: 4, color: css(SLOTS[i])},
-        hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(plotIds[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
-    const L = layout(360, mode === 'index' ? `Index, ${t0.slice(0, 7)} = 100` : mode === 'yoy' ? '% change on a year earlier' : (units.size === 1 && plotIds.length > 1 ? [...units][0] : s.u));
-    if (plotIds.length > 1) L.hovermode = 'x unified';
-    const lastD = data.filter(Boolean).map(z => z.x[z.x.length - 1]).sort().pop();
-    if (range !== 'All') { const f = new Date(lastD); f.setFullYear(f.getFullYear() - {'5Y': 5, '10Y': 10, '20Y': 20}[range]); L.xaxis.range = [f.toISOString().slice(0, 10), lastD]; }
+    let items = [], extra = '';
+    if (dimState && dimState.active) {
+      const dm = dimItems(); const cu = currencyLabel(); items = dm.items.map(t => ({...t, u: cu || s.u}));
+      if (dm.more) extra += `<p class="note">Showing 12 categories; ${dm.more} more — narrow the other selections.</p>`;
+      if (dm.empty) extra += '<p class="note">No data for this combination — pick another value.</p>';
+      plotIds.slice(1).forEach(x => { const z = cache.get(x); if (z) items.push({name: BY.get(x).t, x: z.x, y: z.y, u: BY.get(x).u}); });
+    } else {
+      plotIds.forEach(x => { const z = cache.get(x); if (z) items.push({name: BY.get(x).t, x: z.x, y: z.y, u: BY.get(x).u}); });
+    }
+    items.forEach((t, i) => t.color = css(SLOTS[i % SLOTS.length]));
+    const {tr, L, note, mode: used} = buildChart(items, {mode: plotMode, range});
+    const shown = plotMode === 'level' && used !== 'level' ? 'index' : plotMode;   // forced Index lights Index
+    document.querySelectorAll('[data-pmode]').forEach(b => b.setAttribute('aria-pressed', b.dataset.pmode === shown));
     Plotly.react('sChart', overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
-    const lg = $('#sPol'); if (lg) lg.innerHTML = polLegend() + (mode === 'index' && plotMode === 'auto' ? '<p class="note">Units differ, so series are rebased to 100 at their latest common start.</p>' : ''); };
+    const lg = $('#sPol'); if (lg) lg.innerHTML = (dimState && dimState.active ? '<p class="legend">' + items.map(t => `<span><i style="background:${t.color}"></i>${esc(t.name)}</span>`).join('') + '</p>' : '')
+      + extra + (note ? `<p class="note">${note}</p>` : '') + polLegend()
+      + (oldCur && range === '1995' && !/dollar|ppp|us\$/i.test(currencyLabel()) ? '<p class="note">Shown from 1995: before the real (July 1994) Brazil used five earlier currencies, so older local-currency values are not comparable. Click <strong>All</strong> to see them.</p>' : ''); };
   plotDraw = draw; draw(); redraws.add(draw);
   v.querySelectorAll('.ranges button').forEach(b => b.onclick = () => { range = b.dataset.r; v.querySelectorAll('.ranges button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
   const tail = d.x.map((x, i) => [x, d.y[i]]).slice(-10).reverse();
   $('#sTable').innerHTML = `<table><thead><tr><th>series_id</th><th>date</th><th class="n">value</th></tr></thead><tbody>${tail.map(([x, y]) =>
     `<tr><td class="mono">${esc(id)}</td><td class="mono">${x}</td><td class="n mono">${y == null ? '—' : y.toLocaleString('en', {maximumFractionDigits: 6})}</td></tr>`).join('')}</tbody></table>
     <span class="rows-n">${d.x.length.toLocaleString('en')} rows · latest 10 shown</span>`;
-  $('#copyCsv').onclick = e => copy('date,value\n' + d.x.map((x, i) => x + ',' + (d.y[i] ?? '')).join('\n'), e.target, 'Copied ' + d.x.length + ' rows');
 }
 function copy(text, btn, msg){
   const done = () => { const o = btn.textContent; btn.textContent = msg; setTimeout(() => btn.textContent = o, 1600); };
   const fb = () => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); };
   try { navigator.clipboard.writeText(text).then(done, fb); } catch (e) { fb(); }
-}
-let cmpMode = 'index';
-async function showCompare(){
-  crumbs([['Compare']]);
-  const ids = compare.filter(id => BY.has(id));
-  $('#view').innerHTML = `<div class="head"><h1>Compare</h1><p class="lede">Up to seven datasets. Different units are rebased to 100 at their latest common start — never two y-axes.</p>
-    <div class="badges"><div class="seg" style="width:18rem">${[['level', 'Level'], ['index', 'Index = 100'], ['yoy', '1-year %']].map(([m, l]) =>
-      `<button data-mode="${m}" aria-selected="${cmpMode === m}">${l}</button>`).join('')}</div>
-      <div class="actions"><button class="btn" id="cmpClear">Clear</button></div></div></div>` +
-    (ids.length ? `<div class="panel"><div class="panel-b"><div class="legend">${ids.map((id, i) => `<span><i style="background:${css(SLOTS[i])}"></i>${esc(BY.get(id).t)} <button class="btn" style="padding:0 .4rem" data-add="${esc(id)}" aria-label="Remove">✕</button></span>`).join('')}</div>
-      <div class="chart" id="cmp"></div><div id="cmpPol"></div></div><div class="panel-f">${chips(ids)}</div></div>` : '<p class="empty">Nothing to compare yet. Use “+ Compare” on any dataset.</p>');
-  if (!ids.length) return;
-  const data = await Promise.all(ids.map(series));
-  const units = new Set(ids.map(id => BY.get(id).u));
-  const t0 = data.filter(Boolean).map(d => d.x[0]).sort().pop();
-  const draw = () => { if (!window.Plotly || !$('#cmp')) return;
-    const mode = cmpMode === 'level' && units.size > 1 ? 'index' : cmpMode;
-    const tr = data.map((d, i) => { if (!d) return null; let z = d;
-      if (mode === 'index') z = rebase(d, t0);
-      if (mode === 'yoy') z = {x: d.x, y: d.x.map((x, j) => { const p = new Date(x); p.setFullYear(p.getFullYear() - 1); const iso = p.toISOString().slice(0, 10);
-        for (let k = j; k >= 0; k--) if (d.x[k] <= iso) return d.y[k] ? (d.y[j] / d.y[k] - 1) * 100 : null; return null; })};
-      return {type: 'scatter', mode: 'lines', x: z.x, y: z.y, line: {color: css(SLOTS[i]), width: 2}, hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(ids[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
-    const L = layout(440, mode === 'index' ? `Index, ${t0.slice(0, 7)} = 100` : mode === 'yoy' ? '% change on a year earlier' : [...units][0]);
-    Plotly.react('cmp', overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
-    const lg = $('#cmpPol'); if (lg) lg.innerHTML = polLegend(); };
-  draw(); redraws.add(draw);
-}
-function toggleCompare(id){
-  compare = compare.includes(id) ? compare.filter(x => x !== id) : [...compare, id].slice(-7);
-  store.set('compare', compare); $('#cmpCount').textContent = compare.length ? '(' + compare.length + ')' : '';
-  document.querySelectorAll(`[data-add="${CSS.escape(id)}"]`).forEach(b => { if (b.textContent.includes('✕')) return; const on = compare.includes(id); b.setAttribute('aria-pressed', on); b.textContent = on ? 'In compare' : '+ Compare'; });
 }
 function showPolitics(){
   crumbs([['Political calendar']]);
@@ -557,16 +669,20 @@ function showPolitics(){
     ${P.events.slice().reverse().map(e => `<tr><td class="mono">${esc(e.date)}</td><td class="wrap">${esc(e.event)}</td><td>${esc(e.kind)}</td></tr>`).join('')}</tbody></table></div></div>
     <p class="note" style="margin-top:.75rem">Also in DuckDB as <code>political_terms</code> and <code>political_events</code>; edit <code>registry/political_*.csv</code> to extend.</p>`;
 }
+function basisName(b){ b = String(b || '');
+  return ({dec: 'December value', mean: 'annual mean', sum: 'annual sum', dec_x1e6: 'December value (US$ mn → US$)', sum_x1e6: 'annual sum (US$ mn → US$)'})[b]
+    || b.replace('annual vs WDI', 'same indicator, another international source').replace(/same title$/, 'same title, newer release kept')
+        .replace(/^(annual|quarterly|monthly) (mean|sum)$/, (m, f, a) => `${f} ${a === 'sum' ? 'totals' : 'averages'}`); }
 function showReconcile(){
   crumbs([['Reconciliation']]);
   const r = META.reconciliation || [];
   $('#view').innerHTML = `<div class="head"><h1>Reconciliation</h1><p class="lede">Where a native source and Dateno's World Bank / ILO series measure the same concept, the native
     series is canonical and the other is kept as an alternate. Native series are first put on an annual basis (December value, mean or sum).</p></div>
-    <div class="panel"><div class="tbl"><table><thead><tr><th>Concept</th><th>Canonical</th><th>Alternate</th><th class="n">Common years</th><th class="n">Correlation</th><th class="n">Median diff.</th><th>Annual basis</th></tr></thead>
-    <tbody>${r.map(x => `<tr><td>${esc(x.concept)}</td><td><a href="#${toHash(x.canonical)}">${esc(x.canonical)}</a></td><td><a href="#${toHash(x.alternate)}">${esc(x.alternate)}</a></td>
-    <td class="n">${x.overlap_years} (${x.first_year}–${x.last_year})</td><td class="n">${x.correlation == null ? '—' : x.correlation.toFixed(3)}</td>
-    <td class="n">${x.median_rel_diff_pct == null ? '—' : x.median_rel_diff_pct.toFixed(1) + '%'}</td><td>${esc(x.annualization)}</td></tr>`).join('')}</tbody></table></div></div>
-    <p class="note" style="margin-top:.75rem">Large differences usually reflect definitions: IPCA December-on-December vs annual-average CPI; general vs central government debt.</p>`;
+    <div class="panel"><div class="tbl"><table><thead><tr><th>Concept</th><th>Canonical</th><th>Alternate</th><th class="n">Common points</th><th class="n">Correlation</th><th class="n">Median diff.</th><th>Annual basis</th></tr></thead>
+    <tbody>${r.map(x => `<tr><td>${esc(String(x.concept).startsWith('duplicate:') ? 'same statistic (duplicate removed)' : x.concept.replace(/_/g, ' '))}</td><td><a href="#${toHash(x.canonical)}">${esc(x.canonical)}</a></td><td>${BY.has(x.alternate) ? `<a href="#${toHash(x.alternate)}">${esc(x.alternate)}</a>` : `<span class="mono">${esc(x.alternate)}</span> <span class="note">removed as duplicate</span>`}</td>
+    <td class="n">${x.overlap_years}${x.first_year ? ` (${x.first_year}–${x.last_year})` : ''}</td><td class="n">${x.correlation == null ? '—' : x.correlation.toFixed(3)}</td>
+    <td class="n">${x.median_rel_diff_pct == null ? '—' : x.median_rel_diff_pct.toFixed(1) + '%'}</td><td>${esc(basisName(x.annualization))}</td></tr>`).join('')}</tbody></table></div></div>
+    <p class="note" style="margin-top:.75rem">Only pairs that measure the same definition are listed; duplicates removed from the catalogue appear here with how closely they agreed.</p>`;
 }
 function showMissing(){
   crumbs([['Not yet ingested']]);
@@ -637,7 +753,7 @@ function route(){
   document.querySelectorAll('[data-foot]').forEach(a => a.setAttribute('aria-current', a.dataset.foot === h));
   if (h.startsWith('s-')) showSeries(fromHash(h));
   else if (h.startsWith('c-')) showCurated(h.slice(2));
-  else ({compare: showCompare, politics: showPolitics, reconcile: showReconcile, missing: showMissing, about: showAbout}[h] || (() => showCurated('overview')))();
+  else ({politics: showPolitics, reconcile: showReconcile, missing: showMissing, about: showAbout}[h] || (() => showCurated('overview')))();
   $('#scroll').scrollTo(0, 0); window.scrollTo(0, 0);
   $('#app').classList.remove('open');
   document.querySelectorAll('.tree [aria-current]').forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === location.hash));
@@ -648,10 +764,19 @@ async function boot(){
     const [c, m] = await Promise.all([getJSON('data/catalog.json'), getJSON('data/meta.json')]);
     CAT = c.rows.map(r => { const o = {}; c.keys.forEach((k, i) => o[k] = r[i]); return o; }); CAT.forEach(s => BY.set(s.id, s)); META = m; CUR = m.curated || [];
   } catch (e) { $('#view').innerHTML = `<h1>Could not load the catalogue</h1><p class="lede err">${esc(e.message)}. Opened from disk? Serve the folder: <code>python3 -m http.server -d warehouse/portal</code></p>`; return; }
-  $('#cmpCount').textContent = compare.length ? '(' + compare.length + ')' : '';
-  $('#polToggle').setAttribute('aria-pressed', politics);
+    $('#polToggle').setAttribute('aria-pressed', politics);
   setTab(tab); route();
 }
+document.addEventListener('change', e => {
+  const t = e.target; if (!dimState || !t.closest('#dimbar')) return;
+  if (t.dataset.dtab) setTable(+t.value);
+  if (t.dataset.dval) dimState.sel[+t.dataset.dval] = +t.value;
+  if (t.dataset.dscheme) { const k = +t.dataset.dscheme; dimState.scheme[k] = t.value;
+    dimState.sel[k] = Math.max(0, dimState.D.dims[k].codes.findIndex((c, j) => dimState.D.dims[k].schemes[j] === t.value)); }
+  if (t.dataset.dsplit) dimState.split = +t.value;
+  dimState.active = dimState.tab > 0 || dimState.split >= 0 || dimState.sel.some((v, k) => !/(_T|TOTAL|YGE15)$/.test(dimState.D.dims[k].codes[v]));
+  renderDimbar(); if (plotDraw) plotDraw();
+});
 document.addEventListener('input', e => { if (e.target.id !== 'pickq') return; const res = pickSearch(e.target.value), ul = $('#pickres');
   ul.hidden = !res.length; ul.innerHTML = res.map((x, i) => `<li><button data-pick="${esc(x.id)}" class="${i ? '' : 'hl'}">${esc(x.t)}<small>${esc(x.dset)} · ${esc(x.f)} · ${esc(x.u)} · ${esc(x.a.slice(0, 4))}–${esc(x.b.slice(0, 4))}</small></button></li>`).join(''); });
 document.addEventListener('keydown', e => { if (e.target.id !== 'pickq') return;
@@ -671,9 +796,6 @@ document.addEventListener('click', e => {
   if (t.dataset.stab) { stab = t.dataset.stab; document.querySelectorAll('.stabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.stab === stab));
     $('#sp-chart').hidden = stab !== 'chart'; $('#sp-details').hidden = stab !== 'details'; if (stab === 'chart') window.dispatchEvent(new Event('resize')); }
   if (t.dataset.key) { open.has(t.dataset.key) ? open.delete(t.dataset.key) : open.add(t.dataset.key); store.set('open', [...open]); renderTree(); }
-  if (t.dataset.add) { toggleCompare(t.dataset.add); if (location.hash === '#compare') showCompare(); }
-  if (t.dataset.mode) { cmpMode = t.dataset.mode; showCompare(); }
-  if (t.id === 'cmpClear') { compare = []; store.set('compare', compare); $('#cmpCount').textContent = ''; showCompare(); }
 });
 const SUN = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
 const MOON = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
@@ -681,7 +803,7 @@ function setTheme(t){ document.documentElement.classList.toggle('theme-dark', t 
   const b = $('#themeToggle'); b.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
   $('#themeIcon').innerHTML = t === 'dark' ? SUN : MOON; redraws.forEach(f => f()); if (CAT.length && (location.hash.startsWith('#c-') || !location.hash)) route(); }
 $('#themeToggle').addEventListener('click', () => setTheme(document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark'));
-setTheme(store.get('theme', 'light'));
+setTheme(store.get('theme', 'dark'));
 function setPolitics(on){ politics = on; store.set('politics', on); $('#polToggle').setAttribute('aria-pressed', on); redraws.forEach(f => f()); }
 $('#polToggle').addEventListener('click', () => setPolitics(!politics));
 $('#collapse').addEventListener('click', () => { $('#app').classList.add('collapsed'); $('#expand').hidden = false; store.set('collapsed', true); });
