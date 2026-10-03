@@ -1,0 +1,1494 @@
+{
+ "current_account_components": {
+  "query": "Current account components",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Current account accumulated in 12 months - monthly",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=24419",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "9aee29b84edbcc5cf3818452d6d93773d09ae28cdb1a5167707c61272867ec5a"
+   },
+   {
+    "title": "Current account accumulated in 12 months in relation to GDP - monthly",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=23079",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "fcf925c71d5c67066dc3fde2275a98bcb7c0a3ef7dafbc738225288782eff3fa"
+   },
+   {
+    "title": "Secondary income - monthly - debit",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22840",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "9e541130af38c25044a7fa2a4ddca10b92e25575a6cfe7cd5f8a4c90f895137d"
+   },
+   {
+    "title": "Secondary income - monthly - net",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22838",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "bace61f378c2cf6f81d7f97e0d947e8f520065613eec419fd3125ec90e6cfeca"
+   },
+   {
+    "title": "Secondary income - monthly - credit",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22839",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "596405bb27cde6f264479fa118947f13de9a862d3f38065c236cbc6f2128a3cb"
+   }
+  ]
+ },
+ "median_age": {
+  "query": "Median age",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "90 days past due loans by company age - microenterprise - Above 5 years",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26204",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "3fff54c77fcb82d0f192dd28d836184bbd8870518b9df82fc7c3237692d6bb56"
+   },
+   {
+    "title": "90 days past due loans by company age - microenterprise - Up to 3 years",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26206",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "cfbe571bd4d634950e30c6f4f13e941b9c450b36ac09a28d45325c5964b68934"
+   },
+   {
+    "title": "90 days past due loans by company age - microenterprise - From 3 to 5 years",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26205",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "5baeee049c007a3e5d63658a016488fde2cc4b70d7fc894fc5d862c1c87eb8c9"
+   },
+   {
+    "title": "90 days past due loans by company age - small-sized enterprise - Above 5 years",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26207",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "8a7a9ba05484ebad5d7a1dd59a1b04c2063e83863517ed070a1e626163e2ed92"
+   },
+   {
+    "title": "90 days past due loans by company age - small-sized enterprise - Up to 3 years",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26209",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "c7e5d7d94dd65b46d9db1510e20769b6c847b4098351c7112b1dea17b2223a78"
+   }
+  ]
+ },
+ "labor_productivity_proxy": {
+  "query": "Labor productivity proxy",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Atender solicitação de liberação de proxy - SES",
+    "url": "cdi00020650",
+    "publisher": "Repositório EPROC",
+    "formats": [
+     ".pdf",
+     ".html"
+    ],
+    "changed": "2026-07-21",
+    "dateno_id": "136577a545b9257c69c6daf8f94a304f6e2fbc3f39bbe9b180918f4879a36324"
+   }
+  ]
+ },
+ "lithium_exports": {
+  "query": "Lithium exports",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Exports - Balance of Payments - monthly",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22708",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "2e485bb70ea9a9142267b4e3f8ccc3c5184c6b9e75e346a4662fd7bd1d88e96f"
+   },
+   {
+    "title": "Nonearmarked new operations - Non-financial corporations - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20659",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "3bc2e96df1102b6120bd16cd59701c3784a2763c64602d65140c8f0c98689e5d"
+   },
+   {
+    "title": "Credit operations outstanding by type of credit - microenterprise - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25823",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "72a677eec780169fa0230c780f7efdb7bb357bb3362ee518957827312116cd60"
+   },
+   {
+    "title": "Nonearmarked credit operations outstanding - Non-financial corporations - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20567",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "689afaa783a4e4b237ad34b318924ff464f8fa799ddd490b49566d24b7befae6"
+   },
+   {
+    "title": "Credit operations outstanding by type of credit - small-sized enterprise - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25877",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "2aed65a950908d1f9620304d57604184df27189a49c3608bdb3c65ebbc4aac0b"
+   }
+  ]
+ },
+ "rare_earth_exports": {
+  "query": "Rare-earth exports",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Exports - Balance of Payments - monthly",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22708",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "2e485bb70ea9a9142267b4e3f8ccc3c5184c6b9e75e346a4662fd7bd1d88e96f"
+   },
+   {
+    "title": "Nonearmarked new operations - Non-financial corporations - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20659",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "3bc2e96df1102b6120bd16cd59701c3784a2763c64602d65140c8f0c98689e5d"
+   },
+   {
+    "title": "Credit operations outstanding by type of credit - microenterprise - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25823",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "72a677eec780169fa0230c780f7efdb7bb357bb3362ee518957827312116cd60"
+   },
+   {
+    "title": "Nonearmarked credit operations outstanding - Non-financial corporations - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20567",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "689afaa783a4e4b237ad34b318924ff464f8fa799ddd490b49566d24b7befae6"
+   },
+   {
+    "title": "Credit operations outstanding by type of credit - small-sized enterprise - Exports financing",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25877",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "2aed65a950908d1f9620304d57604184df27189a49c3608bdb3c65ebbc4aac0b"
+   }
+  ]
+ },
+ "arco_norte_export_share": {
+  "query": "Arco Norte export share",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Licitações PM DE SAO JOSE DO NORTE",
+    "url": "https://dados.tce.rs.gov.br/dataset/licitacoes-pm-de-sao-jose-do-norte",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip"
+    ],
+    "changed": "2024-08-26",
+    "dateno_id": "23a0447e33019b1759762d690479b194603ddcf14399f5e3bf89e3a499ddf36f"
+   },
+   {
+    "title": "Licitações PM DE SAO JOSE DO NORTE",
+    "url": "http://dados.tce.rs.gov.br",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip"
+    ],
+    "changed": "2026-01-12",
+    "dateno_id": "c0bf404468bc74c3ba3b05884a0a45d2f8adc5edf014b88c7ba99f8241439d8c"
+   },
+   {
+    "title": "Contratos CM DE SAO JOSE DO NORTE",
+    "url": "https://dados.tce.rs.gov.br/dataset/contratos-cm-de-sao-jose-do-norte",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip"
+    ],
+    "changed": "2024-08-26",
+    "dateno_id": "ed84e8a1a2a5d128cd559fa819b1b789370971bba11490068b716d37d0d67098"
+   },
+   {
+    "title": "Contratos CM DE SAO JOSE DO NORTE",
+    "url": "http://dados.tce.rs.gov.br",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip"
+    ],
+    "changed": "2026-01-05",
+    "dateno_id": "0a6478aed9810a6d4dc6a1870d3d23a6a271908a8da3c0071b00748ae66ddbf7"
+   },
+   {
+    "title": "Contratos PM DE SAO JOSE DO NORTE",
+    "url": "https://dados.tce.rs.gov.br/dataset/contratos-pm-de-sao-jose-do-norte",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip"
+    ],
+    "changed": "2024-08-26",
+    "dateno_id": "4fcf5969af4573beca48ca2c8f460f776142148fcbad5ec5176f1e3994e53b84"
+   }
+  ]
+ },
+ "soy_production": {
+  "query": "Soy production",
+  "status": "pending_tier3",
+  "hits": [
+   {
+    "title": "Earmarked new operations - Households - BNDES funds - Fixed capital investment",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20706",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "fbb435977d1560b294a666429197e9d6c1d180381647440758c12ef640ee17e9"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Consumers",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20709",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "80925cae90ed75e3bec2eebce506e489b767323b9a32e0fc747b3913c9098d15"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Entrepreneurs",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20710",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "d560f2610382737975b08f802b744737166dc9ed9f73d1608dd9a28fb533b571"
+   },
+   {
+    "title": "Earmarked new operations - Households - Other earmarked credit instruments",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20713",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "e8b1505085d603967919dfe14ef6c72967e32c627049a7ad5f1c37b40aa9d42c"
+   },
+   {
+    "title": "Earmarked new operations - Households - Real estate financing - Market rates",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20702",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "8137404ae08049b55b48457d4638c1b52f0a5585cc5de5697d59dd6076126b21"
+   }
+  ]
+ },
+ "corn_production": {
+  "query": "Corn production",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Earmarked new operations - Households - BNDES funds - Fixed capital investment",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20706",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "fbb435977d1560b294a666429197e9d6c1d180381647440758c12ef640ee17e9"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Consumers",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20709",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "80925cae90ed75e3bec2eebce506e489b767323b9a32e0fc747b3913c9098d15"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Entrepreneurs",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20710",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "d560f2610382737975b08f802b744737166dc9ed9f73d1608dd9a28fb533b571"
+   },
+   {
+    "title": "Earmarked new operations - Households - Other earmarked credit instruments",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20713",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "e8b1505085d603967919dfe14ef6c72967e32c627049a7ad5f1c37b40aa9d42c"
+   },
+   {
+    "title": "Earmarked new operations - Households - Real estate financing - Market rates",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20702",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "8137404ae08049b55b48457d4638c1b52f0a5585cc5de5697d59dd6076126b21"
+   }
+  ]
+ },
+ "cotton_production": {
+  "query": "Cotton production",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Earmarked new operations - Households - BNDES funds - Fixed capital investment",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20706",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "fbb435977d1560b294a666429197e9d6c1d180381647440758c12ef640ee17e9"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Consumers",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20709",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "80925cae90ed75e3bec2eebce506e489b767323b9a32e0fc747b3913c9098d15"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Entrepreneurs",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20710",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "d560f2610382737975b08f802b744737166dc9ed9f73d1608dd9a28fb533b571"
+   },
+   {
+    "title": "Earmarked new operations - Households - Other earmarked credit instruments",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20713",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "e8b1505085d603967919dfe14ef6c72967e32c627049a7ad5f1c37b40aa9d42c"
+   },
+   {
+    "title": "Earmarked new operations - Households - Real estate financing - Market rates",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20702",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "8137404ae08049b55b48457d4638c1b52f0a5585cc5de5697d59dd6076126b21"
+   }
+  ]
+ },
+ "planted_area": {
+  "query": "Planted area",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Quantidade de vistorias por nível e área de atuação",
+    "url": "https://siat.cb.es.gov.br",
+    "publisher": "Espírito Santo Opendata",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2026-07-08",
+    "dateno_id": "f4e772e4a5d3f67f2e6f5f8b905de3b9f6e47e640695b1ada555a6e1e52dafbb"
+   },
+   {
+    "title": "Solicitar limpeza de área interna ou externa (extraordinária).",
+    "url": "cdi00020180",
+    "publisher": "Processos Organizacionais da UFS",
+    "formats": [
+     ".png"
+    ],
+    "changed": "2023-05-12",
+    "dateno_id": "f678f806be7eed0858e47151aec590ca5ead10fcfa50d121d29c41faa8a0df90"
+   },
+   {
+    "title": "MAPA 02 - PLANO DIRETOR - PERÍMETRO URBANO E RURAL",
+    "url": "SMU",
+    "publisher": "Portal de Dados Abertos da Prefeitura de Mogi das Cruzes",
+    "formats": [
+     ".kml"
+    ],
+    "changed": "2023-07-03",
+    "dateno_id": "c54c9b061f814d10c8c8fec57736d80209420898171ab20627a503c9c89c8d62"
+   },
+   {
+    "title": "Area Territorial Municipios Meso Regional",
+    "url": "cdi00020541",
+    "publisher": "Portal de Dados Abertos do Acre",
+    "formats": [
+     ".csv"
+    ],
+    "changed": "2022-11-29",
+    "dateno_id": "24ee016ff2ea71a0b5064d77b37ca52036fa56db9af78684a865c2a39f48314b"
+   },
+   {
+    "title": "Principais Iniciativas e Projetos 2020",
+    "url": "https://dadosabertos.ifba.edu.br/dataset/principais-iniciativas-e-projetos-2020",
+    "publisher": "dadosabertos.ifba.edu.br",
+    "formats": [
+     ".csv"
+    ],
+    "changed": "2022-10-21",
+    "dateno_id": "344023095523efeb509d9c301d3ecd6ef26ab3033fc7675b6e1de55ff0c70e4c"
+   }
+  ]
+ },
+ "grain_production_growth": {
+  "query": "Grain production growth",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Market expectations for main macroeconomic indicators",
+    "url": "https://opendata.bcb.gov.br/dataset/market-expectations",
+    "publisher": "Banco Central do Brasil open data",
+    "formats": [
+     ".html"
+    ],
+    "changed": "2018-07-03",
+    "dateno_id": "15c81d70c579d72c4a8b51e536e2bad56c64183b867f2356815fa13fa2c2f246"
+   },
+   {
+    "title": "Earmarked new operations - Households - BNDES funds - Fixed capital investment",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20706",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "fbb435977d1560b294a666429197e9d6c1d180381647440758c12ef640ee17e9"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Consumers",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20709",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "80925cae90ed75e3bec2eebce506e489b767323b9a32e0fc747b3913c9098d15"
+   },
+   {
+    "title": "Earmarked new operations - Households - Microcredit - Entrepreneurs",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20710",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "d560f2610382737975b08f802b744737166dc9ed9f73d1608dd9a28fb533b571"
+   },
+   {
+    "title": "Earmarked new operations - Households - Other earmarked credit instruments",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=20713",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "e8b1505085d603967919dfe14ef6c72967e32c627049a7ad5f1c37b40aa9d42c"
+   }
+  ]
+ },
+ "amazon_deforestation": {
+  "query": "Amazon deforestation",
+  "status": "pending_tier3",
+  "hits": [
+   {
+    "title": "Dados de Disponibilidade de Usinas",
+    "url": "https://dados.ons.org.br/dataset/disponibilidade_usina",
+    "publisher": "DADOS ABERTOS ONS",
+    "formats": [
+     ".pdf",
+     ".csv",
+     ".xlsx",
+     ".parquet"
+    ],
+    "changed": "2024-09-04",
+    "dateno_id": "ba58dc48748f052c741e99e3d6b1e42ed09f847ef5ff31f387efb3242231b407"
+   },
+   {
+    "title": "Indicador de Disponibilidade de Função Transmissão – Conversores",
+    "url": "https://dados.ons.org.br/dataset/ind_disponibilidade_ft_conversor",
+    "publisher": "DADOS ABERTOS ONS",
+    "formats": [
+     ".pdf",
+     ".csv",
+     ".xlsx",
+     ".parquet"
+    ],
+    "changed": "2024-09-04",
+    "dateno_id": "61167c9807bab2b35063bb335a497e4424388dceee5feeecbb006a8808e8d006"
+   },
+   {
+    "title": "Curva de Carga Horária",
+    "url": "https://dados.ons.org.br/dataset/curva-carga",
+    "publisher": "DADOS ABERTOS ONS",
+    "formats": [
+     ".pdf",
+     ".csv",
+     ".xlsx",
+     ".parquet"
+    ],
+    "changed": "2024-09-04",
+    "dateno_id": "00452da726184ca3ad052ddb36450ab0d746d7cb838a802149b5891e2644c3d1"
+   },
+   {
+    "title": "Dados de Grandezas Fluviométricas",
+    "url": "https://dados.ons.org.br/dataset/grandezas_fluviometricas",
+    "publisher": "DADOS ABERTOS ONS",
+    "formats": [
+     ".pdf",
+     ".csv",
+     ".xlsx",
+     ".parquet"
+    ],
+    "changed": "2024-09-04",
+    "dateno_id": "7faa31c30c2279dafdc38edadf3f946327885f1f9765370082cea7ba40bbabf9"
+   },
+   {
+    "title": "CVU das Usina Térmicas",
+    "url": "https://dados.ons.org.br/dataset/cvu-usitermica",
+    "publisher": "DADOS ABERTOS ONS",
+    "formats": [
+     ".pdf",
+     ".csv",
+     ".xlsx",
+     ".parquet"
+    ],
+    "changed": "2024-09-04",
+    "dateno_id": "20248c78cda4e351ec5d27acac8e3b2686aaab83398447ced92189d22cb1c4d7"
+   }
+  ]
+ },
+ "cerrado_deforestation": {
+  "query": "Cerrado deforestation",
+  "status": "pending_tier3",
+  "hits": [
+   {
+    "title": "Plano de Ação para Prevenção e Controle do Desmatamento e das Queimadas no Bioma Cerrado (PPCerrado): 4ª fase",
+    "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/controle-do-desmatamento-1/ppcerrado/ppcerrado_4fase.pdf",
+    "publisher": "Portal de Dados Abertos do MMA:",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2026-07-24",
+    "dateno_id": "daca6f13761efb490ea1e5d8807f6b0214232897f1f7698373660f15f8bfc792"
+   },
+   {
+    "title": "Emissões de gases do efeito estufa por desmatamento para fins de pagamento por resultados de REDD+ (Redução das Emissões por Desmatamento e Degradação florestal)",
+    "url": "http://redd.mma.gov.br/pt/pub-apresentacoes/item/82-o-que-e-redd",
+    "publisher": "Portal de Dados Abertos do MMA:",
+    "formats": [
+     ".pdf",
+     ".odt"
+    ],
+    "changed": "2026-07-24",
+    "dateno_id": "aa3a44d178defa35e3aaca9a2302e2204969d7b3529777606c2c5797cc896164"
+   },
+   {
+    "title": "Plano de Ação para Prevenção e Controle do Desmatamento e das Queimadas no Pampa (PPPampa)",
+    "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/controle-do-desmatamento-1/pppampa/PPPampa_2025_internet.pdf",
+    "publisher": "Portal de Dados Abertos do MMA:",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2026-07-24",
+    "dateno_id": "d117ed34d268d833009ec1d81873cdba047df251cb58c0d79149aef9882cb1e1"
+   }
+  ]
+ },
+ "deter_alerts_amazon": {
+  "query": "DETER alerts - Amazon",
+  "status": "pending_tier3",
+  "hits": [
+   {
+    "title": "Estatísticas Selic - Clientes",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-04",
+    "dateno_id": "1ad9fc5a20dcbf00bda99027e97c96d824c9bee3878293e9529f1454b47de621"
+   },
+   {
+    "title": "Estatísticas Selic - Participantes",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-04",
+    "dateno_id": "121c0d7e5f665626fa7c46a52d0b62ba541c64e3b501e27bb633a42ed857123c"
+   },
+   {
+    "title": "Estatísticas Selic - Operações",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-04-22",
+    "dateno_id": "476ab4e287defe01a5f6966c0f0fab403e97a6ad596549f5093c1cdbc0ca5cf7"
+   },
+   {
+    "title": "Estatística das Falsificações por Ano e Unidade de Federação",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-06-17",
+    "dateno_id": "7dd4a6e810eb207745a02eaa2937a0888e4680931f341698cbcb207c52d96c53"
+   },
+   {
+    "title": "Estatísticas Selic - Contas",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-04",
+    "dateno_id": "8ed2e2f32e6085a6fd902da7a3203e0d64bed853a6cdd0f5c65d6462ce067b59"
+   }
+  ]
+ },
+ "deter_alerts_cerrado": {
+  "query": "DETER alerts - Cerrado",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Áreas Prioritárias para a Conservação da Biodiversidade",
+    "url": "https://dados.mma.gov.br/dataset/areas_prioritarias",
+    "publisher": "Portal de Dados Abertos do MMA:",
+    "formats": [
+     ".csv",
+     ".zip"
+    ],
+    "changed": "2022-12-21",
+    "dateno_id": "4b4dadd2f9a5aaadc810350ada1268eb29ae1c7f5a7f7208cdd008fd60c1fa8c"
+   },
+   {
+    "title": "Plano de Ação para Prevenção e Controle do Desmatamento e das Queimadas no Bioma Cerrado (PPCerrado): 4ª fase",
+    "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/controle-do-desmatamento-1/ppcerrado/ppcerrado_4fase.pdf",
+    "publisher": "Portal de Dados Abertos do MMA:",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2026-07-24",
+    "dateno_id": "daca6f13761efb490ea1e5d8807f6b0214232897f1f7698373660f15f8bfc792"
+   },
+   {
+    "title": "Estatísticas Selic - Clientes",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-04",
+    "dateno_id": "1ad9fc5a20dcbf00bda99027e97c96d824c9bee3878293e9529f1454b47de621"
+   },
+   {
+    "title": "Estatísticas Selic - Participantes",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-04",
+    "dateno_id": "121c0d7e5f665626fa7c46a52d0b62ba541c64e3b501e27bb633a42ed857123c"
+   },
+   {
+    "title": "Estatísticas Selic - Operações",
+    "url": "-",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-04-22",
+    "dateno_id": "476ab4e287defe01a5f6966c0f0fab403e97a6ad596549f5093c1cdbc0ca5cf7"
+   }
+  ]
+ },
+ "endowment_risk_score": {
+  "query": "Endowment risk score",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "CRIB - Clinical Risk Index for Babies",
+    "url": "cdi00000221",
+    "publisher": "Portal de Dados Abertos do Estado de Minas Gerais",
+    "formats": [
+     ".csv",
+     ".json"
+    ],
+    "changed": "2026-08-10",
+    "dateno_id": "d9e927ca931b7ddb0eaff55fa5684886ea1ccb39f0c2da9610eef2bf343fa574"
+   },
+   {
+    "title": "Portifólio de demandas de soluções TI",
+    "url": "temp00004593",
+    "publisher": "Ministério da Infraestrutura: Bem vindo",
+    "formats": [
+     ".csv"
+    ],
+    "changed": "2026-06-08",
+    "dateno_id": "d96d984d9cc82b45fd56968bf1c6aa4d6e53256ec9d093aaa9a62f1d689e7787"
+   },
+   {
+    "title": "CRIB",
+    "url": "https://github.com/fhemig",
+    "publisher": "Portal de Dados Abertos do Estado de Minas Gerais",
+    "formats": [
+     ".csv",
+     ".json"
+    ],
+    "changed": "2026-01-21",
+    "dateno_id": "6c608d34807882ffd47630b2684dfa51a92049f8f956b2e7970d8519f8e68e49"
+   },
+   {
+    "title": "04.03 Cobertura vacinal Pneumocócica",
+    "url": "http://tabnet.datasus.gov.br/cgi/dhdat.exe?bd_pni/cpnibr.def ",
+    "publisher": "TCEGO - Dados Abertos",
+    "formats": [
+     ".pdf",
+     ".csv"
+    ],
+    "changed": "2025-05-08",
+    "dateno_id": "c32c5797e1897fd53b5ae440a043f106aec1f747e4b65a8f80563e216a5e4b3e"
+   }
+  ]
+ },
+ "energy_supply_by_source": {
+  "query": "Energy supply by source",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Average interest rate by source of funds - microenterprise - earmarked credit - total",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26430",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "4d61d890e26c1c862f19c2a39734c51d76075cf5dbd16805b02aabec7d9f155e"
+   },
+   {
+    "title": "Average interest rate by source of funds - microenterprise - nonearmarked credit - other",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=26442",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "7c9c3ee11aa3ee23eca68d9b421bd25221b1dbf0fe8f59935ef1f56e79e48630"
+   },
+   {
+    "title": "Credit operations outstanding by source of funds - microenterprise - earmarked credit - other",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25764",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "5159e6dc51f0d2fa23e0183db8581d2a8a21b58e4d55c447c9608cdb81481d06"
+   },
+   {
+    "title": "Credit operations outstanding by source of funds - microenterprise - nonearmarked credit - total",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25768",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "4c87525947dff6789bf94103bef146a397377243a1d0a99f0226a87a52eab11f"
+   },
+   {
+    "title": "Credit operations outstanding by source of funds - microenterprise - earmarked credit - Total",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=25953",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "94317f60aa1d06667046d8538d277faf1964626b87b0e8fd762dc45fd019ee28"
+   }
+  ]
+ },
+ "energy_consumption_by_sector": {
+  "query": "Energy consumption by sector",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "Susceptibilidade Diferencial à Herbivoria de Partes Distintas da Planta Aquática Nymphoides humboldtiana Sustenta a Teoria da Defesa Ótima (Differential Susceptibility of Distinct Parts of The Aquatic Plant Nymphoides Humboldtiana to Herbivory Supports the Optimal Defense Theory)",
+    "url": "cdi00000187",
+    "publisher": "Portal de dados estruturados do Instituto de Pesquisas Jardim Botânico do Rio de Janeiro",
+    "formats": [
+     ".xlsx"
+    ],
+    "changed": "2025-08-25",
+    "dateno_id": "f43bda18a867287eb45878da219fc6cb05b7d0ecf994324182eb297d9a23aead"
+   },
+   {
+    "title": "Gross Domestic Product at market prices (Ref. 2010) - Pará",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=24115",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "39654c25e215f33ddb76e18205ff8c86538481b07d82b009d04ac186bb2f79de"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Infraestructure sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27725",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "ce0d251ea45f9b42896b7824acf5ac52a118386592a91a6254c4f2c9b8377f09"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Mining sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27749",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "f3a091cfcace815a9bb4e863b03918b5a7ba9a8c04e0620de861e444f3981e6a"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Sugar sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27744",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "2e089f363618450e35dabaeabd8066872ccc49e5d81c451b2d23152e9be79d21"
+   }
+  ]
+ },
+ "rare_earth_global_reserves_share": {
+  "query": "Brazil share of global rare-earth reserves",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "STR – Daily Progress",
+    "url": "http://www.bcb.gov.br/pom/spb/estatistica/port/girodiarioPlanX.asp",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".csv",
+     ".pdf"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "1202519ebd96384d6f74270ab81b3b777c13088bd53cdced2f4d833602d086ec"
+   },
+   {
+    "title": "Broad national consumer price index (IPCA) - Diffusion index",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=21379",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "eb80b89edbc1f861dec54ebe4b40c0dc634f7ee5e4089b0b43c9aac1ee76f4cc"
+   },
+   {
+    "title": "International reserves - Cash concept - Total - daily",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=13621",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "0551828f6dae2fd50c73d26d290132d1753ec92934983470cd45da80c67eed8f"
+   },
+   {
+    "title": "Percent of 90 days past due loans of credit operations outstanding - Households - Total",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=21084",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "7f120cda6ab1318bd36bdc73045a65bdab12639018a4182b7f5411a7ba602f55"
+   },
+   {
+    "title": "Percent of 90 days past due loans of credit operations outstanding - Total",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=21082",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "a6377cfa4929794388a1f71e44b21409bb613ee50fd2bb41b497487b0a257f15"
+   }
+  ]
+ },
+ "foreign_investor_flow_b3": {
+  "query": "Foreign investor flow into B3",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "SFN - BCO B3 S.A.",
+    "url": "BCO B3 S.A.",
+    "publisher": "Portal de Dados Abertos do Banco Central do Brasil",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2026-05-18",
+    "dateno_id": "341f1d19e8df103949bb47e4699b1e3e3c034481066be56e9d74a2103dd38fc7"
+   },
+   {
+    "title": "Quadro de Efetivo na Estrutura da PPES",
+    "url": "temp00004584",
+    "publisher": "Espírito Santo Opendata",
+    "formats": [
+     ".xlsx"
+    ],
+    "changed": "2026-05-20",
+    "dateno_id": "cd1e74255a59173b5df73bf49647eb25bca5fdb354a74cb7a3240d69df8f9bea"
+   },
+   {
+    "title": "Statistical Data - Securities, Derivatives and Foreign Exchange Settlement Systems",
+    "url": "https://opendata.bcb.gov.br/dataset/securities-derivatives-and-foreign-exchange-settlement-systems",
+    "publisher": "Banco Central do Brasil open data",
+    "formats": [
+     ".html",
+     ".json"
+    ],
+    "changed": "2018-07-20",
+    "dateno_id": "f48aaed15e64fe0c46a4287567aaefaf614c0b335232100c0df017e69008cc6b"
+   },
+   {
+    "title": "Financial account - monthly - net",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22863",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "9dd1787e09b6c9720deb6d32210aa0cd78e422941aca76e6a19a02f61e52695c"
+   },
+   {
+    "title": "Direct investment - monthly - net",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=22864",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "718e0bc07cfe1cbf6803e8943cad290e4229b374835a3da2106ab36bad015644"
+   }
+  ]
+ },
+ "debenture_issuance": {
+  "query": "Debenture issuance",
+  "status": "pending_tier2",
+  "hits": []
+ },
+ "fixed_income_aum": {
+  "query": "Fixed-income fund AUM",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "PIRF ZEIS Moura Brasil - Abrang. Escola Fund. - Zeis Moura Brasil",
+    "url": "https://dados.fortaleza.ce.gov.br/dataset/pirf-zeis-moura-brasil-abrang-escola-fund-zeis-moura-brasil",
+    "publisher": "Fortaleza Dados Abertos",
+    "formats": [
+     ".geojson"
+    ],
+    "changed": "2023-11-27",
+    "dateno_id": "7f5987294a5cdfeda380d5661d097179202f19947a52ccc0bdccba7d7027d56f"
+   },
+   {
+    "title": "Balancete de despesa FUND CULT FUND CULTURAL DE IGREJINHA 2023",
+    "url": "https://dados.tce.rs.gov.br/dataset/balancete-de-despesa-fund-cult-fund-cultural-de-igrejinha-2023",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".csv",
+     ".xml",
+     ".json"
+    ],
+    "changed": "2024-04-14",
+    "dateno_id": "d11c7809bc111ca0402469c7793c15591906e00d73dd9490323321d2fd5fc9f1"
+   },
+   {
+    "title": "Balancete de receita FUND CULT FUND CULTURAL DE IGREJINHA 2023",
+    "url": "https://dados.tce.rs.gov.br/dataset/balancete-de-receita-fund-cult-fund-cultural-de-igrejinha-2023",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".csv",
+     ".xml",
+     ".json"
+    ],
+    "changed": "2024-04-14",
+    "dateno_id": "ff955aa9902de196881f326d04863b76d34bcb4e00532def2eee750dd6ddbe43"
+   },
+   {
+    "title": "Balancete de Verificação FUND CULT FUND CULTURAL DE IGREJINHA 2023",
+    "url": "https://dados.tce.rs.gov.br/dataset/balancete-de-verificacao-fund-cult-fund-cultural-de-igrejinha-2023",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".csv",
+     ".xml",
+     ".json"
+    ],
+    "changed": "2024-04-14",
+    "dateno_id": "9fc56e31d4de1da1950fbd65ce3f9dd649447aeb10cf1653e23b19fb7e63c8f8"
+   },
+   {
+    "title": "Despesa orçamentária por empenhos FUND CULT FUND CULTURAL DE IGREJINHA 2023",
+    "url": "https://dados.tce.rs.gov.br/dataset/despesa-orcamentaria-por-empenhos-fund-cult-fund-cultural-de-igrejinha-2023",
+    "publisher": "Dados Abertos TCE-RS",
+    "formats": [
+     ".zip",
+     ".7z"
+    ],
+    "changed": "2024-04-14",
+    "dateno_id": "1b4a6b36378f01b3507aea0e064f6077ff06d4d583c8f61920a1443e748e9cb8"
+   }
+  ]
+ },
+ "cds_5y_brazil": {
+  "query": "Brazil 5Y CDS",
+  "status": "pending_tier3",
+  "hits": [
+   {
+    "title": "Credit operations outstanding by economic activity - Capital goods commerce",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27737",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "02fa4dbcd3e620351e6c2c314962c93fd1053029298bd046cb8439fc25f0fdeb"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Capital goods industry",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27723",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "a7d1d52ad3543d8c882a31827afbd6d180ee6a56e817ebea438ddf9e4c60936f"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Chemicals and pharmaceutical sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27722",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "5fe1f633d89a0878ebe7b9ce2edbf4cd0642e908f5229837307f03829d1fe38c"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Consumer goods - others sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27726",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "cd428b2b1d85113ba5c40f74f779105ded1bef3b0537b5fe36dda8cfd9f03908"
+   },
+   {
+    "title": "Credit operations outstanding by economic activity - Land transport (passenger and freight) sector",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=27729",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "c65af8590bb7ee85e184b48ed9ea9b5edf1c5c6e4c9016e14aac18c3106413d9"
+   }
+  ]
+ },
+ "farmland_prices_usd": {
+  "query": "Farmland prices in USD",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "VET Ranking",
+    "url": "https://opendata.bcb.gov.br/dataset/vet-ranking",
+    "publisher": "Banco Central do Brasil open data",
+    "formats": [
+     ".json",
+     ".pdf"
+    ],
+    "changed": "2017-11-30",
+    "dateno_id": "97e8189314d0521fb090918b06306ac4a687ada1cd167cd4071400530ee58944"
+   },
+   {
+    "title": "Gross Domestic Product at market prices (Ref. 2010) - Pará",
+    "url": "https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarGraficoPorId&hdOidSeriesSelecionadas=24115",
+    "publisher": "Banco Central do Brasil Open Data Portal",
+    "formats": [
+     ".json",
+     ".csv",
+     ".wsdl",
+     ".html"
+    ],
+    "changed": "2026-03-26",
+    "dateno_id": "39654c25e215f33ddb76e18205ff8c86538481b07d82b009d04ac186bb2f79de"
+   },
+   {
+    "title": "Realizar auditoria in loco nos prestadores de serviço do plano SC Saúde SEA",
+    "url": "cdi00020650",
+    "publisher": "Repositório EPROC",
+    "formats": [
+     ".pdf",
+     ".html"
+    ],
+    "changed": "2024-09-18",
+    "dateno_id": "98fd5efac1f922ded19388cc1ac56052e4293a6bcf34e794b5a4f6757da0f54a"
+   },
+   {
+    "title": "GAME THEORY-BASED MODEL FOR INVESTMENT DECISION IN STRATEGIC PLANNING ICT",
+    "url": "cdi00020648",
+    "publisher": "Open Data PETIC",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2018-05-17",
+    "dateno_id": "3049573c0f85ea1ea382b5887ad0be587ef19dff7a8ec147ca16c196a4cbb5ce"
+   },
+   {
+    "title": "Realizar Curso In-Company (ENA)",
+    "url": "cdi00020650",
+    "publisher": "Repositório EPROC",
+    "formats": [
+     ".html",
+     ".pdf"
+    ],
+    "changed": "2024-07-15",
+    "dateno_id": "c7ac60062f1d3414d754c61ab72890fa709e7ee00d8e1599d563c3bd01314a11"
+   }
+  ]
+ },
+ "critical_mineral_policy_events": {
+  "query": "Critical mineral policy events",
+  "status": "pending_tier2",
+  "hits": [
+   {
+    "title": "CadMinério - Cadastro Estadual de Pessoas Jurídicas que comercializam agregados no Estado de São Paulo",
+    "url": "https://semil.sp.gov.br/servicos/cadminerio/",
+    "publisher": "Dados Abertos SP",
+    "formats": [
+     ".xlsx"
+    ],
+    "changed": "2026-02-26",
+    "dateno_id": "1da3ba176ec021a986f22cbbda69d44def49432401570018557663e257fa0d22"
+   },
+   {
+    "title": "Quantidade de usinas termelétricas por tipo",
+    "url": "https://dadosabertos.aneel.gov.br/",
+    "publisher": "Dados Abertos - Agência Nacional de Energia Elétrica (ANEEL)",
+    "formats": [
+     ".pdf",
+     ".csv"
+    ],
+    "changed": "2026-07-20",
+    "dateno_id": "0424b1d19494ac11fc134259cf99d54ee3d95da959a4a62b9c1d1f48c2104555"
+   },
+   {
+    "title": "[2ª fase] 7. Diretrizes para a Política Habitacional de Alagoas",
+    "url": "http://visaoalagoas2030.al.gov.br/",
+    "publisher": "Alagoas em Dados A plataforma de dados abertos do estado.",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2025-06-27",
+    "dateno_id": "cf7cc4407d559c34571dff34c2e43eb5750e27a179ee3105898f1f9c5d2dfbab"
+   },
+   {
+    "title": "[3ª fase] 4. Diretrizes para uma Política Estadual do Turismo",
+    "url": "http://visaoalagoas2030.al.gov.br/",
+    "publisher": "Alagoas em Dados A plataforma de dados abertos do estado.",
+    "formats": [
+     ".pdf"
+    ],
+    "changed": "2025-11-10",
+    "dateno_id": "b46d7e552576d2d994b0f8f7172cb9479a2a22d7f0a463cc603fd2c81cc2968d"
+   }
+  ]
+ }
+}

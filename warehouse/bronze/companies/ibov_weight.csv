@@ -1,0 +1,77 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit,entity_id
+ibov_weight,Ibovespa weight — AMBEV S/A,companies,b3_ibov_portfolio,daily,2026-10-03,2.379,pct,ABEV3
+ibov_weight,Ibovespa weight — ALLOS,companies,b3_ibov_portfolio,daily,2026-10-03,0.543,pct,ALOS3
+ibov_weight,Ibovespa weight — ASSAI,companies,b3_ibov_portfolio,daily,2026-10-03,0.553,pct,ASAI3
+ibov_weight,Ibovespa weight — AUREN,companies,b3_ibov_portfolio,daily,2026-10-03,0.163,pct,AURE3
+ibov_weight,Ibovespa weight — AXIA ENERGIA,companies,b3_ibov_portfolio,daily,2026-10-03,4.817,pct,AXIA3
+ibov_weight,Ibovespa weight — AZZAS 2154,companies,b3_ibov_portfolio,daily,2026-10-03,0.095,pct,AZZA3
+ibov_weight,Ibovespa weight — B3,companies,b3_ibov_portfolio,daily,2026-10-03,3.519,pct,B3SA3
+ibov_weight,Ibovespa weight — BRASIL,companies,b3_ibov_portfolio,daily,2026-10-03,2.505,pct,BBAS3
+ibov_weight,Ibovespa weight — BRADESCO,companies,b3_ibov_portfolio,daily,2026-10-03,0.916,pct,BBDC3
+ibov_weight,Ibovespa weight — BRADESCO,companies,b3_ibov_portfolio,daily,2026-10-03,3.644,pct,BBDC4
+ibov_weight,Ibovespa weight — BBSEGURIDADE,companies,b3_ibov_portfolio,daily,2026-10-03,0.926,pct,BBSE3
+ibov_weight,Ibovespa weight — MINERVA,companies,b3_ibov_portfolio,daily,2026-10-03,0.064,pct,BEEF3
+ibov_weight,Ibovespa weight — BTGP BANCO,companies,b3_ibov_portfolio,daily,2026-10-03,2.93,pct,BPAC11
+ibov_weight,Ibovespa weight — BRADESPAR,companies,b3_ibov_portfolio,daily,2026-10-03,0.194,pct,BRAP4
+ibov_weight,Ibovespa weight — BRAVA,companies,b3_ibov_portfolio,daily,2026-10-03,0.195,pct,BRAV3
+ibov_weight,Ibovespa weight — CEA MODAS,companies,b3_ibov_portfolio,daily,2026-10-03,0.078,pct,CEAB3
+ibov_weight,Ibovespa weight — CEMIG,companies,b3_ibov_portfolio,daily,2026-10-03,0.773,pct,CMIG4
+ibov_weight,Ibovespa weight — CSNMINERACAO,companies,b3_ibov_portfolio,daily,2026-10-03,0.29,pct,CMIN3
+ibov_weight,Ibovespa weight — COGNA ON,companies,b3_ibov_portfolio,daily,2026-10-03,0.173,pct,COGN3
+ibov_weight,Ibovespa weight — CPFL ENERGIA,companies,b3_ibov_portfolio,daily,2026-10-03,0.335,pct,CPFE3
+ibov_weight,Ibovespa weight — COPEL,companies,b3_ibov_portfolio,daily,2026-10-03,1.833,pct,CPLE3
+ibov_weight,Ibovespa weight — COSAN,companies,b3_ibov_portfolio,daily,2026-10-03,0.349,pct,CSAN3
+ibov_weight,Ibovespa weight — COPASA,companies,b3_ibov_portfolio,daily,2026-10-03,0.792,pct,CSMG3
+ibov_weight,Ibovespa weight — SID NACIONAL,companies,b3_ibov_portfolio,daily,2026-10-03,0.167,pct,CSNA3
+ibov_weight,Ibovespa weight — CURY S/A,companies,b3_ibov_portfolio,daily,2026-10-03,0.168,pct,CURY3
+ibov_weight,Ibovespa weight — CAIXA SEGURI,companies,b3_ibov_portfolio,daily,2026-10-03,0.455,pct,CXSE3
+ibov_weight,Ibovespa weight — CYRELA REALT,companies,b3_ibov_portfolio,daily,2026-10-03,0.266,pct,CYRE3
+ibov_weight,Ibovespa weight — DIRECIONAL,companies,b3_ibov_portfolio,daily,2026-10-03,0.128,pct,DIRR3
+ibov_weight,Ibovespa weight — ENGIE BRASIL,companies,b3_ibov_portfolio,daily,2026-10-03,0.505,pct,EGIE3
+ibov_weight,Ibovespa weight — EMBRAER,companies,b3_ibov_portfolio,daily,2026-10-03,2.598,pct,EMBJ3
+ibov_weight,Ibovespa weight — ENEVA,companies,b3_ibov_portfolio,daily,2026-10-03,2.044,pct,ENEV3
+ibov_weight,Ibovespa weight — ENERGISA,companies,b3_ibov_portfolio,daily,2026-10-03,0.734,pct,ENGI11
+ibov_weight,Ibovespa weight — EQUATORIAL,companies,b3_ibov_portfolio,daily,2026-10-03,1.94,pct,EQTL3
+ibov_weight,Ibovespa weight — FLEURY,companies,b3_ibov_portfolio,daily,2026-10-03,0.389,pct,FLRY3
+ibov_weight,Ibovespa weight — GERDAU,companies,b3_ibov_portfolio,daily,2026-10-03,1.206,pct,GGBR4
+ibov_weight,Ibovespa weight — GERDAU MET,companies,b3_ibov_portfolio,daily,2026-10-03,0.361,pct,GOAU4
+ibov_weight,Ibovespa weight — HAPVIDA,companies,b3_ibov_portfolio,daily,2026-10-03,0.08,pct,HAPV3
+ibov_weight,Ibovespa weight — HYPERA,companies,b3_ibov_portfolio,daily,2026-10-03,0.277,pct,HYPE3
+ibov_weight,Ibovespa weight — IGUATEMI S.A,companies,b3_ibov_portfolio,daily,2026-10-03,0.233,pct,IGTI11
+ibov_weight,Ibovespa weight — ISA ENERGIA,companies,b3_ibov_portfolio,daily,2026-10-03,0.482,pct,ISAE4
+ibov_weight,Ibovespa weight — ITAUSA,companies,b3_ibov_portfolio,daily,2026-10-03,3.259,pct,ITSA4
+ibov_weight,Ibovespa weight — ITAUUNIBANCO,companies,b3_ibov_portfolio,daily,2026-10-03,8.89,pct,ITUB4
+ibov_weight,Ibovespa weight — KLABIN S/A,companies,b3_ibov_portfolio,daily,2026-10-03,0.544,pct,KLBN11
+ibov_weight,Ibovespa weight — LOJAS RENNER,companies,b3_ibov_portfolio,daily,2026-10-03,0.426,pct,LREN3
+ibov_weight,Ibovespa weight — MARFRIG,companies,b3_ibov_portfolio,daily,2026-10-03,0.464,pct,MBRF3
+ibov_weight,Ibovespa weight — MAGAZ LUIZA,companies,b3_ibov_portfolio,daily,2026-10-03,0.11,pct,MGLU3
+ibov_weight,Ibovespa weight — MOTIVA SA,companies,b3_ibov_portfolio,daily,2026-10-03,0.651,pct,MOTV3
+ibov_weight,Ibovespa weight — MRV,companies,b3_ibov_portfolio,daily,2026-10-03,0.079,pct,MRVE3
+ibov_weight,Ibovespa weight — MULTIPLAN,companies,b3_ibov_portfolio,daily,2026-10-03,0.395,pct,MULT3
+ibov_weight,Ibovespa weight — NATURA,companies,b3_ibov_portfolio,daily,2026-10-03,0.232,pct,NATU3
+ibov_weight,Ibovespa weight — PETROBRAS,companies,b3_ibov_portfolio,daily,2026-10-03,5.136,pct,PETR3
+ibov_weight,Ibovespa weight — PETROBRAS,companies,b3_ibov_portfolio,daily,2026-10-03,8.385,pct,PETR4
+ibov_weight,Ibovespa weight — MARCOPOLO,companies,b3_ibov_portfolio,daily,2026-10-03,0.117,pct,POMO4
+ibov_weight,Ibovespa weight — PRIO,companies,b3_ibov_portfolio,daily,2026-10-03,1.764,pct,PRIO3
+ibov_weight,Ibovespa weight — PORTO SEGURO,companies,b3_ibov_portfolio,daily,2026-10-03,0.329,pct,PSSA3
+ibov_weight,Ibovespa weight — RAIADROGASIL,companies,b3_ibov_portfolio,daily,2026-10-03,0.951,pct,RADL3
+ibov_weight,Ibovespa weight — RUMO S.A.,companies,b3_ibov_portfolio,daily,2026-10-03,0.882,pct,RAIL3
+ibov_weight,Ibovespa weight — REDE D OR,companies,b3_ibov_portfolio,daily,2026-10-03,1.524,pct,RDOR3
+ibov_weight,Ibovespa weight — LOCALIZA,companies,b3_ibov_portfolio,daily,2026-10-03,1.506,pct,RENT3
+ibov_weight,Ibovespa weight — SANTANDER BR,companies,b3_ibov_portfolio,daily,2026-10-03,0.372,pct,SANB11
+ibov_weight,Ibovespa weight — SABESP,companies,b3_ibov_portfolio,daily,2026-10-03,3.696,pct,SBSP3
+ibov_weight,Ibovespa weight — SMART FIT,companies,b3_ibov_portfolio,daily,2026-10-03,0.364,pct,SMFT3
+ibov_weight,Ibovespa weight — SUZANO S.A.,companies,b3_ibov_portfolio,daily,2026-10-03,1.002,pct,SUZB3
+ibov_weight,Ibovespa weight — TAESA,companies,b3_ibov_portfolio,daily,2026-10-03,0.348,pct,TAEE11
+ibov_weight,Ibovespa weight — TENDA,companies,b3_ibov_portfolio,daily,2026-10-03,0.124,pct,TEND3
+ibov_weight,Ibovespa weight — TIM,companies,b3_ibov_portfolio,daily,2026-10-03,0.535,pct,TIMS3
+ibov_weight,Ibovespa weight — TOTVS,companies,b3_ibov_portfolio,daily,2026-10-03,0.677,pct,TOTS3
+ibov_weight,Ibovespa weight — ULTRAPAR,companies,b3_ibov_portfolio,daily,2026-10-03,1.532,pct,UGPA3
+ibov_weight,Ibovespa weight — USIMINAS,companies,b3_ibov_portfolio,daily,2026-10-03,0.144,pct,USIM5
+ibov_weight,Ibovespa weight — VALE,companies,b3_ibov_portfolio,daily,2026-10-03,9.877,pct,VALE3
+ibov_weight,Ibovespa weight — VAMOS,companies,b3_ibov_portfolio,daily,2026-10-03,0.093,pct,VAMO3
+ibov_weight,Ibovespa weight — VIBRA,companies,b3_ibov_portfolio,daily,2026-10-03,1.692,pct,VBBR3
+ibov_weight,Ibovespa weight — VIVARA S.A.,companies,b3_ibov_portfolio,daily,2026-10-03,0.115,pct,VIVA3
+ibov_weight,Ibovespa weight — TELEF BRASIL,companies,b3_ibov_portfolio,daily,2026-10-03,0.792,pct,VIVT3
+ibov_weight,Ibovespa weight — WEG,companies,b3_ibov_portfolio,daily,2026-10-03,2.792,pct,WEGE3
+ibov_weight,Ibovespa weight — YDUQS PART,companies,b3_ibov_portfolio,daily,2026-10-03,0.102,pct,YDUQ3

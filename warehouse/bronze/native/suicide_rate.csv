@@ -1,0 +1,25 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2000-01-01,3.9012,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2001-01-01,4.3914,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2002-01-01,4.3266,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2003-01-01,4.3501,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2004-01-01,4.3825,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2005-01-01,4.6208,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2006-01-01,4.6183,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2007-01-01,4.6911,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2008-01-01,4.8196,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2009-01-01,4.8575,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2010-01-01,4.8478,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2011-01-01,5.0111,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2012-01-01,5.2043,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2013-01-01,5.2664,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2014-01-01,5.2811,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2015-01-01,5.4935,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2016-01-01,5.5718,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2017-01-01,6.0419,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2018-01-01,6.1071,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2019-01-01,6.4336,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2020-01-01,6.5335,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2021-01-01,7.2657,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2022-01-01,7.6629,per_100k
+suicide_rate,Suicide rate (X60-X84),health,who_mdb,annual,2023-01-01,7.861,per_100k

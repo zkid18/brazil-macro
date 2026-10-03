@@ -29,7 +29,11 @@ HDR = {"User-Agent": "brazil-macro-pipeline/1.0"}
 
 # metric_id -> (Tipo Titulo, target tenor years, name)
 TARGETS = {
-    "gov_real_yield_10y": ("Tesouro IPCA+", 10.0, "Gov real yield ~10y (NTN-B)"),
+    # NTN-B Principal (zero coupon) and NTN-B (semi-annual coupons) together: between
+    # Feb-2020 and Nov-2021 no zero-coupon IPCA+ bond was offered near 10y, so the
+    # coupon bond keeps the series continuous.
+    "gov_real_yield_10y": (["Tesouro IPCA+", "Tesouro IPCA+ com Juros Semestrais"], 10.0,
+                           "Gov real yield ~10y (NTN-B)"),
     "gov_nominal_yield_5y": ("Tesouro Prefixado", 5.0, "Gov nominal yield ~5y (LTN)"),
 }
 START = "2015-01-01"  # keep recent ~decade
@@ -53,7 +57,8 @@ def load() -> pd.DataFrame:
 
 
 def constant_maturity(df, tipo, tenor):
-    s = df[(df["Tipo Titulo"] == tipo) & (df["base"] >= START)].copy()
+    tipos = [tipo] if isinstance(tipo, str) else list(tipo)
+    s = df[df["Tipo Titulo"].isin(tipos) & (df["base"] >= START)].copy()
     s["tenor"] = (s["mat"] - s["base"]).dt.days / 365.25
     s["gap"] = (s["tenor"] - tenor).abs()
     s = s[s["gap"] <= 3.5]                       # only accept bonds near the target tenor

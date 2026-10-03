@@ -16,8 +16,10 @@ Warehouse engine: DuckDB over parquet (warehouse/brazil_macro.duckdb).
 Run:  python3 pipeline.py
 """
 from __future__ import annotations
-import pathlib, datetime as dt
+import os, pathlib, datetime as dt
 import duckdb, yaml, pandas as pd
+import hypotheses
+import catalog
 
 ROOT = pathlib.Path(__file__).resolve().parent
 BRONZE = ROOT / "warehouse" / "bronze"
@@ -27,7 +29,9 @@ DQ = ROOT / "dq"
 DB = ROOT / "warehouse" / "brazil_macro.duckdb"
 REGISTRY_CSV = ROOT / "registry" / "brazil_macro_data_allocation_metrics.csv"
 SOURCE_MAP = ROOT / "registry" / "source_map.yml"
-RUN_TS = "2026-06-01"  # date is injected, not read from clock (reproducible)
+# As-of date for freshness checks. Injectable for reproducible rebuilds
+# (BRAZIL_MACRO_AS_OF=YYYY-MM-DD); defaults to today.
+RUN_TS = os.environ.get("BRAZIL_MACRO_AS_OF", dt.date.today().isoformat())
 
 for d in (SILVER, GOLD, DQ):
     d.mkdir(parents=True, exist_ok=True)
@@ -44,8 +48,9 @@ def load_maps():
     return smap, tier1, ts_to_metric, reg_meta
 
 
-SCHEMA = ["metric_id", "metric_name", "theme", "source_id", "resolved_source",
+SCHEMA = ["metric_id", "entity_id", "metric_name", "theme", "source_id", "resolved_source",
           "freq", "date", "year", "value", "unit", "ingested_via", "load_ts"]
+COUNTRY = "BR"  # entity_id for country-level series; companies use their own key
 
 
 def _silver_wb(ts_to_metric, reg_meta) -> list:
@@ -61,7 +66,7 @@ def _silver_wb(ts_to_metric, reg_meta) -> list:
         raw = raw[raw["value"].notna()].copy()
         raw["year"] = raw["date"].astype(int)
         frames.append(pd.DataFrame({
-            "metric_id": metric_id,
+            "metric_id": metric_id, "entity_id": COUNTRY,
             "metric_name": meta.get("metric_name", raw["indicator_name"].iloc[0] if len(raw) else metric_id),
             "theme": meta.get("theme", "unknown"),
             "source_id": meta.get("source_id", "dateno_wb"),
@@ -78,40 +83,50 @@ def _silver_wb(ts_to_metric, reg_meta) -> list:
 
 
 def _silver_native() -> list:
-    """Native canonical bronze (e.g. BCB SGS) -> long facts at native frequency."""
+    """Native canonical bronze (BCB, ComexStat, ONS, B3, CVM, ...) -> long facts.
+
+    Reads bronze/native (country series) and bronze/companies (entity series).
+    Lineage comes from each file's own source_id; empty files are skipped."""
     frames = []
-    native_dir = BRONZE / "native"
-    for csv in sorted(native_dir.glob("*.csv")):
-        raw = pd.read_csv(csv)
+    files = sorted((BRONZE / "native").glob("*.csv")) + sorted((BRONZE / "companies").glob("*.csv"))
+    for csv in files:
+        raw = pd.read_csv(csv, dtype={"date": str})
         raw = raw[raw["value"].notna()].copy()
+        if raw.empty:
+            print(f"[warn] empty bronze file skipped: {csv.relative_to(ROOT)}")
+            continue
+        ent = raw["entity_id"].fillna(COUNTRY) if "entity_id" in raw else COUNTRY
         raw["year"] = raw["date"].str[:4].astype(int)
         frames.append(pd.DataFrame({
-            "metric_id": raw["metric_id"], "metric_name": raw["metric_name"],
+            "metric_id": raw["metric_id"], "entity_id": ent, "metric_name": raw["metric_name"],
             "theme": raw["theme"], "source_id": raw["source_id"],
-            "resolved_source": "bcb_sgs_api", "freq": raw["freq"],
+            "resolved_source": raw["source_id"], "freq": raw["freq"],
             "date": raw["date"], "year": raw["year"],
             "value": raw["value"].astype(float), "unit": raw["unit"],
-            "ingested_via": "bcb_sgs_api", "load_ts": RUN_TS,
+            "ingested_via": "native_api", "load_ts": RUN_TS,
         }))
     return frames
 
 
-def _series(silver, metric_id):
+def _series(silver, metric_id, entity=COUNTRY):
     """Return a date-indexed value Series for one metric (sorted)."""
-    s = silver[silver.metric_id == metric_id].copy()
+    s = silver[(silver.metric_id == metric_id) & (silver.entity_id == entity)].copy()
     if s.empty:
         return None
     s["dt"] = pd.to_datetime(s["date"])
     return s.sort_values("dt").set_index("dt")["value"]
 
 
-def _emit(silver, metric_id, name, theme, unit, values, freq="monthly", source="derived_native"):
+def _emit(silver, metric_id, name, theme, unit, values, freq="monthly", source="derived_native",
+          entity=COUNTRY):
     """Build a silver-shaped frame for a computed series."""
+    if values is None:
+        return None
     v = values.dropna()
     if v.empty:
         return None
     return pd.DataFrame({
-        "metric_id": metric_id, "metric_name": name, "theme": theme,
+        "metric_id": metric_id, "entity_id": entity, "metric_name": name, "theme": theme,
         "source_id": "derived", "resolved_source": source, "freq": freq,
         "date": v.index.strftime("%Y-%m-%d"), "year": v.index.year,
         "value": v.to_numpy(), "unit": unit,
@@ -194,7 +209,7 @@ def build_silver(ts_to_metric, reg_meta) -> pd.DataFrame:
     native = _silver_native()
     if not (wb or native):
         raise SystemExit("No bronze found. Run ingest/dateno_pull.py (and bcb_sgs.py).")
-    native_ids = {f["metric_id"].iloc[0] for f in native}
+    native_ids = {m for f in native for m in f["metric_id"].unique()}
     # Native is the base: where a WB annual series overlaps a native one, keep the
     # WB copy only as a cross-check under a *_wb_annual id.
     for f in wb:
@@ -204,19 +219,21 @@ def build_silver(ts_to_metric, reg_meta) -> pd.DataFrame:
             f["metric_name"] = f["metric_name"] + " (WB annual, cross-check)"
     silver = pd.concat(wb + native, ignore_index=True)
     silver = pd.concat([silver] + derive_native_series(silver), ignore_index=True)
-    silver = silver[SCHEMA].sort_values(["metric_id", "date"]).reset_index(drop=True)
+    silver = pd.concat([silver] + hypotheses.derive_company_series(silver, RUN_TS),
+                       ignore_index=True)
+    silver = silver[SCHEMA].sort_values(["metric_id", "entity_id", "date"]).reset_index(drop=True)
     silver.to_parquet(SILVER / "fact_time_series.parquet", index=False)
     return silver
 
 
-def latest(df, metric_id):
-    s = df[df.metric_id == metric_id]
+def latest(df, metric_id, entity=COUNTRY):
+    s = df[(df.metric_id == metric_id) & (df.entity_id == entity)]
     return None if s.empty else s.sort_values("date").iloc[-1]
 
 
 def trailing_12m_ipca(silver):
     """Compound the last 12 monthly IPCA %% changes into a 12-month inflation rate."""
-    s = silver[silver.metric_id == "ipca_monthly"].sort_values("date")
+    s = silver[(silver.metric_id == "ipca_monthly") & (silver.entity_id == COUNTRY)].sort_values("date")
     if len(s) < 12:
         return None
     last12 = s["value"].tail(12).to_numpy()
@@ -227,8 +244,50 @@ def trailing_12m_ipca(silver):
 
 
 def mean_window(df, metric_id, y0, y1):
-    s = df[(df.metric_id == metric_id) & (df.year >= y0) & (df.year <= y1)]
+    s = df[(df.metric_id == metric_id) & (df.entity_id == COUNTRY) & (df.year >= y0) & (df.year <= y1)]
     return None if s.empty else float(s["value"].mean())
+
+
+def real_rate_inputs(silver) -> dict:
+    """Single definition of r and g used everywhere (derived table AND scorecard):
+    r = Selic target - expected 12m IPCA (Focus; falls back to realized 12m IPCA),
+    g = expected real GDP growth (Focus; falls back to the latest realized year)."""
+    selic = latest(silver, "selic_target")
+    fipca, ipca12 = latest(silver, "focus_ipca_12m"), latest(silver, "ipca_12m")
+    infl = fipca if fipca is not None else ipca12
+    fg, g = latest(silver, "focus_gdp_growth"), latest(silver, "gdp_real_growth")
+    grow = fg if fg is not None else g
+    return dict(
+        real_rate=(selic.value - infl.value) if selic is not None and infl is not None else None,
+        growth=grow.value if grow is not None else None,
+        infl_basis="Focus expected IPCA 12m" if fipca is not None else "IPCA 12m (ex-post)",
+        growth_basis="Focus expected GDP growth" if fg is not None else "realized GDP growth",
+        year=int(selic.year) if selic is not None else None)
+
+
+def fiscal_gap(silver, rr) -> dict | None:
+    """Primary surplus needed to stabilize gross debt/GDP, minus the actual one."""
+    debt, pbal = latest(silver, "gross_public_debt_gdp"), latest(silver, "primary_balance_gdp")
+    if debt is None or pbal is None or rr["real_rate"] is None or rr["growth"] is None:
+        return None
+    r, g = rr["real_rate"] / 100, rr["growth"] / 100
+    required = debt.value * (r - g) / (1 + g)  # % of GDP
+    return dict(year=int(debt.year), debt=debt.value, primary=pbal.value,
+                required=required, gap=required - pbal.value)
+
+
+def trailing_12m_share(silver, parts, total="exports_total"):
+    """Share (%) of `parts` in `total` over the last 12 months both have (seasonality-safe)."""
+    tot = _series(silver, total)
+    ser = [x for p in parts if (x := _series(silver, p)) is not None]
+    if tot is None or not ser:
+        return None
+    df = pd.concat([tot.rename("tot")] + [x.rename(i) for i, x in enumerate(ser)], axis=1).dropna()
+    if len(df) < 12:
+        return None
+    last = df.tail(12)
+    return dict(share=last.drop(columns="tot").sum().sum() / last["tot"].sum() * 100,
+                end=last.index[-1], start=last.index[0])
 
 
 def build_derived(silver) -> pd.DataFrame:
@@ -255,42 +314,30 @@ def build_derived(silver) -> pd.DataFrame:
                          value=None, unit="ratio", logic="FDI%GDP / |CA%GDP| (CA<0)",
                          status="pending or CA>=0"))
     # real_policy_rate = Selic target - Focus expected IPCA 12m (ex-ante; registry formula)
-    selic = latest(silver, "selic_target")
-    fipca = latest(silver, "focus_ipca_12m")        # ex-ante (Focus)
-    ipca12_s = latest(silver, "ipca_12m")            # ex-post fallback
-    exp_infl = fipca.value if fipca is not None else (ipca12_s.value if ipca12_s is not None else None)
-    basis = "Focus expected IPCA 12m" if fipca is not None else "IPCA 12m (ex-post fallback)"
-    rpr = None
-    if selic is not None and exp_infl is not None:
-        rpr = selic.value - exp_infl
-        rows.append(dict(derived_metric="real_policy_rate", year=int(selic.year),
+    rr = real_rate_inputs(silver)
+    rpr, g_val = rr["real_rate"], rr["growth"]
+    if rpr is not None:
+        rows.append(dict(derived_metric="real_policy_rate", year=rr["year"],
                          value=round(rpr, 3), unit="pct_pa",
-                         logic=f"Selic target - {basis}", status="computed"))
+                         logic=f"Selic target - {rr['infl_basis']}", status="computed"))
     else:
         rows.append(dict(derived_metric="real_policy_rate", year=None, value=None,
                          unit="pct_pa", logic="Selic - expected IPCA 12m", status="pending"))
-    # r_g_spread = real policy rate - expected GDP growth (Focus) or realized GDP
-    fg = latest(silver, "focus_gdp_growth")
-    g = latest(silver, "gdp_real_growth")
-    g_val = fg.value if fg is not None else (g.value if g is not None else None)
-    g_basis = "Focus GDP" if fg is not None else "realized GDP"
+    # r_g_spread = real policy rate - expected real GDP growth (both forward-looking)
     if rpr is not None and g_val is not None:
-        rows.append(dict(derived_metric="r_g_spread", year=int(RUN_TS[:4]),
+        rows.append(dict(derived_metric="r_g_spread", year=rr["year"],
                          value=round(rpr - g_val, 3), unit="pct_pts",
-                         logic=f"real_policy_rate - {g_basis} growth", status="computed"))
+                         logic=f"real_policy_rate - {rr['growth_basis']}", status="computed"))
     # debt_stabilizing_primary_surplus_gap (the book's key fiscal-sustainability metric)
-    debt = latest(silver, "gross_public_debt_gdp")
-    pbal = latest(silver, "primary_balance_gdp")
-    if debt is not None and rpr is not None and g is not None and pbal is not None:
-        required = (debt.value / 100.0) * (rpr - g.value)  # %GDP primary surplus to stabilize
-        gap = required - pbal.value
+    fs = fiscal_gap(silver, rr)
+    if fs is not None:
         rows.append(dict(derived_metric="debt_stabilizing_primary_surplus_gap",
-                         year=int(debt.year), value=round(gap, 3), unit="pct_gdp",
-                         logic="debt%*(r-g) - actual primary balance; +=tightening needed",
+                         year=fs["year"], value=round(fs["gap"], 3), unit="pct_gdp",
+                         logic="debt% x (r-g)/(1+g) - actual primary balance; +=tightening needed",
                          status="computed"))
     else:
         rows.append(dict(derived_metric="debt_stabilizing_primary_surplus_gap", year=None,
-                         value=None, unit="pct_gdp", logic="debt*(r-g) - primary balance",
+                         value=None, unit="pct_gdp", logic="debt*(r-g)/(1+g) - primary balance",
                          status="pending"))
     # credit_impulse = 12m change in credit/GDP (proxy for credit flow into demand)
     cg = _series(silver, "credit_gdp")
@@ -299,20 +346,16 @@ def build_derived(silver) -> pd.DataFrame:
         rows.append(dict(derived_metric="credit_impulse", year=int(cg.index[-1].year),
                          value=round(float(ci), 3), unit="pct_gdp_pts_yoy",
                          logic="credit/GDP(t) - credit/GDP(t-12m)", status="computed"))
-    # export_concentration_index = top-5 product groups / total exports (latest month)
-    tot = _series(silver, "exports_total")
+    # export_concentration_index = tracked commodity groups / total exports (trailing 12m)
     prods = ["soy_exports", "oil_exports", "iron_ore_exports", "beef_exports",
              "coffee_exports", "sugar_exports"]
-    if tot is not None:
-        d = tot.index[-1]
-        vals = sorted((s.loc[d] for p in prods
-                       if (s := _series(silver, p)) is not None and d in s.index), reverse=True)
-        if vals and tot.loc[d]:
-            conc = sum(vals[:5]) / tot.loc[d] * 100
-            rows.append(dict(derived_metric="export_concentration_index",
-                             year=int(d.year), value=round(float(conc), 2), unit="pct_of_exports",
-                             logic="top-5 tracked product groups / total exports (latest month)",
-                             status="computed"))
+    ec = trailing_12m_share(silver, prods)
+    if ec is not None:
+        rows.append(dict(derived_metric="export_concentration_index",
+                         year=int(ec["end"].year), value=round(float(ec["share"]), 2),
+                         unit="pct_of_exports",
+                         logic="6 tracked commodity groups / total exports, trailing 12 months",
+                         status="computed"))
     out = pd.DataFrame(rows)
     out.to_parquet(GOLD / "derived_metrics.parquet", index=False)
     return out
@@ -353,36 +396,27 @@ def build_scorecard(silver) -> pd.DataFrame:
             reading="FDI more than covers the current-account deficit — high-quality financing."))
 
     # Fiscal sustainability — high real rates + primary deficit => rising debt
-    debt = latest(silver, "gross_public_debt_gdp")
+    rr = real_rate_inputs(silver)
+    fs = fiscal_gap(silver, rr)
     ib = latest(silver, "interest_bill_gdp")
-    pb = latest(silver, "primary_balance_gdp")
-    sel, ip12 = latest(silver, "selic_target"), latest(silver, "ipca_12m")
-    gg = latest(silver, "gdp_real_growth")
-    if all(x is not None for x in (debt, ib, pb, sel, ip12, gg)):
-        rpr = sel.value - ip12.value
-        req = (debt.value / 100.0) * (rpr - gg.value)
+    if fs is not None and ib is not None:
         rows.append(dict(
             thread="Fiscal sustainability / structurally high real rates", theme="fiscal",
-            evidence=f"gross debt {debt.value:.0f}%GDP, interest bill {ib.value:.1f}%GDP, "
-                     f"primary {pb.value:+.1f}%GDP; stabilizing gap {req - pb.value:+.1f}pts",
+            evidence=f"gross debt {fs['debt']:.0f}%GDP, interest bill {ib.value:.1f}%GDP, "
+                     f"primary {fs['primary']:+.1f}%GDP; real rate {rr['real_rate']:.1f}% vs "
+                     f"growth {rr['growth']:.1f}% -> stabilizing gap {fs['gap']:+.1f}pts",
             reading="Real rate >> growth with a primary deficit: debt path needs a large "
                     "fiscal tightening — Davidson's 'high interest bill' risk, quantified."))
 
-    # Commodity export concentration — soy/oil/iron-ore dominance (book's concentration risk)
-    tot = _series(silver, "exports_total")
-    if tot is not None:
-        d = tot.index[-1]
-        comp = {p: s.loc[d] for p in ["soy_exports", "oil_exports", "iron_ore_exports"]
-                if (s := _series(silver, p)) is not None and d in s.index}
-        if comp and tot.loc[d]:
-            top3 = sum(comp.values()) / tot.loc[d] * 100
-            rows.append(dict(
-                thread="Commodity export concentration", theme="external_trade",
-                evidence=f"soy+oil+iron-ore = {top3:.0f}% of exports ({d.strftime('%Y-%m')}); "
-                         f"top-5 tracked = {sum(sorted(comp.values(), reverse=True)):,.0f} of "
-                         f"{tot.loc[d]:,.0f} US$",
-                reading="Exports concentrated in a few commodities — China-demand & price "
-                        "sensitivity, the cyclical core of the supercycle reading."))
+    # Commodity export concentration — soy/oil/iron-ore dominance (trailing 12 months)
+    ec = trailing_12m_share(silver, ["soy_exports", "oil_exports", "iron_ore_exports"])
+    if ec is not None:
+        rows.append(dict(
+            thread="Commodity export concentration", theme="external_trade",
+            evidence=f"soy+oil+iron-ore = {ec['share']:.0f}% of exports over the 12 months to "
+                     f"{ec['end'].strftime('%Y-%m')}",
+            reading="Exports concentrated in a few commodities — China-demand & price "
+                    "sensitivity, the cyclical core of the supercycle reading."))
 
     # Pre-salt oil — the book's "Rio is the new Houston" energy bet
     oil = _series(silver, "oil_production")
@@ -464,28 +498,51 @@ def build_dq(silver, tier1) -> pd.DataFrame:
     run = pd.Timestamp(RUN_TS)
     # expected max staleness (days) before a series is flagged stale, by freq
     # WB annual data is structurally ~2yr lagged; only flag genuinely-behind series.
-    tol = {"daily": 10, "monthly": 100, "annual": 1300}
+    tol = {"daily": 10, "weekly": 21, "monthly": 100, "quarterly": 200, "annual": 1300, "event": 4000}
     rows = []
-    for metric_id, g in silver.groupby("metric_id"):
+    for (metric_id, entity_id), g in silver.groupby(["metric_id", "entity_id"]):
         freq = g["freq"].iloc[0]
         last_date = pd.Timestamp(g["date"].max())
         stale_days = (run - last_date).days
         rows.append(dict(
-            metric_id=metric_id, freq=freq, n_obs=int(len(g)),
+            metric_id=metric_id, entity_id=entity_id, freq=freq, n_obs=int(len(g)),
             first=g["date"].min(), last=g["date"].max(),
             stale_days=stale_days,
             check="STALE" if stale_days > tol.get(freq, 550) else "fresh"))
     for metric_id in tier1:  # surface any mapped-but-not-ingested Tier-1 series
         if metric_id not in set(silver.metric_id):
-            rows.append(dict(metric_id=metric_id, freq="annual", n_obs=0, first=None,
+            rows.append(dict(metric_id=metric_id, entity_id=COUNTRY, freq="annual", n_obs=0, first=None,
                              last=None, stale_days=None, check="NOT_INGESTED"))
     out = pd.DataFrame(rows).sort_values(["freq", "metric_id"]).reset_index(drop=True)
     out.to_csv(DQ / "dq_report.csv", index=False)
     return out
 
 
-def persist_duckdb(silver, derived, scorecard, dq):
+def build_company_gold(silver) -> pd.DataFrame:
+    """Wide entity x quarter table of company fundamentals (gold/company_metrics)."""
+    q = silver[(silver.entity_id.isin(list(hypotheses.COMPANIES))) & (silver.freq == "quarterly")]
+    if q.empty:
+        out = pd.DataFrame(columns=["entity_id", "company", "quarter_end"])
+    else:
+        out = (q.pivot_table(index=["entity_id", "date"], columns="metric_id", values="value")
+                .reset_index().rename(columns={"date": "quarter_end"}))
+        out.insert(1, "company", out.entity_id.map(lambda e: hypotheses.COMPANIES[e][0]))
+    out.to_parquet(GOLD / "company_metrics.parquet", index=False)
+    return out
+
+
+def build_hypotheses(silver) -> pd.DataFrame:
+    out = hypotheses.build_hypothesis_tests(silver)
+    out.to_parquet(GOLD / "hypothesis_tests.parquet", index=False)
+    return out
+
+
+def persist_duckdb(silver, derived, scorecard, dq, company=None, hyp=None):
     con = duckdb.connect(str(DB))
+    if company is not None:
+        con.execute("CREATE OR REPLACE TABLE company_metrics AS SELECT * FROM company")
+    if hyp is not None:
+        con.execute("CREATE OR REPLACE TABLE hypothesis_tests AS SELECT * FROM hyp")
     con.execute("CREATE OR REPLACE TABLE fact_time_series AS SELECT * FROM silver")
     con.execute("CREATE OR REPLACE TABLE derived_metrics AS SELECT * FROM derived")
     con.execute("CREATE OR REPLACE TABLE book_scorecard AS SELECT * FROM scorecard")
@@ -499,7 +556,27 @@ def main():
     derived = build_derived(silver)
     scorecard = build_scorecard(silver)
     dq = build_dq(silver, tier1)
-    persist_duckdb(silver, derived, scorecard, dq)
+    company = build_company_gold(silver)
+    hyp = build_hypotheses(silver)
+    persist_duckdb(silver, derived, scorecard, dq, company, hyp)
+    # merged, research-ready layer: every series (native + Dateno/World Bank/ILO) in one
+    # catalog + one long observations table, with source reconciliation
+    cat, obs, rec = catalog.build(as_of=RUN_TS, used_in=catalog.used_in_from(hyp))
+    con = duckdb.connect(str(DB))
+    for name, df in (("catalog", cat), ("observations", obs), ("reconciliation", rec)):
+        con.register("df_" + name, df)
+        con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM df_{name}")
+    dims_p = ROOT / "warehouse" / "export" / "observations_dims.parquet"
+    if dims_p.exists():  # ILO disaggregations (sex, age, ...) behind the headline series
+        con.execute(f"CREATE OR REPLACE TABLE observations_dims AS SELECT * FROM read_parquet('{dims_p}')")
+    for name in ("political_terms", "political_events"):  # registry/<name>.csv, public record
+        con.execute(f"CREATE OR REPLACE TABLE {name} AS SELECT * FROM read_csv_auto('{ROOT / 'registry' / (name + '.csv')}')")
+    con.execute((ROOT / "semantic" / "views.sql").read_text())  # semantic layer (model.yml)
+    con.execute("CREATE OR REPLACE VIEW latest AS SELECT c.series_id, c.title, c.topic, c.source, "
+                "c.unit, c.last AS date, c.last_value AS value, c.status FROM catalog c")
+    con.close()
+    print(f"Merged catalog: {len(cat):,} series, {len(obs):,} observations, "
+          f"{len(rec)} reconciled concept pairs")
 
     reg_n = len(pd.read_csv(REGISTRY_CSV))
     t1, t2, t3 = len(tier1), len(smap.get("tier2", {}).get("metric_ids", [])), \

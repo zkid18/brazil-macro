@@ -15,8 +15,10 @@ SILVER = pd.read_parquet(ROOT / "warehouse" / "silver" / "fact_time_series.parqu
 DERIVED = pd.read_parquet(ROOT / "warehouse" / "gold" / "derived_metrics.parquet")
 smap = yaml.safe_load(open(ROOT / "registry" / "source_map.yml"))
 
-native_ids = set(SILVER[SILVER.resolved_source.isin(["bcb_sgs_api", "derived_native"])].metric_id)
-wb_ids = set(SILVER[SILVER.resolved_source.str.startswith("dateno")].metric_id)
+# country-level series only; company (entity) series are outside the macro registry
+BR = SILVER[SILVER.entity_id == "BR"]
+native_ids = set(BR[~BR.resolved_source.str.startswith("dateno")].metric_id)
+wb_ids = set(BR[BR.resolved_source.str.startswith("dateno")].metric_id)
 derived_ids = set(DERIVED[DERIVED.status.str.startswith("computed")].derived_metric)
 tier3 = set(smap.get("tier3", {}).get("metric_ids", []))
 
@@ -25,7 +27,6 @@ PROXY = {
     "gdp_by_sector": "gdp_agriculture/industry/services_share (WB)",
     "grain_harvest_total": "cereal_production (WB annual)",
     "gfcf": "investment_rate_gdp (WB)",
-    "household_debt_service_ratio": "household_debt_income (BCB 29037, related)",
     "exports_by_product": "soy/oil/iron_ore/beef/coffee/sugar + concentration index",
     "exports_by_destination": "exports_to_china + china_export_share",
 }
@@ -33,7 +34,8 @@ PROXY = {
 
 def classify(mid: str) -> tuple[str, str]:
     if mid in native_ids:
-        return "native_ingested", "BCB SGS (daily/monthly)"
+        src = BR.loc[BR.metric_id == mid, "resolved_source"].iloc[0]
+        return "native_ingested", f"{src} (native)"
     if mid in derived_ids:
         return "derived_computed", "pipeline"
     if mid in wb_ids:

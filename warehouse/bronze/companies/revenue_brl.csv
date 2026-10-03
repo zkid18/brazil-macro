@@ -1,0 +1,346 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit,entity_id
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-03-31,9.2709,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-06-30,9.0125,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-09-30,9.6554,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-12-31,11.2937,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-03-31,6.7994,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-06-30,6.8948,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-09-30,7.2135,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-12-31,7.2786,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-03-31,8.1442,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-06-30,8.0885,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-09-30,6.5888,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-12-31,9.7807,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-03-31,8.5989,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-06-30,8.2269,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-09-30,7.9024,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-12-31,7.8607,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-03-31,6.7614,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-06-30,33.0853,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-09-30,8.6079,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-12-31,12.2942,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-03-31,8.9688,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-06-30,9.0941,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-09-30,8.8924,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-12-31,11.0292,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-03-31,8.5926,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-06-30,12.2885,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-09-30,8.9355,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-12-31,-3.1296,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-03-31,6.4518,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-06-30,6.6434,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-09-30,7.2913,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-12-31,7.339,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-03-31,6.9556,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-06-30,11.0976,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-09-30,7.4312,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-12-31,3.5961,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-03-31,8.2084,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-06-30,7.9593,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-09-30,9.9566,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-12-31,11.4919,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-03-31,9.1813,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-06-30,8.856,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-09-30,8.033,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-12-31,9.0093,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-03-31,9.2098,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-06-30,9.2455,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-09-30,8.7814,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-12-31,9.9221,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-03-31,8.7183,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-06-30,8.3953,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-09-30,11.0429,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-12-31,12.0251,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-03-31,10.4142,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-06-30,10.199,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-09-30,10.0025,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-12-31,10.666,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-03-31,12.7116,brl_bn,AXIA
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-06-30,11.1883,brl_bn,AXIA
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2012-03-31,26.0355,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2013-03-31,23.477,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2013-06-30,27.105,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2013-09-30,26.785,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2013-12-31,21.018,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2014-03-31,30.243,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2014-06-30,31.725,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2014-09-30,36.815,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2014-12-31,30.252,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2015-03-31,26.756,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2015-06-30,39.098,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2015-09-30,32.124,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2015-12-31,31.596,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2016-03-31,41.79,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2016-06-30,52.214,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2016-09-30,43.011,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2016-12-31,46.733,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2017-03-31,42.236,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2017-06-30,47.454,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2017-09-30,37.407,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2017-12-31,30.325,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2018-03-31,33.287,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2018-06-30,38.057,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2018-09-30,35.332,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2018-12-31,26.873,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2019-03-31,17.01,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2019-06-30,49.113,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2019-09-30,49.517,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2019-12-31,47.387,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2020-03-31,43.716,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2020-06-30,23.476,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2020-09-30,37.651,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2020-12-31,47.571,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2021-03-31,43.607,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2021-06-30,32.214,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2021-09-30,50.724,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2021-12-31,60.197,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2022-03-31,65.336,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2022-06-30,36.1,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2022-09-30,36.723,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2022-12-31,175.586,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2023-03-31,75.704,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2023-06-30,82.045,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2023-09-30,80.38,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2023-12-31,75.092,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2024-03-31,79.968,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2024-06-30,86.189,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2024-09-30,77.935,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2024-12-31,91.236,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2025-03-31,97.49,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2025-06-30,102.761,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2025-09-30,97.389,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2025-12-31,89.478,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2026-03-31,99.045,brl_bn,ITUB
+revenue_brl,Revenue (bank: financial intermediation income),companies,cvm_itr_dfp,quarterly,2026-06-30,100.073,brl_bn,ITUB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-03-31,66.134,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-06-30,68.0473,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-09-30,73.7929,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-12-31,73.4052,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-03-31,72.5353,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-06-30,73.6262,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-09-30,77.7003,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-12-31,81.028,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-03-31,81.5448,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-06-30,82.298,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-09-30,88.377,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-12-31,85.04,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-03-31,74.353,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-06-30,79.943,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-09-30,82.239,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-12-31,85.103,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-03-31,70.337,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-06-30,71.32,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-09-30,70.443,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-12-31,70.489,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-03-31,68.365,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-06-30,66.996,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-09-30,71.822,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-12-31,76.512,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-03-31,74.461,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-06-30,84.395,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-09-30,98.26,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-12-31,92.72,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-03-31,79.999,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-06-30,72.567,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-09-30,77.051,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-12-31,81.771,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-03-31,75.469,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-06-30,50.898,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-09-30,70.73,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-12-31,74.972,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-03-31,86.174,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-06-30,110.71,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-09-30,121.594,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-12-31,134.19,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-03-31,141.641,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-06-30,170.96,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-09-30,170.076,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-12-31,158.579,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-03-31,139.068,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-06-30,113.84,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-09-30,124.828,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-12-31,134.258,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-03-31,117.721,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-06-30,122.258,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-09-30,129.582,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-12-31,121.268,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-03-31,123.144,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-06-30,119.128,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-09-30,127.906,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-12-31,127.371,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-03-31,123.686,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-06-30,169.53,brl_bn,PETR
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-03-31,0.0032,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-06-30,0.0,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-09-30,0.0007,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-12-31,0.003,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-03-31,0.0021,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-06-30,0.0009,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-09-30,0.0024,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-12-31,-0.001,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-03-31,0.1433,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-06-30,0.1376,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-09-30,0.1267,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-12-31,0.0817,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-03-31,0.0049,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-06-30,0.0968,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-09-30,0.1279,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-12-31,0.0235,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-03-31,0.0415,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-06-30,0.1034,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-09-30,0.1392,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-12-31,0.1137,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-03-31,0.0748,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-06-30,0.1555,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-09-30,0.11,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-12-31,0.1936,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-03-31,0.1172,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-06-30,0.2394,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-09-30,0.2246,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-12-31,0.2677,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-03-31,0.1394,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-06-30,0.5482,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-09-30,0.399,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-12-31,0.558,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-03-31,0.2232,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-06-30,0.3123,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-09-30,0.4887,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-12-31,0.88,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-03-31,0.6553,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-06-30,1.0228,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-09-30,0.9395,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-12-31,1.7783,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-03-31,1.53,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-06-30,1.874,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-09-30,1.9858,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-12-31,0.9737,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-03-31,2.815,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-06-30,2.3112,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-09-30,4.0455,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-12-31,2.9952,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-03-31,3.2002,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-06-30,4.595,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-09-30,3.5783,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-12-31,2.9871,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-03-31,4.4408,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-06-30,3.3278,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-09-30,3.5631,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-12-31,4.2523,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-03-31,6.5299,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-06-30,7.0162,brl_bn,PRIO
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-03-31,1.0376,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-06-30,1.3234,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-09-30,1.3609,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-12-31,1.4704,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-03-31,1.1741,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-06-30,1.3342,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-09-30,1.5201,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-12-31,1.6603,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-03-31,1.3996,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-06-30,1.709,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-09-30,1.9795,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-12-31,2.1765,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-03-31,2.1474,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-06-30,2.3824,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-09-30,2.9855,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-12-31,2.7091,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-03-31,2.7083,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-06-30,2.5035,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-09-30,2.1728,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-12-31,2.4977,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-03-31,2.2539,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-06-30,2.5299,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-09-30,2.5947,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-12-31,3.1423,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-03-31,2.9989,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-06-30,3.2038,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-09-30,4.0055,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-12-31,3.2292,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-03-31,5.699,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-06-30,6.6651,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-09-30,6.5999,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-12-31,7.049,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-03-31,6.9808,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-06-30,7.9957,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-09-30,7.4708,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-12-31,8.013,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-03-31,8.8892,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-06-30,9.8444,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-09-30,10.7619,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-12-31,11.47,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-03-31,9.7428,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-06-30,11.5197,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-09-30,14.1987,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-12-31,14.3697,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-03-31,11.2764,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-06-30,9.1596,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-09-30,8.948,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-12-31,10.3715,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-03-31,9.4586,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-06-30,11.4941,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-09-30,12.2735,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-12-31,14.177,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-03-31,11.5529,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-06-30,13.2959,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-09-30,12.1531,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-12-31,13.1137,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-03-31,10.9684,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-06-30,11.5901,brl_bn,SUZB
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-03-31,19.5912,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-06-30,23.4049,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-09-30,21.7597,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2012-12-31,28.7558,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-03-31,21.801,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-06-30,22.8713,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-09-30,28.1912,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2013-12-31,29.9634,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-03-31,22.409,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-06-30,22.0841,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-09-30,20.6296,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2014-12-31,23.1518,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-03-31,18.0266,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-06-30,21.4411,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-09-30,23.3501,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2015-12-31,22.6814,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-03-31,22.0674,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-06-30,23.2024,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-09-30,23.7725,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2016-12-31,25.591,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-03-31,26.742,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-06-30,23.3628,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-09-30,28.6,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2017-12-31,29.8271,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-03-31,27.9324,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-06-30,31.2331,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-09-30,37.8624,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2018-12-31,37.4552,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-03-31,30.9516,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-06-30,36.005,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-09-30,40.6647,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2019-12-31,41.0187,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-03-31,31.2509,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-06-30,40.4338,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-09-30,57.9057,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2020-12-31,78.9382,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-03-31,69.3012,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-06-30,87.8468,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-09-30,66.2607,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2021-12-31,70.1153,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-03-31,56.719,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-06-30,54.974,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-09-30,52.08,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2022-12-31,62.735,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-03-31,43.841,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-06-30,47.758,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-09-30,51.962,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2023-12-31,64.505,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-03-31,41.891,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-06-30,51.735,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-09-30,52.978,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2024-12-31,59.401,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-03-31,47.411,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-06-30,49.807,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-09-30,56.701,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2025-12-31,59.676,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-03-31,48.68,brl_bn,VALE
+revenue_brl,Revenue (net sales),companies,cvm_itr_dfp,quarterly,2026-06-30,53.012,brl_bn,VALE

@@ -1,0 +1,6 @@
+certifi==2026.7.22
+duckdb==1.5.6
+pandas==3.0.6
+plotly==7.1.0
+pyarrow==25.0.1
+PyYAML==6.0.3

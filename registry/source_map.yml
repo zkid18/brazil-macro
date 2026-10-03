@@ -136,19 +136,28 @@ tier1:
 # ---------------------------------------------------------------------------
 # TIER 2 — native high-frequency. Dateno carries NO pullable timeseries.
 # Fetch from the native API declared in the registry; Dateno used only to
-# discover/validate the source. Adapters are stubbed in ingest/native_stubs.py.
+# discover/validate the source. Each adapter lives in ingest/<source>.py and writes
+# the bronze contract documented in ingest/_http.py.
 # ---------------------------------------------------------------------------
 tier2:
   # Implemented native adapters (native is the BASE; Dateno is cross-check only):
-  #   ingest/bcb_sgs.py      -> policy/credit/fiscal/external (daily & monthly)
+  #   ingest/bcb_sgs.py      -> policy/credit/fiscal/external (daily & monthly). Transport is the
+  #                             SGS SOAP service (www3.bcb.gov.br/wssgs) — api.bcb.gov.br is NXDOMAIN.
+  #   ingest/bcb_olinda.py   -> pix_transactions_count/value (Olinda EstatisticasTransacoesPix)
+  #   ingest/caged.py        -> caged_net_hires (IPEAData CAGED12_SALDON12, Novo CAGED)
+  #   ingest/anp_production.py -> offshore oil, gas, presalt_share; operated oil per company
+  #   ingest/ons_plants.py   -> cmo_power_cost (weekly); generation per company (AXIA, PETR)
+  #   ingest/b3_market.py    -> ibov_weight, share prices (COTAHIST), dividends (companies)
+  #   ingest/cvm_financials.py -> quarterly revenue/EBIT/NI/debt/cash/capex/dividends (companies)
   #   ingest/bcb_focus.py    -> focus_ipca_12m/selic_12m/gdp_growth/fx (Olinda OData)
   #   ingest/comexstat.py    -> exports/imports totals + soy/oil/iron_ore/beef/
   #                             coffee/sugar exports + fertilizer imports (NCM, monthly)
   #   ingest/tesouro_bonds.py-> gov_real_yield_10y, gov_nominal_yield_5y (constant-maturity)
   #   ingest/ons_energy.py   -> generation shares, load, thermal dispatch, stored EAR (daily)
-  #   ingest/ibge_sidra.py   -> real_average_income, employed_population (PNAD, monthly)
-  #   ingest/ipeadata.py     -> embi_brazil (ends 2024-07), ibovespa_level (daily),
-  #                             oil_production (ANP12_PDPET12, kbbl/d). Gas skipped (unit scale unclear).
+  #   ingest/ibge_sidra.py   -> real_average_income, employed_population, unemployment_rate
+  #                             (PNAD), retail_sales_volume (PMC t8880)
+  #   ingest/ipeadata.py     -> embi_brazil (ends 2024-07), ibovespa_level (daily), brent_usd,
+  #                             oil_production (ANP12_PDPET12, kbbl/d), gas_production (mm3/d)
   # ComexStat note: `period` is a year-range x month-range GRID (month bound must be 12).
   # ComexStat extras verified: niobium 72029300 (~US$240-290M/mo), potash 31042010/090.
   #   Skipped (no/empty native data): lithium carbonate, rare-earth 28461000.
@@ -170,8 +179,19 @@ tier2:
     net_public_debt_gdp:      { code: 4503,  freq: monthly, unit: pct_gdp }
     nominal_deficit_gdp:      { code: 5727,  freq: monthly, unit: pct_gdp_nfsp }
     primary_result_nfsp:      { code: 5793,  freq: monthly, unit: pct_gdp_nfsp }  # -> primary_balance_gdp, interest_bill_gdp
-  # rejected after verification (wrong concept/units): 28763, 19882(stale), 4469(R$),
-  #   22701(US$ flow), 23703/23704(US$ stock), 29034(404), 4513(=67%, not net debt)
+    ipca_services:            { code: 10844, freq: monthly, unit: pct_mom }
+    ipca_administered_prices: { code: 4449,  freq: monthly, unit: pct_mom }
+    inflation_diffusion:      { code: 21379, freq: monthly, unit: pct }
+    current_account_usd:      { code: 22701, freq: monthly, unit: usd_mn }
+    bop_goods_exports:        { code: 22708, freq: monthly, unit: usd_mn }
+    bop_goods_imports:        { code: 22709, freq: monthly, unit: usd_mn }
+    vehicle_production:       { code: 1373,  freq: monthly, unit: units }
+    vehicle_sales:            { code: "7384+7385+7386+7387", freq: monthly, unit: units }  # Fenabrave segments summed
+    household_debt_service_ratio: { code: 29034, freq: monthly, unit: pct_income }  # s.a.
+    gdp_nominal_12m_brl:      { code: 4382,  freq: monthly, unit: brl_mn }
+  # rejected after verification (wrong concept/units): 28763 (CAGED employment STOCK, not net
+  #   hires), 19882(stale), 4469(R$), 23703/23704(US$ stock), 4513(=67%, not net debt),
+  #   29039 (commodity energy index), 1378 (Anfavea total incl. exports)
   metric_ids:
     - credit_gdp
     - household_credit_growth
@@ -207,17 +227,14 @@ tier3:
     - amazon_deforestation        # inpe TerraBrasilis WFS (geospatial)
     - cerrado_deforestation
     - deter_alerts_amazon
-    - oil_production              # anp excel/BI
-    - gas_production
     - grain_harvest_total         # conab portal files
     - soy_production
     - niobium_global_reserves_share  # usgs pdf
     - cds_5y_brazil               # paid vendor
     - pe_vs_em_latam              # paid vendor
-    - ibovespa_level              # b3 portal files
 
 # ---------------------------------------------------------------------------
-# DERIVED — computed in derive.py from the metrics above (annual-feasible only).
+# DERIVED — computed in pipeline.py (build_derived) and hypotheses.py from the metrics above.
 # ---------------------------------------------------------------------------
 derived:
   real_policy_rate:

@@ -1,0 +1,120 @@
+# Brazil Monitoring — data model and semantic layer
+# Read this before querying. Database: DuckDB (warehouse/brazil_macro.duckdb).
+# Remote, read-only:  ATTACH 'https://br.nonamevc.com/data/brazil_macro.duckdb' AS br (READ_ONLY);
+# Every observation of every series is in `observations`; every series is described in `catalog`.
+
+version: 1
+grain: "one row per series per date (long format)"
+date_conventions:
+  annual: "year end (YYYY-12-31)"
+  quarterly: "quarter end"
+  monthly: "first day of the month (PNAD rolling quarters: end month)"
+  daily: "the observation date"
+  event: "the event date (e.g. dividend ex-date)"
+
+entities:
+  series:
+    key: series_id
+    id_patterns:
+      native: "<metric_id> — Brazil-level series from a Brazilian publisher, e.g. selic_target"
+      company: "<metric_id>@<ENTITY> — company series, e.g. revenue_usd_bn@PETR"
+      world_bank: "wb/<INDICATOR>.BR or .BRA — World Bank (same id as Dateno's wb namespace)"
+      ilo: "ilostat/<INDICATOR>.BRA (annual), _Q / _M suffix for quarterly / monthly"
+  company:
+    key: entity_id
+    values: {PETR: Petrobras, VALE: Vale, AXIA: "Axia (ex-Eletrobras)", SUZB: Suzano, PRIO: PRIO,
+             ITUB: "Itaú Unibanco (non-resource control)", IBOV: "Ibovespa index (benchmark only)"}
+  presidential_term:
+    key: [start, end]
+    note: "lean is a coarse left / centre / centre-right / right label of the president's party"
+
+tables:
+  catalog:
+    description: "One row per series: what it is, where it comes from, coverage, freshness."
+    columns:
+      series_id: "primary key"
+      title: "human-readable name"
+      topic: "platform topic (26 values, e.g. Money & rates, Prices, Labour, Health, Companies)"
+      subtopic: "publisher's own topic label (World Bank / ILO), when present"
+      source: "publisher, e.g. Banco Central (SGS), IBGE (SIDRA), World Bank (Dateno), ILO (Dateno)"
+      database: "publisher database, e.g. World Development Indicators, Global Findex database"
+      entity_id: "BR for Brazil-level series, or a company key"
+      freq: "daily | weekly | monthly | quarterly | annual | event"
+      unit: "unit of `value` (bronze code, e.g. pct_pa, brl_per_usd, usd_fob)"
+      first: "first observation date"
+      last: "last observation date"
+      n_obs: "number of observations"
+      last_value: "latest value"
+      status: "fresh | stale (last date vs the series' expected publication lag)"
+      role: "canonical | alternate | derived. Prefer canonical; alternates are other sources for the same concept"
+      concept: "shared concept id linking a canonical series and its alternates"
+      description: "definition from the publisher (World Bank / ILO) when available"
+  observations:
+    description: "All values. Headline only for ILO (all-sexes, all-ages totals)."
+    columns: {series_id: "-> catalog.series_id", date: "ISO date (string; cast to DATE)", value: "double, in catalog.unit"}
+  observations_dims:
+    description: "ILO disaggregations behind the headline: classif1 = sex, classif2 = other dimensions joined by |"
+    columns: {series_id: "-> catalog.series_id", date: "ISO date", classif1: "e.g. SEX_T, SEX_M, SEX_F", classif2: "e.g. AGE_YTHADULT_YGE15", value: "double"}
+  reconciliation:
+    description: "Native vs Dateno (World Bank/ILO) series for the same concept, on common years."
+  company_metrics:
+    description: "Company x quarter fundamentals from CVM filings (BRL bn; *_usd_bn at quarter-average FX)."
+  hypothesis_tests:
+    description: "Ten falsifiable tests with fixed thresholds, re-run on every build (claim, statistic, verdict, evidence)."
+  political_terms: {description: "Presidents since 1985: start, end, president, party, lean, note."}
+  political_events: {description: "Dated political and economic events: date, event, kind (election | political | economic)."}
+  fact_time_series: {description: "Native silver layer with full lineage (source_id, resolved_source, load_ts)."}
+
+relationships:
+  - "observations.series_id = catalog.series_id"
+  - "observations_dims.series_id = catalog.series_id"
+  - "reconciliation.canonical = catalog.series_id; reconciliation.alternate = catalog.series_id"
+  - "catalog.entity_id = company_metrics.entity_id (company series)"
+  - "observation date within [political_terms.start, political_terms.end)"
+
+views:   # the semantic layer — query these first (semantic/views.sql)
+  v_search: "find series: SELECT * FROM v_search WHERE title ILIKE '%inflation%' OR description ILIKE '%inflation%'"
+  v_observations: "observations joined to catalog (title, unit, topic, source, entity)"
+  v_latest: "latest value per series"
+  v_annual: "every series as yearly means — the common frequency for cross-series work"
+  v_annual_yoy: "yearly values with year-on-year % change"
+  v_politics: "observations tagged with president, party and lean"
+  v_by_term: "series averages by presidential term"
+  v_company_quarterly: "company fundamentals by quarter"
+  v_reconciliation: "source agreement for overlapping concepts"
+
+metrics:   # named measures and how to compute them
+  real_policy_rate: "selic_target − focus_ipca_12m (ex-ante, % a year)"
+  r_minus_g: "series r_minus_g = implicit interest rate on gross debt − nominal GDP growth (pts)"
+  trade_balance: "series trade_balance (US$ FOB, monthly) = exports_total − imports_total"
+  china_export_share: "series china_export_share (%) = exports_to_china / exports_total"
+  usd_total_return: "series total_return_usd@<ENTITY>, Jan 2012 = 100, dividends reinvested"
+  export_unit_value: "series *_unit_value (US$/t) = FOB value / net weight"
+  hydro_stress_index: "0.5 × (100 − EAR%) + 0.5 × thermal share% (0–100, higher = stress)"
+
+starter_series:
+  rates_prices: [selic_target, ipca_12m, focus_ipca_12m, gov_real_yield_10y, brl_usd]
+  activity_jobs: [ibc_br, unemployment_rate, caged_net_hires, retail_sales_volume, wb/NY.GDP.MKTP.KD.ZG.BR]
+  fiscal: [gross_public_debt_gdp, primary_balance_gdp, interest_bill_gdp, r_minus_g]
+  external: [exports_total, china_export_share, current_account_usd, fx_reserves]
+  energy: [oil_production, presalt_share, brent_usd, stored_energy_ear, cmo_power_cost]
+  companies: [total_return_usd@PETR, revenue_usd_bn@VALE, operated_oil_production_kbd@PETR]
+  health: [homicide_rate, deaths_total, ncd_death_share]
+
+glossary:
+  Selic: "central bank policy rate"
+  IPCA: "official consumer price index (IBGE)"
+  Focus: "central bank weekly survey of market forecasts"
+  CAGED: "labour ministry register of formal jobs; net hires = hires − separations"
+  PNAD: "IBGE household survey (unemployment)"
+  EAR: "stored energy in hydro reservoirs, % of maximum"
+  CMO: "grid operator's marginal cost of the next MWh"
+  NFSP: "public-sector borrowing requirement; positive = deficit"
+  NTN-B / LTN: "inflation-linked / fixed-rate Treasury bonds"
+
+rules_for_agents:
+  - "Find series with v_search before guessing ids; quote series_id, source and the last date in answers."
+  - "Prefer role = 'canonical'; mention when an alternate disagrees (v_reconciliation)."
+  - "Use v_annual to compare series of different frequencies; never mix units on one axis without rebasing."
+  - "World Bank population series include projections beyond the current year; filter date <= current_date."
+  - "Recent DATASUS months are preliminary; monthly CAGED is not seasonally adjusted."

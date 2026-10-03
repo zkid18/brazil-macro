@@ -1,74 +1,74 @@
 metric_id,theme,priority,status,via
-selic_target,macro_policy,v1,native_ingested,BCB SGS (daily/monthly)
-brl_usd,market_repricing,v1,native_ingested,BCB SGS (daily/monthly)
-ibc_br,domestic_demand,v1,native_ingested,BCB SGS (daily/monthly)
-credit_gdp,domestic_demand,v1,native_ingested,BCB SGS (daily/monthly)
-household_credit_growth,domestic_demand,v1,native_ingested,BCB SGS (daily/monthly)
-corporate_credit_growth,domestic_demand,v1.5,native_ingested,BCB SGS (daily/monthly)
-household_debt_service_ratio,domestic_demand,v1,proxy,"household_debt_income (BCB 29037, related)"
-delinquency_rate,domestic_demand,v1,native_ingested,BCB SGS (daily/monthly)
-gross_public_debt_gdp,fiscal,v1,native_ingested,BCB SGS (daily/monthly)
-net_public_debt_gdp,fiscal,v1,native_ingested,BCB SGS (daily/monthly)
-primary_balance_gdp,fiscal,v1,native_ingested,BCB SGS (daily/monthly)
-nominal_deficit_gdp,fiscal,v1,native_ingested,BCB SGS (daily/monthly)
-interest_bill_gdp,fiscal,v1,native_ingested,BCB SGS (daily/monthly)
+selic_target,macro_policy,v1,native_ingested,bcb_sgs (native)
+brl_usd,market_repricing,v1,native_ingested,bcb_sgs (native)
+ibc_br,domestic_demand,v1,native_ingested,bcb_sgs (native)
+credit_gdp,domestic_demand,v1,native_ingested,bcb_sgs (native)
+household_credit_growth,domestic_demand,v1,native_ingested,derived_native (native)
+corporate_credit_growth,domestic_demand,v1.5,native_ingested,derived_native (native)
+household_debt_service_ratio,domestic_demand,v1,native_ingested,bcb_sgs (native)
+delinquency_rate,domestic_demand,v1,native_ingested,bcb_sgs (native)
+gross_public_debt_gdp,fiscal,v1,native_ingested,bcb_sgs (native)
+net_public_debt_gdp,fiscal,v1,native_ingested,bcb_sgs (native)
+primary_balance_gdp,fiscal,v1,native_ingested,derived_native (native)
+nominal_deficit_gdp,fiscal,v1,native_ingested,bcb_sgs (native)
+interest_bill_gdp,fiscal,v1,native_ingested,derived_native (native)
 current_account_gdp,external_sector,v1,dateno_ingested,Dateno/World Bank (annual)
 current_account_components,external_sector,v1,pending_tier2,native adapter not built yet
 fdi_idp,external_sector,v1,dateno_ingested,Dateno/World Bank (annual)
-fx_reserves,external_sector,v1,native_ingested,BCB SGS (daily/monthly)
+fx_reserves,external_sector,v1,native_ingested,bcb_sgs (native)
 niip_gdp,external_sector,v1.5,pending_tier2,native adapter not built yet
-focus_ipca_12m,expectations,v1,native_ingested,BCB SGS (daily/monthly)
-focus_selic_12m,expectations,v1,native_ingested,BCB SGS (daily/monthly)
-focus_gdp_growth,expectations,v1,native_ingested,BCB SGS (daily/monthly)
-focus_fx,expectations,v1,native_ingested,BCB SGS (daily/monthly)
+focus_ipca_12m,expectations,v1,native_ingested,bcb_focus (native)
+focus_selic_12m,expectations,v1,native_ingested,bcb_focus (native)
+focus_gdp_growth,expectations,v1,native_ingested,bcb_focus (native)
+focus_fx,expectations,v1,native_ingested,bcb_focus (native)
 ipca_headline,inflation,v1,dateno_ingested,Dateno/World Bank (annual)
-ipca_services,inflation,v1,pending_tier2,native adapter not built yet
-ipca_administered_prices,inflation,v1,pending_tier2,native adapter not built yet
-inflation_diffusion,inflation,v1.5,pending_tier2,native adapter not built yet
+ipca_services,inflation,v1,native_ingested,bcb_sgs (native)
+ipca_administered_prices,inflation,v1,native_ingested,bcb_sgs (native)
+inflation_diffusion,inflation,v1.5,native_ingested,bcb_sgs (native)
 gdp_real_growth,macro_activity,v1,dateno_ingested,Dateno/World Bank (annual)
 gdp_by_sector,macro_activity,v1,proxy,gdp_agriculture/industry/services_share (WB)
 gfcf,investment_productivity,v1,proxy,investment_rate_gdp (WB)
 investment_rate_gdp,investment_productivity,v1,dateno_ingested,Dateno/World Bank (annual)
-unemployment_rate,labor,v1,dateno_ingested,Dateno/World Bank (annual)
+unemployment_rate,labor,v1,native_ingested,ibge_sidra (native)
 labor_participation_rate,labor,v1,dateno_ingested,Dateno/World Bank (annual)
-real_average_income,labor,v1,native_ingested,BCB SGS (daily/monthly)
-real_wage_bill,labor,v1,native_ingested,BCB SGS (daily/monthly)
+real_average_income,labor,v1,native_ingested,ibge_sidra (native)
+real_wage_bill,labor,v1,native_ingested,derived_native (native)
 fertility_rate,demography,v1,dateno_ingested,Dateno/World Bank (annual)
 working_age_share,demography,v1,dateno_ingested,Dateno/World Bank (annual)
 dependency_ratio,demography,v1,dateno_ingested,Dateno/World Bank (annual)
 median_age,demography,v1,pending_tier2,native adapter not built yet
 labor_productivity_proxy,investment_productivity,v1.5,pending_tier2,native adapter not built yet
-trade_balance,external_trade,v1,native_ingested,BCB SGS (daily/monthly)
-exports_total,external_trade,v1,native_ingested,BCB SGS (daily/monthly)
-imports_total,external_trade,v1,native_ingested,BCB SGS (daily/monthly)
+trade_balance,external_trade,v1,native_ingested,derived_native (native)
+exports_total,external_trade,v1,native_ingested,comexstat (native)
+imports_total,external_trade,v1,native_ingested,comexstat (native)
 exports_by_product,external_trade,v1,proxy,soy/oil/iron_ore/beef/coffee/sugar + concentration index
 exports_by_destination,external_trade,v1,proxy,exports_to_china + china_export_share
-soy_exports,agriculture_trade,v1,native_ingested,BCB SGS (daily/monthly)
-oil_exports,energy_trade,v1,native_ingested,BCB SGS (daily/monthly)
-iron_ore_exports,minerals_trade,v1,native_ingested,BCB SGS (daily/monthly)
-beef_exports,agriculture_trade,v1,native_ingested,BCB SGS (daily/monthly)
-sugar_exports,agriculture_trade,v1,native_ingested,BCB SGS (daily/monthly)
-coffee_exports,agriculture_trade,v1,native_ingested,BCB SGS (daily/monthly)
-fertilizer_imports,agriculture_risk,v1,native_ingested,BCB SGS (daily/monthly)
-potash_import_dependency_proxy,agriculture_risk,v1,native_ingested,BCB SGS (daily/monthly)
+soy_exports,agriculture_trade,v1,native_ingested,comexstat (native)
+oil_exports,energy_trade,v1,native_ingested,comexstat (native)
+iron_ore_exports,minerals_trade,v1,native_ingested,comexstat (native)
+beef_exports,agriculture_trade,v1,native_ingested,comexstat (native)
+sugar_exports,agriculture_trade,v1,native_ingested,comexstat (native)
+coffee_exports,agriculture_trade,v1,native_ingested,comexstat (native)
+fertilizer_imports,agriculture_risk,v1,native_ingested,comexstat (native)
+potash_import_dependency_proxy,agriculture_risk,v1,native_ingested,derived_native (native)
 lithium_exports,minerals_trade,v1,pending_tier2,native adapter not built yet
-niobium_exports,minerals_trade,v1,native_ingested,BCB SGS (daily/monthly)
+niobium_exports,minerals_trade,v1,native_ingested,comexstat (native)
 rare_earth_exports,minerals_trade,v1.5,pending_tier2,native adapter not built yet
 export_concentration_index,external_trade,v1,derived_computed,pipeline
 arco_norte_export_share,agriculture_logistics,v1.5,pending_tier2,native adapter not built yet
-electricity_generation_by_source,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-hydro_generation_share,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-wind_solar_generation_share,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-thermal_generation_share,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-stored_energy_ear,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-thermal_dispatch_mwh,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-hydro_stress_index,energy_water,v1,native_ingested,BCB SGS (daily/monthly)
-electricity_load,energy_water,v1.5,native_ingested,BCB SGS (daily/monthly)
-cmo_power_cost,energy_water,v1.5,pending_tier2,native adapter not built yet
-oil_production,oil_gas,v1,native_ingested,BCB SGS (daily/monthly)
-gas_production,oil_gas,v1,pending_tier3,manual/geospatial/paid
-presalt_share,oil_gas,v1,pending_tier2,native adapter not built yet
-oil_production_yoy,oil_gas,v1,native_ingested,BCB SGS (daily/monthly)
+electricity_generation_by_source,energy_water,v1,native_ingested,ons_open_data (native)
+hydro_generation_share,energy_water,v1,native_ingested,ons_open_data (native)
+wind_solar_generation_share,energy_water,v1,native_ingested,ons_open_data (native)
+thermal_generation_share,energy_water,v1,native_ingested,ons_open_data (native)
+stored_energy_ear,energy_water,v1,native_ingested,ons_open_data (native)
+thermal_dispatch_mwh,energy_water,v1,native_ingested,ons_open_data (native)
+hydro_stress_index,energy_water,v1,native_ingested,derived_native (native)
+electricity_load,energy_water,v1.5,native_ingested,ons_open_data (native)
+cmo_power_cost,energy_water,v1.5,native_ingested,ons (native)
+oil_production,oil_gas,v1,native_ingested,ipeadata (native)
+gas_production,oil_gas,v1,native_ingested,ipeadata (native)
+presalt_share,oil_gas,v1,native_ingested,anp (native)
+oil_production_yoy,oil_gas,v1,native_ingested,derived_native (native)
 grain_harvest_total,agriculture_production,v1,proxy,cereal_production (WB annual)
 soy_production,agriculture_production,v1,pending_tier3,manual/geospatial/paid
 corn_production,agriculture_production,v1,pending_tier2,native adapter not built yet
@@ -89,9 +89,9 @@ niobium_global_reserves_share,minerals_structural,v1,pending_tier3,manual/geospa
 rare_earth_global_reserves_share,minerals_structural,v1.5,pending_tier2,native adapter not built yet
 lithium_global_reserves_share,minerals_structural,v1.5,pending_tier2,native adapter not built yet
 iron_ore_global_context,minerals_structural,v1.5,pending_tier2,native adapter not built yet
-embi_brazil,market_repricing,v1.5,native_ingested,BCB SGS (daily/monthly)
-ibovespa_level,market_repricing,v1,native_ingested,BCB SGS (daily/monthly)
-ibovespa_usd,market_repricing,v1,native_ingested,BCB SGS (daily/monthly)
+embi_brazil,market_repricing,v1.5,native_ingested,ipeadata (native)
+ibovespa_level,market_repricing,v1,native_ingested,ipeadata (native)
+ibovespa_usd,market_repricing,v1,native_ingested,derived_native (native)
 foreign_investor_flow_b3,market_repricing,v1.5,pending_tier2,native adapter not built yet
 equity_fund_flow,capital_markets,v1.5,pending_tier2,native adapter not built yet
 debenture_issuance,capital_markets,later,pending_tier2,native adapter not built yet
@@ -103,10 +103,10 @@ r_g_spread,derived_fiscal,v1,derived_computed,pipeline
 debt_stabilizing_primary_surplus_gap,derived_fiscal,v1,derived_computed,pipeline
 fdi_coverage_current_account_deficit,derived_external,v1,derived_computed,pipeline
 credit_impulse,derived_demand,v1.5,derived_computed,pipeline
-fertilizer_dependency_index,derived_agriculture,v1,native_ingested,BCB SGS (daily/monthly)
+fertilizer_dependency_index,derived_agriculture,v1,native_ingested,derived_native (native)
 investment_rate_gap,derived_productivity,v1,derived_computed,pipeline
-vehicle_sales,domestic_demand,hold,pending_tier2,native adapter not built yet
-vehicle_production,domestic_demand,hold,pending_tier2,native adapter not built yet
+vehicle_sales,domestic_demand,hold,native_ingested,bcb_sgs (native)
+vehicle_production,domestic_demand,hold,native_ingested,bcb_sgs (native)
 farmland_prices_usd,agriculture_assets,later,pending_tier2,native adapter not built yet
 sovereign_fund_deal_flow,capital_allocation,later,pending_tier2,native adapter not built yet
 critical_mineral_policy_events,policy_events,later,pending_tier2,native adapter not built yet

@@ -1,0 +1,25 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2000-01-01,26.0943,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2001-01-01,27.207,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2002-01-01,27.8399,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2003-01-01,28.2461,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2004-01-01,26.4534,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2005-01-01,25.7191,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2006-01-01,26.2721,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2007-01-01,25.2367,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2008-01-01,25.8285,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2009-01-01,26.6524,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2010-01-01,26.815,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2011-01-01,26.5499,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2012-01-01,28.4078,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2013-01-01,28.4014,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2014-01-01,29.5864,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2015-01-01,28.5725,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2016-01-01,29.8031,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2017-01-01,30.8252,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2018-01-01,26.8179,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2019-01-01,20.9534,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2020-01-01,22.5165,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2021-01-01,21.3588,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2022-01-01,20.6523,per_100k
+homicide_rate,Homicide rate (X85-Y09),health,who_mdb,annual,2023-01-01,20.0861,per_100k

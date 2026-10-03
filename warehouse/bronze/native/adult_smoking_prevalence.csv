@@ -1,0 +1,3 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+adult_smoking_prevalence,Adult (18+) current tobacco smokers (PNS),health,ibge_sidra,annual,2013-12-31,14.7,pct
+adult_smoking_prevalence,Adult (18+) current tobacco smokers (PNS),health,ibge_sidra,annual,2019-12-31,12.6,pct

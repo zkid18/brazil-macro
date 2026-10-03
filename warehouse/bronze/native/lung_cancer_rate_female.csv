@@ -1,0 +1,25 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2000-01-01,5.2044,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2001-01-01,5.3141,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2002-01-01,5.4198,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2003-01-01,5.8737,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2004-01-01,6.1881,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2005-01-01,6.4495,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2006-01-01,6.9294,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2007-01-01,7.3171,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2008-01-01,7.6785,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2009-01-01,7.9047,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2010-01-01,8.2413,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2011-01-01,8.7015,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2012-01-01,9.1172,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2013-01-01,9.4785,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2014-01-01,10.0016,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2015-01-01,10.5665,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2016-01-01,10.782,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2017-01-01,11.1623,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2018-01-01,11.5899,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2019-01-01,11.7528,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2020-01-01,11.6504,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2021-01-01,11.9005,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2022-01-01,12.3518,per_100k
+lung_cancer_rate_female,"Lung cancer death rate, female (C33-C34)",health,who_mdb,annual,2023-01-01,13.091,per_100k

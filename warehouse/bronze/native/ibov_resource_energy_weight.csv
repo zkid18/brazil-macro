@@ -1,0 +1,2 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+ibov_resource_energy_weight,Ibovespa weight of resource & energy sectors,companies,b3_ibov_portfolio,daily,2026-10-03,46.812,pct

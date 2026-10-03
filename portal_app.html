@@ -1,0 +1,689 @@
+<style>
+/* Layout: fixed left catalogue (search + Curated/Sources/Topics tree), a scrolling centre
+   panel for the selected collection or series, and a SQL dock that stays open across
+   navigation. Centre content max 72rem. */
+:root{
+  /* Light, Brazil-flag palette: green (verde-bandeira), yellow (amarelo), navy (azul) on a
+     pale-yellow paper. Single light theme by design. */
+  --paper:#fffdf4; --side:#f2f7ec; --card:#ffffff; --ink:#0e2a1b; --ink-2:#3d5446; --ink-3:#56695c;
+  --rule:#dbe5d3; --hover:#e8f2df; --sel:#fff1a8; --accent:#009c3b; --accent-ink:#00702b; --accent-bg:#e2f4e7;
+  --yellow:#ffdf00; --navy:#002776; --on-accent:#ffffff;
+  --ok:#00702b; --ok-bg:#e2f4e7; --no:#b3261e; --no-bg:#fbe4e1; --mixed:#7a5600; --mixed-bg:#fff3c4;
+  --na:#56695c; --na-bg:#edf1ea;
+  --c1:#009c3b; --c2:#2f57b5; --c3:#e8a600; --c4:#e4572e; --c5:#7a4fc4; --c6:#1a9dc2; --c7:#0e2a1b;
+  --grid:#e9eee4;
+  --left:rgba(228,87,46,.10); --left-ink:#b3261e; --centre:rgba(86,105,92,.10); --centre-ink:#56695c; --right:rgba(47,87,181,.10); --right-ink:#2f57b5;
+  --serif:"Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sideW:21rem; --dockH:0px;
+  color-scheme:light;
+}
+:root.theme-dark{
+  /* Soft dark: near-neutral charcoal with a faint green cast; sage accent, muted flag yellow. */
+  --paper:#151816; --side:#191d1a; --card:#1c211e; --ink:#e6e9e6; --ink-2:#b9c0bb; --ink-3:#979f99;
+  --rule:#2c332e; --hover:#232925; --sel:#3a3720; --accent:#7cc29a; --accent-ink:#9ad3b1; --accent-bg:#233229;
+  --on-accent:#121513; --yellow:#e8cf5a;
+  --ok:#9ad3b1; --ok-bg:#223127; --no:#eb9f95; --no-bg:#3a2321; --mixed:#e3c46f; --mixed-bg:#36301a;
+  --na:#a5ada7; --na-bg:#242a26;
+  --c1:#7cc29a; --c2:#8ea9e8; --c3:#e3c46f; --c4:#e8907a; --c5:#b39ae0; --c6:#72bfd6; --c7:#e6e9e6;
+  --grid:#242a26;
+  --left:rgba(232,144,122,.12); --left-ink:#eba48f; --centre:rgba(165,173,167,.09); --centre-ink:#a5ada7; --right:rgba(142,169,232,.13); --right-ink:#a9bdee;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 14px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:var(--accent-ink);text-underline-offset:.18em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.num{font-variant-numeric:tabular-nums}
+code,.mono{font-family:var(--mono);font-size:.9em}
+
+.app{display:grid;grid-template-columns:var(--sideW) minmax(0,1fr);height:100%;padding-top:env(safe-area-inset-top,0px)}
+.app.collapsed{--sideW:0px}
+.app.collapsed .side{visibility:hidden}
+
+/* ---- sidebar */
+.side{background:var(--side);border-right:1px solid var(--rule);display:flex;flex-direction:column;min-height:0}
+.side-top{padding:.75rem .75rem .5rem;display:grid;gap:.6rem;border-bottom:1px solid var(--rule)}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.brand{font:700 1.05rem/1 var(--serif);color:var(--ink);text-decoration:none}
+.brand span{color:var(--accent)}
+.brand{display:inline-flex;align-items:center;gap:.5rem}
+.flag{width:1.55rem;height:1.1rem;flex:none;filter:drop-shadow(0 1px 1px rgb(0 0 0 / .18))}
+.iconbtn{background:none;border:1px solid transparent;border-radius:6px;width:2rem;height:2rem;display:grid;place-items:center;color:var(--ink-2)}
+.iconbtn:hover{background:var(--hover);border-color:var(--rule)}
+.iconbtn svg{width:1rem;height:1rem;stroke:currentColor;fill:none;stroke-width:1.8}
+.iconbtn.gh svg{fill:currentColor;stroke:none;width:1.15rem;height:1.15rem}
+a.iconbtn{text-decoration:none}
+.search{display:flex;align-items:center;gap:.45rem;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.4rem .6rem}
+.search:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.search svg{width:.95rem;height:.95rem;flex:none;stroke:var(--ink-3);fill:none;stroke-width:2}
+.search input{border:0;outline:0;background:transparent;width:100%;min-width:0}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--hover);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;border-radius:999px;padding:.35rem 0;font-weight:600;font-size:.8125rem;color:var(--ink-2)}
+.seg button[aria-selected="true"]{background:var(--accent);color:var(--on-accent)}
+.tree{flex:1;overflow:auto;padding:.4rem .4rem 1rem}
+.tree ul{list-style:none;margin:0;padding:0}
+.node{display:flex;align-items:center;gap:.35rem;width:100%;text-align:left;background:none;border:0;border-radius:6px;
+  padding:.38rem .5rem;color:var(--ink);font-size:.8125rem;text-decoration:none}
+.node:hover{background:var(--hover)}
+.node[aria-current="true"]{background:var(--sel);font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
+.node .tw{width:.9rem;flex:none;color:var(--ink-3);transition:transform .15s}
+.node[aria-expanded="true"] .tw{transform:rotate(90deg)}
+.node .lbl{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node .ct{color:var(--ink-3);font-size:.75rem;font-variant-numeric:tabular-nums}
+.node .tag{font-size:.6875rem;color:var(--ink-3);border:1px solid var(--rule);border-radius:4px;padding:0 .3rem}
+.tree ul ul{padding-left:.9rem}
+.leaf{position:relative}
+.leaf .node{padding-right:2rem}
+.plus{position:absolute;right:.25rem;top:50%;transform:translateY(-50%);width:1.5rem;height:1.5rem;border-radius:6px;border:1px solid var(--rule);
+  background:var(--card);color:var(--ink);font-weight:700;line-height:1;opacity:0}
+.leaf:hover .plus,.plus:focus-visible,.leaf .node[aria-current="true"] + .plus{opacity:1}
+@media (hover:none){.plus{opacity:.8}}
+.plotbar{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;padding:.75rem 1rem .25rem}
+.pchip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--rule);border-radius:999px;padding:.2rem .3rem .2rem .6rem;font-size:.78rem;background:var(--paper);max-width:24rem}
+.pchip i{width:.65rem;height:.65rem;border-radius:2px;flex:none}
+.pchip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pchip button{border:0;background:none;color:var(--ink-3);width:1.3rem;height:1.3rem;border-radius:50%;line-height:1}
+.pchip button:hover{background:var(--hover);color:var(--ink)}
+.addbtn{display:inline-flex;align-items:center;gap:.35rem;border:1.5px dashed var(--accent);color:var(--accent-ink);background:var(--accent-bg);
+  border-radius:999px;padding:.25rem .8rem;font-weight:700;font-size:.8rem}
+.addbtn:hover{border-style:solid}
+.picker{position:relative;flex:1 1 16rem;max-width:26rem}
+.picker input{width:100%;border:1px solid var(--accent);border-radius:8px;padding:.35rem .6rem;background:var(--card);outline:0;box-shadow:0 0 0 3px var(--accent-bg)}
+.picker ul{position:absolute;z-index:15;left:0;right:0;top:calc(100% + .25rem);list-style:none;margin:0;padding:.25rem;background:var(--card);
+  border:1px solid var(--rule);border-radius:8px;box-shadow:0 10px 30px rgb(0 0 0 / .18);max-height:18rem;overflow:auto}
+.picker li button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:6px;padding:.4rem .5rem;font-size:.8rem}
+.picker li button:hover,.picker li button.hl{background:var(--hover)}
+.picker li small{display:block;color:var(--ink-3);font-size:.7rem}
+.modes{margin-left:auto;display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px}
+.modes button{border:0;background:none;border-radius:999px;padding:.15rem .6rem;font-size:.75rem;font-weight:600;color:var(--ink-2)}
+.modes button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.tree .ic{width:.85rem;height:.85rem;flex:none;stroke:var(--ink-3);fill:none;stroke-width:1.6}
+.side-foot{border-top:1px solid var(--rule);padding:.5rem .6rem;display:flex;flex-wrap:wrap;gap:.15rem .25rem}
+.side-foot a{font-size:.75rem;color:var(--ink-2);text-decoration:none;padding:.25rem .4rem;border-radius:5px}
+.side-foot a:hover,.side-foot a[aria-current="true"]{background:var(--hover);color:var(--ink)}
+.side-foot .stat{width:100%;font-size:.6875rem;color:var(--ink-3);padding:.25rem .4rem 0}
+
+/* ---- main */
+.main{display:flex;flex-direction:column;min-width:0;min-height:0}
+.scroll{flex:1;overflow:auto;min-height:0}
+.topbar{display:flex;align-items:center;gap:.5rem;padding:.6rem 1.25rem;border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:5}
+.crumbs{font-size:.8125rem;color:var(--ink-3);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumbs a{color:var(--ink-2);text-decoration:none} .crumbs a:hover{text-decoration:underline}
+.crumbs .sep{margin:0 .4rem}
+.tray{display:flex;align-items:center;gap:.4rem}
+.btn{background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.35rem .8rem;font-weight:600;font-size:.8125rem;white-space:nowrap;color:var(--ink)}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-ink)}
+.btn[aria-pressed="true"]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent-ink)}
+.content{max-width:72rem;margin:0 auto;padding:1.75rem clamp(1rem,3vw,2.25rem) 4rem}
+.head h1{font-size:clamp(1.6rem,3.4vw,2.15rem);line-height:1.15}
+.head .lede{max-width:72ch;color:var(--ink-2);margin-top:.6rem;font-size:.95rem}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--rule);border-radius:999px;padding:.2rem .65rem;font-size:.75rem;color:var(--ink-2);background:var(--card)}
+.actions{display:flex;flex-wrap:wrap;gap:.4rem;margin-left:auto}
+.headrow{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+.pill{display:inline-flex;align-items:center;padding:.1rem .5rem;border-radius:999px;font-weight:600;font-size:.6875rem;white-space:nowrap}
+.pill.fresh,.pill.ok{color:var(--ok);background:var(--ok-bg)} .pill.stale,.pill.mixed{color:var(--mixed);background:var(--mixed-bg)}
+.pill.alternate,.pill.na{color:var(--na);background:var(--na-bg)} .pill.derived{color:var(--accent-ink);background:var(--accent-bg)} .pill.no{color:var(--no);background:var(--no-bg)}
+
+.kpis{border-top:3px solid var(--yellow)!important;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10.5rem),1fr));border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:1.5rem;background:var(--card)}
+.kpi{padding:1rem 1.1rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);display:block;margin:0 -1px -1px 0}
+.kpi:hover{background:var(--hover)}
+.kpi strong{display:block;font:600 1.45rem/1.15 var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi .k{font-size:.75rem;color:var(--ink-2);margin-top:.3rem}
+.kpi .d{font-size:.6875rem;color:var(--ink-3);margin-top:.15rem}
+.up{color:var(--ok)} .down{color:var(--no)}
+
+.panel{border:1px solid var(--rule);border-radius:10px;background:var(--card);margin-top:1.25rem;overflow:hidden}
+.panel-h{padding:.85rem 1rem .25rem}
+.panel-h h3{font:600 .95rem/1.3 var(--sans)}
+.panel-h p{font-size:.8125rem;color:var(--ink-2);margin-top:.2rem;max-width:80ch}
+.panel-b{padding:.25rem .75rem .5rem}
+.panel-f{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 1rem .85rem;border-top:1px solid var(--rule)}
+.tchip{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--rule);border-radius:6px;padding:.15rem .5rem;font:500 .75rem var(--mono);color:var(--ink-2);text-decoration:none;background:var(--paper)}
+.tchip:hover{border-color:var(--ink-3);color:var(--ink)}
+.tchip i{width:.55rem;height:.55rem;border-radius:2px;display:inline-block}
+.sec-title{font-size:1.25rem;margin-top:2.25rem}
+.sec-desc{font-size:.875rem;color:var(--ink-2);margin-top:.35rem;max-width:80ch}
+.chart{width:100%;min-height:320px}
+.stabs{display:flex;gap:1.25rem;border-bottom:1px solid var(--rule);margin-top:1.5rem}
+.stabs button{background:none;border:0;border-bottom:2px solid transparent;padding:.55rem 0;font-weight:600;font-size:.9rem;color:var(--ink-3);margin-bottom:-1px}
+.stabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.stabs + div > .panel:first-child{margin-top:1rem}
+.ranges{display:flex;gap:.25rem}
+.ranges button{background:none;border:1px solid var(--rule);border-radius:6px;padding:.12rem .5rem;font-size:.75rem;font-weight:600;color:var(--ink-2)}
+.ranges button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.legend{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.75rem;color:var(--ink-2);padding:.2rem .25rem .35rem}
+.legend span{display:inline-flex;align-items:center;gap:.35rem}
+.legend i{width:.9rem;height:.18rem;border-radius:2px;display:inline-block}
+.note{font-size:.75rem;color:var(--ink-3);padding:0 .25rem .35rem}
+.pol-legend{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.72rem;color:var(--ink-3);padding:0 .25rem .4rem}
+.pol-legend i{display:inline-block;width:.8rem;height:.6rem;border-radius:2px;vertical-align:middle;margin-right:.3rem}
+.lean{display:inline-block;padding:.05rem .45rem;border-radius:999px;font-size:.6875rem;font-weight:600}
+.lean.left{background:var(--left);color:var(--left-ink)} .lean.right,.lean.centre-right{background:var(--right);color:var(--right-ink)} .lean.centre{background:var(--centre);color:var(--centre-ink)}
+
+table{border-collapse:collapse;width:100%;font-size:.8125rem}
+.tbl{overflow-x:auto}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--rule);vertical-align:top;white-space:nowrap}
+thead th{font-weight:600;color:var(--ink-3);background:var(--paper)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+td.mono{font-family:var(--mono);font-size:.78rem}
+td.wrap{white-space:normal;min-width:16rem}
+.rows-n{display:inline-block;margin:.6rem .75rem;font-size:.75rem;color:var(--ink-3);background:var(--paper);border-radius:5px;padding:.1rem .45rem}
+
+.empty{padding:2rem 0;color:var(--ink-2)}
+.toast{position:fixed;left:50%;bottom:1.5rem;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:.5rem;
+  background:var(--ink);color:var(--paper);border-radius:999px;padding:.55rem 1rem .55rem .8rem;font-weight:600;font-size:.85rem;
+  box-shadow:0 8px 24px rgb(0 0 0 / .22);animation:toastin .18s ease-out}
+.toast svg{width:1rem;height:1rem;stroke:var(--yellow);fill:none;stroke-width:2.4}
+@keyframes toastin{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
+.hits{list-style:none;padding:0;margin:.4rem 0 0;display:grid;gap:.35rem;font-size:.8125rem}
+.hits .pub{color:var(--ink-3)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1.25rem 2rem;align-items:start}
+pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.8rem;overflow-x:auto;font:400 .78rem/1.5 var(--mono)}
+.mobile-only{display:none}
+
+@media (max-width:60rem){
+  body{overflow:auto}
+  .app{grid-template-columns:minmax(0,1fr);height:auto;min-height:100%}
+  .side{position:fixed;inset:0 auto 0 0;width:min(22rem,88vw);z-index:30;transform:translateX(-100%);transition:transform .2s;box-shadow:0 0 0 100vmax transparent}
+  .app.open .side{transform:none;box-shadow:0 0 0 100vmax rgb(0 0 0 / .35)}
+  .app.collapsed .side{visibility:visible}
+  .mobile-only{display:grid}
+  .scroll{overflow:visible}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="app" id="app">
+  <aside class="side" id="side" aria-label="Data catalogue">
+    <div class="side-top">
+      <div class="brandrow"><a class="brand" href="#c-overview"><svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="2.5" fill="#009c3b"/><path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.3" fill="#002776"/><path d="M9.9 9.1c2.7-.6 5.6-.3 8.1.9" stroke="#fff" stroke-width=".8" fill="none"/></svg>Brazil <span>Monitoring</span></a>
+        <button class="iconbtn" id="collapse" aria-label="Hide catalogue" title="Hide catalogue"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button></div>
+      <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search datasets" autocomplete="off" aria-label="Search all datasets"></label>
+      <div class="seg" role="tablist" aria-label="Browse by">
+        <button role="tab" data-tab="curated" aria-selected="true">Curated</button>
+        <button role="tab" data-tab="sources" aria-selected="false">Sources</button>
+        <button role="tab" data-tab="topics" aria-selected="false">Topics</button>
+      </div>
+    </div>
+    <nav class="tree" id="tree" aria-label="Datasets"></nav>
+    <div class="side-foot">
+      <a href="#compare" data-foot="compare">Compare <span id="cmpCount"></span></a>
+      <a href="#politics" data-foot="politics">Political calendar</a>
+      <a href="#reconcile" data-foot="reconcile">Reconciliation</a>
+      <a href="#missing" data-foot="missing">Not yet ingested</a>
+      <a href="#about" data-foot="about">Data &amp; DuckDB</a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="scroll" id="scroll">
+      <div class="topbar">
+        <button class="iconbtn mobile-only" id="openSide" aria-label="Open catalogue"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button class="iconbtn" id="expand" hidden aria-label="Show catalogue" title="Show catalogue"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button>
+        <div class="crumbs" id="crumbs"></div>
+        <div class="tray"><button class="iconbtn" id="themeToggle" aria-label="Switch to dark theme" title="Switch theme"><svg id="themeIcon" viewBox="0 0 24 24"></svg></button><button class="btn" id="polToggle" aria-pressed="false" title="Shade presidential terms and mark political events on every chart">Politics</button><button class="btn primary" id="copyPrompt" title="Copy instructions for your AI agent (Claude, ChatGPT, Cursor…) to query this database">
+            <svg viewBox="0 0 24 24" aria-hidden="true" style="width:.95rem;height:.95rem;vertical-align:-.15em;margin-right:.3rem;stroke:currentColor;fill:none;stroke-width:2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy prompt</button>
+          <a class="iconbtn gh" href="https://github.com/zkid18/brazil-macro" target="_blank" rel="noopener" aria-label="Source code on GitHub" title="GitHub: zkid18/brazil-macro">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></div>
+      </div>
+      <main class="content" id="view" aria-live="polite"></main>
+      <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    </div>
+  </div>
+</div>
+
+<script src="{{PLOTLY}}"></script>
+<script>
+(function(){
+'use strict';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const SLOTS = ['--c1','--c2','--c3','--c4','--c5','--c6','--c7'];
+const FONT = '"Public Sans", "Helvetica Neue", Arial, sans-serif';
+const fmt = v => v == null ? '—' : Math.abs(v) >= 1e12 ? (v/1e12).toLocaleString('en', {maximumFractionDigits: 2}) + ' tn'
+  : Math.abs(v) >= 1e9 ? (v/1e9).toLocaleString('en', {maximumFractionDigits: 2}) + ' bn'
+  : Math.abs(v) >= 1e6 ? (v/1e6).toLocaleString('en', {maximumFractionDigits: 2}) + ' mn'
+  : v.toLocaleString('en', {maximumFractionDigits: Math.abs(v) >= 100 ? 1 : 2});
+const day = d => new Date(d * 864e5).toISOString().slice(0, 10);
+const toHash = id => 's-' + id.replace('@', '~~').replace('/', '~');
+const fromHash = h => h.slice(2).replace('~~', '@').replace('~', '/');
+const store = {get(k, d){ try { const v = localStorage.getItem('bmd-' + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+               set(k, v){ try { localStorage.setItem('bmd-' + k, JSON.stringify(v)); } catch (e) {} }};
+const ICON_T = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 6.5h12M6 6.5V13"/></svg>';
+const ICON_C = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13l4-5 3 3 5-7"/></svg>';
+
+let CAT = [], BY = new Map(), META = {}, chunks = new Map(), CUR = [];
+let tab = store.get('tab', 'curated'), q = '', compare = store.get('compare', []);
+const open = new Set(store.get('open', []));
+const redraws = new Set();
+
+async function getJSON(p){ const r = await fetch(p); if (!r.ok) throw new Error(p + ': HTTP ' + r.status); return r.json(); }
+async function series(id){
+  const s = BY.get(id); if (!s || s.ch < 0) return null;
+  if (!chunks.has(s.ch)) chunks.set(s.ch, getJSON('data/obs-' + String(s.ch).padStart(3, '0') + '.json'));
+  const v = (await chunks.get(s.ch))[id]; return v ? {x: v[0].map(day), y: v[1]} : null;
+}
+
+// ------------------------------------------------------------------ sidebar tree
+function groupBy(arr, f){ const m = new Map(); arr.forEach(s => { const k = f(s) || 'Other'; if (!m.has(k)) m.set(k, []); m.get(k).push(s); }); return m; }
+function leaf(s, depth){
+  const cur = location.hash === '#' + toHash(s.id);
+  return `<li class="leaf"><a class="node" href="#${toHash(s.id)}" aria-current="${cur}" title="${esc(s.t)}">${ICON_T}<span class="lbl">${esc(s.t)}</span>` +
+    (s.r === 'alternate' ? '<span class="tag">alt</span>' : '') + `</a><button class="plus" data-plot="${esc(s.id)}" aria-label="Add ${esc(s.t)} to the chart" title="Add to chart">+</button></li>`;
+}
+function branch(key, label, items, sub){
+  const isOpen = open.has(key);
+  return `<li><button class="node" data-key="${esc(key)}" aria-expanded="${isOpen}"><span class="tw">›</span><span class="lbl">${esc(label)}</span><span class="ct">${items.length.toLocaleString('en')}</span></button>` +
+    (isOpen ? `<ul>${sub ? sub() : items.slice(0, 400).map(leaf).join('') + (items.length > 400 ? `<li class="note">${items.length - 400} more — use search</li>` : '')}</ul>` : '') + '</li>';
+}
+function renderTree(){
+  const el = $('#tree');
+  if (q) {
+    const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const hits = CAT.map(s => { const hay = (s.t + ' ' + s.id + ' ' + s.tp + ' ' + s.src + ' ' + s.ent + ' ' + s.m + ' ' + s.ds).toLowerCase();
+      if (!terms.every(t => hay.includes(t))) return null; return [s, terms.reduce((a, t) => a + (s.t.toLowerCase().includes(t) ? 3 : 1), 0)]; })
+      .filter(Boolean).sort((a, b) => b[1] - a[1] || b[0].n - a[0].n);
+    el.innerHTML = `<p class="note" style="padding:.4rem .5rem">${hits.length.toLocaleString('en')} datasets match “${esc(q)}”</p><ul>` +
+      hits.slice(0, 300).map(([s]) => leaf(s)).join('') + '</ul>';
+    return;
+  }
+  if (tab === 'curated') {
+    el.innerHTML = '<ul>' + CUR.map(c => `<li><a class="node" href="#c-${c.id}" aria-current="${location.hash === '#c-' + c.id}">${ICON_C}<span class="lbl">${esc(c.title)}</span>` +
+      `<span class="ct">${new Set(c.charts.flatMap(x => x.s).concat(c.kpis)).size}</span></a></li>`).join('') + '</ul>';
+    return;
+  }
+  const top = groupBy(CAT, s => tab === 'sources' ? s.src : s.tp);
+  const keys = [...top.keys()].sort((a, b) => top.get(b).length - top.get(a).length);
+  el.innerHTML = '<ul>' + keys.map(k => {
+    const items = top.get(k);
+    const subKey = s => tab === 'sources' ? (s.db || s.tp) : s.ent;
+    const subs = groupBy(items, subKey);
+    const useSub = subs.size > 1 && items.length > 12;
+    return branch(tab + ':' + k, k, items, useSub ? () => [...subs.keys()].sort((a, b) => subs.get(b).length - subs.get(a).length)
+      .map(sk => branch(tab + ':' + k + ':' + sk, sk, subs.get(sk).sort((a, b) => a.t.localeCompare(b.t)))).join('') : null);
+  }).join('') + '</ul>';
+}
+
+// ------------------------------------------------------------------ charts
+function layout(h, ytitle){
+  return {height: h, margin: {l: 56, r: 14, t: 6, b: 30}, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
+    font: {family: FONT, size: 11.5, color: css('--ink-2')}, showlegend: false, hovermode: 'x unified',
+    hoverlabel: {bgcolor: css('--card'), bordercolor: css('--rule'), font: {family: FONT, color: css('--ink'), size: 12}},
+    xaxis: {showgrid: false, linecolor: css('--rule'), ticks: 'outside', tickcolor: css('--rule')},
+    yaxis: {gridcolor: css('--grid'), zeroline: false, automargin: true, title: ytitle ? {text: ytitle, font: {size: 11}} : undefined}};
+}
+// ---- political overlay: presidential terms (bands by lean) + events (markers with hover)
+let politics = store.get('politics', false);
+const LEAN = l => l === 'left' ? 'left' : (l === 'right' || l === 'centre-right') ? 'right' : 'centre';
+function overlay(L, traces, xs){
+  if (!politics || !META.politics || !xs.length) return traces;
+  const lo = xs.reduce((a, b) => a < b ? a : b), hi = xs.reduce((a, b) => a > b ? a : b);
+  L.shapes = L.shapes || []; L.annotations = L.annotations || [];
+  for (const t of META.politics.terms) {
+    const a = t.start > lo ? t.start : lo, b = t.end < hi ? t.end : hi; if (a >= b) continue;
+    const k = LEAN(t.lean);
+    L.shapes.push({type: 'rect', layer: 'below', xref: 'x', yref: 'paper', x0: a, x1: b, y0: 0, y1: 1, fillcolor: css('--' + k), line: {width: 0}});
+    L.shapes.push({type: 'line', layer: 'below', xref: 'x', yref: 'paper', x0: a, x1: a, y0: 0, y1: 1, line: {color: css('--rule'), width: 1}});
+    const span = (new Date(b) - new Date(a)) / (new Date(hi) - new Date(lo));
+    if (span > .07) L.annotations.push({xref: 'x', yref: 'paper', x: a, y: 0, xanchor: 'left', yanchor: 'bottom', xshift: 3, yshift: 2, showarrow: false,
+      text: t.president.split(' ').slice(-1)[0] === 'Silva' ? 'Lula' : t.president.split(' ').slice(-1)[0], font: {size: 10, color: css('--' + k + '-ink')}});
+  }
+  const ev = META.politics.events.filter(e => e.date >= lo && e.date <= hi);
+  ev.forEach(e => L.shapes.push({type: 'line', xref: 'x', yref: 'paper', x0: e.date, x1: e.date, y0: 0, y1: .93,
+    line: {color: css('--ink-3'), width: 1, dash: 'dot'}}));
+  if (ev.length) {
+    L.yaxis2 = {overlaying: 'y', range: [0, 1], visible: false, fixedrange: true};
+    traces = traces.concat([{type: 'scatter', mode: 'markers', yaxis: 'y2', x: ev.map(e => e.date), y: ev.map(() => .965),
+      marker: {symbol: 'diamond', size: 8, color: ev.map(e => e.kind === 'election' ? css('--accent') : css('--ink-3'))},
+      text: ev.map(e => e.date + ' · ' + e.event), hovertemplate: '%{text}<extra></extra>', showlegend: false}]);
+    L.hovermode = 'closest';
+  }
+  return traces;
+}
+function polLegend(){ return politics ? `<p class="pol-legend"><span><i style="background:${css('--left')}"></i>Left president</span><span><i style="background:${css('--centre')}"></i>Centre</span>` +
+  `<span><i style="background:${css('--right')}"></i>Right / centre-right</span><span>◆ event (hover) · <span style="color:${css('--accent')}">◆</span> election</span></p>` : ''; }
+function rebase(d, t0){ const k = d.x.findIndex(v => v >= t0); const b = k < 0 ? null : d.y[k]; return {x: d.x, y: d.y.map(v => v == null || !b ? null : v / b * 100)}; }
+async function multiChart(el, ids, h){
+  const data = await Promise.all(ids.map(series));
+  const fam = u => /^%|percentage points|% of/.test(u || '') ? '%' : u;
+  const units = new Set(ids.map(id => fam(BY.get(id).u)));
+  const rebased = units.size > 1;
+  const t0 = rebased ? data.filter(Boolean).map(d => d.x[0]).sort().pop() : null;
+  const draw = () => {
+    if (!window.Plotly || !el.isConnected) return;
+    const tr = data.map((d, i) => { if (!d) return null; const z = rebased ? rebase(d, t0) : d;
+      return {type: 'scatter', mode: z.x.length < 60 ? 'lines+markers' : 'lines', x: z.x, y: z.y, name: BY.get(ids[i]).t,
+        line: {color: css(SLOTS[i % SLOTS.length]), width: 1.9}, marker: {size: 4}, hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(ids[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
+    const L = layout(h, rebased ? `Index, ${t0.slice(0, 7)} = 100` : ([...units][0] === '%' && ids.length > 1 ? '%' : BY.get(ids[0]).u));
+    Plotly.react(el, overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
+    const lg = el.parentElement.querySelector('.pol-slot'); if (lg) lg.innerHTML = polLegend();
+  };
+  draw(); redraws.add(draw);
+  return rebased;
+}
+function onTheme(){ redraws.forEach(f => f()); }
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', onTheme);
+new MutationObserver(onTheme).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
+
+// ------------------------------------------------------------------ views
+function crumbs(parts){ $('#crumbs').innerHTML = parts.map(([l, h]) => h ? `<a href="${h}">${esc(l)}</a>` : `<span>${esc(l)}</span>`).join('<span class="sep">/</span>'); }
+function chips(ids){ return ids.map((id, i) => `<a class="tchip" href="#${toHash(id)}" title="${esc(BY.get(id)?.t)}"><i style="background:${css(SLOTS[i % SLOTS.length])}"></i>${esc(id)}</a>`).join(''); }
+async function kpiHTML(id){
+  const s = BY.get(id); const d = await series(id); let ch = '';
+  if (d && d.x.length > 2) { const last = new Date(d.x[d.x.length - 1]); last.setFullYear(last.getFullYear() - 1); const iso = last.toISOString().slice(0, 10);
+    let j = -1; for (let k = d.x.length - 1; k >= 0; k--) if (d.x[k] <= iso) { j = k; break; }
+    if (j >= 0 && d.y[j] != null && s.lv != null) { const pctU = /%|percentage/.test(s.u + ' ' + s.t); const delta = pctU ? s.lv - d.y[j] : (s.lv / d.y[j] - 1) * 100;
+      ch = `<span class="${delta >= 0 ? 'up' : 'down'}">${delta >= 0 ? '+' : ''}${delta.toFixed(pctU ? 2 : 1)}${pctU ? ' pts' : '%'}</span> vs a year earlier`; } }
+  return `<a class="kpi" href="#${toHash(id)}"><strong>${fmt(s.lv)}</strong><p class="k">${esc(s.t)}</p><p class="d">${esc(s.u)} · ${esc(s.b)}</p>${ch ? `<p class="d">${ch}</p>` : ''}</a>`;
+}
+async function showCurated(id){
+  const c = CUR.find(x => x.id === id) || CUR[0];
+  crumbs([]);
+  const nSeries = new Set(c.charts.flatMap(x => x.s).concat(c.kpis)).size;
+  $('#view').innerHTML = `<div class="head"><h1>${esc(c.title)}</h1><p class="lede">${esc(c.desc)}</p>
+    <div class="badges"><span class="badge">${nSeries} series</span>${[...new Set(c.charts.flatMap(x => x.s).map(i => BY.get(i).src))].map(s => `<span class="badge">${esc(s)}</span>`).join('')}</div></div>
+    <div class="kpis" id="kpis"></div>` +
+    c.charts.map((ch, i) => `<h2 class="sec-title">${esc(ch.t)}</h2><p class="sec-desc">${esc(ch.d)}</p><div class="panel"><div class="panel-b">
+      <div class="legend">${ch.s.map((sid, k) => `<span><i style="background:${css(SLOTS[k % SLOTS.length])}"></i>${esc(BY.get(sid).t)}</span>`).join('')}</div>
+      <div class="chart" id="cc${i}" role="img" aria-label="${esc(ch.t)}"></div><div class="pol-slot"></div><p class="note" id="cn${i}"></p></div>
+      <div class="panel-f">${chips(ch.s)}</div></div>`).join('');
+  $('#kpis').innerHTML = (await Promise.all(c.kpis.map(kpiHTML))).join('');
+  c.charts.forEach(async (ch, i) => { const r = await multiChart($('#cc' + i), ch.s, 320); if (r) $('#cn' + i).textContent = 'Units differ, so every series is rebased to 100 at the latest common start.'; });
+}
+let stab = 'chart', plotIds = [], plotDraw = null, plotMode = 'auto';
+const plotExtra = store.get('plotExtra', {});   // series page id -> extra ids drawn with it
+function curSeries(){ const h = location.hash.slice(1); return h.startsWith('s-') ? fromHash(h) : null; }
+function addToPlot(x){
+  const base = curSeries();
+  if (!base) { toggleCompare(x); location.hash = 'compare'; return; }
+  if (x === base) return;
+  const ex = plotExtra[base] || []; if (!ex.includes(x)) plotExtra[base] = [...ex, x].slice(-6);
+  store.set('plotExtra', plotExtra); plotIds = [base, ...plotExtra[base]];
+  if (plotDraw) { stab = 'chart'; const c = $('#sp-chart'); if (c) { c.hidden = false; $('#sp-details').hidden = true;
+    document.querySelectorAll('.stabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.stab === 'chart')); } plotDraw(); }
+}
+function removeFromPlot(x){ const base = curSeries(); if (!base) return; plotExtra[base] = (plotExtra[base] || []).filter(y => y !== x); store.set('plotExtra', plotExtra);
+  plotIds = [base, ...plotExtra[base]]; if (plotDraw) plotDraw(); }
+function renderPlotbar(){
+  const el = $('#plotbar'); if (!el) return;
+  el.innerHTML = plotIds.map((x, i) => `<span class="pchip"><i style="background:${css(SLOTS[i])}"></i><span title="${esc(BY.get(x).t)} · ${esc(BY.get(x).u)}">${esc(BY.get(x).t)}</span>` +
+    (i ? `<button data-unplot="${esc(x)}" aria-label="Remove ${esc(BY.get(x).t)}">✕</button>` : '<span style="width:.3rem"></span>') + '</span>').join('') +
+    (plotIds.length < 7 ? `<span class="picker" id="picker" hidden><input id="pickq" placeholder="Search a dataset to add…" autocomplete="off" aria-label="Search a dataset to add"><ul id="pickres" hidden></ul></span>
+      <button class="addbtn" id="addbtn" aria-expanded="false">+ Add series</button>` : '<span class="note">Up to 7 series</span>');
+}
+function pickSearch(qq){
+  const terms = qq.toLowerCase().split(/\s+/).filter(Boolean); if (!terms.length) return [];
+  return CAT.map(x => { const hay = (x.t + ' ' + x.id + ' ' + x.src + ' ' + x.tp + ' ' + x.ent).toLowerCase();
+    return terms.every(t => hay.includes(t)) ? [x, terms.reduce((a, t) => a + (x.t.toLowerCase().includes(t) ? 3 : 1), 0) + Math.min(x.n, 500) / 1000] : null; })
+    .filter(Boolean).sort((a, b) => b[1] - a[1]).slice(0, 10).map(r => r[0]).filter(x => !plotIds.includes(x.id));
+}
+async function showSeries(id){
+  const s = BY.get(id), v = $('#view');
+  if (!s) { crumbs([['Datasets']]); v.innerHTML = `<h1>Dataset not found</h1><p class="lede">No series <code>${esc(id)}</code> in this build. Search the catalogue on the left.</p>`; return; }
+  crumbs([[s.src, null], [s.tp, null], [s.t]]);
+  const inC = compare.includes(id);
+  const twins = s.c ? CAT.filter(x => x.c === s.c && x.id !== id) : [];
+  v.innerHTML = `<div class="head"><div class="headrow"><h1>${esc(s.t)}</h1></div>
+    <div class="badges"><span class="badge mono">${esc(s.id)}</span><span class="badge">${esc(s.src)}</span><span class="badge">${esc(s.f)}</span>
+      <span class="badge">${esc(s.ent)}</span><span class="pill ${s.st}">${esc(s.st)}</span>${s.r !== 'canonical' ? `<span class="pill ${s.r}">${esc(s.r)}</span>` : ''}
+      <div class="actions"><button class="btn" data-add="${esc(id)}" aria-pressed="${inC}">${inC ? 'In compare' : '+ Compare'}</button>
+      <button class="btn" id="copyCsv">Copy CSV</button><button class="btn primary" data-prompt="${esc(id)}">Copy prompt</button></div></div>
+    ${s.ds ? `<p class="lede">${esc(s.ds)}</p>` : ''}</div>
+    <div class="stabs-slot"></div><div id="sp-chart" role="tabpanel" aria-labelledby="st-chart" ${stab === 'chart' ? '' : 'hidden'}>
+    <div class="panel"><div class="plotbar" id="plotbar"></div><div class="panel-h" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.25rem">
+      <div class="modes" role="group" aria-label="Scale" style="margin-left:0">${[['auto', 'Auto'], ['level', 'Level'], ['index', 'Index = 100'], ['yoy', '1-year %']].map(([m, l]) =>
+        `<button data-pmode="${m}" aria-pressed="${plotMode === m}">${l}</button>`).join('')}</div>
+      <div class="ranges" role="group" aria-label="Time range">${['5Y', '10Y', '20Y', 'All'].map(r => `<button data-r="${r}" aria-pressed="${r === 'All'}">${r}</button>`).join('')}</div></div>
+      <div class="panel-b"><div class="chart" id="sChart" role="img" aria-label="${esc(s.t)} over time"></div><div id="sPol"></div></div></div>
+    ${twins.length ? `<div class="panel"><div class="panel-h"><h3>Same concept, other sources</h3></div><div class="panel-f">${chips(twins.map(t => t.id))}</div></div>` : ''}
+    </div>
+    <div class="stabs" role="tablist" aria-label="Dataset views">
+      <button role="tab" id="st-chart" aria-selected="${stab === 'chart'}" aria-controls="sp-chart" data-stab="chart">Chart</button>
+      <button role="tab" id="st-details" aria-selected="${stab === 'details'}" aria-controls="sp-details" data-stab="details">Details</button></div>
+    <div id="sp-details" role="tabpanel" aria-labelledby="st-details" ${stab === 'details' ? '' : 'hidden'}>
+    <div class="panel"><div class="panel-h"><h3>Table preview</h3></div><div class="tbl" id="sTable"><p class="note" style="padding:.75rem">Loading…</p></div></div>
+    <div class="panel"><div class="panel-h"><h3>Schema</h3><p>Row shape in the <code>observations</code> table and the <code>v_observations</code> view (DuckDB, Parquet).</p></div><div class="tbl"><table>
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+      <tr><td class="mono">series_id</td><td class="mono">varchar</td><td>Always <code>${esc(s.id)}</code> for this dataset</td></tr>
+      <tr><td class="mono">date</td><td class="mono">date</td><td>${esc(s.f)} observation date${s.f === 'annual' ? ' (year end)' : s.f === 'monthly' ? ' (first of month)' : s.f === 'quarterly' ? ' (quarter end)' : ''}</td></tr>
+      <tr><td class="mono">value</td><td class="mono">double</td><td>${esc(s.u || '—')}</td></tr></tbody></table></div></div>
+    <div class="panel"><div class="panel-h"><h3>About</h3></div><div class="tbl"><table><tbody>${[['Source', s.src + (s.db ? ' · ' + s.db : '')], ['Topic', s.tp], ['Entity', s.ent], ['Frequency', s.f],
+      ['Unit', s.u || '—'], ['Coverage', s.a + ' → ' + s.b], ['Observations', s.n.toLocaleString('en')], ['Latest', fmt(s.lv) + ' (' + s.b + ')'], ['Role', s.r + (s.c ? ' · concept ' + s.c : '')],
+      ['Used in tests', s.used || '—'], ['Source code', s.m]].map(([k, val]) => `<tr><th style="width:11rem">${k}</th><td class="wrap">${esc(val)}</td></tr>`).join('')}</tbody></table></div></div>
+    </div>
+`;
+  // move the tab bar above both panels
+  const bar = v.querySelector('.stabs'); v.querySelector('.stabs-slot').replaceWith(bar);
+  const d = await series(id);
+  if (!d) { $('#sChart').innerHTML = '<p class="empty">No observations in this build.</p>'; $('#sTable').innerHTML = ''; return; }
+  let range = 'All';
+  plotIds = [id, ...(plotExtra[id] || [])].filter(x => BY.has(x)).slice(0, 7);
+  const cache = new Map([[id, d]]);
+  const draw = async () => { if (!window.Plotly || !$('#sChart')) return;
+    for (const x of plotIds) if (!cache.has(x)) cache.set(x, await series(x));
+    renderPlotbar();
+    const data = plotIds.map(x => cache.get(x));
+    const fam = u => /^%|percentage points|% of/.test(u || '') ? '%' : u;
+    const units = new Set(plotIds.map(x => fam(BY.get(x).u)));
+    const mode = plotMode === 'auto' ? (units.size > 1 ? 'index' : 'level') : plotMode;
+    const t0 = data.filter(Boolean).map(z => z.x[0]).sort().pop();
+    const tr = data.map((z, i) => { if (!z) return null; let w = z;
+      if (mode === 'index') w = rebase(z, t0);
+      if (mode === 'yoy') w = {x: z.x, y: z.x.map((x, j) => { const p = new Date(x); p.setFullYear(p.getFullYear() - 1); const iso = p.toISOString().slice(0, 10);
+        for (let k = j; k >= 0; k--) if (z.x[k] <= iso) return z.y[k] ? (z.y[j] / z.y[k] - 1) * 100 : null; return null; })};
+      return {type: 'scatter', mode: w.x.length < 80 ? 'lines+markers' : 'lines', x: w.x, y: w.y, name: BY.get(plotIds[i]).t,
+        line: {color: css(SLOTS[i]), width: i ? 1.8 : 2.2}, marker: {size: 4, color: css(SLOTS[i])},
+        hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(plotIds[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
+    const L = layout(360, mode === 'index' ? `Index, ${t0.slice(0, 7)} = 100` : mode === 'yoy' ? '% change on a year earlier' : (units.size === 1 && plotIds.length > 1 ? [...units][0] : s.u));
+    if (plotIds.length > 1) L.hovermode = 'x unified';
+    const lastD = data.filter(Boolean).map(z => z.x[z.x.length - 1]).sort().pop();
+    if (range !== 'All') { const f = new Date(lastD); f.setFullYear(f.getFullYear() - {'5Y': 5, '10Y': 10, '20Y': 20}[range]); L.xaxis.range = [f.toISOString().slice(0, 10), lastD]; }
+    Plotly.react('sChart', overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
+    const lg = $('#sPol'); if (lg) lg.innerHTML = polLegend() + (mode === 'index' && plotMode === 'auto' ? '<p class="note">Units differ, so series are rebased to 100 at their latest common start.</p>' : ''); };
+  plotDraw = draw; draw(); redraws.add(draw);
+  v.querySelectorAll('.ranges button').forEach(b => b.onclick = () => { range = b.dataset.r; v.querySelectorAll('.ranges button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
+  const tail = d.x.map((x, i) => [x, d.y[i]]).slice(-10).reverse();
+  $('#sTable').innerHTML = `<table><thead><tr><th>series_id</th><th>date</th><th class="n">value</th></tr></thead><tbody>${tail.map(([x, y]) =>
+    `<tr><td class="mono">${esc(id)}</td><td class="mono">${x}</td><td class="n mono">${y == null ? '—' : y.toLocaleString('en', {maximumFractionDigits: 6})}</td></tr>`).join('')}</tbody></table>
+    <span class="rows-n">${d.x.length.toLocaleString('en')} rows · latest 10 shown</span>`;
+  $('#copyCsv').onclick = e => copy('date,value\n' + d.x.map((x, i) => x + ',' + (d.y[i] ?? '')).join('\n'), e.target, 'Copied ' + d.x.length + ' rows');
+}
+function copy(text, btn, msg){
+  const done = () => { const o = btn.textContent; btn.textContent = msg; setTimeout(() => btn.textContent = o, 1600); };
+  const fb = () => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); };
+  try { navigator.clipboard.writeText(text).then(done, fb); } catch (e) { fb(); }
+}
+let cmpMode = 'index';
+async function showCompare(){
+  crumbs([['Compare']]);
+  const ids = compare.filter(id => BY.has(id));
+  $('#view').innerHTML = `<div class="head"><h1>Compare</h1><p class="lede">Up to seven datasets. Different units are rebased to 100 at their latest common start — never two y-axes.</p>
+    <div class="badges"><div class="seg" style="width:18rem">${[['level', 'Level'], ['index', 'Index = 100'], ['yoy', '1-year %']].map(([m, l]) =>
+      `<button data-mode="${m}" aria-selected="${cmpMode === m}">${l}</button>`).join('')}</div>
+      <div class="actions"><button class="btn" id="cmpClear">Clear</button></div></div></div>` +
+    (ids.length ? `<div class="panel"><div class="panel-b"><div class="legend">${ids.map((id, i) => `<span><i style="background:${css(SLOTS[i])}"></i>${esc(BY.get(id).t)} <button class="btn" style="padding:0 .4rem" data-add="${esc(id)}" aria-label="Remove">✕</button></span>`).join('')}</div>
+      <div class="chart" id="cmp"></div><div id="cmpPol"></div></div><div class="panel-f">${chips(ids)}</div></div>` : '<p class="empty">Nothing to compare yet. Use “+ Compare” on any dataset.</p>');
+  if (!ids.length) return;
+  const data = await Promise.all(ids.map(series));
+  const units = new Set(ids.map(id => BY.get(id).u));
+  const t0 = data.filter(Boolean).map(d => d.x[0]).sort().pop();
+  const draw = () => { if (!window.Plotly || !$('#cmp')) return;
+    const mode = cmpMode === 'level' && units.size > 1 ? 'index' : cmpMode;
+    const tr = data.map((d, i) => { if (!d) return null; let z = d;
+      if (mode === 'index') z = rebase(d, t0);
+      if (mode === 'yoy') z = {x: d.x, y: d.x.map((x, j) => { const p = new Date(x); p.setFullYear(p.getFullYear() - 1); const iso = p.toISOString().slice(0, 10);
+        for (let k = j; k >= 0; k--) if (d.x[k] <= iso) return d.y[k] ? (d.y[j] / d.y[k] - 1) * 100 : null; return null; })};
+      return {type: 'scatter', mode: 'lines', x: z.x, y: z.y, line: {color: css(SLOTS[i]), width: 2}, hovertemplate: '%{y:,.4~g}<extra>' + esc(BY.get(ids[i]).t).slice(0, 38) + '</extra>'}; }).filter(Boolean);
+    const L = layout(440, mode === 'index' ? `Index, ${t0.slice(0, 7)} = 100` : mode === 'yoy' ? '% change on a year earlier' : [...units][0]);
+    Plotly.react('cmp', overlay(L, tr, tr.flatMap(t => [t.x[0], t.x[t.x.length - 1]])), L, {displayModeBar: false, responsive: true});
+    const lg = $('#cmpPol'); if (lg) lg.innerHTML = polLegend(); };
+  draw(); redraws.add(draw);
+}
+function toggleCompare(id){
+  compare = compare.includes(id) ? compare.filter(x => x !== id) : [...compare, id].slice(-7);
+  store.set('compare', compare); $('#cmpCount').textContent = compare.length ? '(' + compare.length + ')' : '';
+  document.querySelectorAll(`[data-add="${CSS.escape(id)}"]`).forEach(b => { if (b.textContent.includes('✕')) return; const on = compare.includes(id); b.setAttribute('aria-pressed', on); b.textContent = on ? 'In compare' : '+ Compare'; });
+}
+function showPolitics(){
+  crumbs([['Political calendar']]);
+  const P = META.politics || {terms: [], events: []};
+  $('#view').innerHTML = `<div class="head"><h1>Political calendar</h1><p class="lede">Presidents since the return to civilian rule and the political and economic
+    events that matter for the data. Switch on <strong>Politics</strong> (top right) to shade terms and mark events on every chart. Lean is a coarse
+    left / centre / right label of the president's party; terms are four years since 1995.</p></div>
+    <div class="panel"><div class="panel-h"><h3>Presidential terms</h3></div><div class="tbl"><table><thead><tr><th>From</th><th>To</th><th>President</th><th>Party</th><th>Lean</th><th>Note</th></tr></thead><tbody>
+    ${P.terms.map(t => `<tr><td class="mono">${esc(t.start)}</td><td class="mono">${esc(t.end)}</td><td>${esc(t.president)}</td><td>${esc(t.party)}</td>
+      <td><span class="lean ${esc(t.lean)}">${esc(t.lean)}</span></td><td class="wrap">${esc(t.note)}</td></tr>`).join('')}</tbody></table></div></div>
+    <div class="panel"><div class="panel-h"><h3>Events</h3></div><div class="tbl"><table><thead><tr><th>Date</th><th>Event</th><th>Kind</th></tr></thead><tbody>
+    ${P.events.slice().reverse().map(e => `<tr><td class="mono">${esc(e.date)}</td><td class="wrap">${esc(e.event)}</td><td>${esc(e.kind)}</td></tr>`).join('')}</tbody></table></div></div>
+    <p class="note" style="margin-top:.75rem">Also in DuckDB as <code>political_terms</code> and <code>political_events</code>; edit <code>registry/political_*.csv</code> to extend.</p>`;
+}
+function showReconcile(){
+  crumbs([['Reconciliation']]);
+  const r = META.reconciliation || [];
+  $('#view').innerHTML = `<div class="head"><h1>Reconciliation</h1><p class="lede">Where a native source and Dateno's World Bank / ILO series measure the same concept, the native
+    series is canonical and the other is kept as an alternate. Native series are first put on an annual basis (December value, mean or sum).</p></div>
+    <div class="panel"><div class="tbl"><table><thead><tr><th>Concept</th><th>Canonical</th><th>Alternate</th><th class="n">Common years</th><th class="n">Correlation</th><th class="n">Median diff.</th><th>Annual basis</th></tr></thead>
+    <tbody>${r.map(x => `<tr><td>${esc(x.concept)}</td><td><a href="#${toHash(x.canonical)}">${esc(x.canonical)}</a></td><td><a href="#${toHash(x.alternate)}">${esc(x.alternate)}</a></td>
+    <td class="n">${x.overlap_years} (${x.first_year}–${x.last_year})</td><td class="n">${x.correlation == null ? '—' : x.correlation.toFixed(3)}</td>
+    <td class="n">${x.median_rel_diff_pct == null ? '—' : x.median_rel_diff_pct.toFixed(1) + '%'}</td><td>${esc(x.annualization)}</td></tr>`).join('')}</tbody></table></div></div>
+    <p class="note" style="margin-top:.75rem">Large differences usually reflect definitions: IPCA December-on-December vs annual-average CPI; general vs central government debt.</p>`;
+}
+function showMissing(){
+  crumbs([['Not yet ingested']]);
+  const m = META.missing || [];
+  $('#view').innerHTML = `<div class="head"><h1>Not yet ingested</h1><p class="lede">${m.length} of ${META.registry_total} registry metrics are not in the warehouse yet.
+    Candidates come from Dateno's dataset search (Brazil, open-data portals).</p></div><div class="cols" style="margin-top:1rem">${m.map(x => `<div class="panel" style="margin-top:0">
+    <div class="panel-h"><h3>${esc(x.name || x.id)}</h3><p><code>${esc(x.id)}</code> · ${esc(x.theme)}</p></div><div class="panel-b">` +
+    (x.hits.length ? `<ul class="hits">${x.hits.map(h => `<li>${h.u ? `<a href="${esc(h.u)}" target="_blank" rel="noopener">${esc(h.t)}</a>` : esc(h.t)} <span class="pub">${esc(h.p || '')}</span></li>`).join('')}</ul>` : '<p class="note">No Dateno candidates.</p>') + '</div></div>').join('')}</div>`;
+}
+function showAbout(){
+  crumbs([['Data & DuckDB']]);
+  const src = Object.entries(META.sources || {});
+  $('#view').innerHTML = `<div class="head"><h1>Data &amp; DuckDB</h1><p class="lede">One reconciled warehouse. The same tables ship as DuckDB and Parquet for your own research.</p></div>
+  <div class="cols" style="margin-top:1rem"><div class="panel" style="margin-top:0"><div class="panel-h"><h3>Query it remotely</h3><p>No download: DuckDB reads the file over HTTPS.</p></div><div class="panel-b"><pre>INSTALL httpfs; LOAD httpfs;
+ATTACH 'https://br.nonamevc.com/data/brazil_macro.duckdb' AS br (READ_ONLY);
+USE br;
+SELECT * FROM v_search WHERE title ILIKE '%inflation%';</pre>
+  <p class="note">Download: <a href="https://br.nonamevc.com/data/brazil_macro.duckdb">brazil_macro.duckdb</a> · Parquet: <a href="https://br.nonamevc.com/export/">/export/</a> ·
+  Semantic layer: <a href="https://br.nonamevc.com/semantic/model.yml">model.yml</a> · Agents: <a href="https://br.nonamevc.com/llms.txt">llms.txt</a></p>
+  <p class="note">Or use <strong>Copy prompt</strong> (top right) and paste it into Claude, ChatGPT or Cursor: it tells your agent how to attach the database and read the semantic layer.</p>
+  <pre>git clone https://github.com/zkid18/brazil-macro
+cd brazil-macro && pip install -r requirements.txt
+python3 pipeline.py     # -> warehouse/brazil_macro.duckdb
+duckdb warehouse/brazil_macro.duckdb</pre><p class="note">Parquet: warehouse/export/catalog.parquet, observations.parquet, reconciliation.parquet</p>
+  <pre>SELECT c.title, o.date, o.value
+FROM observations o JOIN catalog c USING (series_id)
+WHERE c.topic = 'Energy' AND o.date >= '2020-01-01';</pre></div></div>
+  <div class="panel" style="margin-top:0"><div class="panel-h"><h3>Sources</h3></div><div class="tbl"><table><thead><tr><th>Source</th><th class="n">Datasets</th></tr></thead><tbody>${src.map(([k, v]) =>
+    `<tr><td>${esc(k)}</td><td class="n">${v.toLocaleString('en')}</td></tr>`).join('')}</tbody></table></div></div></div>
+  <div class="panel"><div class="panel-h"><h3>Tables</h3></div><div class="tbl"><table><thead><tr><th>Table</th><th>Grain</th><th>Columns</th></tr></thead><tbody>
+  <tr><td class="mono">catalog</td><td>dataset</td><td class="wrap">series_id, title, topic, source, entity_id, freq, unit, first, last, n_obs, last_value, status, role, concept, description</td></tr>
+  <tr><td class="mono">observations</td><td>dataset × date</td><td class="wrap">series_id, date, value</td></tr>
+  <tr><td class="mono">reconciliation</td><td>concept pair</td><td class="wrap">concept, canonical, alternate, overlap_years, correlation, median_rel_diff_pct</td></tr>
+  <tr><td class="mono">v_search · v_observations · v_latest · v_annual · v_annual_yoy</td><td>views</td><td class="wrap">semantic layer for discovery and cross-series work</td></tr>
+  <tr><td class="mono">v_politics · v_by_term</td><td>views</td><td class="wrap">observations tagged with the president in office; averages by term</td></tr>
+  <tr><td class="mono">v_company_quarterly · v_reconciliation</td><td>views</td><td class="wrap">company fundamentals; source agreement</td></tr>
+  <tr><td class="mono">company_metrics</td><td>company × quarter</td><td class="wrap">revenue, EBIT, net income, debt, cash, capex, dividends</td></tr>
+  <tr><td class="mono">hypothesis_tests</td><td>test</td><td class="wrap">hyp_id, claim, threshold, statistic, verdict, evidence</td></tr></tbody></table></div></div>
+  <p class="note" style="margin-top:.75rem">Built ${esc(META.built)}. Freshness compares each dataset's last date with its expected publication lag.</p>`;
+}
+
+// ------------------------------------------------------------------ agent prompt
+const CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+let toastT;
+function toast(msg){ const t = $('#toast'); t.innerHTML = CHECK + esc(msg); t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2600); }
+function promptText(id){
+  let focus = '';
+  const s = id && BY.get(id);
+  if (s) focus = `\n## Start here\nSeries \`${s.id}\` — ${s.t} (${s.src}; ${s.f}; unit: ${s.u || 'see catalog'}; ${s.a} → ${s.b}).\n` +
+    `\`SELECT date, value FROM v_observations WHERE series_id = '${s.id}' ORDER BY date;\`\n`;
+  else { const h = location.hash.slice(1); const c = h.startsWith('c-') && CUR.find(x => x.id === h.slice(2));
+    if (c) focus = `\n## Start here\nCollection "${c.title}": ${[...new Set(c.charts.flatMap(x => x.s).concat(c.kpis))].map(x => '`' + x + '`').join(', ')}.\n`; }
+  return (META.agent_prompt || '').replace('{{FOCUS}}', focus);
+}
+function copyPrompt(id){
+  const text = promptText(id);
+  const ok = () => toast('Prompt copied to clipboard — paste it into your AI agent');
+  const fb = () => { const t = document.createElement('textarea'); t.value = text; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select();
+    try { document.execCommand('copy'); ok(); } catch (e) { toast('Copy blocked by the browser'); } t.remove(); };
+  try { navigator.clipboard.writeText(text).then(ok, fb); } catch (e) { fb(); }
+}
+$('#copyPrompt').addEventListener('click', () => copyPrompt(curSeries()));
+
+// ------------------------------------------------------------------ router + boot
+function route(){
+  redraws.clear();
+  const h = location.hash.slice(1) || 'c-overview';
+  document.querySelectorAll('[data-foot]').forEach(a => a.setAttribute('aria-current', a.dataset.foot === h));
+  if (h.startsWith('s-')) showSeries(fromHash(h));
+  else if (h.startsWith('c-')) showCurated(h.slice(2));
+  else ({compare: showCompare, politics: showPolitics, reconcile: showReconcile, missing: showMissing, about: showAbout}[h] || (() => showCurated('overview')))();
+  $('#scroll').scrollTo(0, 0); window.scrollTo(0, 0);
+  $('#app').classList.remove('open');
+  document.querySelectorAll('.tree [aria-current]').forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === location.hash));
+}
+function setTab(t){ tab = t; store.set('tab', t); document.querySelectorAll('.seg[role="tablist"] button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === t)); renderTree(); }
+async function boot(){
+  try {
+    const [c, m] = await Promise.all([getJSON('data/catalog.json'), getJSON('data/meta.json')]);
+    CAT = c.rows.map(r => { const o = {}; c.keys.forEach((k, i) => o[k] = r[i]); return o; }); CAT.forEach(s => BY.set(s.id, s)); META = m; CUR = m.curated || [];
+  } catch (e) { $('#view').innerHTML = `<h1>Could not load the catalogue</h1><p class="lede err">${esc(e.message)}. Opened from disk? Serve the folder: <code>python3 -m http.server -d warehouse/portal</code></p>`; return; }
+  $('#cmpCount').textContent = compare.length ? '(' + compare.length + ')' : '';
+  $('#polToggle').setAttribute('aria-pressed', politics);
+  setTab(tab); route();
+}
+document.addEventListener('input', e => { if (e.target.id !== 'pickq') return; const res = pickSearch(e.target.value), ul = $('#pickres');
+  ul.hidden = !res.length; ul.innerHTML = res.map((x, i) => `<li><button data-pick="${esc(x.id)}" class="${i ? '' : 'hl'}">${esc(x.t)}<small>${esc(x.src)} · ${esc(x.f)} · ${esc(x.u)} · ${esc(x.a.slice(0, 4))}–${esc(x.b.slice(0, 4))}</small></button></li>`).join(''); });
+document.addEventListener('keydown', e => { if (e.target.id !== 'pickq') return;
+  if (e.key === 'Enter') { const b = $('#pickres button'); if (b) addToPlot(b.dataset.pick); }
+  if (e.key === 'Escape') { $('#picker').hidden = true; $('#addbtn').hidden = false; } });
+let qt; $('#q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { q = e.target.value.trim(); renderTree(); }, 120); });
+$('#q').addEventListener('keydown', e => { if (e.key === 'Enter') { const a = $('#tree a.node'); if (a) location.hash = a.getAttribute('href'); } });
+document.addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t) return;
+  if (t.dataset.prompt) { copyPrompt(t.dataset.prompt); return; }
+  if (t.dataset.plot) { e.preventDefault(); addToPlot(t.dataset.plot); return; }
+  if (t.dataset.unplot) { removeFromPlot(t.dataset.unplot); return; }
+  if (t.dataset.pmode) { plotMode = t.dataset.pmode; document.querySelectorAll('[data-pmode]').forEach(b => b.setAttribute('aria-pressed', b.dataset.pmode === plotMode)); if (plotDraw) plotDraw(); return; }
+  if (t.id === 'addbtn') { const pk = $('#picker'); pk.hidden = false; t.hidden = true; $('#pickq').focus(); return; }
+  if (t.dataset.pick) { addToPlot(t.dataset.pick); return; }
+  if (t.dataset.tab) setTab(t.dataset.tab);
+  if (t.dataset.stab) { stab = t.dataset.stab; document.querySelectorAll('.stabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.stab === stab));
+    $('#sp-chart').hidden = stab !== 'chart'; $('#sp-details').hidden = stab !== 'details'; if (stab === 'chart') window.dispatchEvent(new Event('resize')); }
+  if (t.dataset.key) { open.has(t.dataset.key) ? open.delete(t.dataset.key) : open.add(t.dataset.key); store.set('open', [...open]); renderTree(); }
+  if (t.dataset.add) { toggleCompare(t.dataset.add); if (location.hash === '#compare') showCompare(); }
+  if (t.dataset.mode) { cmpMode = t.dataset.mode; showCompare(); }
+  if (t.id === 'cmpClear') { compare = []; store.set('compare', compare); $('#cmpCount').textContent = ''; showCompare(); }
+});
+const SUN = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+const MOON = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function setTheme(t){ document.documentElement.classList.toggle('theme-dark', t === 'dark'); store.set('theme', t);
+  const b = $('#themeToggle'); b.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  $('#themeIcon').innerHTML = t === 'dark' ? SUN : MOON; redraws.forEach(f => f()); if (CAT.length && (location.hash.startsWith('#c-') || !location.hash)) route(); }
+$('#themeToggle').addEventListener('click', () => setTheme(document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark'));
+setTheme(store.get('theme', 'light'));
+function setPolitics(on){ politics = on; store.set('politics', on); $('#polToggle').setAttribute('aria-pressed', on); redraws.forEach(f => f()); }
+$('#polToggle').addEventListener('click', () => setPolitics(!politics));
+$('#collapse').addEventListener('click', () => { $('#app').classList.add('collapsed'); $('#expand').hidden = false; store.set('collapsed', true); });
+$('#expand').addEventListener('click', () => { $('#app').classList.remove('collapsed'); $('#expand').hidden = true; store.set('collapsed', false); });
+$('#openSide').addEventListener('click', () => $('#app').classList.add('open'));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') $('#app').classList.remove('open'); if (e.key === '/' && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); $('#q').focus(); } });
+if (store.get('collapsed', false)) { $('#app').classList.add('collapsed'); $('#expand').hidden = false; }
+window.addEventListener('hashchange', route);
+boot();
+})();
+</script>
