@@ -1,0 +1,2037 @@
+{
+ "diversion.fungible_share_us_mix": {
+  "value": 0.4358211759190821,
+  "series_id": "exports_to_us",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null,
+  "note": "numerator external (A14)"
+ },
+ "anchor.us_mayjul25_avg": {
+  "value": 3.590193743,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_mayjul24_avg": {
+  "value": 3.3642336213333333,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_augnov25_avg": {
+  "value": 2.60254216425,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_augnov24_avg": {
+  "value": 3.473814151,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_augnov_yoy": {
+  "value": -25.081134133188698,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot_augnov25_avg": {
+  "value": 29.92977251975,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot_augnov24_avg": {
+  "value": 28.5914909115,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_13m": {
+  "value": 37.927393123,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_13m_prev": {
+  "value": 44.316664827,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_13m_prev2": {
+  "value": 42.806307309,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.pre_us": {
+  "value": 4.846727263432449,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.yoy13_us": {
+  "value": -14.417311701911562,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.did_us": {
+  "value": -19.26403896534401,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.two_year_us": {
+  "value": -11.397652572040961,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_us": {
+  "value": 24.104879482,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_us_prev": {
+  "value": 26.70487015,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_13m": {
+  "value": 119.331146869,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_13m_prev": {
+  "value": 99.666802821,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_13m_prev2": {
+  "value": 114.666641442,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.pre_cn": {
+  "value": -6.5851685090117185,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.yoy13_cn": {
+  "value": 19.730084131741286,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.did_cn": {
+  "value": 26.315252640753005,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.two_year_cn": {
+  "value": 4.06788353468901,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_cn": {
+  "value": 77.070422805,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_cn_prev": {
+  "value": 67.040336738,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.eu_13m": {
+  "value": 58.613819409,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.eu_13m_prev": {
+  "value": 53.287201581,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.eu_13m_prev2": {
+  "value": 52.013113997,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.pre_eu": {
+  "value": 3.808396534425995,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.yoy13_eu": {
+  "value": 9.996054718510972,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.did_eu": {
+  "value": 6.187658184084977,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.two_year_eu": {
+  "value": 12.690463817222541,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_eu": {
+  "value": 37.313231703,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_eu_prev": {
+  "value": 32.451841475,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.rest_13m": {
+  "value": 185.412092964,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.rest_13m_prev": {
+  "value": 169.384129688,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.rest_13m_prev2": {
+  "value": 163.217805433,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.pre_rest": {
+  "value": 2.292480458147761,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.yoy13_rest": {
+  "value": 9.46249409878186,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.did_rest": {
+  "value": 7.1700136406340995,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.two_year_rest": {
+  "value": 13.59795732586948,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_rest": {
+  "value": 112.366613069,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_rest_prev": {
+  "value": 101.210742121,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot_13m": {
+  "value": 401.284452365,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot_13m_prev": {
+  "value": 366.654798917,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot_13m_prev2": {
+  "value": 372.703868181,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.pre_tot": {
+  "value": 0.025280147145001486,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.yoy13_tot": {
+  "value": 9.444756634929297,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.did_tot": {
+  "value": 9.419476487784294,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.two_year_tot": {
+  "value": 7.668443132476455,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_tot": {
+  "value": 250.855147059,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.ytd_tot_prev": {
+  "value": 227.407790484,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.gap_us_13m": {
+  "value": -8.537179580414183,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.gap_us_yr": {
+  "value": -7.880473458843861,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.tot2025": {
+  "value": 348.2784625,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_sh_2025": {
+  "value": 28.695499570261255,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.eu_sh_2025": {
+  "value": 14.291241109116818,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.us_sh_2025": {
+  "value": 10.819574269253012,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.gap_us_pct_exports": {
+  "value": -2.2626933064641808,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.gap_us_pct_gdp": {
+  "value": -0.3456469147666434,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_jul24": {
+  "value": 10.172597056,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.cn_dec24": {
+  "value": 5.181548099,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.bop_2025": {
+  "value": 350.50079999999997,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor.bop_ytd26": {
+  "value": 251.8415,
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CA…"
+ },
+ "anchor_mismatches": {
+  "value": []
+ },
+ "seasonality": {
+  "value": {
+   "exports_to_china": {
+    "1": 0.0529,
+    "2": 0.0597,
+    "3": 0.0961,
+    "4": 0.1005,
+    "5": 0.1045,
+    "6": 0.1049,
+    "7": 0.0968,
+    "8": 0.088,
+    "9": 0.08,
+    "10": 0.0764,
+    "11": 0.0692,
+    "12": 0.071
+   },
+   "exports_to_us": {
+    "1": 0.0702,
+    "2": 0.0685,
+    "3": 0.0825,
+    "4": 0.078,
+    "5": 0.0827,
+    "6": 0.0878,
+    "7": 0.0871,
+    "8": 0.0885,
+    "9": 0.0859,
+    "10": 0.0893,
+    "11": 0.0844,
+    "12": 0.0952
+   },
+   "soy_exports": {
+    "1": 0.0159,
+    "2": 0.0487,
+    "3": 0.1277,
+    "4": 0.1494,
+    "5": 0.1565,
+    "6": 0.1392,
+    "7": 0.1131,
+    "8": 0.0823,
+    "9": 0.0573,
+    "10": 0.0465,
+    "11": 0.0354,
+    "12": 0.0278
+   }
+  },
+  "series_id": [
+   "exports_to_china",
+   "exports_to_us",
+   "soy_exports"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.beef_exports": {
+  "value": {
+   "post_augdec25": 55.3748024141808,
+   "pre_janjul25": 30.98229650507256,
+   "ytd26": 22.24644782852767
+  },
+  "series_id": "beef_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.beef_exports_to_china": {
+  "value": {
+   "post_augdec25": 62.29135463811346,
+   "pre_janjul25": 33.980195646497144,
+   "ytd26": 9.422573817628344
+  },
+  "series_id": "beef_exports_to_china",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.soy_exports": {
+  "value": {
+   "post_augdec25": 30.823054922279326,
+   "pre_janjul25": -7.650538995600343,
+   "ytd26": 15.171288287336825
+  },
+  "series_id": "soy_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.oil_exports": {
+  "value": {
+   "post_augdec25": 10.690884371018194,
+   "pre_janjul25": -8.049015109565982,
+   "ytd26": 23.778195370664278
+  },
+  "series_id": "oil_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.oil_exports_kg": {
+  "value": {
+   "post_augdec25": 27.773454783447924,
+   "pre_janjul25": -0.8515068616100074,
+   "ytd26": 5.956912765895872
+  },
+  "series_id": "oil_exports_kg",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.iron_ore_exports": {
+  "value": {
+   "post_augdec25": 20.309598674018183,
+   "pre_janjul25": -14.695806211346518,
+   "ytd26": -1.3427933849177953
+  },
+  "series_id": "iron_ore_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.coffee_exports": {
+  "value": {
+   "post_augdec25": 17.856407253957983,
+   "pre_janjul25": 44.332458167847165,
+   "ytd26": -13.729499229499343
+  },
+  "series_id": "coffee_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.pulp_exports": {
+  "value": {
+   "post_augdec25": -12.66738116194307,
+   "pre_janjul25": 2.894457586239607,
+   "ytd26": 3.438988391760467
+  },
+  "series_id": "pulp_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.pulp_exports_kg": {
+  "value": {
+   "post_augdec25": 11.442470669285765,
+   "pre_janjul25": 13.577049754358029,
+   "ytd26": -6.626203880217796
+  },
+  "series_id": "pulp_exports_kg",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.sugar_exports": {
+  "value": {
+   "post_augdec25": -18.957661754123446,
+   "pre_janjul25": -28.372971962793635,
+   "ytd26": -28.17215980212806
+  },
+  "series_id": "sugar_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "product_response.niobium_exports": {
+  "value": {
+   "post_augdec25": 14.320279044945995,
+   "pre_janjul25": 9.706609641139984,
+   "ytd26": 17.652347200506213
+  },
+  "series_id": "niobium_exports",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "confound.brent_dec25": {
+  "value": 62.54428571428571,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.brent_apr26": {
+  "value": 117.2875,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.brent_sep26": {
+  "value": 114.0757142857143,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_uv_2025": {
+  "value": 453.5578625481819,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.brl_dec24": {
+  "value": 6.097028571428571,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.brl_may26": {
+  "value": 4.9837,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.brl_oct26": {
+  "value": 5.21585,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_uv_ytd26": {
+  "value": 548.714725580392,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_uv_series_2025": {
+  "value": 455.9889135012589,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_uv_series_ytd26": {
+  "value": 560.8388894772373,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.ytd_total_delta_bn": {
+  "value": 23.447356574999986,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.ytd_oil_delta_bn": {
+  "value": 7.080462943999997,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_share_of_ytd_growth": {
+  "value": 30.197275847927866,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "confound.oil_tonnes_ytd_yoy": {
+  "value": 5.956912765895872,
+  "series_id": [
+   "brent_usd",
+   "brl_usd",
+   "oil_exports",
+   "oil_exports_kg"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData",
+  "last_date": "2026-10-02",
+  "sql": null
+ },
+ "exposure.product_hhi_9": {
+  "value": 2983.042212858892,
+  "series_id": "exports_total",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null,
+  "note": "8 groups + residual; residual treated as one bucket -> overstated"
+ },
+ "exposure.hhi4_2025": {
+  "value": 3278.5909940187203,
+  "series_id": [
+   "exports_to_china",
+   "exports_to_us",
+   "exports_to_eu"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null,
+  "note": "lower bound on concentration"
+ },
+ "exposure.tracked8_share": {
+  "value": 49.60283263022617,
+  "series_id": "exports_total",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "exposure.wb/TX.VAL.AGRI.ZS.UN.BR.2025": {
+  "value": 5.212393180455372,
+  "series_id": "wb/TX.VAL.AGRI.ZS.UN.BR",
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "exposure.wb/TX.VAL.FOOD.ZS.UN.BR.2025": {
+  "value": 40.72899821253257,
+  "series_id": "wb/TX.VAL.FOOD.ZS.UN.BR",
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "exposure.wb/TX.VAL.FUEL.ZS.UN.BR.2025": {
+  "value": 16.116867430775887,
+  "series_id": "wb/TX.VAL.FUEL.ZS.UN.BR",
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "exposure.wb/TX.VAL.MANF.ZS.UN.BR.2025": {
+  "value": 23.847179907479784,
+  "series_id": "wb/TX.VAL.MANF.ZS.UN.BR",
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "exposure.wb/TX.VAL.MMTL.ZS.UN.BR.2025": {
+  "value": 12.205002422784254,
+  "series_id": "wb/TX.VAL.MMTL.ZS.UN.BR",
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "exposure.wb_regional_2023": {
+  "value": {
+   "wb/TX.VAL.MRCH.AL.ZS.BR": 5.702592758144249,
+   "wb/TX.VAL.MRCH.HI.ZS.BR": 42.56116705560491,
+   "wb/TX.VAL.MRCH.OR.ZS.BR": 44.61090583694614,
+   "wb/TX.VAL.MRCH.R1.ZS.BR": 35.843741348468576,
+   "wb/TX.VAL.MRCH.R2.ZS.BR": 1.298940920371626,
+   "wb/TX.VAL.MRCH.R3.ZS.BR": 12.48815719104918,
+   "wb/TX.VAL.MRCH.R4.ZS.BR": 3.4860763439436173,
+   "wb/TX.VAL.MRCH.R5.ZS.BR": 2.12757262716183,
+   "wb/TX.VAL.MRCH.R6.ZS.BR": 1.854574597000488,
+   "wb/TX.VAL.MRCH.RS.ZS.BR": 0.3397699163997726,
+   "wb/TX.VAL.MRCH.WR.ZS.BR": 12.48815719104918,
+   "wb/TX.VAL.MRCH.XD.WD.BR": 181.9
+  },
+  "series_id": [
+   "wb/TX.VAL.MRCH.AL.ZS.BR",
+   "wb/TX.VAL.MRCH.HI.ZS.BR",
+   "wb/TX.VAL.MRCH.OR.ZS.BR",
+   "wb/TX.VAL.MRCH.R1.ZS.BR",
+   "wb/TX.VAL.MRCH.R2.ZS.BR",
+   "wb/TX.VAL.MRCH.R3.ZS.BR",
+   "wb/TX.VAL.MRCH.R4.ZS.BR",
+   "wb/TX.VAL.MRCH.R5.ZS.BR",
+   "wb/TX.VAL.MRCH.R6.ZS.BR",
+   "wb/TX.VAL.MRCH.RS.ZS.BR",
+   "wb/TX.VAL.MRCH.WR.ZS.BR",
+   "wb/TX.VAL.MRCH.XD.WD.BR"
+  ],
+  "source": "World Bank (Dateno)",
+  "last_date": "2024-12-31",
+  "sql": null
+ },
+ "commodity_share_2025": {
+  "value": 69.0508680660927,
+  "series_id": [
+   "wb/TX.VAL.FOOD.ZS.UN.BR",
+   "wb/TX.VAL.FUEL.ZS.UN.BR",
+   "wb/TX.VAL.MMTL.ZS.UN.BR"
+  ],
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "pvv.table": {
+  "value": [
+   {
+    "product": "oil",
+    "window": "2019->2025",
+    "dlog_value": 60.99768814507689,
+    "dlog_tonnes": 49.12457567173254,
+    "dlog_unit_value": 11.873112473344344
+   },
+   {
+    "product": "oil",
+    "window": "2026YTD vs 2025YTD",
+    "dlog_value": 21.332103088790845,
+    "dlog_tonnes": 5.78623421466233,
+    "dlog_unit_value": 15.545868874128516
+   },
+   {
+    "product": "oil",
+    "window": "post-tariff Aug25-Aug26 vs Aug24-Aug25",
+    "dlog_value": 17.40923029971926,
+    "dlog_tonnes": 12.749984134261794,
+    "dlog_unit_value": 4.659246165457464
+   },
+   {
+    "product": "iron ore",
+    "window": "2019->2025",
+    "dlog_value": 26.16981327066795,
+    "dlog_tonnes": 18.493832986597848,
+    "dlog_unit_value": 7.675980284070105
+   },
+   {
+    "product": "iron ore",
+    "window": "2026YTD vs 2025YTD",
+    "dlog_value": -1.3518903830010225,
+    "dlog_tonnes": -2.0963100690891334,
+    "dlog_unit_value": 0.7444196860881112
+   },
+   {
+    "product": "iron ore",
+    "window": "post-tariff Aug25-Aug26 vs Aug24-Aug25",
+    "dlog_value": 6.839331875843077,
+    "dlog_tonnes": 3.923470459624194,
+    "dlog_unit_value": 2.915861416218883
+   },
+   {
+    "product": "pulp",
+    "window": "2019->2025",
+    "dlog_value": 30.756527787924483,
+    "dlog_tonnes": 37.187159534186,
+    "dlog_unit_value": -6.430631746261517
+   },
+   {
+    "product": "pulp",
+    "window": "2026YTD vs 2025YTD",
+    "dlog_value": 3.381176876566768,
+    "dlog_tonnes": -6.855943557905809,
+    "dlog_unit_value": 10.237120434472576
+   },
+   {
+    "product": "pulp",
+    "window": "post-tariff Aug25-Aug26 vs Aug24-Aug25",
+    "dlog_value": -3.0383395204851036,
+    "dlog_tonnes": -0.32016398765106735,
+    "dlog_unit_value": -2.7181755328340365
+   }
+  ],
+  "series_id": [
+   "oil_exports_kg",
+   "iron_ore_exports_kg",
+   "pulp_exports_kg"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "pvv.wb_2015_2024": {
+  "value": {
+   "wb/TX.QTY.MRCH.XD.WD.BR": {
+    "2015": 100.0,
+    "2024": 139.5
+   },
+   "wb/TX.UVI.MRCH.XD.WD.BR": {
+    "2015": 100.0,
+    "2024": 129.4
+   }
+  },
+  "series_id": [
+   "wb/TX.QTY.MRCH.XD.WD.BR",
+   "wb/TX.UVI.MRCH.XD.WD.BR"
+  ],
+  "source": "World Bank (Dateno)",
+  "last_date": "2024-12-31",
+  "sql": null
+ },
+ "tariff.placebo": {
+  "value": {
+   "exports_to_us": {
+    "did_actual": -19.26403896534402,
+    "did_placebo_p05": -34.83509109619413,
+    "did_placebo_p95": 60.637347393319736,
+    "did_placebo_sd": 26.86517155285273,
+    "did_p_lower": 0.23300970873786409,
+    "did_p_upper": 0.7766990291262136,
+    "gap_actual_pct": -19.865236884072978,
+    "gap_placebo_p05": -26.952882999253184,
+    "gap_placebo_p95": 83.75575835497928,
+    "gap_p_lower": 0.17475728155339806,
+    "n_placebo": 102,
+    "largest_placebo": [
+     [
+      "2020-12",
+      72.02625734994861
+     ],
+     [
+      "2021-02",
+      71.70636261247958
+     ],
+     [
+      "2021-01",
+      71.23471628538044
+     ],
+     [
+      "2020-11",
+      69.03215019707551
+     ],
+     [
+      "2021-03",
+      65.89134796416748
+     ]
+    ],
+    "did4_actual": -29.927861396621147,
+    "did4_p_lower": 0.02912621359223301,
+    "did4_p_upper": 0.9805825242718447,
+    "did_excovid_p_lower": 0.01818181818181818,
+    "did_excovid_p_upper": 1.0,
+    "n_excovid": 54,
+    "did_excovid_p05_p95": [
+     -12.187451484488983,
+     22.769936199542617
+    ],
+    "did4_excovid_p_lower": 0.01818181818181818,
+    "did_ci90": [
+     -83.29092771454117,
+     12.181510774972693
+    ]
+   },
+   "exports_to_china": {
+    "did_actual": 26.315252640753005,
+    "did_placebo_p05": -45.491273159500146,
+    "did_placebo_p95": 26.875121344798394,
+    "did_placebo_sd": 22.241330518488876,
+    "did_p_lower": 0.9320388349514563,
+    "did_p_upper": 0.07766990291262135,
+    "gap_actual_pct": 30.011559448990923,
+    "gap_placebo_p05": -32.330858415477884,
+    "gap_placebo_p95": 30.532767686467544,
+    "gap_p_lower": 0.941747572815534,
+    "n_placebo": 102,
+    "largest_placebo": [
+     [
+      "2019-02",
+      -60.87388102099893
+     ],
+     [
+      "2019-01",
+      -57.44102113186336
+     ],
+     [
+      "2019-03",
+      -54.87370891897383
+     ],
+     [
+      "2024-03",
+      -50.62707881874337
+     ],
+     [
+      "2018-12",
+      -50.22293069898158
+     ]
+    ],
+    "did4_actual": 34.605207255286,
+    "did4_p_lower": 0.9223300970873787,
+    "did4_p_upper": 0.08737864077669903,
+    "did_excovid_p_lower": 0.9090909090909091,
+    "did_excovid_p_upper": 0.10909090909090909,
+    "n_excovid": 54,
+    "did_excovid_p05_p95": [
+     -47.29654241804501,
+     32.65478862591463
+    ],
+    "did4_excovid_p_lower": 0.8909090909090909,
+    "did_ci90": [
+     4.414056613829803,
+     76.78045111812834
+    ]
+   },
+   "exports_total": {
+    "did_actual": 9.419476487784294,
+    "did_placebo_p05": -18.476487284524968,
+    "did_placebo_p95": 31.830143003898975,
+    "did_placebo_sd": 15.656974017516914,
+    "did_p_lower": 0.7281553398058253,
+    "did_p_upper": 0.2815533980582524,
+    "gap_actual_pct": 9.284465310982593,
+    "gap_placebo_p05": -13.61409304507598,
+    "gap_placebo_p95": 33.60107231780778,
+    "gap_p_lower": 0.7184466019417476,
+    "n_placebo": 102,
+    "largest_placebo": [
+     [
+      "2021-02",
+      40.387734348129264
+     ],
+     [
+      "2021-03",
+      39.61532204312118
+     ],
+     [
+      "2021-01",
+      38.66590850323905
+     ],
+     [
+      "2020-12",
+      38.157648458734485
+     ],
+     [
+      "2020-11",
+      36.35674114452804
+     ]
+    ],
+    "did4_actual": 4.655418779652543,
+    "did4_p_lower": 0.7378640776699029,
+    "did4_p_upper": 0.27184466019417475,
+    "did_excovid_p_lower": 0.7272727272727273,
+    "did_excovid_p_upper": 0.2909090909090909,
+    "n_excovid": 54,
+    "did_excovid_p05_p95": [
+     -11.582560382450113,
+     20.41685464037808
+    ],
+    "did4_excovid_p_lower": 0.6727272727272727,
+    "did_ci90": [
+     -26.884306271650956,
+     23.422324016772986
+    ]
+   }
+  },
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_total"
+  ],
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "tariff.recovery": {
+  "value": {
+   "us_yoy_monthly": {
+    "2025-01": -4.033671465426403,
+    "2025-02": 21.555287717383198,
+    "2025-03": -15.67499388035044,
+    "2025-04": 20.180494165009154,
+    "2025-05": 11.13426394646433,
+    "2025-06": 1.9232720560278027,
+    "2025-07": 7.121994487333683,
+    "2025-08": -16.089419869104017,
+    "2025-09": -17.49900385740868,
+    "2025-10": -35.36629166680799,
+    "2025-11": -30.014239041960554,
+    "2025-12": -8.184850606264726,
+    "2026-01": -26.342295064763565,
+    "2026-02": -20.124654947381348,
+    "2026-03": -10.168680299495081,
+    "2026-04": -10.196479059471153,
+    "2026-05": -16.941164946200004,
+    "2026-06": 2.2915895914529694,
+    "2026-07": -6.384095423228042,
+    "2026-08": 12.135568899731354
+   },
+   "trough_augnov25_mean_yoy": -24.742238608820312,
+   "junaug26_mean_yoy": 2.6810210226520934,
+   "dec25_may26_mean_yoy": -15.326354153929314,
+   "junaug26_vs_junaug24": -0.49071348761728917
+  },
+  "series_id": "exports_to_us",
+  "source": "ComexStat (MDIC)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "diversion": {
+  "value": {
+   "G_US_13m": -8.537179580414183,
+   "G_US_yr": -7.880473458843861,
+   "gain_above_pretrend_13m": {
+    "cn": 26.22757096130728,
+    "eu": 3.2972298896966024,
+    "rest": 12.144865203698942
+   },
+   "nonus_gain_13m": 41.66966605470282,
+   "upper_bound_rate": 1.0,
+   "lower_bound_rate": 0.0,
+   "net_loss_no_diversion_yr": -7.880473458843861,
+   "central_rate": 0.4358211759190821,
+   "net_loss_central_yr": -4.445996249211413,
+   "oil_realisation_pre_jan_jul25": 0.9007022737883623,
+   "oil_realisation_post_aug25_aug26": 0.8716079437003194,
+   "oil_realisation_2024": 0.8545011594093502,
+   "oil_realisation_2023": 0.8645389308566486,
+   "pulp_uv_pre": 466.53814000084486,
+   "pulp_uv_post": 485.3092021946951,
+   "pulp_uv_2024": 538.2155100271171
+  },
+  "series_id": [
+   "exports_to_us",
+   "exports_to_china",
+   "exports_to_eu",
+   "exports_total",
+   "oil_export_unit_value",
+   "brent_usd",
+   "pulp_unit_value"
+  ],
+  "source": "ComexStat (MDIC); Derived; IPEAData",
+  "last_date": "2026-09-29",
+  "sql": null
+ },
+ "elasticity.tot_beta": {
+  "value": {
+   "1992-2025": {
+    "beta": 0.24377047046805467,
+    "ci90": [
+     0.17085650454052287,
+     0.31769003932404255
+    ],
+    "ci95": [
+     0.15812198527922194,
+     0.3344970033172599
+    ],
+    "r2": 0.347286692677924,
+    "n": 34,
+    "p_perm": 0.0004997501249375312
+   },
+   "1997-2025": {
+    "beta": 0.2572865121878404,
+    "ci90": [
+     0.16805790603540874,
+     0.3433488514677832
+    ],
+    "ci95": [
+     0.15014901380490403,
+     0.3583584708530336
+    ],
+    "r2": 0.35698502020653755,
+    "n": 29,
+    "p_perm": 0.0004997501249375312
+   },
+   "2003-2025": {
+    "beta": 0.2736681406486416,
+    "ci90": [
+     0.15124053215350428,
+     0.36422646023843025
+    ],
+    "ci95": [
+     0.125438357880608,
+     0.38055498068601074
+    ],
+    "r2": 0.3454651537642395,
+    "n": 23,
+    "p_perm": 0.004497751124437781
+   },
+   "TT.PRI 2006-2024": {
+    "beta": 0.2792924929599464,
+    "ci90": [
+     0.14903102971166046,
+     0.3659355746236472
+    ],
+    "r2": 0.3726261293942802,
+    "n": 19
+   },
+   "tot_stats": {
+    "level_2025": 1.0490706903858333,
+    "min": 0.6837292422841666,
+    "min_year": 1991,
+    "max": 1.1257022536074999,
+    "max_year": 2011,
+    "dlog_sd": 0.06288250759430133,
+    "p10": -0.04925956520049596,
+    "p90": 0.09546546950004764,
+    "min_dlog": -0.13483644705477968,
+    "min_dlog_year": 1999,
+    "max_dlog": 0.1524937884834041,
+    "max_dlog_year": 2010
+   }
+  },
+  "series_id": [
+   "wb/TOT.BRA",
+   "wb/NY.GDP.PCAP.KD.ZG.BR",
+   "wb/TT.PRI.MRCH.XD.WD.BR"
+  ],
+  "source": "World Bank (Dateno)",
+  "last_date": "2025-12-31",
+  "sql": null
+ },
+ "elasticity.fx": {
+  "value": {
+   "lag0": {
+    "b_reer": 0.05441716162311926,
+    "ci90": [
+     -0.39489816045582676,
+     0.20197991722073025
+    ],
+    "r2": 0.07276669607004338,
+    "n": 19,
+    "b_reer_sum": 0.05441716162311926
+   },
+   "lag0+1": {
+    "b_reer": 0.047680120907013464,
+    "ci90": [
+     -0.4596733702418695,
+     0.20731559333651717
+    ],
+    "r2": 0.0754118926746028,
+    "n": 19,
+    "b_reer_sum": 0.07029015726294122,
+    "sum_ci90": [
+     -0.5040567585956527,
+     0.2849317009483405
+    ]
+   },
+   "monthly": {
+    "lag0": {
+     "b_fx": -0.052818104105089705,
+     "ci90": [
+      -0.2965210752788024,
+      0.12734002896768642
+     ],
+     "b_brent": 0.3275435045600424,
+     "r2": 0.8501084463542992,
+     "n": 129
+    },
+    "lag3": {
+     "b_fx": 0.011559403784235244,
+     "ci90": [
+      -0.24191616261820578,
+      0.1827468609060645
+     ],
+     "b_brent": 0.3444183813705085,
+     "r2": 0.8478396623870443,
+     "n": 129
+    },
+    "lag6": {
+     "b_fx": 0.04403729434819284,
+     "ci90": [
+      -0.20710346198648585,
+      0.1952237648248165
+     ],
+     "b_brent": 0.34987035081810436,
+     "r2": 0.8499496083091895,
+     "n": 129
+    },
+    "lag9": {
+     "b_fx": 0.062324885844669595,
+     "ci90": [
+      -0.11162431303327613,
+      0.22100031388340433
+     ],
+     "b_brent": 0.3472894825667609,
+     "r2": 0.8529456366353092,
+     "n": 129
+    },
+    "lag12": {
+     "b_fx": 0.08113474346440579,
+     "ci90": [
+      -0.06000882807838245,
+      0.24854402168782713
+     ],
+     "b_brent": 0.34140284407985183,
+     "r2": 0.8569979348264031,
+     "n": 129
+    }
+   }
+  },
+  "series_id": [
+   "wb/TX.QTY.MRCH.XD.WD.BR",
+   "wb/PX.REX.REER.BR",
+   "wb/TOT.BRA",
+   "exports_total",
+   "brl_usd",
+   "brent_usd"
+  ],
+  "source": "Banco Central (SGS); ComexStat (MDIC); IPEAData; World Bank (Dateno)",
+  "last_date": "2026-10-02",
+  "sql": null,
+  "note": "b_fx>0 means BRL depreciation (higher BRL/USD) raises USD exports"
+ },
+ "analogues": {
+  "value": {
+   "terms": [
+    {
+     "president": "Michel Temer",
+     "from": "2016-05",
+     "to": "2018-12",
+     "months": 31,
+     "cn_sh": 23.58847090975733,
+     "us_sh": 12.639201877724469,
+     "eu_sh": 14.549337802895785,
+     "rest_sh": 49.222989409622414,
+     "eu_bn_yr": 31.243595600129034,
+     "us_bn_yr": 27.14172407883871,
+     "cn_bn_yr": 50.65444599019355,
+     "beefcn_bn_yr": 1.0918643550967742,
+     "total_bn_yr": 214.7423891272258
+    },
+    {
+     "president": "Jair Bolsonaro",
+     "from": "2019-01",
+     "to": "2022-12",
+     "months": 48,
+     "cn_sh": 29.512459734539448,
+     "us_sh": 11.458414346386306,
+     "eu_sh": 13.883261688159827,
+     "rest_sh": 45.14586423091442,
+     "eu_bn_yr": 36.27896423625,
+     "us_bn_yr": 29.94248856025,
+     "cn_bn_yr": 77.120311875,
+     "beefcn_bn_yr": 4.64481151,
+     "total_bn_yr": 261.3144162455
+    },
+    {
+     "president": "Luiz Inácio Lula da Silva",
+     "from": "2023-01",
+     "to": "2026-08",
+     "months": 44,
+     "cn_sh": 29.447034991817677,
+     "us_sh": 10.900056566866118,
+     "eu_sh": 14.238583137326751,
+     "rest_sh": 45.41432530398945,
+     "eu_bn_yr": 49.54543611927273,
+     "us_bn_yr": 37.92849689618181,
+     "cn_bn_yr": 102.46568615836364,
+     "beefcn_bn_yr": 7.089108118090909,
+     "total_bn_yr": 347.96605562099995
+    }
+   ],
+   "deforestation": {
+    "pfls": {
+     "2015": 828840.0,
+     "2016": 2830943.0,
+     "2017": 2134474.0,
+     "2018": 1347177.0,
+     "2019": 1361054.0,
+     "2020": 1703492.0,
+     "2021": 1546965.0,
+     "2022": 1772215.0,
+     "2023": 1136251.0,
+     "2024": 2823647.0,
+     "2025": 1626785.0
+    },
+    "frls": {
+     "2015": 2222654.0,
+     "2016": 5378610.0,
+     "2017": 4519546.0,
+     "2018": 2948393.0,
+     "2019": 2696542.0,
+     "2020": 3290645.0,
+     "2021": 2990029.0,
+     "2022": 3308334.0,
+     "2023": 2805355.0,
+     "2024": 4391694.0,
+     "2025": 2868122.0
+    },
+    "pfls_mean_2019_22": 1595931.5,
+    "pfls_mean_2023_25": 1862227.6666666667,
+    "pfls_mean_2023_25_ex2024": 1381518.0,
+    "frls_mean_2019_22": 3071387.5,
+    "frls_mean_2023_25": 3355057.0
+   },
+   "soy_2018_quarterly_yoy": {
+    "soy_exports": {
+     "2018Q1": -3.4,
+     "2018Q2": 17.1,
+     "2018Q3": 42.7,
+     "2018Q4": 106.8,
+     "2019Q1": 10.6,
+     "2019Q2": -27.9,
+     "2019Q3": -34.1,
+     "2019Q4": -12.5
+    },
+    "exports_to_china": {
+     "2018Q1": 1.1,
+     "2018Q2": 19.6,
+     "2018Q3": 55.4,
+     "2018Q4": 76.4,
+     "2019Q1": 10.7,
+     "2019Q2": -7.4,
+     "2019Q3": -3.1,
+     "2019Q4": 0.2
+    },
+    "exports_to_us": {
+     "2018Q1": 6.5,
+     "2018Q2": -2.8,
+     "2018Q3": 6.9,
+     "2018Q4": 16.4,
+     "2019Q1": 1.9,
+     "2019Q2": 22.0,
+     "2019Q3": -1.4,
+     "2019Q4": -6.0
+    }
+   },
+   "soy_2025_quarterly_yoy": {
+    "soy_exports": {
+     "2025Q1": -11.1,
+     "2025Q2": -8.1,
+     "2025Q3": 8.5,
+     "2025Q4": 55.3,
+     "2026Q1": 11.2,
+     "2026Q2": 16.9
+    },
+    "exports_to_china": {
+     "2025Q1": -14.2,
+     "2025Q2": -1.6,
+     "2025Q3": 11.6,
+     "2025Q4": 35.7,
+     "2026Q1": 22.7,
+     "2026Q2": 20.7
+    },
+    "exports_to_us": {
+     "2025Q1": -1.7,
+     "2025Q2": 10.7,
+     "2025Q3": -8.4,
+     "2025Q4": -24.4,
+     "2026Q1": -18.9,
+     "2026Q2": -8.5
+    }
+   },
+   "soy_windfall_2018_bn": 7.334531483,
+   "soy_reversal_2019_bn": -6.974949319,
+   "soy_2017": 25.712173321,
+   "soy_2018": 33.046704804,
+   "julaug26_yoy": {
+    "soy_exports": 15.88113971048848,
+    "exports_to_china": -1.3340111289768086,
+    "exports_to_us": 1.5111999355794214,
+    "exports_total": 8.419782603343462
+   },
+   "soy_2025": 43.531594841,
+   "soy_2024": 42.94189447
+  },
+  "series_id": [
+   "exports_to_china",
+   "exports_to_us",
+   "exports_to_eu",
+   "beef_exports_to_china",
+   "soy_exports",
+   "wb/AG.LND.PFLS.HA.BR",
+   "wb/AG.LND.FRLS.HA.BR"
+  ],
+  "source": "ComexStat (MDIC); World Bank (Dateno)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "gold": {
+  "value": {
+   "L4": [
+    {
+     "hyp_id": "L4",
+     "title": "Exports pivot from the US to China",
+     "statistic": 14.2788,
+     "verdict": "Supported",
+     "evidence": "12 months to Aug 2026 vs prior 12: US -14.3%, China +19.0%, EU +12.1%",
+     "as_of": "2026-08-01"
+    }
+   ],
+   "political_events_tariff": [
+    {
+     "date": "2025-08-06",
+     "event": "US 50% tariff on Brazilian goods takes effect",
+     "kind": "economic"
+    },
+    {
+     "date": "2026-10-04",
+     "event": "General election: first round",
+     "kind": "election"
+    }
+   ]
+  },
+  "series_id": "hypothesis_tests/political_events",
+  "source": "warehouse gold tables"
+ },
+ "scenario.revisions": {
+  "value": [
+   {
+    "cell": "Lula IV / best / US",
+    "plan_range": "+2 to +4",
+    "revised": "+1 to +3",
+    "reason": "IEEPA 50% voided Feb-2026; current layer is Sec.301 25% + forced-labour 12.5% on only 16.5% (US$6.6bn) of US-bound exports; a Lula deal would carve out more lines, not remove 301",
+    "fact_ids": "A16;A21;A22;A23;A26"
+   },
+   {
+    "cell": "Lula IV / worst / US",
+    "plan_range": "-6 to -3",
+    "revised": "-5 to -2",
+    "reason": "escalation from today's 37.5% layer (exemption list narrowed, 301 rate raised, Magnitsky re-imposition discussed Aug-2026); the 2025 shock is already in the base",
+    "fact_ids": "A12;A21;A23;A25;A38"
+   },
+   {
+    "cell": "Flávio Bolsonaro / best / US",
+    "plan_range": "+4 to +8",
+    "revised": "+2 to +6",
+    "reason": "301/forced-labour layer lifted in a bilateral deal; recovery capped because 24% of US-bound exports sit under Sec.232 (not country-negotiable) and the 2025 crude drop (-30%) was not tariff-driven",
+    "fact_ids": "A15;A21;A22;A23;A27;A28"
+   },
+   {
+    "cell": "Flávio Bolsonaro / worst / US",
+    "plan_range": "+2 to +4",
+    "revised": "+0 to +2",
+    "reason": "301 remedies tied to Pix/ethanol/digital concessions that Congress/BCB resist; relief partial and slow",
+    "fact_ids": "A19;A20;A24;A30"
+   },
+   {
+    "cell": "Lula IV / worst / China",
+    "plan_range": "-13 to -6",
+    "revised": "-10 to -3",
+    "reason": "US-China truce/soy pledges shift soy share (China share of Brazil soy 75%->69% H1-26) but Brazil re-routed volume (+8% total soy); beef safeguard is already binding for both candidates (baseline)",
+    "fact_ids": "B06;B09;B10;B11;B14"
+   },
+   {
+    "cell": "Flávio Bolsonaro / worst / China",
+    "plan_range": "-20 to -5",
+    "revised": "-15 to -3",
+    "reason": "Australia analogue: ~A$20bn/yr (~14% of its China exports) hit, much re-routed for fungible goods; scaled to Brazil's ~US$100bn China flow and soy/iron-ore fungibility",
+    "fact_ids": "B19;B20;B21;B22;A29;B24"
+   },
+   {
+    "cell": "Lula IV / best / EU",
+    "plan_range": "+1 to +3",
+    "revised": "+1 to +3",
+    "reason": "interim agreement provisionally applied since 1 May 2026 (exports to EU +23.5% May-Aug) + beef relisting after the Sep-2026 antimicrobial suspension",
+    "fact_ids": "C07;C14;C18;C19;C20"
+   },
+   {
+    "cell": "Lula IV / worst / EU",
+    "plan_range": "-0.5 to +0",
+    "revised": "-2 to +0",
+    "reason": "EU beef suspension (US$1.8bn/yr) lasts up to two years; adverse CJEU opinion (2027) unsettles provisional application",
+    "fact_ids": "C05;C06;C19;C20"
+   },
+   {
+    "cell": "Lula IV / worst / Mercosur/LatAm",
+    "plan_range": "-3 to -1",
+    "revised": "-3 to -1",
+    "reason": "Brazil-Argentina diplomatic downgrade (Aug-2026), Chinese cars displacing Brazilian autos (-28% H1-26), US-Argentina deal perforating the CET",
+    "fact_ids": "C42;C43;C44;C45;C50"
+   },
+   {
+    "cell": "US-China détente",
+    "plan_range": "-10 to -5",
+    "revised": "-8 to -2",
+    "reason": "since the Nov-2025 truce China's share of Brazil soy fell 75%->69% yet total soy +8% (B11) and soy_exports +15.2% YTD: re-routing works",
+    "fact_ids": "B09;B10;B11"
+   }
+  ],
+  "series_id": "n/a",
+  "source": "",
+  "last_date": "",
+  "sql": null
+ },
+ "scenario.dominance": {
+  "value": {
+   "candidate_delta_max_bn": 47.0,
+   "candidate_delta_central": {
+    "Flávio best - Lula worst": 25.0,
+    "Lula best - Flávio worst": 30.0,
+    "Flávio best - Lula best": -2.0
+   },
+   "tot_state_delta_bn": [
+    28.8,
+    43.2
+   ],
+   "us_china_state_delta_bn": [
+    7.0,
+    23.0
+   ]
+  },
+  "series_id": [
+   "exports_total",
+   "wb/TOT.BRA"
+  ],
+  "source": "ComexStat (MDIC); World Bank (Dateno)",
+  "last_date": "2026-08-01",
+  "sql": null
+ },
+ "_sql": {
+  "value": {
+   "monthly_panel": "SELECT series_id, date_trunc('month', date) AS ym,\n       CASE WHEN series_id IN ('brl_usd','brent_usd','focus_fx') THEN avg(value) ELSE max(value) END AS v\nFROM v_observations WHERE date <= current_date AND series_id IN ('exports_total','imports_total','exports_to_us','exports_to_china','exports_to_eu','china_export_share','soy_exports','oil_exports','oil_exports_kg','iron_ore_exports','iron_ore_exports_kg','beef_exports','beef_exports_to_china','coffee_exports','sugar_exports','pulp_exports','pulp_exports_kg','niobium_exports','fertilizer_imports','potash_imports','iron_ore_unit_value','oil_export_unit_value','pulp_unit_value','bop_goods_exports','brl_usd','brent_usd','focus_fx','wb/TOT.BRA','wb/DXGSRMRCHNSXD_M.BRA','wb/DXGSRMRCHNSCD_M.BRA','wb/REER_M.BRA','trade_balance')\nGROUP BY 1,2 ORDER BY 2,1",
+   "annual": "WITH a AS (SELECT year, series_id, value FROM v_annual WHERE is_complete AND series_id IN\n ('exports_total','exports_to_us','exports_to_china','exports_to_eu','soy_exports','oil_exports','iron_ore_exports',\n  'beef_exports','coffee_exports','sugar_exports','pulp_exports','niobium_exports','beef_exports_to_china'))\nSELECT * FROM a PIVOT (max(value) FOR series_id IN ('exports_total','exports_to_us','exports_to_china','exports_to_eu',\n 'soy_exports','oil_exports','iron_ore_exports','beef_exports','coffee_exports','sugar_exports','pulp_exports',\n 'niobium_exports','beef_exports_to_china')) ORDER BY year",
+   "wb_regional": "SELECT series_id, year, value FROM v_annual WHERE series_id LIKE 'wb/TX.VAL.MRCH.%' AND year BETWEEN 2014 AND 2023",
+   "wb_product_class": "SELECT series_id, year, value FROM v_annual WHERE series_id IN ('wb/TX.VAL.FOOD.ZS.UN.BR','wb/TX.VAL.FUEL.ZS.UN.BR',\n             'wb/TX.VAL.MMTL.ZS.UN.BR','wb/TX.VAL.MANF.ZS.UN.BR','wb/TX.VAL.AGRI.ZS.UN.BR') AND year>=2019",
+   "wb_qty_uvi": "SELECT series_id, year, value FROM v_annual WHERE series_id IN ('wb/TX.QTY.MRCH.XD.WD.BR','wb/TX.UVI.MRCH.XD.WD.BR')\n               AND year IN (2015, 2024)",
+   "tot_annual": "SELECT year, value FROM v_annual WHERE series_id='wb/TOT.BRA' AND is_complete ORDER BY year",
+   "gdppc_growth": "SELECT year, value FROM v_annual WHERE series_id='wb/NY.GDP.PCAP.KD.ZG.BR' AND is_complete ORDER BY year",
+   "ttpri": "SELECT year, value FROM v_annual WHERE series_id='wb/TT.PRI.MRCH.XD.WD.BR' ORDER BY year",
+   "fx_annual": "SELECT series_id, year, value FROM v_annual WHERE series_id IN ('wb/TX.QTY.MRCH.XD.WD.BR','wb/PX.REX.REER.BR','wb/TOT.BRA')\n             AND is_complete ORDER BY year",
+   "terms": "SELECT president, start, \"end\" FROM political_terms WHERE start >= '2016-01-01'",
+   "deforestation": "SELECT series_id, year, value FROM v_annual WHERE series_id IN ('wb/AG.LND.PFLS.HA.BR','wb/AG.LND.FRLS.HA.BR')\n               AND year >= 2015 ORDER BY year"
+  }
+ }
+}
