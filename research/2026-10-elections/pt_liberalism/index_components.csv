@@ -1,0 +1,930 @@
+component_id,sub_index,series_ids,source,transform,sign,weight,descriptive,coverage,year,value,z,partial_year
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,1995,0.24,-0.1977,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,1996,-0.09,-0.3177,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,1997,-0.87,-0.6014,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,1998,0.01,-0.2813,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,1999,2.86,0.7552,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2000,3.18,0.8715,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2001,3.34,0.9297,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2002,3.19,0.8752,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2003,3.24,0.8933,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2004,3.69,1.057,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2005,3.74,1.0752,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2006,3.15,0.8606,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2007,3.24,0.8933,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2008,3.33,0.9261,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2009,1.94,0.4206,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2010,2.62,0.6679,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2011,2.94,0.7842,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2012,2.18,0.5079,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2013,1.71,0.3369,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2014,-0.56,-0.4886,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2015,-1.86,-0.9614,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2016,-2.48,-1.1869,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2017,-1.68,-0.8959,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2018,-1.55,-0.8487,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2019,-0.84,-0.5904,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2020,-9.24,-3.6453,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2021,0.72,-0.0231,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2022,1.25,0.1696,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2023,-2.28,-1.1141,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2024,-0.4,-0.4304,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2025,-0.43,-0.4413,False
+F1,a,primary_balance_gdp; ext:primary_balance_gdp_bcb,"BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",annual level (Dec 12m),1,1.0,False,1995-2026,2026,-0.62,-0.5104,True
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,1998,8.09134,-0.5729,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,1999,1.24248,0.155,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2000,0.03597,0.2832,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2001,7.12604,-0.4703,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2002,2.97327,-0.029,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2003,-5.24546,0.8445,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2004,4.45642,-0.1866,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2005,5.46887,-0.2942,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2006,5.22322,-0.2681,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2007,3.5721,-0.0926,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2008,1.50192,0.1274,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2009,6.93823,-0.4503,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2010,8.76394,-0.6444,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2011,-6.74085,1.0034,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2012,3.63374,-0.0992,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2013,3.73478,-0.1099,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2014,5.90468,-0.3405,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2015,5.64302,-0.3127,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2016,1.98912,0.0756,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2017,-2.40065,0.5422,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2018,0.17818,0.2681,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2019,1.58443,0.1186,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2020,34.10208,-3.3372,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2021,-28.23376,3.2876,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2022,-0.42451,0.3321,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2023,9.61782,-0.7351,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2024,-4.23965,0.7376,False
+F2,a,ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR,Tesouro RTN primary spending deflated by CPI minus real GDP growth,pts/yr,-1,1.0,False,1998-2025,2025,1.12347,0.1676,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,1996,-0.79,0.8806,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,1997,0.06,0.0574,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,1998,0.71,-0.572,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,1999,2.0,-1.8212,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2000,0.75,-0.6107,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2001,1.43,-1.2692,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2002,1.61,-1.4435,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2003,-0.65,0.745,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2004,-2.65,2.6817,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2006,-0.21,0.3189,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2007,0.36,-0.2331,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2008,-0.08,0.193,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2009,-1.29,1.3647,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2010,0.11,0.009,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2011,0.7,-0.5623,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2012,-0.4,0.5029,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2013,-0.3,0.4061,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2014,-0.8,0.8902,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2015,0.2,-0.0781,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2016,0.1,0.0187,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2017,0.1,0.0187,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2018,0.5,-0.3687,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2019,0.0,0.1155,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2020,-1.2,1.2776,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2021,1.7,-1.5307,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2022,0.3,-0.175,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2023,-0.9,0.9871,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2024,1.92,-1.7437,False
+F3,a,ext:tax_burden_gdp; ext:tax_burden_gdp_stn,Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025,delta pts/yr,-1,1.0,False,1996-2025,2025,0.18,-0.0588,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2006,-0.06,0.4134,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2007,0.36,0.3073,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2008,-3.67,1.3252,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2009,3.895,-0.5856,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2010,-4.83,1.6182,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2011,-1.6,0.8024,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2012,0.08,0.378,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2013,-1.86,0.8681,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2014,3.145,-0.3961,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2015,5.17,-0.9076,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2016,7.89,-1.5947,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2017,4.51,-0.7409,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2018,1.265,0.0787,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2019,0.685,0.2252,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2020,9.41,-1.9786,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2021,-6.45,2.0274,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2022,-1.665,0.8188,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2023,3.42,-0.4656,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2024,1.565,0.0029,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2025,3.23,-0.4176,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2026,4.265,-0.679,True
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,1996,2.74,-0.2938,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,1997,1.11,0.1179,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,1998,7.11,-1.3976,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,1999,5.59,-1.0137,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2000,1.01,0.1431,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2001,5.95,-1.1046,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2002,6.37,-1.2107,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2003,-3.98,1.4035,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2004,-2.97,1.1484,False
+F4,a,gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb,mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes,delta pts/yr (Dec-Dec; 2026 = Aug vs Dec-2025),-1,1.0,False,1996-2026,2005,-0.12,0.4286,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2001,0.71198,0.4888,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2002,-0.04061,0.254,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2003,2.40632,1.0173,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2004,-2.78222,-0.6012,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2005,0.69537,0.4836,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2006,-2.2803,-0.4446,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2007,-4.21653,-1.0486,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2008,-3.95041,-0.9655,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2009,-4.96585,-1.2823,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2010,-5.23723,-1.3669,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2011,-3.40773,-0.7963,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2012,-5.50102,-1.4492,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2013,-4.89463,-1.2601,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2014,-1.93639,-0.3373,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2015,1.33615,0.6835,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2016,2.99118,1.1997,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2017,1.85483,0.8453,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2018,-0.34535,0.159,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2019,-0.60245,0.0788,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2020,-3.09009,-0.6972,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2021,-2.87621,-0.6305,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2022,3.50674,1.3606,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2023,4.22055,1.5832,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2024,2.3157,0.989,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2025,4.71263,1.7367,False
+M1,b,real_policy_rate; ext:neutral_rate,"real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",annual mean of gap,1,1.0,False,2001-2026,2026,5.38369,1.946,True
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2000,-0.03,0.9713,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2001,-3.67,-0.685,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2002,-9.03,-3.1238,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2003,-5.3,-1.4266,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2004,-2.1,0.0294,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2005,-1.19,0.4435,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2006,-1.36,0.3661,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2007,-0.04,0.9667,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2008,-1.4,0.3479,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2009,-0.19,0.8985,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2010,-1.41,0.3434,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2011,-2.0,0.0749,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2012,-1.34,0.3752,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2013,-1.41,0.3434,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2014,-1.91,0.1159,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2015,-6.17,-1.8225,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2016,-1.79,0.1705,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2017,-1.55,0.2797,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2018,-0.75,0.6437,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2019,-0.06,0.9576,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2020,-0.52,0.7483,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2021,-6.31,-1.8862,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2022,-2.29,-0.0571,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2023,-1.37,0.3616,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2024,-1.83,0.1523,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2025,-1.26,0.4116,False
+M2,b,ipca_12m; cmn_targets,-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets),-|dev|,1,1.0,False,2000-2026,2026,-1.22,0.4298,True
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2000,0.91667,0.9143,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2001,0.08333,-1.2273,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2002,0.0,-1.4414,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2003,0.0,-1.4414,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2004,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2005,0.5,-0.1565,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2006,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2007,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2008,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2009,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2010,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2011,0.33333,-0.5848,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2012,1.0,1.1284,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2013,0.83333,0.7001,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2014,0.58333,0.0577,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2015,0.0,-1.4414,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2016,0.08333,-1.2273,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2017,0.5,-0.1565,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2018,0.58333,0.0577,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2019,0.91667,0.9143,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2020,0.58333,0.0577,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2021,0.16667,-1.0131,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2022,0.0,-1.4414,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2023,0.66667,0.2718,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2024,0.66667,0.2718,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2025,0.16667,-1.0131,False
+M3,b,ipca_12m; cmn_targets,share of months IPCA 12m inside CMN band,share,1,1.0,False,2000-2026,2026,0.75,0.486,True
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2001,-1.53,-0.697,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2002,-2.22847,-1.4111,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2003,-3.05237,-2.2535,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2004,-0.96294,-0.1172,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2005,-0.60406,0.2497,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2006,0.20443,1.0763,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2007,0.7409,1.6248,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2008,-0.37163,0.4873,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2009,0.21059,1.0826,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2010,-0.38149,0.4772,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2011,-0.91467,-0.0679,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2012,-0.96092,-0.1152,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2013,-1.30629,-0.4683,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2014,-1.66453,-0.8346,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2015,-1.7571,-0.9292,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2016,-1.30718,-0.4692,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2017,0.11971,0.9897,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2018,0.40444,1.2808,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2019,0.39454,1.2707,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2020,0.54379,1.4233,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2021,-0.7261,0.1249,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2022,-2.03002,-1.2082,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2023,-1.48495,-0.651,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2024,-0.84337,0.005,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2025,-1.69893,-0.8697,False
+M4a,b,focus_ipca_12m; cmn_targets,Focus 12m-ahead IPCA expectation minus target (blend),-mean gap,1,0.5,False,2001-2026,2026,-1.13878,-0.297,True
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2001,-0.17122,0.5644,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2002,-2.38824,-3.6959,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2003,-1.80116,-2.5678,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2004,-0.28672,0.3425,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2005,-0.38622,0.1513,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2006,-0.16766,0.5712,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2007,-0.21736,0.4757,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2008,-0.45183,0.0252,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2009,-0.24003,0.4322,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2010,-0.28607,0.3437,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2011,-0.17711,0.5531,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2012,-0.10573,0.6903,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2013,-0.28783,0.3403,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2014,-0.22555,0.46,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2015,-0.44051,0.0469,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2016,-0.70066,-0.453,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2017,-0.29611,0.3244,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2018,-0.19271,0.5231,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2019,-0.1907,0.527,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2020,-0.29953,0.3178,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2021,-0.54247,-0.149,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2022,-0.2707,0.3732,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2023,-0.64779,-0.3514,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2024,-0.336,0.2478,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2025,-0.51334,-0.093,False
+M4b,b,focus_ipca_12m,within-year SD of Focus 12m IPCA expectations (daily),-SD,1,0.5,False,2001-2026,2026,-0.20132,0.5066,True
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2001,-1.58302,0.1944,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2002,-3.38331,-0.4485,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2003,-2.17223,-0.016,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2004,-4.22662,-0.7497,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2005,-0.21072,0.6845,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2006,-1.97365,0.0549,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2007,-3.10518,-0.3492,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2008,-4.50785,-0.8501,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2009,-4.64996,-0.9009,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2010,-5.80947,-1.315,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2011,-4.77974,-0.9472,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2012,-6.9424,-1.7196,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2013,-6.85405,-1.6881,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2014,-4.43319,-0.8235,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2015,-1.2995,0.2957,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2016,1.03042,1.1278,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2017,2.03438,1.4863,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2018,0.26131,0.8531,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2019,-0.01064,0.756,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2020,-2.27441,-0.0525,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2021,-3.96537,-0.6564,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2022,0.46172,0.9247,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2023,1.99313,1.4716,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2024,1.05064,1.135,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2025,2.16423,1.5327,False
+M5,b,selic_target; focus_ipca_12m; neutral_rate; cmn_targets,Selic - [r* + pi_e + 1.5(pi_e - pi*)],annual mean residual,1,1.0,False,2001-2026,2026,3.67552,2.0725,True
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,1995,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,1996,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,1997,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,1998,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,1999,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2000,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2001,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2002,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2003,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2004,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2005,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2006,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2007,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2008,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2009,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2010,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2011,0.0,-2.1929,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2012,0.0,-2.1929,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2013,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2014,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2015,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2016,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2017,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2018,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2019,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2020,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2021,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2022,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2023,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2024,1.0,-0.4934,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2025,2.0,1.2061,False
+M6,b,coded; facts RA*/RM*,coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected),ordinal 0-3,1,1.0,False,1995-2026,2026,2.0,1.2061,True
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2007,34.48305,1.4364,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2008,32.19679,1.8798,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2009,34.43341,1.446,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2010,37.55788,0.84,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2011,38.65737,0.6268,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2012,39.91923,0.3821,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2013,42.99511,-0.2145,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2014,46.40988,-0.8767,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2015,48.74499,-1.3296,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2016,49.91631,-1.5568,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2017,49.91207,-1.5559,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2018,47.62118,-1.1116,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2019,44.30545,-0.4686,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2020,42.05026,-0.0312,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2021,41.60959,0.0542,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2022,39.94452,0.3772,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2023,40.98421,0.1755,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2024,41.79191,0.0189,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2025,42.36313,-0.0919,False
+C1,c,sgs:20593; sgs:20539,SGS 20593/20539 earmarked share of credit (2007-03+),annual mean %,-1,1.0,False,2007-2026,2026,43.41296,-0.2955,True
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,1995,1.00568,0.9851,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,1996,1.13131,0.8594,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,1997,1.87903,0.1115,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,1998,1.89455,0.096,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,1999,1.65945,0.3311,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2000,1.92229,0.0682,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2001,1.91677,0.0737,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2002,2.51346,-0.5231,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2003,1.95174,0.0387,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2004,2.03448,-0.044,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2005,2.16439,-0.174,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2006,2.12995,-0.1395,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2007,2.38543,-0.3951,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2008,2.92237,-0.9322,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2009,4.09116,-2.1013,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2010,4.33419,-2.3444,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2011,3.17317,-1.183,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2012,3.23983,-1.2497,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2013,3.57152,-1.5815,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2014,3.25042,-1.2603,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2015,2.26726,-0.2769,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2016,1.40781,0.5828,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2017,1.07433,0.9164,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2018,0.98941,1.0013,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2019,0.74853,1.2423,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2020,0.85313,1.1377,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2021,0.71348,1.2774,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2022,0.96749,1.0233,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2023,1.04502,0.9457,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2024,1.13488,0.8558,False
+C2,c,ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR,BNDES disbursements / nominal GDP,% GDP,-1,0.5,False,1995-2025,2025,1.33218,0.6585,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2001,0.323,0.9761,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2002,0.793,0.8213,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2003,0.793,0.8213,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2004,0.908,0.7834,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2005,0.775,0.8272,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2006,0.413,0.9465,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2007,0.244,1.0022,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2008,1.14,0.707,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2009,3.877,-0.1949,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2010,6.092,-0.9247,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2011,6.906,-1.1929,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2012,7.719,-1.4608,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2013,7.746,-1.4697,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2014,8.442,-1.699,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2015,8.581,-1.7448,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2016,6.853,-1.1754,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2017,6.181,-0.954,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2018,4.311,-0.3379,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2019,2.623,0.2183,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2020,2.514,0.2542,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2021,1.491,0.5913,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2022,0.701,0.8516,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2023,0.619,0.8786,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2024,0.867,0.7969,False
+C2b,c,ext:bndes_treasury_debt_gdp,"Treasury credits to BNDES, stock % GDP (BCB net-debt table)",% GDP,-1,0.5,False,2001-2025,2025,1.228,0.678,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,1995,-31.5275,-3.4889,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,1996,-11.54,-0.749,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,1997,-15.0475,-1.2298,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,1998,-17.82917,-1.6111,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,1999,-13.04333,-0.955,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2000,-6.83833,-0.1044,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2001,-7.96667,-0.2591,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2002,-9.23833,-0.4334,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2003,-11.86833,-0.794,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2004,-6.43167,-0.0487,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2005,-9.37417,-0.4521,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2006,-7.40333,-0.1819,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2007,-5.605,0.0646,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2008,-6.105,-0.0039,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2009,-3.9375,0.2932,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2010,-3.8025,0.3117,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2011,-5.665,0.0564,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2012,-2.78083,0.4518,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2013,-3.17833,0.3973,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2014,-5.85583,0.0302,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2015,-7.11667,-0.1426,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2016,-6.57917,-0.0689,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2017,-2.95417,0.428,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2018,2.33907,1.1536,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2019,1.62918,1.0563,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2020,2.98579,1.2423,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2021,7.67272,1.8848,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2022,2.92643,1.2341,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2023,-2.68804,0.4645,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2024,-0.23875,0.8003,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2025,-1.30894,0.6535,False
+C3,c,sgs:256; sgs:27572; sgs:433; sgs:4189,TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189),annual mean pp,1,1.0,False,1995-2026,2026,-1.96342,0.5638,True
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,1995,55.55272,-1.3582,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,1996,55.55016,-1.3578,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,1997,55.53253,-1.3554,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,1998,52.88568,-0.9909,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,1999,51.58128,-0.8112,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2000,48.95604,-0.4497,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2001,37.71848,1.098,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2002,35.93459,1.3436,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2003,39.17776,0.897,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2004,38.89615,0.9358,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2005,37.70492,1.0998,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2006,36.4855,1.2678,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2007,35.11913,1.4559,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2008,34.37549,1.5584,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2009,38.97525,0.9249,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2010,41.69208,0.5507,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2011,42.25909,0.4726,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2012,45.48568,0.0283,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2013,49.55034,-0.5315,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2014,52.93842,-0.9981,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2015,55.26377,-1.3184,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2016,56.5644,-1.4975,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2017,55.59824,-1.3645,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2018,52.95405,-1.0003,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2019,49.25421,-0.4908,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2020,46.35414,-0.0914,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2021,43.86195,0.2519,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2022,42.40867,0.452,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2023,42.86698,0.3889,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2024,42.89152,0.3855,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2025,42.02619,0.5047,False
+C4,c,sgs:2007; sgs:2043,public-control banks share of credit SGS 2007/(2007+2043),annual mean %,-1,1.0,False,1995-2026,2026,41.63151,0.5591,True
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,1995,11.40703,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,1996,15.40286,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,1997,17.69418,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,1998,25.98117,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,1999,34.19332,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2000,34.69669,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2001,34.48816,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2002,31.95981,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2003,37.11432,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2004,37.36795,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2005,40.89092,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2006,41.08709,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2007,38.68527,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2008,34.55337,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2009,36.79398,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2010,35.90311,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2011,36.44764,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2012,37.23402,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2013,34.62202,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2014,33.79398,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2015,40.03166,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2016,44.37369,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2017,48.74338,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2018,49.14723,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2019,52.13695,,False
+C5,c,wb/GFDD.EI.08.BR,WB credit to govt & SOEs % GDP,level,-1,1.0,True,1995-2020,2020,61.87773,,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,1995,0.10274,-0.1479,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,1996,1.514,-1.628,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,1997,1.19286,-1.2912,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,1998,2.71146,-2.8839,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,1999,1.47455,-1.5866,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2000,1.88678,-2.019,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2001,0.74277,-0.8192,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2002,0.54003,-0.6065,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2003,0.30417,-0.3591,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2004,-0.56495,0.5524,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2005,-1.03407,1.0444,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2006,-1.20542,1.2241,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2007,-1.17085,1.1879,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2008,-0.78895,0.7873,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2009,-0.52226,0.5076,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2010,-0.4806,0.4639,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2011,-0.41071,0.3906,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2012,-0.30964,0.2846,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2013,0.5871,-0.6559,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2014,-0.30793,0.2828,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2015,-0.2472,0.2191,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2016,-0.33986,0.3163,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2017,-0.28872,0.2627,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2018,-0.39332,0.3724,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2019,-0.40191,0.3814,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2020,-0.26562,0.2385,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2021,-0.53897,0.5252,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2022,-0.59945,0.5886,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2023,-1.27767,1.2999,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2024,-0.54721,0.5338,False
+T1,d,wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg,WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+,z-mean of levels,-1,1.0,False,1995-2025,2025,-0.54721,0.5338,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,1995,-1.4803,-0.7612,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,1996,-1.44111,-0.7411,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,1997,-0.98933,-0.5088,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,1998,-1.44486,-0.743,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,1999,-3.16357,-1.6269,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2000,-0.50628,-0.2604,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2001,-0.44313,-0.2279,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2002,-0.57036,-0.2933,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2003,-1.06358,-0.5469,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2004,1.18059,0.6071,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2005,3.06685,1.5771,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2006,3.207,1.6492,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2007,3.15674,1.6234,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2008,5.02777,2.5855,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2009,0.35124,0.1806,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2010,-0.17999,-0.0926,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2011,-0.1309,-0.0673,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2012,-0.24281,-0.1249,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2013,-0.36833,-0.1894,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2014,-1.10229,-0.5669,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2015,-0.29237,-0.1504,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2016,-2.11531,-1.0878,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2017,-1.74914,-0.8995,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2018,0.49175,0.2529,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2019,-0.01087,-0.0056,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2020,-2.29671,-1.1811,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2021,-1.27758,-0.657,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2022,4.6268,2.3793,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2023,-0.03592,-0.0185,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2024,0.10007,0.0515,False
+T2,d,wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR,"trade % GDP residual on log ToT, log REER (OLS 1995-2025)",OLS residual,1,0.5,False,1995-2025,2025,-0.30406,-0.1564,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,1995,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,1996,3.0,1.9365,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,1997,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,1998,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,1999,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2000,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2001,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2002,3.0,1.9365,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2003,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2004,4.0,2.9047,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2005,2.0,0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2006,2.0,0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2007,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2008,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2009,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2010,2.0,0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2011,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2012,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2013,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2014,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2015,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2016,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2017,2.0,0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2018,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2019,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2020,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2021,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2022,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2023,0.0,-0.9682,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2024,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2025,1.0,0.0,False
+T3,d,ext:trade_agreements_sice.csv,count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine),count/yr,1,1.0,False,1995-2026,2026,2.0,0.9682,True
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,1995,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,1996,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,1997,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,1998,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,1999,0.0,0.1726,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2000,0.0,0.1726,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2001,0.0,0.1726,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2002,0.0,0.1726,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2003,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2004,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2005,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2006,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2007,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2008,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2009,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2010,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2011,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2012,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2013,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2014,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2015,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2016,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2017,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2018,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2019,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2020,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2021,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2022,1.0,1.2428,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2023,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2024,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2025,-1.0,-0.8976,False
+T4,d,ext:local_content.csv,coded local-content stance per regime (+ = lower),coded -1/0/+1,1,1.0,False,1995-2026,2026,-1.0,-0.8976,True
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,1995,5.0,0.8588,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,1996,18.0,-0.1053,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,1997,11.0,0.4138,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,1998,18.0,-0.1053,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,1999,16.0,0.0431,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2000,11.0,0.4138,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2001,17.0,-0.0311,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2002,8.0,0.6363,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2003,4.0,0.9329,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2004,8.0,0.6363,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2005,6.0,0.7846,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2006,12.0,0.3397,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2007,13.0,0.2655,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2008,24.0,-0.5502,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2009,9.0,0.5621,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2010,37.0,-1.5142,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2011,16.0,0.0431,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2012,47.0,-2.2558,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2013,54.0,-2.7748,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2014,35.0,-1.3659,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2015,23.0,-0.476,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2016,11.0,0.4138,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2017,7.0,0.7105,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2018,7.0,0.7105,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2019,1.0,1.1554,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2020,9.0,0.5621,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2021,11.0,0.4138,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2022,0.0,1.2295,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2023,7.0,0.7105,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2024,37.0,-1.5142,False
+T5,d,ext:ad_initiations_brazil,WTO AD initiations by Brazil,count/yr,-1,1.0,False,1995-2025,2025,32.0,-1.1434,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2010,2.0941,0.9966,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2011,2.34164,0.1007,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2012,2.45039,-0.2929,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2013,2.72537,-1.2882,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2014,2.64586,-1.0004,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2015,2.51706,-0.5342,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2016,1.91575,1.6421,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2017,2.01495,1.2831,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2018,2.29832,0.2575,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2019,2.27191,0.353,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2020,2.70605,-1.2183,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2021,2.79337,-1.5343,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2022,2.17352,0.7092,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2023,2.10619,0.9529,False
+T6,d,wb/GC.TAX.INTT.RV.ZS.BR,WB taxes on international trade % revenue,level,-1,1.0,False,2010-2024,2024,2.48734,-0.4267,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2012,0.06326,0.4723,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2013,0.06083,0.4541,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2014,0.15266,1.1397,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2015,0.23546,1.7578,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2016,0.17614,1.315,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2017,0.09587,0.7157,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2018,-0.01859,-0.1388,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2019,-0.14135,-1.0552,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2020,-0.17616,-1.3151,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2021,-0.1533,-1.1444,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2022,-0.01649,-0.1231,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2023,-0.06061,-0.4524,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2024,-0.15409,-1.1503,False
+S1,e,revenue_usd_bn@PETR; brent_usd,FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series,OLS residual,1,1.0,False,2012-2025,2025,-0.06363,-0.4751,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,1995,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,1996,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,1997,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,1998,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,1999,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2000,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2001,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2002,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2003,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2004,-0.064,0.5979,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2005,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2006,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2007,-1.60888,-0.2566,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2008,-4.8074,-2.0258,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2009,-1.21544,-0.039,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2010,-1.45663,-0.1724,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2011,-1.7769,-0.3496,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2012,-1.89271,-0.4136,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2013,-6.21513,-2.8044,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2014,-2.53091,-0.7666,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2015,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2016,-0.42863,0.3962,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2017,-0.09902,0.5785,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2018,0.0,0.6333,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2019,-0.03924,0.6116,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2020,-2.08411,-0.5195,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2021,-0.46842,0.3742,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2022,-5.70638,-2.523,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2023,-4.46321,-1.8354,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2024,-0.01943,0.6225,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2025,-0.61549,0.2928,False
+S2,e,sgs:11428; sgs:4449,"-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",annual mean,1,1.0,False,1995-2026,2026,0.0,0.6333,True
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,1995,-1.0,1.4507,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,1996,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,1997,-1.0,1.4507,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,1998,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,1999,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2000,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2001,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2002,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2003,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2004,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2005,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2006,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2007,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2008,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2009,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2010,1.0,-0.9162,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2011,1.0,-0.9162,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2012,2.0,-2.0997,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2013,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2014,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2015,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2016,-2.0,2.6342,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2017,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2018,1.0,-0.9162,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2019,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2020,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2021,1.0,-0.9162,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2022,2.0,-2.0997,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2023,1.0,-0.9162,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2024,2.0,-2.0997,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2025,0.0,0.2672,False
+S4,e,coded; facts RA*/RM*,"coded sectoral-intervention events (+1 intervention, -1 liberalisation)",net count/yr,-1,1.0,False,1995-2026,2026,1.0,-0.9162,True
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2012,7.69004,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2013,5.57025,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2014,9.6366,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2015,0.0,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2016,0.0,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2017,0.0,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2018,5.1084,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2019,18.04424,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2020,17.15999,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2021,67.88507,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2022,79.63716,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2023,61.88385,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2024,55.6752,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2025,29.36934,,False
+S5,e,dividends_paid_brl@PETR; capex_brl@PETR,Petrobras dividends/(dividends+capex),%,1,1.0,True,2012-2026,2026,29.18395,,True
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,1996,-3.24615,-1.6814,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,1997,0.20214,-0.7539,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,1998,4.97917,0.531,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,1999,-0.2318,-0.8706,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2000,3.72302,0.1932,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2001,11.57328,2.3047,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2002,2.45361,-0.1483,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2003,4.60714,0.431,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2004,1.6287,-0.3702,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2005,7.96773,1.3349,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2006,11.98183,2.4146,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2007,4.75694,0.4713,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2008,3.34215,0.0907,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2009,6.82648,1.0279,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2010,4.41617,0.3796,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2011,0.21221,-0.7512,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2012,8.27766,1.4183,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2013,2.6354,-0.0994,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2014,0.4285,-0.693,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2015,-0.17438,-0.8551,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2016,2.70002,-0.082,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2017,2.92992,-0.0202,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2018,-1.78513,-1.2884,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2019,0.84754,-0.5803,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2020,1.45105,-0.4179,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2021,-2.80559,-1.5629,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2022,0.82514,-0.5863,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2023,2.7078,-0.0799,False
+L1,f,ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433,"real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",% y/y,1,1.0,False,1996-2024,2024,3.9103,0.2435,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2010,16.45421,-1.0277,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2011,16.53809,-0.9896,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2012,16.86301,-0.8421,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2013,16.80427,-0.8688,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2014,17.36521,-0.6141,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2015,17.56765,-0.5222,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2016,19.0368,0.1448,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2017,19.03345,0.1433,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2018,19.07392,0.1616,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2019,19.222,0.2289,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2020,24.8504,2.7841,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2021,18.72854,0.0048,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2022,20.15936,0.6544,False
+L2a,f,wb/GC.XPN.TRFT.ZS.BR; wb/GC.XPN.TOTL.GD.ZS.BR,WB subsidies & transfers % GDP (central govt),% GDP,1,0.5,False,2010-2023,2023,20.35357,0.7426,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2008,0.346,-0.627,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2009,0.35127,-0.6141,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2010,0.34358,-0.6329,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2011,0.38566,-0.5302,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2012,0.43624,-0.4068,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2013,0.46237,-0.3431,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2014,0.4632,-0.341,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2015,0.44977,-0.3738,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2016,0.4579,-0.354,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2017,0.42812,-0.4266,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2018,0.43346,-0.4136,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2019,0.44634,-0.3822,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2020,0.25501,-0.849,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2021,0.28575,-0.774,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2022,1.12154,1.2652,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2023,1.51975,2.2367,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2024,1.4264,2.0089,False
+L2b,f,ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR,Bolsa Familia/Auxilio Brasil spending % GDP,% GDP,1,0.5,False,2008-2025,2025,1.24132,1.5574,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2006,21.68107,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2009,15.49978,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2011,16.60569,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2012,17.24517,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2015,20.52541,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2016,19.70935,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2017,18.68699,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2018,18.64918,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2019,18.2692,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2020,5.94834,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2021,11.53115,,False
+L3,f,wb/per_sa_cc.cov_pop_tot.BRA,WB CCT coverage (sparse; 2020 anomaly),%,1,1.0,True,2006-2022,2022,22.7315,,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,1995,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,1996,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,1997,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,1998,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,1999,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2000,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2001,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2002,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2003,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2004,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2005,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2006,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2007,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2008,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2009,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2010,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2011,1.0,2.2605,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2012,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2013,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2014,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2015,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2016,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2017,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2018,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2019,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2020,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2021,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2022,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2023,1.0,2.2605,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2024,-1.0,-1.7438,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2025,0.0,0.2583,False
+L4,f,coded; facts,coded labour/pension regulation events,net count/yr,1,1.0,False,1995-2026,2026,0.0,0.2583,True
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2001,0.50984,-0.2003,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2002,0.38388,-0.2735,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2003,2.05523,0.6988,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2004,0.54371,-0.1806,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2005,0.0969,-0.4405,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2006,2.89267,1.1859,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2007,6.76358,3.4378,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2008,0.79305,-0.0355,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2009,2.68369,1.0643,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2010,2.26612,0.8214,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2011,2.42482,0.9138,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2012,0.85732,0.0019,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2013,-0.57986,-0.8342,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2014,0.19312,-0.3845,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2015,-0.39324,-0.7256,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2016,0.47625,-0.2198,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2017,0.43402,-0.2444,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2018,0.03876,-0.4743,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2019,-0.95186,-1.0506,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2020,-0.08563,-0.5467,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2021,0.3941,-0.2676,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2022,-1.92123,-1.6145,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2023,1.38426,0.3084,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2024,-1.15764,-1.1703,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2025,1.25022,0.2304,False
+X1,g,fx_reserves; wb/NY.GDP.MKTP.CD.BR,change in year-end FX reserves % GDP (USD),pp of GDP,1,0.5,False,2001-2026,2026,0.1922,-0.385,True
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,1995,-1.93937,-1.5736,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,1996,-1.93937,-1.5736,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,1997,-1.93937,-1.5736,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,1998,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,1999,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2000,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2001,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2002,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2003,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2004,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2005,0.07701,1.1037,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2006,0.32878,1.438,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2007,0.32878,1.438,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2008,0.32878,1.438,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2009,0.32878,1.438,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2010,0.07701,1.1037,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2011,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2012,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2013,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2014,-0.17477,0.7694,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2015,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2016,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2017,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2018,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2019,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2020,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2021,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2022,-1.25388,-0.6634,False
+X2,g,ext:kaopen,Chinn-Ito KAOPEN (higher = more open),index,1,1.0,False,1995-2023,2023,-1.25388,-0.6634,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,1999,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2000,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2001,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2002,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2003,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2004,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2005,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2006,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2007,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2008,0.90164,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2009,0.4,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2010,2.88767,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2011,6.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2012,6.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2013,2.54795,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2014,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2015,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2016,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2017,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2018,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2019,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2020,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2021,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2022,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2023,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2024,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2025,0.0,,False
+X2b,g,coded; facts RA*/RM*,"IOF on foreign portfolio fixed-income inflows, time-weighted annual mean (Decrees 6,391/6,613/6,983/7,323/7,330/8,023)",% rate,-1,1.0,True,1999-2026,2026,0.0,,True

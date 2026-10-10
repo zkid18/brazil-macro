@@ -1,0 +1,34 @@
+series_id,term_id,term_label,mean_exact,n_months,last_obs
+gross_public_debt_gdp,5,Luiz Inácio Lula da Silva 2003,56.96,49,2010-12-01
+gross_public_debt_gdp,6,Dilma Rousseff 2011,55.72,65,2016-05-01
+gross_public_debt_gdp,7,Michel Temer 2016,72.93,31,2018-12-01
+gross_public_debt_gdp,8,Jair Bolsonaro 2019,78.74,48,2022-12-01
+gross_public_debt_gdp,9,Luiz Inácio Lula da Silva 2023,76.2,44,2026-08-01
+interest_bill_gdp,4,Fernando Henrique Cardoso 1995,7.36,2,2002-12-01
+interest_bill_gdp,5,Luiz Inácio Lula da Silva 2003,6.51,96,2010-12-01
+interest_bill_gdp,6,Dilma Rousseff 2011,5.55,65,2016-05-01
+interest_bill_gdp,7,Michel Temer 2016,6.25,31,2018-12-01
+interest_bill_gdp,8,Jair Bolsonaro 2019,4.84,48,2022-12-01
+interest_bill_gdp,9,Luiz Inácio Lula da Silva 2023,7.37,44,2026-08-01
+ipca_12m,4,Fernando Henrique Cardoso 1995,7.44,36,2002-12-01
+ipca_12m,5,Luiz Inácio Lula da Silva 2003,6.46,96,2010-12-01
+ipca_12m,6,Dilma Rousseff 2011,6.95,65,2016-05-01
+ipca_12m,7,Michel Temer 2016,4.57,31,2018-12-01
+ipca_12m,8,Jair Bolsonaro 2019,6.14,48,2022-12-01
+ipca_12m,9,Luiz Inácio Lula da Silva 2023,4.61,44,2026-08-01
+primary_balance_gdp,4,Fernando Henrique Cardoso 1995,3.25,2,2002-12-01
+primary_balance_gdp,5,Luiz Inácio Lula da Silva 2003,3.15,96,2010-12-01
+primary_balance_gdp,6,Dilma Rousseff 2011,1.22,65,2016-05-01
+primary_balance_gdp,7,Michel Temer 2016,-2.05,31,2018-12-01
+primary_balance_gdp,8,Jair Bolsonaro 2019,-2.26,48,2022-12-01
+primary_balance_gdp,9,Luiz Inácio Lula da Silva 2023,-0.84,44,2026-08-01
+real_policy_rate,4,Fernando Henrique Cardoso 1995,13.28,13,2002-12-01
+real_policy_rate,5,Luiz Inácio Lula da Silva 2003,9.74,96,2010-12-01
+real_policy_rate,6,Dilma Rousseff 2011,5.02,65,2016-05-01
+real_policy_rate,7,Michel Temer 2016,5.25,31,2018-12-01
+real_policy_rate,8,Jair Bolsonaro 2019,2.3,48,2022-12-01
+real_policy_rate,9,Luiz Inácio Lula da Silva 2023,8.88,45,2026-09-01
+unemployment_rate,6,Dilma Rousseff 2011,7.79,51,2016-05-01
+unemployment_rate,7,Michel Temer 2016,12.45,31,2018-12-01
+unemployment_rate,8,Jair Bolsonaro 2019,12.13,48,2022-12-01
+unemployment_rate,9,Luiz Inácio Lula da Silva 2023,6.72,44,2026-08-01
