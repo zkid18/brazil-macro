@@ -1,0 +1,42 @@
+VALE AND BRAZILIAN POLITICS — STUDY PLAN (written 2026-10-10, before any results were computed)
+
+Goal: measure how much Brazil's governing lean (left vs right) shows up in Vale's shareholder returns and fundamentals,
+after controlling for what really drives Vale (iron ore price / China, global miner beta, BRL), and translate that into
+best/worst cases for the 25 Oct 2026 run-off (Lula IV vs Flávio Bolsonaro).
+
+Terms (defined here, NOT from v_politics/v_by_term):
+  FHC .. 2002-12 (right/centre; only Apr-Dec 2002 in sample) | Lula I-II 2003-01..2010-12 (left) | Dilma 2011-01..2016-08 (left)
+  Temer 2016-09..2018-12 (right) | Bolsonaro 2019-01..2022-12 (right) | Lula III 2023-01..2026-09 (left)
+
+Data
+  Warehouse (read-only, warehouse/brazil_macro.duckdb):
+    total_return_usd@VALE, total_return_usd@IBOV, total_return_usd@PETR (Derived from B3, monthly, 2012+)
+    share_close_adj_brl@VALE (B3 daily 2012+), dividend_per_share_brl@VALE, dividend_yield_ttm@VALE
+    v_company_quarterly (CVM, 2012Q1+): revenue, EBIT, net income, capex, dividends paid, net debt (VALE, PETR)
+    brl_usd (BCB SGS daily), iron_ore_exports, iron_ore_exports_kg, iron_ore_unit_value, exports_to_china, china_export_share (ComexStat 2014+)
+    ibovespa_usd (daily 2000+), wb/TOT.BRA, political_events
+  External market data (not in warehouse; stored in data/ with URL):
+    Yahoo Finance daily adjusted close (dividend+split adjusted, USD): VALE (NYSE ADR, 2002-03+), PBR, BHP, RIO, EWZ (MSCI Brazil), SPY
+    FRED PIORECRUSDM (IMF iron ore CFR China, US$/t, monthly), FRED POILBREUSDM (Brent, monthly)
+  Why external: the warehouse's Vale price history starts in 2012, which would leave out Lula I-II, the 2002-2010 elections
+  and the 2011 Agnelli episode; the warehouse has no benchmark iron ore price (only Brazil's export unit value from 2014).
+  Cross-check: correlate monthly VALE ADR return with total_return_usd@VALE over 2012+ (should be ~0.99).
+
+Methods
+  Q1 Returns by term: monthly log USD total returns. Factor model on full sample (2002-05..2026-09):
+      r_VALE = a + b1*r_ironore + b2*r_miners(avg BHP,RIO) + e. Term alpha = mean(e) annualised (+ a common).
+      Also: raw excess vs EWZ, vs Ibovespa, and an iron-ore-only beta model. Left-minus-right gap in mean monthly residual.
+      Inference: circular block bootstrap (12-month blocks, 5000 draws) of the left-minus-right difference; term-label permutation
+      (assign 'right' to every 2-of-5 full terms: 10 permutations, min p = 0.1). Descriptive only.
+  Q2 Event study (daily, VALE ADR USD): market model on [-260,-30] with EWZ and miners (BHP,RIO avg) as factors.
+      CAR[0,+1], CAR[0,+5], CAR[-20,-1] (run-up). Events: run-offs 2002/06/10/14/18/22, 2026 first round; interference events.
+      Placebo: 1000 random trading days 2003-2026 excluding +/-10 days of any event; report percentile of each CAR.
+      Same CARs for PBR (vs EWZ + Brent-proxy? -> use EWZ + XOM/oil majors not available -> EWZ only + BHP/RIO excluded) as contrast.
+  Q3 Fundamentals (CVM 2012+ quarterly, annualised, USD via brl_usd): dividends paid, payout (dividends/net income), capex,
+      EBIT margin, net debt/EBIT, iron ore export volume (Brazil, ComexStat 2014+). Regress annual values on the iron ore price,
+      report term means of residuals. Descriptive.
+  Q4 Contrast Petrobras: variance decomposition (R^2) of monthly USD returns: Vale on {iron ore, miners} vs Petrobras on {Brent}
+      then each adding EWZ-residual Brazil factor; term alphas of PBR vs Brent+majors-free model; election-day CARs side by side.
+  Q5 Scenarios: judgement, anchored on Q1-Q4 numbers plus external facts (external_facts.csv).
+
+Outputs: preregistration.txt, vale_study.py, fetch_external.py, results.json, CSVs, charts/*.html, external_facts.csv, report.txt

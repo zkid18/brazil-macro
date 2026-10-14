@@ -1,0 +1,64 @@
+PRE-REGISTRATION — Petrobras and Brazilian governments (written 2026-10-10, before results)
+
+General
+- Unit of analysis: monthly (Q1, Q3, Q4) and daily (Q2, Q5) returns. Petrobras = PETR4 (preferred,
+  main ticker in the warehouse), total return = price + cash dividends/JCP reinvested on ex-date.
+- Left = Lula I-II, Dilma, Lula III. Right = FHC (centre-right, 2000-2002 only), Temer, Bolsonaro.
+- Only 6 terms (3 vs 3). Every term-level comparison is DESCRIPTIVE. p-values are reported but no
+  claim of statistical proof will be made from them. Alpha = 0.10 (one-sided where a sign is stated).
+- Dates: date <= 2026-10-10. Warehouse data end 2026-10-02 (daily) / 2026-08 (monthly).
+
+Q1 Shareholder returns by term
+- Metrics per term: annualised PETR4 total return in USD; excess vs Ibovespa in USD (geometric, annualised);
+  Brent-model abnormal return = mean residual of monthly r_PETR_usd = a + b*r_Brent_usd + e, estimated on
+  the full 2000-2026 sample, residual = r - b*r_Brent (alpha kept in all terms equally, so term
+  differences are unaffected); secondary two-factor model adds r_IBOV_usd.
+- H1 (sign stated): left minus right mean monthly Brent-adjusted abnormal return < 0.
+- Inference: (a) circular block bootstrap, block = 12 months, 5,000 resamples, on the left-right
+  difference (resampling within the left and within the right month sets); (b) term-label permutation:
+  all C(6,3)=20 ways to label 3 of 6 terms "left"; p = share of assignments with diff <= observed
+  (min attainable p = 0.05).
+
+Q2 Event study
+- Day 0 = first trading session on/after the event (weekend elections -> Monday).
+- Abnormal return models, estimated over sessions [-250,-21] before day 0:
+  (i) market model vs Ibovespa: r_PETR = a + b*r_IBOV;  (ii) Brent model: r_PETR_usd = a + b*r_Brent_usd.
+- Windows: CAR[0,+1] primary; CAR[0,+5] secondary; CAR[-5,-1] reported as pre-trend check.
+- Placebo: 2,000 random sessions 2001-2026 excluding +-20 sessions around all listed events; the same
+  CAR computed on each; event p-value = two-sided empirical rank of the event CAR in the placebo
+  distribution. Also sign tests on groups.
+- Predicted signs: right-leaning election outcome/surprise (2018 Bolsonaro, 2026 first-round Flávio lead)
+  > 0; left win (2002, 2006, 2010, 2014, 2022) < 0; government-driven CEO removals (Feb 2021, Mar 2022,
+  May 2022, May 2024) < 0; PPI adoption (Oct 2016) > 0; PPI abandonment (16 May 2023) < 0;
+  Mar 2024 extraordinary-dividend withholding (8 Mar 2024) < 0; reversal/payment approval (Apr 2024) > 0.
+- Group statistic: mean CAR of "pro-market" events minus "anti-market" events (signed CAR), placebo p.
+
+Q3 Fundamentals by term (2012-2026 CVM quarterly, so Dilma/Temer/Bolsonaro/Lula III only)
+- Payout = dividends paid / net income (4-quarter sums); capex USD bn/yr; net debt USD bn and
+  net debt / annualised EBIT; operated production kbd (2016+) and national oil production (2000+).
+- Fuel price gap (if ANP producer prices available): domestic producer price of gasoline A and
+  diesel A converted to USD/bbl, ratio to Brent; term means; 'discount' measured against the
+  2017-2022 PPI-era average ratio. Expectation: left terms show lower ratio (fuel held below parity).
+- H3 (sign stated): left terms have lower payout and lower fuel-price/Brent ratio; capex not signed.
+
+Q4 Fiscal channel
+- Union receipts from Petrobras = Petrobras cash dividends x Union+BNDES economic stake (external
+  fact) and, if available, Tesouro RTN 'dividendos' line; plus royalties/special participation.
+  Express as % of net federal revenue and vs primary balance (annual 2012-2025).
+- Scenario arithmetic: change in Union dividend receipts for a +-10pp payout change and for a
+  +-US$10/bbl Brent move, as % of GDP. No hypothesis test; arithmetic only.
+
+Q5 Is Petrobras "the most important piece"?
+- Election sensitivity: for each asset (PETR4, Ibovespa ex-Petrobras (constructed, w=12%), BRL/USD,
+  ITUB4, VALE, AXIA/ELET3), the absolute [0,+1] and [0,+5] election-window return divided by the
+  asset's own daily vol in the estimation window (z-score); compare mean |z| across the 2014, 2018,
+  2022 run-offs and the 2026 first round (all assets available), plus 2002-2010 where available.
+- Weight in the economy: Ibovespa weight (B3 portfolio snapshot), crude oil share of goods exports
+  (ComexStat), Petrobras-related receipts share of federal revenue, Petrobras capex vs national
+  investment where available, oil & gas share of FDI (external fact if needed).
+- Decision rule fixed in advance: the claim "most important piece" is SUPPORTED if PETR4 has the largest
+  mean |z| among the assets AND ranks first in at least 2 of the weight measures; PARTLY supported if
+  only one of those holds; REJECTED otherwise.
+
+Q6 Scenarios: judgement, clearly labelled; valuation ranges from historical P/E-proxy / dividend-yield
+  ranges by term, not model forecasts.

@@ -1,0 +1,7 @@
+term,national_oil_kbd_avg,national_oil_growth_pct_yr,petr_operated_kbd_avg,petr_operated_growth_pct_yr,quarters,first_q,last_q,brent_avg,revenue_usd_bn_yr,net_income_usd_bn_yr,dividends_usd_bn_yr,capex_usd_bn_yr,payout_pct,div_share_of_div_plus_capex_pct,net_debt_usd_bn_end,net_debt_usd_bn_start,nd_to_ebit_end,ebit_margin_pct,revenue_usd_per_brent
+FHC,1366.53,5.59,,,,,,,,,,,,,,,,,
+Lula I-II,1813.62,4.89,,,,,,,,,,,,,,,,,
+Dilma,2296.16,3.72,2134.26,,18.0,2012-03-31,2016-06-30,87.15,125.54,1.1,2.19,32.55,-164.97,5.55,103.55,58.3,-16.73,3.38,0.38
+Temer,2721.29,0.24,2315.26,0.99,10.0,2016-09-30,2018-12-31,59.69,91.0,1.11,0.25,13.05,20.8,2.1,69.38,100.29,4.14,13.3,0.39
+Bolsonaro,3009.0,3.87,2641.05,4.04,16.0,2019-03-31,2022-12-31,69.38,85.18,16.52,13.56,7.58,81.83,65.46,43.03,95.52,0.76,37.97,0.31
+Lula III,3715.32,9.46,3226.14,9.44,14.0,2023-03-31,2026-06-30,79.39,97.16,19.52,14.28,15.82,73.7,47.05,60.42,40.18,1.68,32.66,0.31

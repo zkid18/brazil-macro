@@ -161,7 +161,56 @@ Data comes from the Brazil Monitoring warehouse: monthly series through 2026-08,
 
 ---
 
-## Caveats across all seven studies
+## 08 Foreign investment by term (`08_fdi.md`)
+- **Total FDI is flat across left and right:** 3.3–3.9% of GDP under Dilma, Temer, Bolsonaro and Lula III. Left minus right, with controls: −0.19pp.
+- **Lula III's mix:** fresh equity is the lowest of the four terms (1.72% of GDP vs Temer 2.54%), while reinvested earnings are the highest (1.27%).
+- **Peer check:** against EM peers, Brazil under Lula III (+1.59pp) beat Bolsonaro (+0.83pp) while global EM FDI halved.
+- **Portfolio:** foreigners are net sellers of Brazilian stocks under Lula III (−US$6.4bn/yr); local-bond carry inflows are higher under left governments (+1.2pp with controls, rate-driven).
+- **2026 Jan–Aug:** fresh equity −21% y/y, reinvested earnings +34%, Brazilian FDI abroad still rising.
+
+## 09 Petrobras by government (`09_petrobras.md`)
+- **Your prior ("Petrobras is the key piece") barely passes the pre-registered test and fails in substance.**
+  - Election sensitivity in volatility units: Petrobras 1.52 vs BRL 1.50 on the pre-registered elections; adding first rounds, BRL 2.17 vs PETR 1.88.
+  - First round on 5 Oct 2026: Itaú +11.8%, Ibovespa ex-Petrobras +6.6%, Petrobras +5.0%. The market traded Flávio through the BRL and the banks.
+- **Left vs right returns don't fit the story.**
+  - After Brent: left minus right +11pp/yr, not significant.
+  - Lula III: Petrobras +42.5%/yr in USD, +21pp/yr vs the Ibovespa, the best of six terms. Dilma: −20%/yr.
+- **Damage comes from governance events on both sides (2-day abnormal returns):**
+  - Castello Branco fired, Bolsonaro 2021: −8.5%
+  - Dividend withheld, Mar 2024: −11.4%
+  - Prates fired, May 2024: −9.3%
+  - Lula's 2022 win: −10.5%
+  - Placebo p < 0.001.
+- **Since the 2016 parity rule, fuel prices follow Brent at 0.5–0.8 under every president** (Dilma 0.23).
+  - Capex: Dilma $32.6bn/yr, Bolsonaro $7.6bn, Lula III $15.8bn.
+  - Payout under Lula III slid from 79% (2023) to 41% (2025) and 23% in 2026H1.
+- **Budget link:** dividends plus royalties are about 3.7% of federal net revenue (0.67% of GDP).
+  - A ±10pp change in payout is worth about R$3.9bn; a ±$10 move in Brent about R$10bn of royalties.
+  - It can flatter a single year but can't fix the budget.
+- **Live risk:** Brent is above $110 (warehouse `brent_usd` $119.66 on 2026-09-18). Gasoline is at 0.96× Brent, the lowest in the sample, and the Treasury already subsidises diesel. The oil shock tests any winner.
+- **Scenarios vs R$56, about 5.5× P/E (judgement):**
+  - Lula IV, continuity: −18% to 0%. Lula IV, Dilma-style: −36% to −27%.
+  - Flávio, market-friendly: +10% to +28%. Flávio, 2021–22-style interference: −27% to −9%. Credible privatisation: +28% to +55%.
+  - Flávio's stated Petrobras positions are unverified.
+
+## 10 Vale by government (`10_vale.md`)
+- **Vale trades as a global iron-ore miner, not as a Brazil political bet.** Iron ore plus BHP and Rio explain 65% of its monthly moves.
+  - After removing them, left minus right is −4.9pp/yr, not significant (p 0.61–0.70).
+  - Term alphas: Lula I–II +6.7, Dilma −12.5, Temer +16.9, Bolsonaro −6.6, Lula III −9.0pp/yr.
+- **Exposure to Brazil risk:** Vale's beta to a pure Brazil factor is 0.50 vs Petrobras 1.20. It adds 9% of explained variance for Vale vs 41% for Petrobras, and has fallen since the 2017 governance reform.
+- **Reaction to left wins:** 2 days after the five left wins, Vale −0.85% (not significant) vs Petrobras −4.67% (p 0.001).
+- **2026 first round:** Brazil +10.7%, Petrobras +8.9%, Vale only +1.25%.
+- **Interference episodes are small and short-lived:**
+  - Agnelli ouster (2011): −1.5% on the day, −7.2% over the 20 days before.
+  - Mantega push (2024): −2.7% to +1.4%, net reversed.
+  - For scale, Brumadinho: −31%.
+- **Dividends follow iron ore:** about +US$0.9bn/yr per +$10/t. Lula III has the highest dividend yield (8.7%) and record iron-ore exports (392 Mt in 2025).
+- **Scenarios (judgement):**
+  - Flávio: +8 to +18% best, −2 to −5% worst.
+  - Lula IV: ~0% best, −8 to −15% worst (board pressure via Previ and the golden share, plus fiscal slippage).
+  - A $20/t iron-ore fall (−$1.8bn/yr dividends) matters more than either outcome.
+
+## Caveats across all studies
 - **Small samples:** 7–13 presidential terms or regimes per study. These are effect sizes with uncertainty bands, and almost nothing survives multiple-testing correction.
 - **Association, not causation.** Terms of trade, the global cycle and inherited conditions confound everything.
 - **The warehouse is Brazil-only**, so there is no US or peer-country comparison.
