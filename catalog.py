@@ -509,12 +509,22 @@ def remove_duplicates(cat: pd.DataFrame, obs: pd.DataFrame):
 # ---- ILO table families -----------------------------------------------------------------
 # ILO publishes one statistic as several tables that differ only in breakdowns, e.g.
 # EAR_EMTA_SEX_NB / _SEX_AGE_NB / _SEX_OCU_NB / _SEX_AGE_CUR_NB ("Average monthly earnings of
-# employees by sex / by sex and age / ..."). They are merged into one series: the table with
-# the fewest breakdowns represents the family (title without the "by ..." clause) and every
-# member's breakdowns stay selectable on the site ("Breakdown table"). Tokens that are not
-# breakdown dimensions (measure variants such as SKN/SKS, EC2) keep families apart.
+# employees by sex / by sex and age / ..."). They are merged into one series: one table
+# represents the family (a plain by-sex / by-age table, else the longest history; its title
+# loses the "by ..." clause) and every
+# member's breakdowns stay selectable on the site ("Breakdown table"). Every classification
+# prefix that occurs in classif1/classif2 is a breakdown (EC2/OC2 = 2-digit ISIC/ISCO, JBT =
+# working time, SKN/SKS = educational mismatch, ...); tokens outside this set keep families apart.
 ILO_DIMS = {"SEX", "AGE", "ECO", "OCU", "EDU", "GEO", "CUR", "STE", "IFL", "INS", "EST", "CBR", "MTS", "HHT",
-            "DSB", "NOC", "LMS", "NAT", "MJH", "WKT", "IND", "HOW", "DUR", "CAT", "REL", "JOB", "TEN", "MIG", "HHS", "DIS"}
+            "DSB", "NOC", "LMS", "NAT", "MJH", "WKT", "IND", "HOW", "DUR", "CAT", "REL", "JOB", "TEN", "MIG", "HHS", "DIS",
+            "EC2", "OC2", "JBT", "JBC", "JBF", "CAR", "COI", "DCL", "GAI", "GOV", "INJ", "SKN", "SKS", "SOC", "VOL", "WBL"}
+
+
+def _plain_breakdown(label: str) -> str:
+    """'by sex and economic activity - ISIC level 2 (thousands)' -> 'by sex and economic activity (detailed)'."""
+    label = re.sub(r"\s*\([^()]*\)\s*$", "", label)   # the unit belongs to the series, not the table
+    label = re.sub(r"\s+--\s.*$", "", label)          # "-- ILO modelled estimates, Nov. 2025": same for every table
+    return re.sub(r" - IS(IC|CO) level 2", " (detailed)", label).strip()
 
 
 def _ilo_family(series_id: str):
@@ -542,14 +552,16 @@ def merge_ilo_families(cat: pd.DataFrame, obs: pd.DataFrame):
             fam.setdefault(key, []).append((sid, dims))
     rows, drop = [], set()
     title = cat.set_index("series_id").title.astype(str)
+    first = cat.set_index("series_id")["first"].astype(str)
     for key, mem in fam.items():
         if len(mem) < 2:
             continue
-        mem.sort(key=lambda x: (len(x[1]), "CUR" in x[1], x[0]))
+        # representative: a plain by-sex / by-age table, then the longest history, then fewest breakdowns
+        mem.sort(key=lambda x: ("CUR" in x[1], not set(x[1]) <= {"SEX", "AGE"}, first.get(x[0], "9999"), len(x[1]), x[0]))
         rep = mem[0][0]
         for sid, dims in mem:
             t = title.get(sid, "")
-            label = ("by " + t.split(" by ", 1)[1]) if " by " in t else t
+            label = _plain_breakdown(("by " + t.split(" by ", 1)[1]) if " by " in t else t)
             rows.append((rep, sid, label, len(dims)))
             if sid != rep:
                 drop.add(sid)
