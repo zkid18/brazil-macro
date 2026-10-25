@@ -1,0 +1,301 @@
+{
+ "source": "BCB SGS BPM6 monthly (codes in CODES); GDP SGS 4385; last obs 2026-08-01",
+ "codes": {
+  "idp_net": 22885,
+  "idp_in": 22886,
+  "idp_out": 22887,
+  "idp_equity_ex_reinv": 22891,
+  "idp_reinv_earn": 22892,
+  "idp_intercompany": 22893,
+  "ide_outward_net": 22865,
+  "port_liab_net": 22924,
+  "port_eq_domestic": 22930,
+  "port_funds_liab": 22936,
+  "port_debt_domestic": 22942,
+  "port_debt_external": 22945,
+  "fin_account_net": 22863,
+  "gdp_usd_mn": 4385
+ },
+ "terms": [
+  {
+   "term": "Lula I\u2013II",
+   "lean": "left",
+   "months": 96,
+   "gdp_usd_bn_yr": 1275.036,
+   "idp_net_pct_gdp": 2.67,
+   "idp_net_usd_bn_yr": 34.041,
+   "idp_equity_ex_reinv_pct_gdp": 1.71,
+   "idp_equity_ex_reinv_usd_bn_yr": 21.809,
+   "idp_reinv_earn_pct_gdp": 0.282,
+   "idp_reinv_earn_usd_bn_yr": 3.6,
+   "idp_intercompany_pct_gdp": 0.677,
+   "idp_intercompany_usd_bn_yr": 8.632,
+   "ide_outward_net_pct_gdp": 1.05,
+   "ide_outward_net_usd_bn_yr": 13.393,
+   "port_liab_net_pct_gdp": 1.823,
+   "port_liab_net_usd_bn_yr": 23.249,
+   "port_eq_total_pct_gdp": 0.832,
+   "port_eq_total_usd_bn_yr": 10.614,
+   "port_debt_domestic_pct_gdp": 0.779,
+   "port_debt_domestic_usd_bn_yr": 9.931,
+   "port_debt_external_pct_gdp": -0.06,
+   "port_debt_external_usd_bn_yr": -0.759
+  },
+  {
+   "term": "Dilma I\u2013II",
+   "lean": "left",
+   "months": 68,
+   "gdp_usd_bn_yr": 2283.873,
+   "idp_net_pct_gdp": 3.591,
+   "idp_net_usd_bn_yr": 82.019,
+   "idp_equity_ex_reinv_pct_gdp": 2.076,
+   "idp_equity_ex_reinv_usd_bn_yr": 47.403,
+   "idp_reinv_earn_pct_gdp": 0.33,
+   "idp_reinv_earn_usd_bn_yr": 7.542,
+   "idp_intercompany_pct_gdp": 1.185,
+   "idp_intercompany_usd_bn_yr": 27.074,
+   "ide_outward_net_pct_gdp": 0.506,
+   "ide_outward_net_usd_bn_yr": 11.559,
+   "port_liab_net_pct_gdp": 1.046,
+   "port_liab_net_usd_bn_yr": 23.879,
+   "port_eq_total_pct_gdp": 0.397,
+   "port_eq_total_usd_bn_yr": 9.061,
+   "port_debt_domestic_pct_gdp": 0.586,
+   "port_debt_domestic_usd_bn_yr": 13.38,
+   "port_debt_external_pct_gdp": 0.051,
+   "port_debt_external_usd_bn_yr": 1.158
+  },
+  {
+   "term": "Temer",
+   "lean": "right",
+   "months": 28,
+   "gdp_usd_bn_yr": 1986.465,
+   "idp_net_pct_gdp": 3.867,
+   "idp_net_usd_bn_yr": 76.822,
+   "idp_equity_ex_reinv_pct_gdp": 2.538,
+   "idp_equity_ex_reinv_usd_bn_yr": 50.421,
+   "idp_reinv_earn_pct_gdp": 0.531,
+   "idp_reinv_earn_usd_bn_yr": 10.553,
+   "idp_intercompany_pct_gdp": 0.798,
+   "idp_intercompany_usd_bn_yr": 15.848,
+   "ide_outward_net_pct_gdp": 0.649,
+   "ide_outward_net_usd_bn_yr": 12.896,
+   "port_liab_net_pct_gdp": -0.435,
+   "port_liab_net_usd_bn_yr": -8.65,
+   "port_eq_total_pct_gdp": 0.08,
+   "port_eq_total_usd_bn_yr": 1.592,
+   "port_debt_domestic_pct_gdp": -0.442,
+   "port_debt_domestic_usd_bn_yr": -8.788,
+   "port_debt_external_pct_gdp": -0.123,
+   "port_debt_external_usd_bn_yr": -2.439
+  },
+  {
+   "term": "Bolsonaro",
+   "lean": "right",
+   "months": 48,
+   "gdp_usd_bn_yr": 1742.599,
+   "idp_net_pct_gdp": 3.291,
+   "idp_net_usd_bn_yr": 57.347,
+   "idp_equity_ex_reinv_pct_gdp": 1.974,
+   "idp_equity_ex_reinv_usd_bn_yr": 34.395,
+   "idp_reinv_earn_pct_gdp": 0.913,
+   "idp_reinv_earn_usd_bn_yr": 15.914,
+   "idp_intercompany_pct_gdp": 0.404,
+   "idp_intercompany_usd_bn_yr": 7.038,
+   "ide_outward_net_pct_gdp": 0.989,
+   "ide_outward_net_usd_bn_yr": 17.236,
+   "port_liab_net_pct_gdp": 0.118,
+   "port_liab_net_usd_bn_yr": 2.052,
+   "port_eq_total_pct_gdp": 0.157,
+   "port_eq_total_usd_bn_yr": 2.741,
+   "port_debt_domestic_pct_gdp": 0.146,
+   "port_debt_domestic_usd_bn_yr": 2.547,
+   "port_debt_external_pct_gdp": -0.201,
+   "port_debt_external_usd_bn_yr": -3.503
+  },
+  {
+   "term": "Lula III",
+   "lean": "left",
+   "months": 44,
+   "gdp_usd_bn_yr": 2291.841,
+   "idp_net_pct_gdp": 3.436,
+   "idp_net_usd_bn_yr": 78.736,
+   "idp_equity_ex_reinv_pct_gdp": 1.723,
+   "idp_equity_ex_reinv_usd_bn_yr": 39.478,
+   "idp_reinv_earn_pct_gdp": 1.273,
+   "idp_reinv_earn_usd_bn_yr": 29.171,
+   "idp_intercompany_pct_gdp": 0.44,
+   "idp_intercompany_usd_bn_yr": 10.087,
+   "ide_outward_net_pct_gdp": 1.386,
+   "ide_outward_net_usd_bn_yr": 31.758,
+   "port_liab_net_pct_gdp": 0.608,
+   "port_liab_net_usd_bn_yr": 13.941,
+   "port_eq_total_pct_gdp": -0.28,
+   "port_eq_total_usd_bn_yr": -6.426,
+   "port_debt_domestic_pct_gdp": 0.583,
+   "port_debt_domestic_usd_bn_yr": 13.363,
+   "port_debt_external_pct_gdp": 0.304,
+   "port_debt_external_usd_bn_yr": 6.961
+  }
+ ],
+ "ytd_2026": {
+  "idp_net": {
+   "2026_jan_aug_usd_bn": 64.4143,
+   "2025_jan_aug_usd_bn": 62.8945
+  },
+  "idp_equity_ex_reinv": {
+   "2026_jan_aug_usd_bn": 23.9471,
+   "2025_jan_aug_usd_bn": 30.3138
+  },
+  "idp_reinv_earn": {
+   "2026_jan_aug_usd_bn": 36.1502,
+   "2025_jan_aug_usd_bn": 26.9064
+  },
+  "idp_intercompany": {
+   "2026_jan_aug_usd_bn": 4.317099999999999,
+   "2025_jan_aug_usd_bn": 5.674200000000001
+  },
+  "ide_outward_net": {
+   "2026_jan_aug_usd_bn": 26.661399999999997,
+   "2025_jan_aug_usd_bn": 22.5914
+  },
+  "port_liab_net": {
+   "2026_jan_aug_usd_bn": 11.5044,
+   "2025_jan_aug_usd_bn": 4.6537
+  },
+  "port_eq_total": {
+   "2026_jan_aug_usd_bn": -3.821000000000001,
+   "2025_jan_aug_usd_bn": -1.2810000000000001
+  },
+  "port_debt_domestic": {
+   "2026_jan_aug_usd_bn": 6.078099999999998,
+   "2025_jan_aug_usd_bn": 9.3783
+  },
+  "port_debt_external": {
+   "2026_jan_aug_usd_bn": 9.248899999999999,
+   "2025_jan_aug_usd_bn": -3.4388000000000005
+  }
+ },
+ "regressions_12m_rolling_pct_gdp_2011_12_on": {
+  "idp_net": {
+   "raw": {
+    "beta_left": -0.001597965850320672,
+    "ci80": [
+     -0.23834399520792096,
+     0.17762206766781705
+    ],
+    "n": 177
+   },
+   "controls": {
+    "beta_left": -0.19100686774862957,
+    "ci80": [
+     -0.5447371296446772,
+     -0.019897536889159677
+    ],
+    "n": 169
+   },
+   "perm_raw": 1.0
+  },
+  "idp_equity_ex_reinv": {
+   "raw": {
+    "beta_left": -0.27360542476981314,
+    "ci80": [
+     -0.493598406697742,
+     -0.10303735611219675
+    ],
+    "n": 177
+   },
+   "controls": {
+    "beta_left": -0.42699989181109155,
+    "ci80": [
+     -0.6911881083658403,
+     -0.238049638904398
+    ],
+    "n": 169
+   },
+   "perm_raw": 0.6666666666666666
+  },
+  "port_eq_total": {
+   "raw": {
+    "beta_left": 0.01617232791152909,
+    "ci80": [
+     -0.31269632321535185,
+     0.32806324914491813
+    ],
+    "n": 177
+   },
+   "controls": {
+    "beta_left": 0.24739205753707758,
+    "ci80": [
+     -0.08232295484865619,
+     0.49227515543477474
+    ],
+    "n": 169
+   },
+   "perm_raw": 1.0
+  },
+  "port_debt_domestic": {
+   "raw": {
+    "beta_left": 0.8176608553590624,
+    "ci80": [
+     0.4545587888103031,
+     1.1850030877921085
+    ],
+    "n": 177
+   },
+   "controls": {
+    "beta_left": 1.2303402112594801,
+    "ci80": [
+     0.9146383555432169,
+     1.6511980951955298
+    ],
+    "n": 169
+   },
+   "perm_raw": 0.3333333333333333
+  }
+ },
+ "election_windows": {
+  "2014 Dilma re-elected": {
+   "port_eq_total": {
+    "pre6_usd_bn": 9.984800000000002,
+    "post6_usd_bn": 7.1635
+   },
+   "port_debt_domestic": {
+    "pre6_usd_bn": 17.1226,
+    "post6_usd_bn": 11.4762
+   },
+   "idp_equity_ex_reinv": {
+    "pre6_usd_bn": 23.9375,
+    "post6_usd_bn": 19.806099999999997
+   }
+  },
+  "2018 Bolsonaro elected": {
+   "port_eq_total": {
+    "pre6_usd_bn": -2.7581999999999995,
+    "post6_usd_bn": -3.0554
+   },
+   "port_debt_domestic": {
+    "pre6_usd_bn": -2.3743999999999996,
+    "post6_usd_bn": 3.7118000000000007
+   },
+   "idp_equity_ex_reinv": {
+    "pre6_usd_bn": 18.1133,
+    "post6_usd_bn": 18.9704
+   }
+  },
+  "2022 Lula elected": {
+   "port_eq_total": {
+    "pre6_usd_bn": -5.8331,
+    "post6_usd_bn": 4.6657
+   },
+   "port_debt_domestic": {
+    "pre6_usd_bn": 0.1885,
+    "post6_usd_bn": 7.0599
+   },
+   "idp_equity_ex_reinv": {
+    "pre6_usd_bn": 14.767,
+    "post6_usd_bn": 15.598100000000002
+   }
+  }
+ }
+}

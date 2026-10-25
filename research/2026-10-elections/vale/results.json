@@ -1,0 +1,1181 @@
+{
+ "meta": {
+  "generated": "2026-10-10",
+  "prereg": "preregistration.txt"
+ },
+ "crosscheck": {
+  "corr_yahoo_VALE_vs_total_return_usd@VALE_monthly": 0.995,
+  "n_months": 176,
+  "mean_diff_pp_per_yr": -0.05
+ },
+ "Q1_returns_by_term": {
+  "models": {
+   "iron_only": {
+    "beta": {
+     "const": 0.0087,
+     "IRON": 0.2793
+    },
+    "r2": 0.048,
+    "n": 292
+   },
+   "iron_miners": {
+    "beta": {
+     "const": -0.0013,
+     "IRON": 0.1232,
+     "MIN": 1.0391
+    },
+    "r2": 0.645,
+    "n": 292
+   },
+   "miners_only": {
+    "beta": {
+     "const": -0.0009,
+     "MIN": 1.0579
+    },
+    "r2": 0.636,
+    "n": 294
+   },
+   "ewz_only": {
+    "beta": {
+     "const": 0.0047,
+     "EWZ": 0.8505
+    },
+    "r2": 0.521,
+    "n": 294
+   },
+   "iron_miners_ewz": {
+    "beta": {
+     "const": -0.0009,
+     "IRON": 0.131,
+     "MIN": 0.7279,
+     "EWZ": 0.4409
+    },
+    "r2": 0.731,
+    "n": 292
+   },
+   "PBR_brent_only": {
+    "beta": {
+     "const": 0.0069,
+     "BRENT": 0.5858
+    },
+    "r2": 0.135,
+    "n": 292
+   },
+   "PBR_brent_xom": {
+    "beta": {
+     "const": 0.0017,
+     "BRENT": 0.3983,
+     "XOM": 0.849
+    },
+    "r2": 0.263,
+    "n": 292
+   },
+   "PBR_brent_xom_ewz": {
+    "beta": {
+     "const": -0.0001,
+     "BRENT": 0.1584,
+     "XOM": 0.1906,
+     "EWZ": 1.1355
+    },
+    "r2": 0.743,
+    "n": 292
+   },
+   "PBR_ewz_only": {
+    "beta": {
+     "const": 0.0016,
+     "EWZ": 1.2328
+    },
+    "r2": 0.725,
+    "n": 294
+   },
+   "iron_miners_2012plus": {
+    "beta": {
+     "const": -0.0058,
+     "IRON": 0.1316,
+     "MIN": 1.1805
+    },
+    "r2": 0.679,
+    "n": 175
+   },
+   "iron_leadlag_miners": {
+    "beta": {
+     "const": -0.0025,
+     "IRON": 0.0843,
+     "IRON_lead": 0.2306,
+     "IRON_lag": 0.045,
+     "MIN": 0.9829
+    },
+    "r2": 0.676,
+    "n": 290
+   }
+  },
+  "terms": [
+   {
+    "term": "FHC (Apr-Dec 2002)",
+    "lean": "right",
+    "months": 9,
+    "VALE_ann_pct": 11.8,
+    "EWZ_ann_pct": -48.1,
+    "PBR_ann_pct": -52.2,
+    "MIN_ann_pct": 13.6,
+    "SPY_ann_pct": -28.1,
+    "iron_ore_ann_pct": 0.0,
+    "iron_ore_avg_usd_t": 12.7,
+    "VALE_minus_EWZ_pp": 76.8,
+    "alpha_iron_only_pp_yr": 11.1,
+    "alpha_iron_miners_pp_yr": -2.1,
+    "alpha_ewz_only_pp_yr": 67.0,
+    "alpha_iron_miners_ewz_pp_yr": 30.8,
+    "PBR_alpha_brent_xom_pp_yr": -59.2,
+    "PBR_alpha_ewz_only_pp_yr": 7.0,
+    "WH_VALE_minus_IBOV_pp_2012plus": null,
+    "WH_months": 0
+   },
+   {
+    "term": "Lula I-II",
+    "lean": "left",
+    "months": 96,
+    "VALE_ann_pct": 43.4,
+    "EWZ_ann_pct": 36.6,
+    "PBR_ann_pct": 39.0,
+    "MIN_ann_pct": 27.6,
+    "SPY_ann_pct": 6.6,
+    "iron_ore_ann_pct": 38.2,
+    "iron_ore_avg_usd_t": 52.1,
+    "VALE_minus_EWZ_pp": 4.9,
+    "alpha_iron_only_pp_yr": 27.0,
+    "alpha_iron_miners_pp_yr": 6.7,
+    "alpha_ewz_only_pp_yr": 9.5,
+    "alpha_iron_miners_ewz_pp_yr": 0.3,
+    "PBR_alpha_brent_xom_pp_yr": 17.3,
+    "PBR_alpha_ewz_only_pp_yr": -5.5,
+    "WH_VALE_minus_IBOV_pp_2012plus": null,
+    "WH_months": 0
+   },
+   {
+    "term": "Dilma",
+    "lean": "left",
+    "months": 68,
+    "VALE_ann_pct": -24.8,
+    "EWZ_ann_pct": -11.4,
+    "PBR_ann_pct": -20.7,
+    "MIN_ann_pct": -12.5,
+    "SPY_ann_pct": 12.4,
+    "iron_ore_ann_pct": -16.4,
+    "iron_ore_avg_usd_t": 109.6,
+    "VALE_minus_EWZ_pp": -16.5,
+    "alpha_iron_only_pp_yr": -23.5,
+    "alpha_iron_miners_pp_yr": -12.5,
+    "alpha_ewz_only_pp_yr": -18.3,
+    "alpha_iron_miners_ewz_pp_yr": -11.2,
+    "PBR_alpha_brent_xom_pp_yr": -23.6,
+    "PBR_alpha_ewz_only_pp_yr": -8.4,
+    "WH_VALE_minus_IBOV_pp_2012plus": -14.4,
+    "WH_months": 55
+   },
+   {
+    "term": "Temer",
+    "lean": "right",
+    "months": 28,
+    "VALE_ann_pct": 54.0,
+    "EWZ_ann_pct": 8.7,
+    "PBR_ann_pct": 16.8,
+    "MIN_ann_pct": 28.0,
+    "SPY_ann_pct": 8.4,
+    "iron_ore_ann_pct": 5.5,
+    "iron_ore_avg_usd_t": 70.2,
+    "VALE_minus_EWZ_pp": 34.9,
+    "alpha_iron_only_pp_yr": 41.7,
+    "alpha_iron_miners_pp_yr": 16.9,
+    "alpha_ewz_only_pp_yr": 36.1,
+    "alpha_iron_miners_ewz_pp_yr": 20.8,
+    "PBR_alpha_brent_xom_pp_yr": 17.8,
+    "PBR_alpha_ewz_only_pp_yr": 5.3,
+    "WH_VALE_minus_IBOV_pp_2012plus": 33.1,
+    "WH_months": 28
+   },
+   {
+    "term": "Bolsonaro",
+    "lean": "right",
+    "months": 48,
+    "VALE_ann_pct": 15.5,
+    "EWZ_ann_pct": -1.5,
+    "PBR_ann_pct": 13.6,
+    "MIN_ann_pct": 20.6,
+    "SPY_ann_pct": 13.1,
+    "iron_ore_ann_pct": 12.8,
+    "iron_ore_avg_usd_t": 120.1,
+    "VALE_minus_EWZ_pp": 15.9,
+    "alpha_iron_only_pp_yr": 11.0,
+    "alpha_iron_miners_pp_yr": -6.6,
+    "alpha_ewz_only_pp_yr": 15.6,
+    "alpha_iron_miners_ewz_pp_yr": -0.2,
+    "PBR_alpha_brent_xom_pp_yr": -5.6,
+    "PBR_alpha_ewz_only_pp_yr": 14.6,
+    "WH_VALE_minus_IBOV_pp_2012plus": 16.2,
+    "WH_months": 48
+   },
+   {
+    "term": "Lula III",
+    "lean": "left",
+    "months": 45,
+    "VALE_ann_pct": 2.4,
+    "EWZ_ann_pct": 13.8,
+    "PBR_ann_pct": 38.2,
+    "MIN_ann_pct": 14.3,
+    "SPY_ann_pct": 21.7,
+    "iron_ore_ann_pct": -2.5,
+    "iron_ore_avg_usd_t": 110.8,
+    "VALE_minus_EWZ_pp": -10.6,
+    "alpha_iron_only_pp_yr": 5.7,
+    "alpha_iron_miners_pp_yr": -9.0,
+    "alpha_ewz_only_pp_yr": -8.6,
+    "alpha_iron_miners_ewz_pp_yr": -10.5,
+    "PBR_alpha_brent_xom_pp_yr": 19.8,
+    "PBR_alpha_ewz_only_pp_yr": 16.4,
+    "WH_VALE_minus_IBOV_pp_2012plus": -11.8,
+    "WH_months": 45
+   }
+  ],
+  "tests": {
+   "iron_only": {
+    "gap_left_minus_right_pp_yr": -16.32,
+    "p_block_null": 0.413,
+    "ci90": [
+     -45.37,
+     12.08
+    ],
+    "perm": {
+     "gap": -16.32,
+     "perm_p_two_sided": 0.7,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 4
+    }
+   },
+   "iron_miners": {
+    "gap_left_minus_right_pp_yr": -4.88,
+    "p_block_null": 0.609,
+    "ci90": [
+     -20.83,
+     11.86
+    ],
+    "perm": {
+     "gap": -4.88,
+     "perm_p_two_sided": 0.7,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 4
+    }
+   },
+   "ewz_only": {
+    "gap_left_minus_right_pp_yr": -26.59,
+    "p_block_null": 0.033,
+    "ci90": [
+     -49.94,
+     -3.98
+    ],
+    "perm": {
+     "gap": -26.59,
+     "perm_p_two_sided": 0.2,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 1
+    }
+   },
+   "iron_miners_ewz": {
+    "gap_left_minus_right_pp_yr": -13.24,
+    "p_block_null": 0.102,
+    "ci90": [
+     -28.47,
+     3.37
+    ],
+    "perm": {
+     "gap": -13.24,
+     "perm_p_two_sided": 0.2,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 1
+    }
+   },
+   "iron_leadlag_miners": {
+    "gap_left_minus_right_pp_yr": -4.49,
+    "p_block_null": 0.626,
+    "ci90": [
+     -20.82,
+     13.28
+    ],
+    "perm": {
+     "gap": -4.49,
+     "perm_p_two_sided": 0.6,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 3
+    }
+   },
+   "PBR_brent_xom": {
+    "gap_left_minus_right_pp_yr": 1.37,
+    "p_block_null": 0.933,
+    "ci90": [
+     -20.4,
+     22.87
+    ],
+    "perm": {
+     "gap": 1.37,
+     "perm_p_two_sided": 1.0,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 6
+    }
+   },
+   "PBR_ewz_only": {
+    "gap_left_minus_right_pp_yr": -12.92,
+    "p_block_null": 0.283,
+    "ci90": [
+     -36.6,
+     9.32
+    ],
+    "perm": {
+     "gap": -12.92,
+     "perm_p_two_sided": 0.4,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 3
+    }
+   },
+   "VALE_minus_EWZ": {
+    "gap_left_minus_right_pp_yr": -28.25,
+    "p_block_null": 0.016,
+    "ci90": [
+     -51.52,
+     -6.04
+    ],
+    "perm": {
+     "gap": -28.25,
+     "perm_p_two_sided": 0.1,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 1
+    }
+   },
+   "VALE_raw": {
+    "gap_left_minus_right_pp_yr": -17.18,
+    "p_block_null": 0.435,
+    "ci90": [
+     -48.83,
+     13.21
+    ],
+    "perm": {
+     "gap": -17.18,
+     "perm_p_two_sided": 0.7,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 4
+    }
+   },
+   "EWZ_raw": {
+    "gap_left_minus_right_pp_yr": 11.07,
+    "p_block_null": 0.483,
+    "ci90": [
+     -9.2,
+     31.93
+    ],
+    "perm": {
+     "gap": 11.07,
+     "perm_p_two_sided": 0.7,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 7
+    }
+   },
+   "PBR_minus_EWZ": {
+    "gap_left_minus_right_pp_yr": -10.34,
+    "p_block_null": 0.398,
+    "ci90": [
+     -34.37,
+     12.19
+    ],
+    "perm": {
+     "gap": -10.34,
+     "perm_p_two_sided": 0.5,
+     "n_perms": 10,
+     "rank_of_observed_low_to_high": 3
+    }
+   },
+   "EXPLORATORY_iron_miners_ex_disaster_months": {
+    "gap_left_minus_right_pp_yr": -7.63,
+    "p_block_null": 0.414,
+    "ci90": [
+     -21.77,
+     6.72
+    ]
+   }
+  },
+  "EXPLORATORY_term_alpha_ex_disasters": {
+   "Lula I-II": 6.7,
+   "Dilma": -11.2,
+   "Temer": 16.9,
+   "Bolsonaro": -1.7,
+   "Lula III": -9.0
+  }
+ },
+ "Q2_event_study": {
+  "placebo": {
+   "VALE|M2_miners_ewz": {
+    "CAR_0_1_sd": 1.95,
+    "CAR_0_1_p5_p95": [
+     -2.95,
+     3.22
+    ],
+    "n": 1000
+   },
+   "VALE|M1_miners_spy": {
+    "CAR_0_1_sd": 2.38,
+    "CAR_0_1_p5_p95": [
+     -3.68,
+     4.08
+    ],
+    "n": 1000
+   },
+   "PBR|M2_xom_ewz": {
+    "CAR_0_1_sd": 2.39,
+    "CAR_0_1_p5_p95": [
+     -3.51,
+     3.6
+    ],
+    "n": 1000
+   },
+   "EWZ|M1_spy": {
+    "CAR_0_1_sd": 2.38,
+    "CAR_0_1_p5_p95": [
+     -3.65,
+     3.65
+    ],
+    "n": 1000
+   }
+  },
+  "VALE_vs_miners_EWZ": {
+   "mean_CAR01_left_wins": -0.85,
+   "CAR01_2018_right_win": -4.87,
+   "CAR01_2026_first_round": -4.69,
+   "CAR04_2026_first_round": -8.17,
+   "p_left_wins_mean_this_low_vs_placebo": 0.16,
+   "mean_CAR01_interference_E1_E3": -0.91,
+   "p_interference_mean_this_low_vs_placebo": 0.189,
+   "E1_Agnelli_CAR_m20_m1": -7.15,
+   "E1_Agnelli_CAR_m5_5": -2.77
+  },
+  "VALE_vs_miners_SPY": {
+   "mean_CAR01_left_wins": -0.9,
+   "CAR01_2018_right_win": -4.64,
+   "CAR01_2026_first_round": 1.25,
+   "CAR04_2026_first_round": -1.33,
+   "p_left_wins_mean_this_low_vs_placebo": 0.189,
+   "mean_CAR01_interference_E1_E3": -0.34,
+   "p_interference_mean_this_low_vs_placebo": 0.395,
+   "E1_Agnelli_CAR_m20_m1": -4.11,
+   "E1_Agnelli_CAR_m5_5": -1.12
+  },
+  "PBR_vs_XOM_EWZ": {
+   "mean_CAR01_left_wins": -4.67,
+   "CAR01_2018_right_win": -0.76,
+   "CAR01_2026_first_round": 2.27,
+   "CAR04_2026_first_round": 5.62,
+   "p_left_wins_mean_this_low_vs_placebo": 0.001
+  },
+  "EWZ_vs_SPY": {
+   "mean_CAR01_left_wins": 0.35,
+   "CAR01_2018_right_win": 0.33,
+   "CAR01_2026_first_round": 10.68,
+   "CAR04_2026_first_round": 12.0,
+   "p_left_wins_mean_this_low_vs_placebo": 0.633
+  }
+ },
+ "Q3_fundamentals": {
+  "annual": [
+   {
+    "co": "VALE",
+    "year": 2012,
+    "q": 4,
+    "revenue": 47.69,
+    "ebit": 8.09,
+    "ni": 5.41,
+    "capex": 16.19,
+    "div": 5.81,
+    "net_debt": 24.27,
+    "ebit_margin_pct": 16.97,
+    "payout_pct": 107.39,
+    "div_over_ebit_pct": 71.74,
+    "capex_over_rev_pct": 33.95,
+    "nd_over_ebit": 3.0,
+    "iron_usd_t": 128.53,
+    "brent_usd_bbl": 112.01,
+    "br_iron_exports_mt": NaN,
+    "term": "Dilma",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2013,
+    "q": 4,
+    "revenue": 47.48,
+    "ebit": 15.5,
+    "ni": 0.44,
+    "capex": 13.24,
+    "div": 4.32,
+    "net_debt": 24.86,
+    "ebit_margin_pct": 32.65,
+    "payout_pct": 977.7,
+    "div_over_ebit_pct": 27.84,
+    "capex_over_rev_pct": 27.89,
+    "nd_over_ebit": 1.6,
+    "iron_usd_t": 135.36,
+    "brent_usd_bbl": 108.96,
+    "br_iron_exports_mt": NaN,
+    "term": "Dilma",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2014,
+    "q": 4,
+    "revenue": 37.55,
+    "ebit": 7.61,
+    "ni": 0.57,
+    "capex": 11.13,
+    "div": 4.15,
+    "net_debt": 25.93,
+    "ebit_margin_pct": 20.26,
+    "payout_pct": 728.41,
+    "div_over_ebit_pct": 54.56,
+    "capex_over_rev_pct": 29.65,
+    "nd_over_ebit": 3.41,
+    "iron_usd_t": 97.39,
+    "brent_usd_bbl": 99.35,
+    "br_iron_exports_mt": 323.15,
+    "term": "Dilma",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2015,
+    "q": 4,
+    "revenue": 25.76,
+    "ebit": -6.96,
+    "ni": -12.16,
+    "capex": 8.35,
+    "div": 1.52,
+    "net_debt": 25.66,
+    "ebit_margin_pct": -27.02,
+    "payout_pct": NaN,
+    "div_over_ebit_pct": NaN,
+    "capex_over_rev_pct": 32.43,
+    "nd_over_ebit": NaN,
+    "iron_usd_t": 56.14,
+    "brent_usd_bbl": 53.02,
+    "br_iron_exports_mt": 313.88,
+    "term": "Dilma",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2016,
+    "q": 4,
+    "revenue": 27.36,
+    "ebit": 7.38,
+    "ni": 3.68,
+    "capex": 4.95,
+    "div": 0.55,
+    "net_debt": 24.78,
+    "ebit_margin_pct": 26.99,
+    "payout_pct": 14.91,
+    "div_over_ebit_pct": 7.44,
+    "capex_over_rev_pct": 18.09,
+    "nd_over_ebit": 3.36,
+    "iron_usd_t": 58.57,
+    "brent_usd_bbl": 45.08,
+    "br_iron_exports_mt": 344.55,
+    "term": "Dilma",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2017,
+    "q": 4,
+    "revenue": 33.99,
+    "ebit": 10.85,
+    "ni": 5.57,
+    "capex": 3.83,
+    "div": 1.45,
+    "net_debt": 18.5,
+    "ebit_margin_pct": 31.92,
+    "payout_pct": 26.06,
+    "div_over_ebit_pct": 13.37,
+    "capex_over_rev_pct": 11.28,
+    "nd_over_ebit": 1.71,
+    "iron_usd_t": 71.13,
+    "brent_usd_bbl": 54.89,
+    "br_iron_exports_mt": 353.26,
+    "term": "Temer",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2018,
+    "q": 4,
+    "revenue": 36.69,
+    "ebit": 11.8,
+    "ni": 6.92,
+    "capex": 3.82,
+    "div": 3.43,
+    "net_debt": 9.85,
+    "ebit_margin_pct": 32.15,
+    "payout_pct": 49.49,
+    "div_over_ebit_pct": 29.03,
+    "capex_over_rev_pct": 10.4,
+    "nd_over_ebit": 0.83,
+    "iron_usd_t": 70.14,
+    "brent_usd_bbl": 71.61,
+    "br_iron_exports_mt": 355.07,
+    "term": "Temer",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2019,
+    "q": 4,
+    "revenue": 37.61,
+    "ebit": 0.59,
+    "ni": -1.71,
+    "capex": 3.71,
+    "div": 0.18,
+    "net_debt": 7.34,
+    "ebit_margin_pct": 1.56,
+    "payout_pct": NaN,
+    "div_over_ebit_pct": 30.0,
+    "capex_over_rev_pct": 9.87,
+    "nd_over_ebit": 12.52,
+    "iron_usd_t": 93.62,
+    "brent_usd_bbl": 64.2,
+    "br_iron_exports_mt": 326.16,
+    "term": "Bolsonaro",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2020,
+    "q": 4,
+    "revenue": 39.91,
+    "ebit": 9.98,
+    "ni": 5.0,
+    "capex": 4.41,
+    "div": 3.48,
+    "net_debt": 1.48,
+    "ebit_margin_pct": 25.0,
+    "payout_pct": 69.57,
+    "div_over_ebit_pct": 34.86,
+    "capex_over_rev_pct": 11.05,
+    "nd_over_ebit": 0.15,
+    "iron_usd_t": 108.07,
+    "brent_usd_bbl": 43.33,
+    "br_iron_exports_mt": 325.93,
+    "term": "Bolsonaro",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2021,
+    "q": 4,
+    "revenue": 54.47,
+    "ebit": 26.18,
+    "ni": 22.45,
+    "capex": 5.05,
+    "div": 13.8,
+    "net_debt": 1.87,
+    "ebit_margin_pct": 48.06,
+    "payout_pct": 61.45,
+    "div_over_ebit_pct": 52.7,
+    "capex_over_rev_pct": 9.26,
+    "nd_over_ebit": 0.07,
+    "iron_usd_t": 158.16,
+    "brent_usd_bbl": 70.83,
+    "br_iron_exports_mt": 337.58,
+    "term": "Bolsonaro",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2022,
+    "q": 4,
+    "revenue": 43.87,
+    "ebit": 17.49,
+    "ni": 18.66,
+    "capex": 5.45,
+    "div": 6.52,
+    "net_debt": 7.86,
+    "ebit_margin_pct": 39.87,
+    "payout_pct": 34.95,
+    "div_over_ebit_pct": 37.29,
+    "capex_over_rev_pct": 12.43,
+    "nd_over_ebit": 0.45,
+    "iron_usd_t": 120.7,
+    "brent_usd_bbl": 99.0,
+    "br_iron_exports_mt": 324.67,
+    "term": "Bolsonaro",
+    "lean": "right"
+   },
+   {
+    "co": "VALE",
+    "year": 2023,
+    "q": 4,
+    "revenue": 41.75,
+    "ebit": 13.09,
+    "ni": 8.02,
+    "capex": 5.91,
+    "div": 5.58,
+    "net_debt": 10.03,
+    "ebit_margin_pct": 31.35,
+    "payout_pct": 69.63,
+    "div_over_ebit_pct": 42.64,
+    "capex_over_rev_pct": 14.16,
+    "nd_over_ebit": 0.77,
+    "iron_usd_t": 120.32,
+    "brent_usd_bbl": 82.32,
+    "br_iron_exports_mt": 353.13,
+    "term": "Lula III",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2024,
+    "q": 4,
+    "revenue": 38.11,
+    "ebit": 10.48,
+    "ni": 6.09,
+    "capex": 6.44,
+    "div": 3.98,
+    "net_debt": 11.14,
+    "ebit_margin_pct": 27.49,
+    "payout_pct": 65.39,
+    "div_over_ebit_pct": 37.99,
+    "capex_over_rev_pct": 16.89,
+    "nd_over_ebit": 1.06,
+    "iron_usd_t": 111.06,
+    "brent_usd_bbl": 79.91,
+    "br_iron_exports_mt": 362.58,
+    "term": "Lula III",
+    "lean": "left"
+   },
+   {
+    "co": "VALE",
+    "year": 2025,
+    "q": 4,
+    "revenue": 38.36,
+    "ebit": 5.64,
+    "ni": 2.31,
+    "capex": 6.01,
+    "div": 3.52,
+    "net_debt": 11.46,
+    "ebit_margin_pct": 14.71,
+    "payout_pct": 152.57,
+    "div_over_ebit_pct": 62.44,
+    "capex_over_rev_pct": 15.67,
+    "nd_over_ebit": 2.03,
+    "iron_usd_t": 103.72,
+    "brent_usd_bbl": 68.32,
+    "br_iron_exports_mt": 392.42,
+    "term": "Lula III",
+    "lean": "left"
+   }
+  ],
+  "term_means": [
+   {
+    "term": "Dilma",
+    "iron_usd_t": 95.2,
+    "div": 3.27,
+    "capex": 10.77,
+    "ebit_margin_pct": 13.97,
+    "payout_pct": 457.1,
+    "capex_over_rev_pct": 28.4,
+    "nd_over_ebit": 2.84,
+    "br_iron_exports_mt": 327.19
+   },
+   {
+    "term": "Temer",
+    "iron_usd_t": 70.64,
+    "div": 2.44,
+    "capex": 3.82,
+    "ebit_margin_pct": 32.04,
+    "payout_pct": 37.78,
+    "capex_over_rev_pct": 10.84,
+    "nd_over_ebit": 1.27,
+    "br_iron_exports_mt": 354.17
+   },
+   {
+    "term": "Bolsonaro",
+    "iron_usd_t": 120.14,
+    "div": 5.99,
+    "capex": 4.65,
+    "ebit_margin_pct": 28.62,
+    "payout_pct": 55.32,
+    "capex_over_rev_pct": 10.65,
+    "nd_over_ebit": 3.3,
+    "br_iron_exports_mt": 328.58
+   },
+   {
+    "term": "Lula III",
+    "iron_usd_t": 111.7,
+    "div": 4.36,
+    "capex": 6.12,
+    "ebit_margin_pct": 24.51,
+    "payout_pct": 95.86,
+    "capex_over_rev_pct": 15.57,
+    "nd_over_ebit": 1.29,
+    "br_iron_exports_mt": 369.38
+   }
+  ],
+  "iron_regressions": {
+   "div": {
+    "slope_per_usd10_iron": 0.906,
+    "r2": 0.66,
+    "n_years": 14,
+    "resid_by_term": {
+     "Bolsonaro": 0.22,
+     "Dilma": -0.25,
+     "Lula III": -0.65,
+     "Temer": 1.15
+    },
+    "left_minus_right_resid": -0.93,
+    "resid_sd": 1.9
+   },
+   "capex": {
+    "slope_per_usd10_iron": 0.427,
+    "r2": 0.11,
+    "n_years": 14,
+    "resid_by_term": {
+     "Bolsonaro": -3.14,
+     "Dilma": 4.04,
+     "Lula III": -1.32,
+     "Temer": -1.86
+    },
+    "left_minus_right_resid": 4.75,
+    "resid_sd": 3.5
+   },
+   "ebit_margin_pct": {
+    "slope_per_usd10_iron": 3.232,
+    "r2": 0.28,
+    "n_years": 14,
+    "resid_by_term": {
+     "Bolsonaro": -0.12,
+     "Dilma": -6.71,
+     "Lula III": -1.51,
+     "Temer": 19.29
+    },
+    "left_minus_right_resid": -11.11,
+    "resid_sd": 14.92
+   },
+   "payout_pct": {
+    "slope_per_usd10_iron": 25.757,
+    "r2": 0.06,
+    "n_years": 12,
+    "resid_by_term": {
+     "Bolsonaro": -197.94,
+     "Dilma": 265.71,
+     "Lula III": -112.88,
+     "Temer": -65.2
+    },
+    "left_minus_right_resid": 248.3,
+    "resid_sd": 291.31
+   },
+   "capex_over_rev_pct": {
+    "slope_per_usd10_iron": -0.144,
+    "r2": 0.0,
+    "n_years": 14,
+    "resid_by_term": {
+     "Bolsonaro": -7.16,
+     "Dilma": 10.23,
+     "Lula III": -2.37,
+     "Temer": -7.69
+    },
+    "left_minus_right_resid": 12.84,
+    "resid_sd": 8.62
+   },
+   "nd_over_ebit": {
+    "slope_per_usd10_iron": -0.308,
+    "r2": 0.07,
+    "n_years": 13,
+    "resid_by_term": {
+     "Bolsonaro": 1.35,
+     "Dilma": 0.43,
+     "Lula III": -0.92,
+     "Temer": -2.2
+    },
+    "left_minus_right_resid": -0.32,
+    "resid_sd": 3.01
+   },
+   "net_debt": {
+    "slope_per_usd10_iron": -1.144,
+    "r2": 0.15,
+    "n_years": 14,
+    "resid_by_term": {
+     "Bolsonaro": -7.97,
+     "Dilma": 9.64,
+     "Lula III": -2.7,
+     "Temer": -4.1
+    },
+    "left_minus_right_resid": 11.69,
+    "resid_sd": 8.07
+   },
+   "br_iron_exports_mt": {
+    "slope_per_usd10_iron": 0.492,
+    "r2": 0.0,
+    "n_years": 12,
+    "resid_by_term": {
+     "Bolsonaro": -15.23,
+     "Dilma": -14.19,
+     "Lula III": 25.98,
+     "Temer": 12.78
+    },
+    "left_minus_right_resid": 11.78,
+    "resid_sd": 21.09
+   },
+   "div_over_ebit_pct": {
+    "slope_per_usd10_iron": 3.999,
+    "r2": 0.38,
+    "n_years": 13,
+    "resid_by_term": {
+     "Bolsonaro": -5.59,
+     "Dilma": 2.17,
+     "Lula III": 6.76,
+     "Temer": -3.3
+    },
+    "left_minus_right_resid": 8.96,
+    "resid_sd": 13.92
+   }
+  },
+  "vale_2026_H1": {
+   "quarters": 2,
+   "div_usd_bn": 2.75,
+   "capex_usd_bn": 2.43,
+   "net_income_usd_bn": 3.25,
+   "net_debt_usd_bn_end": 13.5
+  },
+  "dividend_yield_ttm_by_term_pct": {
+   "Dilma": 6.53,
+   "Temer": 2.64,
+   "Bolsonaro": 7.79,
+   "Lula III": 8.69
+  },
+  "dividend_yield_ttm_latest": {
+   "value": 7.7843,
+   "date": "2026-10-02"
+  }
+ },
+ "Q4_petrobras_contrast": {
+  "VALE": {
+   "r2_global_commodity": 0.645,
+   "r2_global_plus_EWZ": 0.731,
+   "r2_EWZ_only": 0.521,
+   "r2_global_plus_SPY": 0.646,
+   "incremental_r2_pure_Brazil_factor": 0.092,
+   "beta_pure_Brazil_factor": 0.5
+  },
+  "PBR": {
+   "r2_global_commodity": 0.263,
+   "r2_global_plus_EWZ": 0.743,
+   "r2_EWZ_only": 0.725,
+   "r2_global_plus_SPY": 0.336,
+   "incremental_r2_pure_Brazil_factor": 0.411,
+   "beta_pure_Brazil_factor": 1.2
+  },
+  "gap_compare_pp_yr": {
+   "VALE_iron_miners": -4.88,
+   "PBR_brent_xom": 1.37,
+   "VALE_minus_EWZ_raw": -28.25,
+   "PBR_minus_EWZ_raw": -10.34,
+   "EWZ_raw": 11.07
+  },
+  "VALE_beta_to_pure_Brazil_factor_by_term": {
+   "Lula I-II": {
+    "VALE": 0.67,
+    "PBR": 1.15,
+    "months": 96
+   },
+   "Dilma": {
+    "VALE": 0.51,
+    "PBR": 1.71,
+    "months": 68
+   },
+   "Temer": {
+    "VALE": 0.31,
+    "PBR": 1.25,
+    "months": 28
+   },
+   "Bolsonaro": {
+    "VALE": 0.48,
+    "PBR": 1.28,
+    "months": 48
+   },
+   "Lula III": {
+    "VALE": 0.43,
+    "PBR": 0.71,
+    "months": 43
+   }
+  }
+ },
+ "context": {
+  "iron_ore_latest": {
+   "value": 101.6,
+   "date": "2026-07-01",
+   "series": "fred:PIORECRUSDM"
+  },
+  "iron_ore_2025_avg": 103.7,
+  "iron_ore_2021_peak_month": 215.8,
+  "brl_usd_latest": {
+   "value": 5.2238,
+   "date": "2026-10-02"
+  },
+  "VALE_adr_ytd_2026_pct": 7.5,
+  "EWZ_ytd_2026_pct": 38.4,
+  "VALE_adr_last": {
+   "value": 13.62,
+   "date": "2026-10-09"
+  },
+  "iron_ore_export_unit_value_latest": {
+   "value": 59.6,
+   "date": "2026-08-01"
+  },
+  "china_export_share_latest": {
+   "value": 25.2,
+   "date": "2026-08-01",
+   "avg_2025": 28.5
+  },
+  "iron_ore_exports_usd_bn_2025": 26.29,
+  "iron_ore_exports_usd_bn_2026_jan_aug": 16.04,
+  "iron_ore_exports_usd_bn_2025_jan_aug": 16.25,
+  "iron_ore_exports_mt_2026_jan_aug_vs_2025": [
+   244.6,
+   249.8
+  ],
+  "vale_beta_iron_monthly": 0.2793,
+  "annual_2003_2025": {
+   "corr_VALE_IRON": 0.23,
+   "corr_VALE_MIN": 0.93,
+   "corr_VALE_EWZ": 0.92,
+   "corr_PBR_EWZ": 0.86,
+   "r2_VALE_on_IRON": 0.055,
+   "r2_VALE_on_MIN": 0.861
+  }
+ },
+ "sources": {
+  "yahoo:VALE": {
+   "series_id": "yahoo:VALE adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VALE?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:PBR": {
+   "series_id": "yahoo:PBR adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PBR?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:BHP": {
+   "series_id": "yahoo:BHP adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BHP?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:RIO": {
+   "series_id": "yahoo:RIO adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:EWZ": {
+   "series_id": "yahoo:EWZ adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EWZ?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:SPY": {
+   "series_id": "yahoo:SPY adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "yahoo:XOM": {
+   "series_id": "yahoo:XOM adjclose (USD, dividends reinvested)",
+   "source": "Yahoo Finance",
+   "last_date": "2026-10-09",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=946684800&period2=1791763200&interval=1d&events=div,split"
+  },
+  "fred:PIORECRUSDM": {
+   "series_id": "fred:PIORECRUSDM",
+   "source": "IMF via FRED",
+   "last_date": "2026-07-01",
+   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PIORECRUSDM"
+  },
+  "fred:POILBREUSDM": {
+   "series_id": "fred:POILBREUSDM",
+   "source": "IMF via FRED",
+   "last_date": "2026-07-01",
+   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=POILBREUSDM"
+  },
+  "total_return_usd@VALE": {
+   "series_id": "total_return_usd@VALE",
+   "source": "Derived",
+   "last_date": "2026-10-02"
+  },
+  "total_return_usd@IBOV": {
+   "series_id": "total_return_usd@IBOV",
+   "source": "Derived",
+   "last_date": "2026-10-01"
+  },
+  "total_return_usd@PETR": {
+   "series_id": "total_return_usd@PETR",
+   "source": "Derived",
+   "last_date": "2026-10-02"
+  },
+  "brl_usd": {
+   "series_id": "brl_usd",
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-10-02"
+  },
+  "dividend_yield_ttm@VALE": {
+   "series_id": "dividend_yield_ttm@VALE",
+   "source": "Derived",
+   "last_date": "2026-10-02"
+  },
+  "iron_ore_exports_kg": {
+   "series_id": "iron_ore_exports_kg",
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01"
+  },
+  "iron_ore_exports": {
+   "series_id": "iron_ore_exports",
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01"
+  },
+  "iron_ore_unit_value": {
+   "series_id": "iron_ore_unit_value",
+   "source": "Derived",
+   "last_date": "2026-08-01"
+  },
+  "exports_to_china": {
+   "series_id": "exports_to_china",
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01"
+  },
+  "china_export_share": {
+   "series_id": "china_export_share",
+   "source": "Derived",
+   "last_date": "2026-08-01"
+  },
+  "wb/TOT.BRA": {
+   "series_id": "wb/TOT.BRA",
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31"
+  },
+  "share_close_adj_brl@VALE": {
+   "series_id": "share_close_adj_brl@VALE",
+   "source": "B3",
+   "last_date": "2026-10-02"
+  },
+  "v_company_quarterly@VALE": {
+   "series_id": "v_company_quarterly (VALE, PETR)",
+   "source": "CVM",
+   "last_date": "2026-06-30"
+  }
+ }
+}

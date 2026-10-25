@@ -1,0 +1,81 @@
+PRE-REGISTRATION - Study 2: hydrology/climate -> power cost -> inflation, agro and EU access
+Written 2026-10-05T21:07:59Z (UTC), after the 0.6 anchor reproduction and before any W1-W11 estimate was computed.
+Warehouse: /Users/zkid18/proj-personal/brazil-macro/warehouse/brazil_macro.duckdb (read-only; registry/ last commit b79840b).
+
+0. Anchor check (done before this file was written)
+All 0.6 anchors reproduced: EAR annual mean/min and days < 40% for 2015-2025, CMO annual mean/max and weeks > 500,
+administered-price annual sums (2015 16.8, 2021 15.8, 2022 -3.7, 2023 8.8, 2024 4.6, 2025 5.2), the 2021 monthly path
+(EAR 38.0 Jul -> 24.3 Oct; CMO 1,056 Jul, 2,734 Aug; Focus 3.45 -> 5.29; IPCA 12m 4.56 -> 10.74; Selic 2.00 -> 8.86 monthly
+mean in Dec, 9.25 at year-end), hydro share (WB 92.8/81.5/55.3/56.1; ONS 70.8 -> 57.3), wind+solar 4.7 -> 29.8, load
+61.4 -> 79.6 GWmed with YoY 2021 +8.1, 2023 +7.1, 2024 +7.1, 2025 +0.8, SPEI, heat days, cereal yield YoY, agri VA
+growth, 2001 quarterly GDP YoY 4.24 -> -0.93 and 2021 12.26 -> 1.66.
+Differences, none breaking: 2026 YTD EAR mean is 64.5 (plan 64.1) and 2026 YTD load is 80.5 GWmed (plan 81.5). Both
+are moving YTD windows. 2025 EAR mean 61.9 (plan 62.0, rounding). Section 0.1 re-check: no electricity-tariff or IPCA
+electricity sub-item, no CONAB, no PLD, no EAR before 2015 in the warehouse; political_terms 9 rows, political_events 34.
+
+1. Narratives (both reported regardless of outcome)
+F "Fragility": hydro dependence is still a macro risk. Droughts raise power prices, feed administered inflation and
+  expectations, force the BCB, cut agro output and raise fire/deforestation and EU-access risk. Load growth tightens the margin.
+D "Diversified": wind+solar (~30%), thermal backup and the 2001 lessons make drought a price/inflation shock only.
+  Policy can suppress pass-through (2022), yields are irrigation/tech-driven, and EU access is unaffected by hydrology.
+
+2. Definitions fixed now
+- Sample (monthly): 2015-01 to the last common month (ONS daily/weekly averaged to calendar months; IPCA to 2026-08).
+- Drought shock S_t = max(0, 40 - EAR_t)/10, where EAR_t is the monthly mean of stored_energy_ear. One unit = 10 pts below 40.
+- Episode month = a month inside a run of >= 3 consecutive months with monthly-mean EAR < 40.
+- Daily episode (episodes.csv) = a run of >= 90 consecutive days with daily EAR < 40. Gaps <= 7 days above 40 are merged.
+- CMO deflated: cmo_power_cost monthly mean x (IPCA index 2026-08 / IPCA index month), the index chained from ipca_monthly.
+  log CMO uses log(CMO + 10) because 2023 has zero CMO.
+- Bootstrap: moving-block, 2,000 draws, seed 0, block length 12 (monthly) or 3 (annual). 90% percentile CIs.
+- Local projections (LP): y(t,h) = a + b_h S_t + c1 Brent12_t + c2 ylag_t + e. Brent12 = 100 x 12-month log change of
+  brent_usd monthly mean. ylag = the outcome's own trailing 12-month change at t-1. h = 0..12.
+  Outcomes: cumulative administered IPCA (sum of monthly pct t..t+h); cumulative headline IPCA; focus_ipca_12m change
+  (month mean t+h minus t-1); focus_selic_12m change; selic_target change in bp (month mean t+h minus t-1).
+- Verdict labels: "F" (F's prediction met at its threshold), "D", "Both agree", "Partial", "Null/inconclusive".
+
+3. Hypotheses, tests and thresholds
+W1 Drought -> power price. Ratio of mean nominal CMO in episode months vs other months, 2015-2026. OLS of log(CMO_real+10)
+   on EAR, EAR x WS (wind+solar share), log Brent. Both narratives expect ratio >= 2x ("Both agree" if met). D's addition:
+   the EAR x WS coefficient > 0 (slope flattens with WS) with 90% CI > 0 -> D addition supported.
+W2 Drought -> inflation. LP b_12 for cumulative administered IPCA. F if b_12 >= +1.0 pp with 90% CI > 0. D if b_12 < +0.5 pp
+   (or CI includes 0). Otherwise Partial. Headline reported alongside (F expects ~ 0.25 x admin). Robustness: drop 2015
+   (tariff realignment), drop 2022 (election-year cuts), continuous EAR shock (-(EAR-mean)/10).
+W3 Drought -> expectations and Selic. LP peak of Focus IPCA 12m change over h = 0..12. F if >= +0.5 pp with CI > 0; Selic
+   F if +50 bp or more with CI > 0. D if neither. 2021 decomposition: the administered contribution to the 12-month IPCA
+   change Jan->Nov 2021, using an administered weight from an external fact (IBGE/BCB, ~ 25%).
+W4 Drought -> output. 2001 descriptive (quarterly GDP YoY path, annual WB GDP growth vs 2000 and 2002). Post-2015: OLS of IBC-Br
+   12-month growth on S_t with Brent12 control, 2020-03..2020-12 excluded (COVID), block bootstrap. F if b < 0 with CI
+   excluding 0. D if CI includes 0.
+W5 Drought -> agro. Annual OLS 1961-2023: 100 x dlog cereal yield on SPEI and SPEI x (year-1990)/10; same for agri VA growth.
+   F if b_SPEI > 0 with 90% CI > 0 AND interaction >= 0. D if interaction < 0 (shrinking) or b_SPEI CI includes 0.
+   Exports (USD, 2015-2025): descriptive correlation of soy/coffee/sugar export YoY with SPEI and EAR (price offsets volume).
+W6 Diversification lowers sensitivity. Mean log real CMO per EAR band (20-30, 30-40, 40-50, 50-60, 60+) in 2015-2021 vs
+   2022-2026; bootstrap difference per band. D if lower in every band with data in both periods and CI < 0 in at least
+   one band. F if not lower in the 40-50 band. Bands < 40 have no post-2022 months -> declared untestable in advance.
+   Also the 2024 episode (EAR min 43.7, CMO max 625) vs 2017-18 months at similar EAR.
+W7 Load growth (data-centre check). Annual load YoY (ONS GWmed) 2016-2025 on dCDD and IBC-Br annual growth, fitted on
+   2016-2022, residuals for 2023-2025 (2025 uses an IBC-only model because CDD ends 2024). F if mean residual 2023-25
+   >= 2 pp/yr. D if |mean residual| < 1 pp. Otherwise Partial. A known measurement caveat is checked externally: any ONS
+   change in how "carga" counts distributed micro/mini generation (MMGD) after 2023 that would mechanically raise measured load.
+W8 Climate trend. Permutation test (10,000 shuffles, seed 0) for mean and variance of SPEI, heat-35 days and CDD,
+   1960-1999 vs 2010-latest. F if p < 0.10 in the drier/hotter direction for >= 2 of 3 series. D if none.
+W9 Companies. Descriptive: Axia/Petrobras generation and SIN share in episode vs non-episode months (deviation from the
+   same calendar year's mean), and monthly USD total returns regressed on dEAR. No verdict threshold; F/D read from signs.
+W10 Drought/fire -> EU access. Descriptive: fire years (2016, 2024) vs wb/AG.LND.FRLS.HA.BR, PFLS and exports_to_eu YoY.
+   Scenario input only.
+W11 Policy suppression. Administered IPCA per unit of drought shock in 2015 and 2021 vs 2022 (election year, LC 194/2022).
+   Annual OLS 2015-2025 of administered sum on mean S and an election-year dummy (2018, 2022). Quantify the fiscal cost
+   of 2022 suppression from external facts. Both narratives agree that suppression shifts cost to the budget.
+
+4. Multiple testing and power
+Eleven hypotheses, about 140 monthly observations with heavy serial correlation, and one dominant drought regime
+(2015-2021). The effective number of independent drought episodes is about 4 (2015, 2017-18, 2019-20, 2021). Results are
+effect sizes with bands. BH q = 0.10 over the W1-W8 primary p-values is reported, but no claim relies on it.
+
+5. Scenarios (B4) fixed now
+States Wet / One drought year / Severe / Rationing tail x policy {pass-through, suppression} x diversification
+{WS 35-40% with storage/transmission, without}. Start from the plan's prior ranges (cmo, admin, headline, Selic, GDP,
+agro, fiscal, EU). Where a W estimate implies a range that differs from the prior by more than 50% at the midpoint,
+the data-implied range replaces the prior and both are recorded. Best/worst per state. Cross-tab against exports ToT
+states (ToT +/-10%: +/-$14-22bn/yr exports, +/-2.3-3.1 GDP-pc growth points upper bound, ~ +/-1.5% GDP income effect).
+Probabilities qualitative (low < 25%, medium 25-60%, high > 60%), set from base rates and the ONS/ONI outlook facts.

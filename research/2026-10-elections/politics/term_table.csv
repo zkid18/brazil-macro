@@ -1,0 +1,378 @@
+metric_id,term,term_id,lean_A,value,n_years,incomplete
+A1,Sarney,1,centre,4.394,5,False
+A1,Collor,2,right,-1.287,3,False
+A1,Itamar,3,centre,5.389,2,False
+A1,FHC,4,right,2.433,8,False
+A1,Lula I–II,5,left,4.079,8,False
+A1,Dilma,6,left,1.172,5,False
+A1,Temer,7,right,-0.056,3,False
+A1,Bolsonaro,8,right,1.431,4,False
+A1,Lula III,9,left,2.527,4,True
+A2,Sarney,1,centre,2.34,5,False
+A2,Collor,2,right,-2.973,3,False
+A2,Itamar,3,centre,3.725,2,False
+A2,FHC,4,right,0.983,8,False
+A2,Lula I–II,5,left,3.022,8,False
+A2,Dilma,6,left,0.359,5,False
+A2,Temer,7,right,-0.777,3,False
+A2,Bolsonaro,8,right,0.923,4,False
+A2,Lula III,9,left,2.576,3,True
+A3,Sarney,1,centre,22.449,5,False
+A3,Collor,2,right,19.065,3,False
+A3,Itamar,3,centre,20.016,2,False
+A3,FHC,4,right,18.532,8,False
+A3,Lula I–II,5,left,18.151,8,False
+A3,Dilma,6,left,19.989,5,False
+A3,Temer,7,right,15.06,3,False
+A3,Bolsonaro,8,right,16.938,4,False
+A3,Lula III,9,left,16.762,3,True
+A4,Itamar,3,centre,7.195,2,False
+A4,FHC,4,right,1.916,8,False
+A4,Lula I–II,5,left,3.116,8,False
+A4,Dilma,6,left,-2.302,5,False
+A4,Temer,7,right,-1.078,3,False
+A4,Bolsonaro,8,right,-0.609,4,False
+A4,Lula III,9,left,1.24,3,True
+A5,FHC,4,right,-0.099,3,False
+A5,Lula I–II,5,left,2.16,8,False
+A5,Dilma,6,left,0.347,5,False
+A5,Temer,7,right,0.043,3,False
+A5,Bolsonaro,8,right,0.07,4,False
+A5,Lula III,9,left,1.271,3,True
+B1,Sarney,1,centre,158.159,5,False
+B1,Collor,2,right,245.23,3,False
+B1,Itamar,3,centre,309.775,2,False
+B1,FHC,4,right,15.732,8,False
+B1,Lula I–II,5,left,8.022,8,False
+B1,Dilma,6,left,7.544,5,False
+B1,Temer,7,right,5.264,3,False
+B1,Bolsonaro,8,right,7.724,4,False
+B1,Lula III,9,left,4.866,3,True
+B1b,FHC,4,right,8.723,3,False
+B1b,Lula I–II,5,left,5.789,8,False
+B1b,Dilma,6,left,7.066,5,False
+B1b,Temer,7,right,4.33,3,False
+B1b,Bolsonaro,8,right,6.17,4,False
+B1b,Lula III,9,left,4.482,4,True
+B2,Lula I–II,5,left,9.741,8,False
+B2,Dilma,6,left,4.799,5,False
+B2,Temer,7,right,5.594,3,False
+B2,Bolsonaro,8,right,2.303,4,False
+B2,Lula III,9,left,8.973,4,True
+B3,Lula I–II,5,left,5.122,8,False
+B3,Dilma,6,left,5.821,5,False
+B3,Temer,7,right,4.713,3,False
+B3,Bolsonaro,8,right,4.198,4,False
+B3,Lula III,9,left,4.315,4,True
+B4,FHC,4,right,58.762,6,False
+B4,Lula I–II,5,left,38.8,8,False
+B4,Dilma,6,left,26.83,5,False
+B4,Temer,7,right,38.505,3,False
+B4,Bolsonaro,8,right,24.127,4,False
+B4,Lula III,9,left,36.248,3,True
+B5,Sarney,1,centre,25.785,3,False
+B5,Collor,2,right,-14.427,3,False
+B5,Itamar,3,centre,-7.471,2,False
+B5,FHC,4,right,-4.985,8,False
+B5,Lula I–II,5,left,2.89,8,False
+B5,Dilma,6,left,2.813,5,False
+B5,Temer,7,right,-2.204,3,False
+B5,Bolsonaro,8,right,2.597,4,False
+B5,Lula III,9,left,1.499,3,True
+C1,Lula I–II,5,left,3.119,8,False
+C1,Dilma,6,left,0.882,5,False
+C1,Temer,7,right,-1.903,3,False
+C1,Bolsonaro,8,right,-2.027,4,False
+C1,Lula III,9,left,-0.932,4,True
+C2,Lula I–II,5,left,-0.927,4,False
+C2,Dilma,6,left,2.746,5,False
+C2,Temer,7,right,3.257,3,False
+C2,Bolsonaro,8,right,-0.897,4,False
+C2,Lula III,9,left,2.795,4,True
+C3,Lula I–II,5,left,-1.489,8,False
+C3,Dilma,6,left,-0.772,5,False
+C3,Temer,7,right,5.853,3,False
+C3,Bolsonaro,8,right,1.887,4,False
+C3,Lula III,9,left,3.445,4,True
+C4,Lula I–II,5,left,6.306,8,False
+C4,Dilma,6,left,5.654,5,False
+C4,Temer,7,right,6.0,3,False
+C4,Bolsonaro,8,right,4.968,4,False
+C4,Lula III,9,left,7.85,4,True
+C5,Sarney,1,centre,12.645,5,False
+C5,Collor,2,right,18.085,3,False
+C5,Itamar,3,centre,17.765,2,False
+C5,FHC,4,right,19.749,8,False
+C5,Lula I–II,5,left,18.99,8,False
+C5,Dilma,6,left,19.004,5,False
+C5,Temer,7,right,20.145,3,False
+C5,Bolsonaro,8,right,19.267,4,False
+C5,Lula III,9,left,18.982,3,True
+C6,Dilma,6,left,14.086,5,False
+C6,Temer,7,right,13.752,3,False
+C6,Bolsonaro,8,right,13.83,4,False
+C6,Lula III,9,left,14.726,2,True
+D1,FHC,4,right,-7.129,8,False
+D1,Lula I–II,5,left,32.103,8,False
+D1,Dilma,6,left,-26.417,5,False
+D1,Temer,7,right,23.815,3,False
+D1,Bolsonaro,8,right,-1.821,4,False
+D1,Lula III,9,left,13.332,4,True
+D2,FHC,4,right,-17.869,8,False
+D2,Lula I–II,5,left,9.396,8,False
+D2,Dilma,6,left,-17.033,5,False
+D2,Temer,7,right,0.257,3,False
+D2,Bolsonaro,8,right,-7.439,4,False
+D2,Lula III,9,left,-0.029,4,True
+D3,Sarney,1,centre,74.192,5,False
+D3,Collor,2,right,98.489,3,False
+D3,Itamar,3,centre,90.656,2,False
+D3,FHC,4,right,87.118,8,False
+D3,Lula I–II,5,left,79.95,8,False
+D3,Dilma,6,left,87.166,5,False
+D3,Temer,7,right,74.688,3,False
+D3,Bolsonaro,8,right,59.829,4,False
+D3,Lula III,9,left,60.957,3,True
+D4,FHC,4,right,993.825,3,False
+D4,Lula I–II,5,left,374.806,8,False
+D4,Dilma,6,left,231.833,5,False
+D4,Temer,7,right,307.354,3,False
+D4,Bolsonaro,8,right,291.646,4,False
+D5,Temer,7,right,5.524,3,False
+D5,Bolsonaro,8,right,4.156,4,False
+D5,Lula III,9,left,6.731,4,True
+D6,Sarney,1,centre,-0.225,5,False
+D6,Collor,2,right,0.203,3,False
+D6,Itamar,3,centre,-0.107,2,False
+D6,FHC,4,right,-3.448,8,False
+D6,Lula I–II,5,left,-0.496,8,False
+D6,Dilma,6,left,-3.709,5,False
+D6,Temer,7,right,-1.911,3,False
+D6,Bolsonaro,8,right,-2.418,4,False
+D6,Lula III,9,left,-2.305,3,True
+D7,Sarney,1,centre,0.483,5,False
+D7,Collor,2,right,0.388,3,False
+D7,Itamar,3,centre,0.468,2,False
+D7,FHC,4,right,3.096,8,False
+D7,Lula I–II,5,left,2.477,8,False
+D7,Dilma,6,left,3.575,5,False
+D7,Temer,7,right,3.851,3,False
+D7,Bolsonaro,8,right,3.222,4,False
+D7,Lula III,9,left,3.25,3,True
+D8,Sarney,1,centre,-0.336,5,False
+D8,Collor,2,right,1.543,3,False
+D8,Itamar,3,centre,0.409,2,False
+D8,FHC,4,right,-0.391,8,False
+D8,Lula I–II,5,left,0.607,8,False
+D8,Dilma,6,left,0.884,5,False
+D8,Temer,7,right,-0.482,3,False
+D8,Bolsonaro,8,right,-1.217,4,False
+D8,Lula III,9,left,0.028,3,True
+D9,Sarney,1,centre,-1.218,5,False
+D9,Collor,2,right,0.646,3,False
+D9,Itamar,3,centre,-0.678,2,False
+D9,FHC,4,right,0.59,8,False
+D9,Lula I–II,5,left,-0.421,8,False
+D9,Dilma,6,left,0.407,5,False
+D9,Temer,7,right,0.578,3,False
+D9,Bolsonaro,8,right,1.249,4,False
+D9,Lula III,9,left,-0.603,3,True
+D10,FHC,4,right,-4.819,2,False
+D10,Lula I–II,5,left,5.638,8,False
+D10,Dilma,6,left,-8.551,5,False
+D10,Temer,7,right,6.87,3,False
+D10,Bolsonaro,8,right,-1.782,4,False
+D10,Lula III,9,left,-0.826,3,True
+E1,Collor,2,right,6.991,2,False
+E1,Itamar,3,centre,6.304,2,False
+E1,FHC,4,right,9.698,8,False
+E1,Lula I–II,5,left,9.609,8,False
+E1,Dilma,6,left,7.439,5,False
+E1,Temer,7,right,12.234,3,False
+E1,Bolsonaro,8,right,12.006,4,False
+E1,Lula III,9,left,6.582,4,True
+E1c,Itamar,3,centre,-0.254,2,False
+E1c,FHC,4,right,0.508,8,False
+E1c,Lula I–II,5,left,-0.277,8,False
+E1c,Dilma,6,left,0.023,5,False
+E1c,Temer,7,right,1.264,3,False
+E1c,Bolsonaro,8,right,-0.775,4,False
+E1c,Lula III,9,left,-0.906,4,True
+E2,Sarney,1,centre,-0.683,5,False
+E2,Collor,2,right,1.671,3,False
+E2,Itamar,3,centre,0.37,2,False
+E2,FHC,4,right,0.04,8,False
+E2,Lula I–II,5,left,-1.297,8,False
+E2,Dilma,6,left,-1.564,5,False
+E2,Temer,7,right,0.68,3,False
+E2,Bolsonaro,8,right,-0.301,4,False
+E2,Lula III,9,left,-0.673,3,True
+E3,FHC,4,right,0.443,8,False
+E3,Lula I–II,5,left,5.495,8,False
+E3,Dilma,6,left,2.204,5,False
+E3,Temer,7,right,1.25,3,False
+E3,Bolsonaro,8,right,0.065,4,False
+E3,Lula III,9,left,3.254,2,True
+E4,Dilma,6,left,0.532,2,False
+E4,Temer,7,right,0.235,3,False
+E4,Bolsonaro,8,right,-1.123,4,False
+E4,Lula III,9,left,4.216,4,True
+E5,Sarney,1,centre,0.98,5,False
+E5,Collor,2,right,-3.367,3,False
+E5,Itamar,3,centre,3.35,2,False
+E5,FHC,4,right,-0.212,8,False
+E5,Lula I–II,5,left,-0.6,8,False
+E5,Dilma,6,left,-0.28,5,False
+E5,Temer,7,right,0.667,3,False
+E5,Bolsonaro,8,right,-0.5,4,False
+E5,Lula III,9,left,-0.8,2,True
+E5L,Sarney,1,centre,59.62,5,False
+E5L,Collor,2,right,56.8,2,False
+E5L,FHC,4,right,59.171,7,False
+E5L,Lula I–II,5,left,55.514,7,False
+E5L,Dilma,6,left,52.6,5,False
+E5L,Temer,7,right,53.533,3,False
+E5L,Bolsonaro,8,right,51.775,4,False
+E5L,Lula III,9,left,50.9,2,True
+E6,Sarney,1,centre,-2.24,5,False
+E6,Collor,2,right,1.233,3,False
+E6,Itamar,3,centre,-2.775,2,False
+E6,FHC,4,right,-0.956,8,False
+E6,Lula I–II,5,left,-1.056,8,False
+E6,Dilma,6,left,-0.47,5,False
+E6,Temer,7,right,0.5,3,False
+E6,Bolsonaro,8,right,-0.5,4,False
+E6,Lula III,9,left,-0.95,2,True
+E6b,Sarney,1,centre,-2.74,5,False
+E6b,Collor,2,right,2.533,3,False
+E6b,Itamar,3,centre,-3.75,2,False
+E6b,FHC,4,right,-1.325,8,False
+E6b,Lula I–II,5,left,-1.944,8,False
+E6b,Dilma,6,left,-1.37,5,False
+E6b,Temer,7,right,0.433,3,False
+E6b,Bolsonaro,8,right,-0.85,4,False
+E6b,Lula III,9,left,-2.35,2,True
+E7a,Sarney,1,centre,-0.16,5,False
+E7a,Collor,2,right,0.3,3,False
+E7a,Itamar,3,centre,-0.225,2,False
+E7a,FHC,4,right,0.019,8,False
+E7a,Lula I–II,5,left,0.081,8,False
+E7a,Dilma,6,left,0.07,5,False
+E7a,Temer,7,right,-0.167,3,False
+E7a,Bolsonaro,8,right,0.125,4,False
+E7a,Lula III,9,left,0.15,2,True
+E7b,Sarney,1,centre,0.92,5,False
+E7b,Collor,2,right,-3.8,3,False
+E7b,Itamar,3,centre,4.125,2,False
+E7b,FHC,4,right,-0.231,8,False
+E7b,Lula I–II,5,left,-0.519,8,False
+E7b,Dilma,6,left,-0.21,5,False
+E7b,Temer,7,right,0.533,3,False
+E7b,Bolsonaro,8,right,-0.425,4,False
+E7b,Lula III,9,left,-0.75,2,True
+E8,Lula I–II,5,left,0.308,6,False
+E8,Dilma,6,left,0.853,5,False
+E8,Temer,7,right,-0.305,3,False
+E8,Bolsonaro,8,right,-0.264,4,False
+E8,Lula III,9,left,0.029,3,True
+E9,Collor,2,right,-0.031,3,False
+E9,Itamar,3,centre,0.003,2,False
+E9,FHC,4,right,0.001,8,False
+E9,Lula I–II,5,left,-0.009,8,False
+E9,Dilma,6,left,-0.002,5,False
+E9,Temer,7,right,0.008,3,False
+E9,Bolsonaro,8,right,-0.001,4,False
+E9,Lula III,9,left,0.001,3,True
+F1,Sarney,1,centre,-3.646,5,False
+F1,Collor,2,right,-4.345,3,False
+F1,Itamar,3,centre,-5.574,2,False
+F1,FHC,4,right,-6.307,8,False
+F1,Lula I–II,5,left,-5.875,8,False
+F1,Dilma,6,left,-3.104,5,False
+F1,Temer,7,right,-1.493,3,False
+F1,Bolsonaro,8,right,-0.973,4,False
+F1,Lula III,9,left,-1.205,2,True
+F2,Sarney,1,centre,0.392,5,False
+F2,Collor,2,right,0.342,3,False
+F2,Itamar,3,centre,0.377,2,False
+F2,FHC,4,right,0.388,8,False
+F2,Lula I–II,5,left,0.423,8,False
+F2,Dilma,6,left,0.265,5,False
+F2,Temer,7,right,0.176,3,False
+F2,Bolsonaro,8,right,-0.19,4,False
+F2,Lula III,9,left,0.575,2,True
+F3,FHC,4,right,3.556,3,False
+F3,Lula I–II,5,left,3.517,8,False
+F3,Dilma,6,left,3.585,5,False
+F3,Temer,7,right,3.93,3,False
+F3,Bolsonaro,8,right,4.164,4,False
+F4,FHC,4,right,4.249,8,False
+F4,Lula I–II,5,left,4.818,8,False
+F4,Dilma,6,left,5.924,5,False
+F4,Temer,7,right,6.241,3,False
+F4,Bolsonaro,8,right,5.713,4,False
+F5,FHC,4,right,0.873,2,False
+F5,Lula I–II,5,left,-0.128,8,False
+F5,Dilma,6,left,0.352,5,False
+F5,Temer,7,right,-0.585,3,False
+F5,Bolsonaro,8,right,-1.541,4,False
+F5,Lula III,9,left,-1.522,3,True
+F6,Lula I–II,5,left,21.425,2,False
+F6,Dilma,6,left,20.632,3,False
+F6,Temer,7,right,22.521,3,False
+F6,Bolsonaro,8,right,32.865,4,False
+GCC,FHC,4,right,-0.004,6,False
+GCC,Lula I–II,5,left,-0.014,8,False
+GCC,Dilma,6,left,-0.067,5,False
+GCC,Temer,7,right,-0.019,3,False
+GCC,Bolsonaro,8,right,-0.012,4,False
+GCC,Lula III,9,left,0.024,2,True
+GGE,FHC,4,right,-0.012,6,False
+GGE,Lula I–II,5,left,0.006,8,False
+GGE,Dilma,6,left,-0.019,5,False
+GGE,Temer,7,right,-0.035,3,False
+GGE,Bolsonaro,8,right,-0.007,4,False
+GGE,Lula III,9,left,0.006,2,True
+GRL,FHC,4,right,0.007,6,False
+GRL,Lula I–II,5,left,0.032,8,False
+GRL,Dilma,6,left,-0.037,5,False
+GRL,Temer,7,right,-0.059,3,False
+GRL,Bolsonaro,8,right,-0.01,4,False
+GRL,Lula III,9,left,-0.003,2,True
+GRQ,FHC,4,right,0.033,6,False
+GRQ,Lula I–II,5,left,0.012,8,False
+GRQ,Dilma,6,left,-0.057,5,False
+GRQ,Temer,7,right,-0.049,3,False
+GRQ,Bolsonaro,8,right,0.011,4,False
+GRQ,Lula III,9,left,-0.048,2,True
+GVA,FHC,4,right,0.035,6,False
+GVA,Lula I–II,5,left,0.018,8,False
+GVA,Dilma,6,left,-0.034,5,False
+GVA,Temer,7,right,-0.056,3,False
+GVA,Bolsonaro,8,right,-0.066,4,False
+GVA,Lula III,9,left,0.143,2,True
+GPV,FHC,4,right,0.061,6,False
+GPV,Lula I–II,5,left,-0.061,8,False
+GPV,Dilma,6,left,-0.069,5,False
+GPV,Temer,7,right,-0.05,3,False
+GPV,Bolsonaro,8,right,0.057,4,False
+GPV,Lula III,9,left,-0.052,2,True
+H1,Lula I–II,5,left,1.363,8,False
+H1,Dilma,6,left,0.864,5,False
+H1,Temer,7,right,2.104,3,False
+H1,Bolsonaro,8,right,1.596,4,False
+H1,Lula III,9,left,1.862,3,True
+H2,FHC,4,right,1139.386,3,False
+H2,Lula I–II,5,left,1199.858,8,False
+H2,Dilma,6,left,275.655,5,False
+H2,Temer,7,right,334.678,3,False
+H2,Bolsonaro,8,right,679.095,4,False
+H3,Sarney,1,centre,0.037,5,False
+H3,Collor,2,right,-0.01,3,False
+H3,Itamar,3,centre,0.039,2,False
+H3,FHC,4,right,0.043,8,False
+H3,Lula I–II,5,left,0.038,8,False
+H3,Dilma,6,left,0.059,5,False
+H3,Temer,7,right,-0.094,3,False
+H3,Bolsonaro,8,right,-0.002,4,False
+H3,Lula III,9,left,0.02,2,True

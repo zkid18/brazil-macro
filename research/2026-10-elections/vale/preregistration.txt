@@ -1,0 +1,33 @@
+PRE-REGISTRATION — Vale and Brazilian politics (written 2026-10-10 before computing any return, CAR or fundamental statistic)
+
+Primary hypotheses and directions
+ H1 (returns): Vale's USD total return net of its iron-ore + global-miner factor exposure is LOWER in left terms
+    (Lula I-II, Dilma, Lula III) than in right terms (Temer, Bolsonaro). Primary statistic: left-minus-right difference in mean
+    monthly factor residual (annualised x12). Pre-stated expectation: small (|gap| < 5 pp/yr) and not significant, because Vale
+    is privately controlled and ~80%+ of its variance should be iron ore / miners / Brazil beta.
+    Tests: circular block bootstrap (block 12m, 5000 draws, seed 42), two-sided; term-label permutation over the 5 full terms.
+    FHC (Apr-Dec 2002 only) is reported but EXCLUDED from the left/right test. Lula III runs to 2026-09.
+ H2 (elections): CAR[0,+1] at run-offs won by the left (2002, 2006, 2010, 2014, 2022) is negative on average and below the CAR
+    at the right win (2018). 2006 is a re-election with little surprise — expected near zero. The 4-5 Oct 2026 first round
+    (Flávio ahead) is expected to show a positive CAR, but smaller for Vale than for Petrobras and the Ibovespa.
+ H3 (interference): Vale CAR is negative around government interference events:
+      E1 Agnelli ouster: reports Bradesco/government agreed to replace him, day 0 = 2011-04-01 (window [-20,+5] since pressure leaked over March 2011)
+      E2 Lula pushes Mantega as CEO (Bloomberg Sat 2024-01-20) -> day 0 = 2024-01-22
+      E3 Board extends Bartolomeo to end-2024 instead of naming a successor / director Penido resigns (2024-03-08 / 2024-03-11) -> day 0 = 2024-03-11
+      E4 Pimenta (market-preferred, not government's pick) named CEO 2024-08-26 -> expected POSITIVE
+      E5 Mariana final settlement signed 2024-10-25 (R$170bn) -> sign ambiguous (removes overhang); reported, not counted in H3 test
+    H3 statistic: mean CAR[0,+1] of E1-E3 vs placebo distribution.
+ H4 (fundamentals): no detectable lean effect on payout, capex, net debt after regressing on the iron ore price; any gap
+    smaller than the iron-ore-explained variation. Exception expected: Lula III-era capex/dividend pressure is weak in the data.
+ H5 (contrast): share of Vale monthly USD return variance explained by global factors (iron ore + miners) > 50%, and the
+    left-minus-right residual gap for Vale is smaller in absolute value than Petrobras's (PBR vs Brent).
+
+Specification choices fixed in advance
+ - Monthly returns: log of month-end adjusted close ratio (Yahoo adjclose; dividends reinvested), USD. Iron ore: FRED PIORECRUSDM
+   is a monthly AVERAGE price; use log change of the average (acknowledged timing mismatch); robustness: lead/lag of 1 month.
+ - Factor betas estimated once on the full sample (primary) and on 2012+ (robustness).
+ - Event windows in trading days of the NYSE; election on a Sunday -> day 0 = Monday. Estimation window [-260,-30].
+ - Placebo: 1000 random days, seed 7.
+ - All numbers reported, including those against hypotheses. No term redefinition after results.
+ Known limitations stated up front: 5 full terms (2 right) -> permutation min p = 0.10; terms are confounded with the
+ commodity super-cycle (2003-2011), the China slowdown (2014-15), Brumadinho (Jan 2019, Bolsonaro term) and COVID.

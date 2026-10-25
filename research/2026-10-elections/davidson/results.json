@@ -1,0 +1,5273 @@
+{
+ "run_date": "2026-10-05",
+ "db": "/Users/zkid18/proj-personal/brazil-macro/warehouse/brazil_macro.duckdb",
+ "anchors": [
+  {
+   "anchor": "oil_production 2010 mean kbd",
+   "series": "oil_production",
+   "expected": 2137.0,
+   "got": 2137.0833,
+   "match": true
+  },
+  {
+   "anchor": "oil_production 2026 YTD mean kbd",
+   "series": "oil_production",
+   "expected": 4368.0,
+   "got": 4367.5251,
+   "match": true
+  },
+  {
+   "anchor": "oil_production Jul 2026 kbd",
+   "series": "oil_production",
+   "expected": 4601.0,
+   "got": 4601.4667,
+   "match": true
+  },
+  {
+   "anchor": "wind_solar_generation_share 2015 %",
+   "series": "wind_solar_generation_share",
+   "expected": 4.7,
+   "got": 4.6538,
+   "match": true
+  },
+  {
+   "anchor": "wind_solar_generation_share 2025 %",
+   "series": "wind_solar_generation_share",
+   "expected": 29.8,
+   "got": 29.7847,
+   "match": true
+  },
+  {
+   "anchor": "wb/EG.ELC.HYRO.ZS.BR 2010",
+   "series": "wb/EG.ELC.HYRO.ZS.BR",
+   "expected": 78.2,
+   "got": 78.2003,
+   "match": true
+  },
+  {
+   "anchor": "wb/EG.ELC.HYRO.ZS.BR 2024",
+   "series": "wb/EG.ELC.HYRO.ZS.BR",
+   "expected": 56.1,
+   "got": 56.1399,
+   "match": true
+  },
+  {
+   "anchor": "wb/ER.H2O.FWTL.ZS.BR 2010",
+   "series": "wb/ER.H2O.FWTL.ZS.BR",
+   "expected": 1.32,
+   "got": 1.3208,
+   "match": true
+  },
+  {
+   "anchor": "wb/ER.H2O.FWTL.ZS.BR 2022",
+   "series": "wb/ER.H2O.FWTL.ZS.BR",
+   "expected": 1.2,
+   "got": 1.2001,
+   "match": true
+  },
+  {
+   "anchor": "wb/AG.PRD.CREL.MT.BR 2010",
+   "series": "wb/AG.PRD.CREL.MT.BR",
+   "expected": 75200000.0,
+   "got": 75160152.06,
+   "match": true
+  },
+  {
+   "anchor": "wb/AG.PRD.CREL.MT.BR 2024",
+   "series": "wb/AG.PRD.CREL.MT.BR",
+   "expected": 139000000.0,
+   "got": 138980898.51,
+   "match": true
+  },
+  {
+   "anchor": "wb/AG.YLD.CREL.KG.BR 2010",
+   "series": "wb/AG.YLD.CREL.KG.BR",
+   "expected": 4041.0,
+   "got": 4040.6,
+   "match": true
+  },
+  {
+   "anchor": "wb/AG.YLD.CREL.KG.BR 2024",
+   "series": "wb/AG.YLD.CREL.KG.BR",
+   "expected": 5003.0,
+   "got": 5002.6,
+   "match": true
+  },
+  {
+   "anchor": "wb/GOV_WGI_CC_EST.BR 2010",
+   "series": "wb/GOV_WGI_CC_EST.BR",
+   "expected": -0.015,
+   "got": -0.0151,
+   "match": true
+  },
+  {
+   "anchor": "wb/GOV_WGI_CC_EST.BR 2024",
+   "series": "wb/GOV_WGI_CC_EST.BR",
+   "expected": -0.409,
+   "got": -0.4089,
+   "match": true
+  },
+  {
+   "anchor": "wb/NY.GDP.PCAP.PP.KD.BR 2010",
+   "series": "wb/NY.GDP.PCAP.PP.KD.BR",
+   "expected": 18062.0,
+   "got": 18062.1581,
+   "match": true
+  },
+  {
+   "anchor": "wb/NY.GDP.PCAP.PP.KD.BR 2025",
+   "series": "wb/NY.GDP.PCAP.PP.KD.BR",
+   "expected": 20025.0,
+   "got": 20024.6968,
+   "match": true
+  },
+  {
+   "anchor": "wb/PA.NUS.GDP.PLI.BR 2010",
+   "series": "wb/PA.NUS.GDP.PLI.BR",
+   "expected": 78.9,
+   "got": 78.9061,
+   "match": true
+  },
+  {
+   "anchor": "wb/PA.NUS.GDP.PLI.BR 2025",
+   "series": "wb/PA.NUS.GDP.PLI.BR",
+   "expected": 45.7,
+   "got": 45.7182,
+   "match": true
+  },
+  {
+   "anchor": "credit_gdp 2010 (Dec)",
+   "series": "credit_gdp",
+   "expected": 44.1,
+   "got": 44.08,
+   "match": true
+  },
+  {
+   "anchor": "credit_gdp 2008 (Dec)",
+   "series": "credit_gdp",
+   "expected": 39.7,
+   "got": 39.68,
+   "match": true
+  },
+  {
+   "anchor": "credit_gdp Aug 2026",
+   "series": "credit_gdp",
+   "expected": 55.4,
+   "got": 55.44,
+   "match": true
+  },
+  {
+   "anchor": "household_debt_income 2010 mean",
+   "series": "household_debt_income",
+   "expected": 31.7,
+   "got": 31.7342,
+   "match": true
+  },
+  {
+   "anchor": "household_debt_income 2026 YTD mean",
+   "series": "household_debt_income",
+   "expected": 49.8,
+   "got": 49.8271,
+   "match": true
+  },
+  {
+   "anchor": "real_policy_rate 2010 mean",
+   "series": "real_policy_rate",
+   "expected": 5.0,
+   "got": 5.0132,
+   "match": true
+  },
+  {
+   "anchor": "real_policy_rate 2026 YTD mean",
+   "series": "real_policy_rate",
+   "expected": 10.4,
+   "got": 10.3837,
+   "match": true
+  },
+  {
+   "anchor": "Gini 2024",
+   "series": "wb/SI.POV.GINI.BR",
+   "expected": 50.3,
+   "got": 50.3,
+   "match": true
+  },
+  {
+   "anchor": "Gini 2008",
+   "series": "wb/SI.POV.GINI.BR",
+   "expected": 54.0,
+   "got": 54.0,
+   "match": true
+  },
+  {
+   "anchor": "Ibovespa USD 2025 return %",
+   "series": "ibovespa_usd",
+   "expected": 50.8,
+   "got": 50.7504,
+   "match": true
+  },
+  {
+   "anchor": "brl_usd year-end 2024",
+   "series": "brl_usd",
+   "expected": 6.192,
+   "got": 6.1923,
+   "match": true
+  },
+  {
+   "anchor": "brl_usd year-end 2025",
+   "series": "brl_usd",
+   "expected": 5.502,
+   "got": 5.5024,
+   "match": true
+  },
+  {
+   "anchor": "BRL appreciation 2025 %",
+   "series": "brl_usd",
+   "expected": 12.5,
+   "got": 12.5382,
+   "match": true
+  },
+  {
+   "anchor": "gold reserves 2010 $bn",
+   "series": "wb/FI.RES.TOTL.CD.BR-XGLD",
+   "expected": 1.5,
+   "got": 1.5186,
+   "match": true
+  },
+  {
+   "anchor": "gold reserves 2025 $bn",
+   "series": "wb/FI.RES.TOTL.CD.BR-XGLD",
+   "expected": 24.2,
+   "got": 24.2163,
+   "match": true
+  },
+  {
+   "anchor": "gold share of reserves 2025 %",
+   "series": "wb/FI.RES.TOTL.CD.BR-XGLD",
+   "expected": 6.8,
+   "got": 6.7546,
+   "match": true
+  },
+  {
+   "anchor": "Findex account 2011",
+   "series": "wb/account.t.d.BRA",
+   "expected": 55.9,
+   "got": 55.8604,
+   "match": true
+  },
+  {
+   "anchor": "Findex account 2024",
+   "series": "wb/account.t.d.BRA",
+   "expected": 86.4,
+   "got": 86.3812,
+   "match": true
+  },
+  {
+   "anchor": "Pix count 2025 bn",
+   "series": "pix_transactions_count",
+   "expected": 71.3,
+   "got": 71.3201,
+   "match": true
+  },
+  {
+   "anchor": "Pix per person 2025",
+   "series": "pix_transactions_count/population",
+   "expected": 326.0,
+   "got": 325.6194,
+   "match": true
+  }
+ ],
+ "s2_comparative": {
+  "price_level_us100": {
+   "value": {
+    "1990": 38.5941,
+    "2000": 41.4281,
+    "2010": 78.9061,
+    "2019": 56.1912,
+    "2025": 45.7182
+   },
+   "series": [
+    {
+     "series_id": "wb/PA.NUS.GDP.PLI.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "equity_usd_index_yearend": {
+   "value": {
+    "1994": 14.0541,
+    "2000": 19.4416,
+    "2010": 104.9153,
+    "2019": 71.0691,
+    "2025": 75.9301
+   },
+   "series": [
+    {
+     "series_id": "wb/DSTKMKTXD_M.BRA",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT EXTRACT(year FROM date)::INT, arg_max(value,date) FROM v_observations WHERE series_id='wb/DSTKMKTXD_M.BRA' GROUP BY 1"
+  },
+  "reer": {
+   "value": {
+    "1990": 114.7468,
+    "2000": 76.4712,
+    "2010": 100.0,
+    "2019": 69.8696,
+    "2025": 59.083
+   },
+   "series": [
+    {
+     "series_id": "wb/PX.REX.REER.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "gdp_pc_ppp": {
+   "value": {
+    "1990": 12633.2885,
+    "2000": 14005.3472,
+    "2010": 18062.1581,
+    "2019": 18018.6209,
+    "2025": 20024.6968,
+    "cagr_2000_2010": 2.5764,
+    "cagr_2010_2025": 0.69,
+    "cagr_1990_2010": 1.8035
+   },
+   "series": [
+    {
+     "series_id": "wb/NY.GDP.PCAP.PP.KD.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "pre_post_panel": {
+   "real GDP growth %": {
+    "value": {
+     "pre_mean": 3.1681,
+     "post_mean": 1.3351,
+     "diff_post_minus_pre": -1.833,
+     "ci95": [
+      -3.9386,
+      -0.3622
+     ],
+     "post_mean_ex2020": 1.6645,
+     "n_pre": 20,
+     "n_post": 15,
+     "post2012_mean": 1.087
+    },
+    "series": [
+     {
+      "series_id": "wb/NY.GDP.MKTP.KD.ZG.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "GDP pc PPP growth %": {
+    "value": {
+     "pre_mean": 1.8309,
+     "post_mean": 0.7254,
+     "diff_post_minus_pre": -1.1054,
+     "ci95": [
+      -3.3414,
+      0.496
+     ],
+     "post_mean_ex2020": 1.0512,
+     "n_pre": 20,
+     "n_post": 15,
+     "post2012_mean": 0.5117
+    },
+    "series": [
+     {
+      "series_id": "wb/NY.GDP.PCAP.PP.KD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "output per worker growth %": {
+    "value": {
+     "pre_mean": 1.1479,
+     "post_mean": 0.397,
+     "diff_post_minus_pre": -0.7508,
+     "ci95": [
+      -2.3173,
+      0.3797
+     ],
+     "post_mean_ex2020": 0.0771,
+     "n_pre": 19,
+     "n_post": 15,
+     "post2012_mean": 0.1223
+    },
+    "series": [
+     {
+      "series_id": "ilostat/GDP_205U_NOC_NB.BRA",
+      "source": "ILO (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "GFCF % GDP (level)": {
+    "value": {
+     "pre_mean": 18.5015,
+     "post_mean": 17.5443,
+     "diff_post_minus_pre": -0.9572,
+     "ci95": [
+      -2.667,
+      0.6687
+     ],
+     "post_mean_ex2020": 17.6145,
+     "n_pre": 20,
+     "n_post": 15,
+     "post2012_mean": 17.0645
+    },
+    "series": [
+     {
+      "series_id": "wb/NE.GDI.FTOT.ZS.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "cereal yield growth %": {
+    "value": {
+     "pre_mean": 4.6532,
+     "post_mean": 2.1338,
+     "diff_post_minus_pre": -2.5194,
+     "ci95": [
+      -6.407,
+      2.1581
+     ],
+     "post_mean_ex2020": 2.3934,
+     "n_pre": 20,
+     "n_post": 14,
+     "post2012_mean": 1.3669
+    },
+    "series": [
+     {
+      "series_id": "wb/AG.YLD.CREL.KG.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "oil output growth %": {
+    "value": {
+     "pre_mean": 5.4391,
+     "post_mean": 4.1176,
+     "diff_post_minus_pre": -1.3215,
+     "ci95": [
+      -3.4135,
+      1.2612
+     ],
+     "post_mean_ex2020": 4.0377,
+     "n_pre": 10,
+     "n_post": 15,
+     "post2012_mean": 4.7036
+    },
+    "series": [
+     {
+      "series_id": "oil_production",
+      "source": "IPEAData",
+      "last_date": "2026-07-01"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   }
+  },
+  "note": "No peer countries in warehouse; US comparison only via US-relative WB series (PLI, US=100) and the USD equity index. Convergence-to-US GDP ratio cannot be computed in-warehouse."
+ },
+ "s1_evidence": {
+  "E1": {
+   "value": {
+    "trend_2000_2010": 5.1223,
+    "trend_2011_2025": 4.1004,
+    "net_energy_imports_2000": 23.6412,
+    "net_energy_imports_latest": -13.6809,
+    "latest_year": 2023
+   },
+   "series": [
+    {
+     "series_id": "oil_production",
+     "source": "IPEAData",
+     "last_date": "2026-07-01"
+    },
+    {
+     "series_id": "wb/EG.IMP.CONS.ZS.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2023-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "E2": {
+   "value": {
+    "renew_elec_2010": 84.7242,
+    "latest": 77.3753,
+    "latest_year": 2021,
+    "trend_post2010": -0.0907
+   },
+   "series": [
+    {
+     "series_id": "wb/EG.ELC.RNEW.ZS.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2021-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "W1": {
+   "value": {
+    "withdrawal_pct_2010": 1.3208,
+    "latest": 1.2001,
+    "latest_year": 2022,
+    "slope_pts_per_yr_2000+": 0.0098
+   },
+   "series": [
+    {
+     "series_id": "wb/ER.H2O.FWTL.ZS.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2022-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "W3_context": {
+   "value": {
+    "forest_1990": 5888980.0,
+    "forest_latest": 4929787.518,
+    "forest_change_pct": -16.2879,
+    "spei_mean_2011_2023": -1.1234,
+    "spei_mean_1991_2010": 0.1799
+   },
+   "series": [
+    {
+     "series_id": "wb/AG.LND.FRST.K2.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2023-12-31"
+    },
+    {
+     "series_id": "wb/EN.CLC.SPEI.XD.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2023-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year",
+   "note": "context only (not a note claim; not scored)"
+  },
+  "A1": {
+   "value": {
+    "1977_2010": {
+     "prod_growth_pct": 143.1279,
+     "area_share": -0.1516,
+     "yield_share": 1.1516,
+     "prod_start_Mt": 30.9138,
+     "prod_end_Mt": 75.1602
+    },
+    "2010_2024": {
+     "prod_growth_pct": 84.913,
+     "area_share": 0.6526,
+     "yield_share": 0.3474,
+     "prod_start_Mt": 75.1602,
+     "prod_end_Mt": 138.9809
+    },
+    "1977_2024": {
+     "prod_growth_pct": 349.5751,
+     "area_share": 0.1772,
+     "yield_share": 0.8228,
+     "prod_start_Mt": 30.9138,
+     "prod_end_Mt": 138.9809
+    }
+   },
+   "series": [
+    {
+     "series_id": "wb/AG.PRD.CREL.MT.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/AG.LND.CREL.HA.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/AG.YLD.CREL.KG.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "A2": {
+   "value": {
+    "soy_exports": {
+     "2014_usd_bn": 23.2731,
+     "2025_usd_bn": 43.5316,
+     "growth_pct": 87.0471
+    },
+    "beef_exports": {
+     "2014_usd_bn": 5.6642,
+     "2025_usd_bn": 16.5483,
+     "growth_pct": 192.1532
+    },
+    "coffee_exports": {
+     "2014_usd_bn": 6.0518,
+     "2025_usd_bn": 14.9205,
+     "growth_pct": 146.5467
+    },
+    "sugar_exports": {
+     "2014_usd_bn": 9.4547,
+     "2025_usd_bn": 14.1059,
+     "growth_pct": 49.1934
+    }
+   },
+   "series": [
+    {
+     "series_id": "soy_exports",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "beef_exports",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "coffee_exports",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "sugar_exports",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "A4": {
+   "value": {
+    "2014_usd_bn": 4.6044,
+    "2025_usd_bn": 7.817,
+    "trend_pct_yr": 9.5919
+   },
+   "series": [
+    {
+     "series_id": "fertilizer_imports",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "C1": {
+   "value": {
+    "bcb_2000": 27.26,
+    "bcb_2004": 25.47,
+    "bcb_2008": 39.68,
+    "bcb_latest": 55.44,
+    "bcb_latest_date": "2026-08-01",
+    "wb_2008": 45.7823,
+    "wb_2025": 75.103
+   },
+   "series": [
+    {
+     "series_id": "credit_gdp",
+     "source": "Banco Central (SGS)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "wb/FS.AST.PRVT.GD.ZS.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "C3": {
+   "value": {
+    "selic_apr2026_end": 14.5,
+    "ipca12m_apr2026": 4.39,
+    "real_policy_apr2026": 10.6835,
+    "real_policy_latest": 9.2718,
+    "real_latest_date": "2026-09-01",
+    "ipca12m_2026_range": [
+     3.81,
+     4.72
+    ],
+    "wb_lending_rate_2025": 45.3333,
+    "wb_spread_2024": 32.5213
+   },
+   "series": [
+    {
+     "series_id": "real_policy_rate",
+     "source": "Derived",
+     "last_date": "2026-09-01"
+    },
+    {
+     "series_id": "selic_target",
+     "source": "Banco Central (SGS)",
+     "last_date": "2026-10-03"
+    },
+    {
+     "series_id": "ipca_12m",
+     "source": "Banco Central (SGS)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "wb/FR.INR.LEND.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    },
+    {
+     "series_id": "wb/FR.INR.LNDP.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    }
+   ]
+  },
+  "C5": {
+   "value": {
+    "2010": {
+     "gold_usd_bn": 1.5186,
+     "share_pct": 0.5262
+    },
+    "2020": {
+     "gold_usd_bn": 4.0957,
+     "share_pct": 1.1517
+    },
+    "2024": {
+     "gold_usd_bn": 10.8759,
+     "share_pct": 3.2984
+    },
+    "2025": {
+     "gold_usd_bn": 24.2163,
+     "share_pct": 6.7546
+    }
+   },
+   "series": [
+    {
+     "series_id": "wb/FI.RES.TOTL.CD.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    },
+    {
+     "series_id": "wb/FI.RES.XGLD.CD.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "I2": {
+   "value": {
+    "pre_mean": {
+     "wb/GOV_WGI_CC_EST.BR": -0.0375,
+     "wb/GOV_WGI_GE_EST.BR": -0.1647,
+     "wb/GOV_WGI_RL_EST.BR": -0.2936,
+     "wb/GOV_WGI_RQ_EST.BR": 0.0761,
+     "wb/GOV_WGI_VA_EST.BR": 0.491,
+     "wb/GOV_WGI_PV_EST.BR": -0.0311
+    },
+    "post_mean": {
+     "wb/GOV_WGI_CC_EST.BR": -0.2946,
+     "wb/GOV_WGI_GE_EST.BR": -0.0911,
+     "wb/GOV_WGI_RL_EST.BR": -0.2863,
+     "wb/GOV_WGI_RQ_EST.BR": -0.086,
+     "wb/GOV_WGI_VA_EST.BR": 0.33,
+     "wb/GOV_WGI_PV_EST.BR": -0.4392
+    },
+    "cc_2010": -0.0151,
+    "cc_2024": -0.4089,
+    "rl_2010": -0.0414,
+    "rl_2024": -0.4462
+   },
+   "series": [
+    {
+     "series_id": "wb/GOV_WGI_CC_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/GOV_WGI_GE_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/GOV_WGI_RL_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/GOV_WGI_RQ_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/GOV_WGI_VA_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    },
+    {
+     "series_id": "wb/GOV_WGI_PV_EST.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2024-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  },
+  "I6": {
+   "value": {
+    "gfcf_mean_1996_2010": 18.212,
+    "gfcf_mean_2011_2025": 17.5443,
+    "diff": -0.6677,
+    "diff_ci95": [
+     -2.2788,
+     1.1655
+    ],
+    "gfcf_2010": 20.5347,
+    "gfcf_2025": 16.839
+   },
+   "series": [
+    {
+     "series_id": "wb/NE.GDI.FTOT.ZS.BR",
+     "source": "World Bank (Dateno)",
+     "last_date": "2025-12-31"
+    }
+   ],
+   "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+  }
+ },
+ "s3": {
+  "3a": {
+   "tot_validation": {
+    "value": {
+     "rho": 1.0,
+     "n": 20,
+     "pass": true
+    },
+    "series": [
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/TT.PRI.MRCH.XD.WD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     }
+    ],
+    "note": "annual mean of wb/TOT.BRA vs WB net barter ToT index, 2005-2024"
+   },
+   "corr_ibov_brent": {
+    "value": {
+     "full": {
+      "n": 320,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": 0.3436,
+      "spearman": 0.2439,
+      "ci95": [
+       0.1154,
+       0.5374
+      ],
+      "p_perm": 0.0005
+     },
+     "pre": {
+      "n": 131,
+      "start": "2000-02-01",
+      "end": "2010-12-01",
+      "pearson": 0.2177,
+      "spearman": 0.1762,
+      "ci95": [
+       -0.093,
+       0.5049
+      ],
+      "p_perm": 0.0125
+     },
+     "post": {
+      "n": 189,
+      "start": "2011-01-01",
+      "end": "2026-09-01",
+      "pearson": 0.4439,
+      "spearman": 0.2868,
+      "ci95": [
+       0.1492,
+       0.6473
+      ],
+      "p_perm": 0.0005
+     },
+     "pre2012": {
+      "n": 155,
+      "start": "2000-02-01",
+      "end": "2012-12-01",
+      "pearson": 0.2353,
+      "spearman": 0.2058,
+      "ci95": [
+       -0.0292,
+       0.51
+      ],
+      "p_perm": 0.0015
+     },
+     "post2012": {
+      "n": 165,
+      "start": "2013-01-01",
+      "end": "2026-09-01",
+      "pearson": 0.4535,
+      "spearman": 0.2753,
+      "ci95": [
+       0.1274,
+       0.6639
+      ],
+      "p_perm": 0.0005
+     },
+     "ex2020": {
+      "n": 308,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": 0.2232,
+      "spearman": 0.2031,
+      "ci95": [
+       0.0508,
+       0.4018
+      ],
+      "p_perm": 0.001
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "corr_brl_brent": {
+    "value": {
+     "full": {
+      "n": 320,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": -0.2275,
+      "spearman": -0.2035,
+      "ci95": [
+       -0.3734,
+       -0.0732
+      ],
+      "p_perm": 0.001
+     },
+     "pre": {
+      "n": 131,
+      "start": "2000-02-01",
+      "end": "2010-12-01",
+      "pearson": -0.1507,
+      "spearman": -0.1567,
+      "ci95": [
+       -0.4309,
+       0.1159
+      ],
+      "p_perm": 0.079
+     },
+     "post": {
+      "n": 189,
+      "start": "2011-01-01",
+      "end": "2026-09-01",
+      "pearson": -0.2849,
+      "spearman": -0.2237,
+      "ci95": [
+       -0.4202,
+       -0.1045
+      ],
+      "p_perm": 0.0005
+     },
+     "pre2012": {
+      "n": 155,
+      "start": "2000-02-01",
+      "end": "2012-12-01",
+      "pearson": -0.1716,
+      "spearman": -0.1873,
+      "ci95": [
+       -0.4412,
+       0.0489
+      ],
+      "p_perm": 0.036
+     },
+     "post2012": {
+      "n": 165,
+      "start": "2013-01-01",
+      "end": "2026-09-01",
+      "pearson": -0.2864,
+      "spearman": -0.1996,
+      "ci95": [
+       -0.4427,
+       -0.0875
+      ],
+      "p_perm": 0.0005
+     },
+     "ex2020": {
+      "n": 308,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": -0.1605,
+      "spearman": -0.1844,
+      "ci95": [
+       -0.3221,
+       -0.023
+      ],
+      "p_perm": 0.0075
+     }
+    },
+    "series": [
+     {
+      "series_id": "brl_usd",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "brl_usd is BRL per USD: negative rho = BRL strengthens when Brent rises"
+   },
+   "corr_ibov_tot": {
+    "value": {
+     "full": {
+      "n": 311,
+      "start": "2000-02-01",
+      "end": "2025-12-01",
+      "pearson": 0.051,
+      "spearman": 0.0353,
+      "ci95": [
+       -0.0613,
+       0.1556
+      ],
+      "p_perm": 0.3628
+     },
+     "pre": {
+      "n": 131,
+      "start": "2000-02-01",
+      "end": "2010-12-01",
+      "pearson": 0.0644,
+      "spearman": 0.0619,
+      "ci95": [
+       -0.0495,
+       0.1451
+      ],
+      "p_perm": 0.4373
+     },
+     "post": {
+      "n": 180,
+      "start": "2011-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.0331,
+      "spearman": 0.0009,
+      "ci95": [
+       -0.1414,
+       0.2051
+      ],
+      "p_perm": 0.6617
+     },
+     "pre2012": {
+      "n": 155,
+      "start": "2000-02-01",
+      "end": "2012-12-01",
+      "pearson": 0.0495,
+      "spearman": 0.0451,
+      "ci95": [
+       -0.0488,
+       0.1465
+      ],
+      "p_perm": 0.5532
+     },
+     "post2012": {
+      "n": 156,
+      "start": "2013-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.0513,
+      "spearman": 0.0245,
+      "ci95": [
+       -0.1418,
+       0.2321
+      ],
+      "p_perm": 0.5322
+     },
+     "ex2020": {
+      "n": 299,
+      "start": "2000-02-01",
+      "end": "2025-12-01",
+      "pearson": 0.0303,
+      "spearman": 0.0482,
+      "ci95": [
+       -0.0776,
+       0.1356
+      ],
+      "p_perm": 0.5982
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "corr_brl_tot": {
+    "value": {
+     "full": {
+      "n": 311,
+      "start": "2000-02-01",
+      "end": "2025-12-01",
+      "pearson": -0.0341,
+      "spearman": -0.0525,
+      "ci95": [
+       -0.1295,
+       0.0507
+      ],
+      "p_perm": 0.5547
+     },
+     "pre": {
+      "n": 131,
+      "start": "2000-02-01",
+      "end": "2010-12-01",
+      "pearson": -0.0809,
+      "spearman": -0.0956,
+      "ci95": [
+       -0.1578,
+       0.0112
+      ],
+      "p_perm": 0.3428
+     },
+     "post": {
+      "n": 180,
+      "start": "2011-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.0124,
+      "spearman": -0.0039,
+      "ci95": [
+       -0.1428,
+       0.1387
+      ],
+      "p_perm": 0.8741
+     },
+     "pre2012": {
+      "n": 155,
+      "start": "2000-02-01",
+      "end": "2012-12-01",
+      "pearson": -0.0731,
+      "spearman": -0.0871,
+      "ci95": [
+       -0.1549,
+       0.0054
+      ],
+      "p_perm": 0.3833
+     },
+     "post2012": {
+      "n": 156,
+      "start": "2013-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.0091,
+      "spearman": 0.0018,
+      "ci95": [
+       -0.1543,
+       0.1484
+      ],
+      "p_perm": 0.9065
+     },
+     "ex2020": {
+      "n": 299,
+      "start": "2000-02-01",
+      "end": "2025-12-01",
+      "pearson": -0.0276,
+      "spearman": -0.0681,
+      "ci95": [
+       -0.1315,
+       0.0618
+      ],
+      "p_perm": 0.6232
+     }
+    },
+    "series": [
+     {
+      "series_id": "brl_usd",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "ols_ibov_tot_brent": {
+    "value": {
+     "beta_tot": 0.0597,
+     "beta_tot_ci": [
+      -0.3893,
+      0.5657
+     ],
+     "beta_brent": 0.2816,
+     "beta_brent_ci": [
+      0.1135,
+      0.3954
+     ],
+     "r2": 0.1223,
+     "n": 311,
+     "start": "2000-02-01",
+     "end": "2025-12-01",
+     "r2_pre": 0.0523,
+     "r2_post": 0.2141
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "interaction_ibov_tot": {
+    "value": {
+     "beta_x": 0.3455,
+     "beta_x_ci": [
+      -0.2528,
+      0.9396
+     ],
+     "beta_post_x": -0.2096,
+     "beta_post_x_ci": [
+      -1.0809,
+      0.8093
+     ],
+     "r2": 0.0067,
+     "n": 311
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ]
+   },
+   "interaction_ibov_brent": {
+    "value": {
+     "beta_x": 0.2118,
+     "beta_x_ci": [
+      -0.1127,
+      0.4746
+     ],
+     "beta_post_x": 0.0749,
+     "beta_post_x_ci": [
+      -0.2311,
+      0.4035
+     ],
+     "r2": 0.1224,
+     "n": 320
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ]
+   },
+   "rolling60_ibov_brent": {
+    "value": {
+     "min": -0.1448,
+     "max": 0.6692,
+     "last": 0.1577,
+     "last_date": "2026-09-01",
+     "mean_pre": 0.1696,
+     "mean_post": 0.4662
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ]
+   },
+   "ccf_gdpq_tot": {
+    "value": {
+     "ccf": {
+      "full": {
+       "0": {
+        "rho": 0.3781,
+        "n": 139
+       },
+       "1": {
+        "rho": 0.0358,
+        "n": 138
+       },
+       "2": {
+        "rho": -0.0218,
+        "n": 137
+       },
+       "3": {
+        "rho": 0.0072,
+        "n": 136
+       },
+       "4": {
+        "rho": 0.08,
+        "n": 135
+       }
+      },
+      "pre": {
+       "0": {
+        "rho": 0.4553,
+        "n": 79
+       },
+       "1": {
+        "rho": 0.0473,
+        "n": 78
+       },
+       "2": {
+        "rho": -0.148,
+        "n": 77
+       },
+       "3": {
+        "rho": -0.0296,
+        "n": 76
+       },
+       "4": {
+        "rho": 0.0444,
+        "n": 75
+       }
+      },
+      "post": {
+       "0": {
+        "rho": 0.2801,
+        "n": 60
+       },
+       "1": {
+        "rho": -0.0171,
+        "n": 59
+       },
+       "2": {
+        "rho": 0.0438,
+        "n": 58
+       },
+       "3": {
+        "rho": 0.0041,
+        "n": 57
+       },
+       "4": {
+        "rho": 0.0957,
+        "n": 56
+       }
+      }
+     },
+     "lag0": {
+      "full": {
+       "n": 139,
+       "start": "1991-04-01",
+       "end": "2025-10-01",
+       "pearson": 0.3781,
+       "spearman": 0.3235,
+       "ci95": [
+        0.1719,
+        0.4967
+       ],
+       "p_perm": 0.0005
+      },
+      "pre": {
+       "n": 79,
+       "start": "1991-04-01",
+       "end": "2010-10-01",
+       "pearson": 0.4553,
+       "spearman": 0.3877,
+       "ci95": [
+        0.1257,
+        0.6012
+       ],
+       "p_perm": 0.0005
+      },
+      "post": {
+       "n": 60,
+       "start": "2011-01-01",
+       "end": "2025-10-01",
+       "pearson": 0.2801,
+       "spearman": 0.1748,
+       "ci95": [
+        -0.0326,
+        0.4593
+       ],
+       "p_perm": 0.0345
+      },
+      "pre2012": {
+       "n": 87,
+       "start": "1991-04-01",
+       "end": "2012-10-01",
+       "pearson": 0.4683,
+       "spearman": 0.3972,
+       "ci95": [
+        0.1591,
+        0.5985
+       ],
+       "p_perm": 0.0005
+      },
+      "post2012": {
+       "n": 52,
+       "start": "2013-01-01",
+       "end": "2025-10-01",
+       "pearson": 0.2647,
+       "spearman": 0.1322,
+       "ci95": [
+        -0.1284,
+        0.4562
+       ],
+       "p_perm": 0.058
+      },
+      "ex2020": {
+       "n": 135,
+       "start": "1991-04-01",
+       "end": "2025-10-01",
+       "pearson": 0.3736,
+       "spearman": 0.2939,
+       "ci95": [
+        0.1089,
+        0.5138
+       ],
+       "p_perm": 0.0005
+      }
+     }
+    },
+    "series": [
+     {
+      "series_id": "wb/NYGDPMKTPSAKD_Q.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "note": "rho(dlog ToT_t, dlog GDP_{t+k}), k quarters"
+   },
+   "annual_gdp_tot": {
+    "value": {
+     "full": {
+      "n": 34,
+      "start": "1992",
+      "end": "2025",
+      "pearson": 0.5952,
+      "spearman": 0.6425,
+      "ci95": [
+       0.394,
+       0.7938
+      ],
+      "p_perm": 0.0005
+     },
+     "pre": {
+      "n": 19,
+      "start": "1992",
+      "end": "2010",
+      "pearson": 0.7111,
+      "spearman": 0.7491,
+      "ci95": [
+       0.5231,
+       0.8224
+      ],
+      "p_perm": 0.001
+     },
+     "post": {
+      "n": 15,
+      "start": "2011",
+      "end": "2025",
+      "pearson": 0.4329,
+      "spearman": 0.4143,
+      "ci95": [
+       0.0437,
+       0.694
+      ],
+      "p_perm": 0.1054
+     },
+     "pre2012": {
+      "n": 21,
+      "start": "1992",
+      "end": "2012",
+      "pearson": 0.7132,
+      "spearman": 0.7377,
+      "ci95": [
+       0.5714,
+       0.8675
+      ],
+      "p_perm": 0.0005
+     },
+     "post2012": {
+      "n": 13,
+      "start": "2013",
+      "end": "2025",
+      "pearson": 0.4122,
+      "spearman": 0.3352,
+      "ci95": [
+       -0.106,
+       0.7022
+      ],
+      "p_perm": 0.1629
+     },
+     "ex2020": {
+      "n": 33,
+      "start": "1992",
+      "end": "2025",
+      "pearson": 0.6369,
+      "spearman": 0.6574,
+      "ci95": [
+       0.4479,
+       0.8182
+      ],
+      "p_perm": 0.0005
+     }
+    },
+    "series": [
+     {
+      "series_id": "wb/NY.GDP.MKTP.KD.ZG.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ]
+   },
+   "ibc_yoy_tot_yoy": {
+    "value": {
+     "full": {
+      "n": 264,
+      "start": "2004-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.4665,
+      "spearman": 0.4347,
+      "ci95": [
+       0.1765,
+       0.6746
+      ],
+      "p_perm": 0.0005
+     },
+     "pre": {
+      "n": 84,
+      "start": "2004-01-01",
+      "end": "2010-12-01",
+      "pearson": 0.6138,
+      "spearman": 0.5303,
+      "ci95": [
+       0.0184,
+       0.828
+      ],
+      "p_perm": 0.0005
+     },
+     "post": {
+      "n": 180,
+      "start": "2011-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.3532,
+      "spearman": 0.2595,
+      "ci95": [
+       -0.0811,
+       0.5996
+      ],
+      "p_perm": 0.0005
+     },
+     "pre2012": {
+      "n": 108,
+      "start": "2004-01-01",
+      "end": "2012-12-01",
+      "pearson": 0.6095,
+      "spearman": 0.5823,
+      "ci95": [
+       0.2541,
+       0.8
+      ],
+      "p_perm": 0.0005
+     },
+     "post2012": {
+      "n": 156,
+      "start": "2013-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.3343,
+      "spearman": 0.206,
+      "ci95": [
+       -0.0574,
+       0.6086
+      ],
+      "p_perm": 0.0005
+     },
+     "ex2020": {
+      "n": 252,
+      "start": "2004-01-01",
+      "end": "2025-12-01",
+      "pearson": 0.4915,
+      "spearman": 0.4501,
+      "ci95": [
+       0.1856,
+       0.7087
+      ],
+      "p_perm": 0.0005
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibc_br",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-07-01"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "note": "YoY on YoY: overlapping windows inflate apparent rho; block bootstrap partly corrects"
+   }
+  },
+  "3b": {
+   "ccf_real_rate": {
+    "value": {
+     "household_credit_growth": {
+      "lag_most_negative_6_18": 10,
+      "rho": -0.1863,
+      "n": 222,
+      "ci95": [
+       -0.641,
+       0.1237
+      ],
+      "lag_max_abs": 10,
+      "rho_max_abs": -0.1863,
+      "pre_rho": 0.3116,
+      "pre_n": 44,
+      "post_rho": -0.4877,
+      "post_n": 178,
+      "post_ci": [
+       -0.772,
+       -0.065
+      ],
+      "ex2020_rho": -0.1466,
+      "expost_rate_rho_same_lag": -0.1858,
+      "ccf": {
+       "-12": 0.074,
+       "-11": 0.091,
+       "-10": 0.108,
+       "-9": 0.123,
+       "-8": 0.133,
+       "-7": 0.14,
+       "-6": 0.141,
+       "-5": 0.134,
+       "-4": 0.119,
+       "-3": 0.1,
+       "-2": 0.077,
+       "-1": 0.05,
+       "0": 0.022,
+       "1": -0.006,
+       "2": -0.036,
+       "3": -0.064,
+       "4": -0.091,
+       "5": -0.116,
+       "6": -0.139,
+       "7": -0.159,
+       "8": -0.173,
+       "9": -0.183,
+       "10": -0.186,
+       "11": -0.186,
+       "12": -0.181,
+       "13": -0.173,
+       "14": -0.161,
+       "15": -0.147,
+       "16": -0.128,
+       "17": -0.103,
+       "18": -0.076,
+       "19": -0.045,
+       "20": -0.012,
+       "21": 0.025,
+       "22": 0.065,
+       "23": 0.107,
+       "24": 0.149
+      }
+     },
+     "corporate_credit_growth": {
+      "lag_most_negative_6_18": 7,
+      "rho": -0.1778,
+      "n": 222,
+      "ci95": [
+       -0.5933,
+       0.0837
+      ],
+      "lag_max_abs": 24,
+      "rho_max_abs": 0.201,
+      "pre_rho": 0.1295,
+      "pre_n": 41,
+      "post_rho": -0.4248,
+      "post_n": 181,
+      "post_ci": [
+       -0.7393,
+       -0.0607
+      ],
+      "ex2020_rho": -0.1562,
+      "expost_rate_rho_same_lag": -0.1485,
+      "ccf": {
+       "-12": -0.024,
+       "-11": -0.014,
+       "-10": -0.002,
+       "-9": 0.008,
+       "-8": 0.015,
+       "-7": 0.02,
+       "-6": 0.021,
+       "-5": 0.014,
+       "-4": -0.0,
+       "-3": -0.017,
+       "-2": -0.036,
+       "-1": -0.057,
+       "0": -0.078,
+       "1": -0.098,
+       "2": -0.118,
+       "3": -0.136,
+       "4": -0.151,
+       "5": -0.163,
+       "6": -0.173,
+       "7": -0.178,
+       "8": -0.178,
+       "9": -0.173,
+       "10": -0.162,
+       "11": -0.15,
+       "12": -0.135,
+       "13": -0.117,
+       "14": -0.098,
+       "15": -0.077,
+       "16": -0.053,
+       "17": -0.025,
+       "18": 0.003,
+       "19": 0.032,
+       "20": 0.063,
+       "21": 0.096,
+       "22": 0.131,
+       "23": 0.166,
+       "24": 0.201
+      }
+     },
+     "credit_gdp_d12": {
+      "lag_most_negative_6_18": 6,
+      "rho": -0.1858,
+      "n": 291,
+      "ci95": [
+       -0.4697,
+       0.1538
+      ],
+      "lag_max_abs": 1,
+      "rho_max_abs": -0.2323,
+      "pre_rho": -0.598,
+      "pre_n": 109,
+      "post_rho": -0.3508,
+      "post_n": 182,
+      "post_ci": [
+       -0.6586,
+       0.0282
+      ],
+      "ex2020_rho": -0.0839,
+      "expost_rate_rho_same_lag": -0.1099,
+      "ccf": {
+       "-12": -0.101,
+       "-11": -0.109,
+       "-10": -0.117,
+       "-9": -0.129,
+       "-8": -0.144,
+       "-7": -0.16,
+       "-6": -0.174,
+       "-5": -0.184,
+       "-4": -0.192,
+       "-3": -0.203,
+       "-2": -0.215,
+       "-1": -0.225,
+       "0": -0.231,
+       "1": -0.232,
+       "2": -0.232,
+       "3": -0.226,
+       "4": -0.215,
+       "5": -0.202,
+       "6": -0.186,
+       "7": -0.175,
+       "8": -0.163,
+       "9": -0.145,
+       "10": -0.129,
+       "11": -0.113,
+       "12": -0.097,
+       "13": -0.082,
+       "14": -0.067,
+       "15": -0.053,
+       "16": -0.038,
+       "17": -0.021,
+       "18": -0.003,
+       "19": 0.016,
+       "20": 0.037,
+       "21": 0.056,
+       "22": 0.081,
+       "23": 0.104,
+       "24": 0.129
+      }
+     },
+     "ibc_br_yoy": {
+      "lag_most_negative_6_18": 6,
+      "rho": 0.1279,
+      "n": 271,
+      "ci95": [
+       -0.1515,
+       0.3679
+      ],
+      "lag_max_abs": 22,
+      "rho_max_abs": 0.3401,
+      "pre_rho": -0.1619,
+      "pre_n": 90,
+      "post_rho": -0.083,
+      "post_n": 181,
+      "post_ci": [
+       -0.4323,
+       0.2627
+      ],
+      "ex2020_rho": 0.1753,
+      "expost_rate_rho_same_lag": 0.165,
+      "ccf": {
+       "-12": 0.33,
+       "-11": 0.33,
+       "-10": 0.328,
+       "-9": 0.321,
+       "-8": 0.311,
+       "-7": 0.297,
+       "-6": 0.278,
+       "-5": 0.254,
+       "-4": 0.233,
+       "-3": 0.21,
+       "-2": 0.187,
+       "-1": 0.163,
+       "0": 0.141,
+       "1": 0.125,
+       "2": 0.115,
+       "3": 0.113,
+       "4": 0.113,
+       "5": 0.119,
+       "6": 0.128,
+       "7": 0.142,
+       "8": 0.163,
+       "9": 0.186,
+       "10": 0.212,
+       "11": 0.241,
+       "12": 0.27,
+       "13": 0.294,
+       "14": 0.316,
+       "15": 0.324,
+       "16": 0.331,
+       "17": 0.334,
+       "18": 0.335,
+       "19": 0.336,
+       "20": 0.334,
+       "21": 0.336,
+       "22": 0.34,
+       "23": 0.335,
+       "24": 0.325
+      }
+     },
+     "delinquency_rate": {
+      "lag_most_negative_6_18": 18,
+      "rho": 0.6263,
+      "n": 186,
+      "ci95": [
+       0.4436,
+       0.7826
+      ],
+      "lag_max_abs": 9,
+      "rho_max_abs": 0.8422,
+      "pre_rho": 0.7473,
+      "pre_n": 16,
+      "post_rho": 0.6294,
+      "post_n": 170,
+      "post_ci": [
+       0.4546,
+       0.7804
+      ],
+      "ex2020_rho": 0.5563,
+      "expost_rate_rho_same_lag": 0.4157,
+      "ccf": {
+       "-12": -0.091,
+       "-11": -0.033,
+       "-10": 0.029,
+       "-9": 0.092,
+       "-8": 0.157,
+       "-7": 0.224,
+       "-6": 0.292,
+       "-5": 0.357,
+       "-4": 0.421,
+       "-3": 0.483,
+       "-2": 0.541,
+       "-1": 0.594,
+       "0": 0.642,
+       "1": 0.686,
+       "2": 0.723,
+       "3": 0.756,
+       "4": 0.783,
+       "5": 0.806,
+       "6": 0.823,
+       "7": 0.835,
+       "8": 0.842,
+       "9": 0.842,
+       "10": 0.836,
+       "11": 0.823,
+       "12": 0.806,
+       "13": 0.783,
+       "14": 0.756,
+       "15": 0.726,
+       "16": 0.693,
+       "17": 0.658,
+       "18": 0.626,
+       "19": 0.598,
+       "20": 0.571,
+       "21": 0.542,
+       "22": 0.512,
+       "23": 0.483,
+       "24": 0.456
+      }
+     }
+    },
+    "series": [
+     {
+      "series_id": "real_policy_rate",
+      "source": "Derived",
+      "last_date": "2026-09-01"
+     },
+     {
+      "series_id": "selic_target",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-10-03"
+     },
+     {
+      "series_id": "ipca_12m",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "household_credit_growth",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "corporate_credit_growth",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "credit_gdp",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "ibc_br",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-07-01"
+     },
+     {
+      "series_id": "delinquency_rate",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "rho(real_rate_t, Y_{t+k}); both sides persistent -> CIs from 12-month block bootstrap; spurious-correlation risk remains"
+   },
+   "annual_ols": {
+    "value": {
+     "dGFCF_on_real_rate": {
+      "beta": -0.0995,
+      "ci95": [
+       -0.2881,
+       -0.0138
+      ],
+      "r2": 0.1634,
+      "n": 24
+     },
+     "gdp_growth_on_real_rate": {
+      "beta": 0.1141,
+      "ci95": [
+       -0.2385,
+       0.3723
+      ],
+      "r2": 0.0276,
+      "n": 24
+     }
+    },
+    "series": [
+     {
+      "series_id": "wb/NE.GDI.FTOT.ZS.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "real_policy_rate",
+      "source": "Derived",
+      "last_date": "2026-09-01"
+     },
+     {
+      "series_id": "wb/NY.GDP.MKTP.KD.ZG.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "r_minus_g": {
+    "value": {
+     "latest": 5.0578,
+     "date": "2026-08-01",
+     "L3_evidence": "Aug 2026: interest rate on debt 12.3% vs nominal growth 7.2% \u2192 r \u2212 g = +5.1 pts"
+    },
+    "series": [
+     {
+      "series_id": "r_minus_g",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     }
+    ]
+   },
+   "binding_full_sample": [],
+   "binding_post2010": [
+    "household_credit_growth",
+    "corporate_credit_growth"
+   ],
+   "binding": true,
+   "binding_series": [
+    "household_credit_growth",
+    "corporate_credit_growth"
+   ],
+   "any_negative": true,
+   "summary": "rho(real rate_t, Y_t+k), most negative lag 6-18m: household credit -0.19 @k=10 (CI -0.64,0.12, n=222); corporate -0.18 @k=7 (CI -0.59,0.08); IBC-Br YoY 0.13 @k=6 (CI -0.15,0.37); post-2010 at same lag: household -0.49 (CI -0.77,-0.07, n=178), corporate -0.42 (CI -0.74,-0.06); delinquency +0.84 @k=9; annual dGFCF beta -0.10 (CI -0.29,-0.01, n=24)"
+  },
+  "3c": {
+   "composites": {
+    "value": {
+     "z_rebased_2010_0": {
+      "1996": {
+       "endowment": -1.011,
+       "institutions": -1.245,
+       "outcome": -1.978
+      },
+      "1997": {
+       "endowment": -1.051,
+       "institutions": -1.255,
+       "outcome": -1.892
+      },
+      "1998": {
+       "endowment": -1.007,
+       "institutions": -1.236,
+       "outcome": -2.034
+      },
+      "1999": {
+       "endowment": -1.014,
+       "institutions": -1.789,
+       "outcome": -2.347
+      },
+      "2000": {
+       "endowment": -1.208,
+       "institutions": -0.992,
+       "outcome": -2.259
+      },
+      "2001": {
+       "endowment": -1.256,
+       "institutions": -1.234,
+       "outcome": -2.658
+      },
+      "2002": {
+       "endowment": -1.175,
+       "institutions": -0.84,
+       "outcome": -2.676
+      },
+      "2003": {
+       "endowment": -0.658,
+       "institutions": -1.2,
+       "outcome": -2.546
+      },
+      "2004": {
+       "endowment": -0.66,
+       "institutions": -1.258,
+       "outcome": -2.202
+      },
+      "2005": {
+       "endowment": -0.574,
+       "institutions": -1.308,
+       "outcome": -2.025
+      },
+      "2006": {
+       "endowment": -0.509,
+       "institutions": -1.275,
+       "outcome": -1.681
+      },
+      "2007": {
+       "endowment": -0.322,
+       "institutions": -1.131,
+       "outcome": -0.886
+      },
+      "2008": {
+       "endowment": -0.278,
+       "institutions": -0.468,
+       "outcome": -1.223
+      },
+      "2009": {
+       "endowment": -0.072,
+       "institutions": -0.331,
+       "outcome": -1.102
+      },
+      "2010": {
+       "endowment": 0.0,
+       "institutions": 0.0,
+       "outcome": 0.0
+      },
+      "2011": {
+       "endowment": 0.162,
+       "institutions": 0.076,
+       "outcome": -0.2
+      },
+      "2012": {
+       "endowment": 0.126,
+       "institutions": 0.149,
+       "outcome": -0.514
+      },
+      "2013": {
+       "endowment": 0.001,
+       "institutions": 0.063,
+       "outcome": -0.558
+      },
+      "2014": {
+       "endowment": -0.148,
+       "institutions": -0.238,
+       "outcome": -0.852
+      },
+      "2015": {
+       "endowment": -0.065,
+       "institutions": -0.839,
+       "outcome": -1.585
+      },
+      "2016": {
+       "endowment": -0.075,
+       "institutions": -1.298,
+       "outcome": -1.37
+      },
+      "2017": {
+       "endowment": 0.276,
+       "institutions": -1.591,
+       "outcome": -0.943
+      },
+      "2018": {
+       "endowment": 0.357,
+       "institutions": -1.639,
+       "outcome": -1.119
+      },
+      "2019": {
+       "endowment": 0.526,
+       "institutions": -1.41,
+       "outcome": -1.175
+      },
+      "2020": {
+       "endowment": 0.701,
+       "institutions": -1.111,
+       "outcome": -0.889
+      },
+      "2021": {
+       "endowment": 0.612,
+       "institutions": -1.963,
+       "outcome": -1.301
+      },
+      "2022": {
+       "endowment": 1.247,
+       "institutions": -2.222,
+       "outcome": -1.606
+      },
+      "2023": {
+       "endowment": 1.727,
+       "institutions": -2.587,
+       "outcome": -0.871
+      },
+      "2024": {
+       "endowment": 1.507,
+       "institutions": -2.398,
+       "outcome": -1.07
+      },
+      "2025": {
+       "endowment": 1.916,
+       "institutions": -2.162,
+       "outcome": -0.811
+      }
+     },
+     "n_components": {
+      "1996": {
+       "endowment_n": 6,
+       "institutions_n": 3,
+       "outcome_n": 4
+      },
+      "1997": {
+       "endowment_n": 6,
+       "institutions_n": 2,
+       "outcome_n": 4
+      },
+      "1998": {
+       "endowment_n": 6,
+       "institutions_n": 3,
+       "outcome_n": 4
+      },
+      "1999": {
+       "endowment_n": 6,
+       "institutions_n": 2,
+       "outcome_n": 4
+      },
+      "2000": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2001": {
+       "endowment_n": 8,
+       "institutions_n": 2,
+       "outcome_n": 5
+      },
+      "2002": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2003": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2004": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2005": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2006": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2007": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2008": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2009": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2010": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2011": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2012": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2013": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2014": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2015": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2016": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2017": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2018": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2019": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2020": {
+       "endowment_n": 8,
+       "institutions_n": 3,
+       "outcome_n": 5
+      },
+      "2021": {
+       "endowment_n": 7,
+       "institutions_n": 2,
+       "outcome_n": 5
+      },
+      "2022": {
+       "endowment_n": 6,
+       "institutions_n": 2,
+       "outcome_n": 5
+      },
+      "2023": {
+       "endowment_n": 6,
+       "institutions_n": 2,
+       "outcome_n": 5
+      },
+      "2024": {
+       "endowment_n": 5,
+       "institutions_n": 2,
+       "outcome_n": 5
+      },
+      "2025": {
+       "endowment_n": 3,
+       "institutions_n": 1,
+       "outcome_n": 5
+      }
+     },
+     "2025": {
+      "endowment": 1.9158,
+      "institutions": -2.1622,
+      "outcome": -0.811
+     },
+     "2024": {
+      "endowment": 1.5073,
+      "institutions": -2.398,
+      "outcome": -1.07
+     }
+    },
+    "series": [
+     {
+      "series_id": "oil_production",
+      "source": "IPEAData",
+      "last_date": "2026-07-01"
+     },
+     {
+      "series_id": "wb/AG.YLD.CREL.KG.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/AG.PRD.CREL.MT.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/NV.AGR.EMPL.KD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/EG.ELC.RNEW.ZS.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2021-12-31"
+     },
+     {
+      "series_id": "wb/EG.IMP.CONS.ZS.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2023-12-31"
+     },
+     {
+      "series_id": "wb/NW.NCA.TOTL.PC.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2020-12-31"
+     },
+     {
+      "series_id": "bop_goods_exports",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "wb/GOV_WGI_CC_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_GE_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_RL_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_RQ_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_VA_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_PV_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/SI.POV.GINI.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/NE.GDI.FTOT.ZS.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/NW.HCA.PC.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2020-12-31"
+     },
+     {
+      "series_id": "wb/NY.GDP.PCAP.PP.KD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "ilostat/GDP_205U_NOC_NB.BRA",
+      "source": "ILO (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "ilostat/SDG_0821_NOC_RT.BRA",
+      "source": "ILO (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/PA.NUS.GDP.PLI.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/DSTKMKTXD_M.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "note": "each component z-scored over 1995-2025 and shifted so 2010 = 0; equal weights; mean of available components (natural-capital and renewables series end 2020-2021; wind/solar excluded since it starts 2015)"
+   },
+   "cagr_table": {
+    "value": {
+     "oil_production": {
+      "cagr_2000_2010": 5.369,
+      "cagr_2010_last": 4.0031,
+      "last_year": 2025
+     },
+     "wb/AG.YLD.CREL.KG.BR": {
+      "cagr_2000_2010": 4.335,
+      "cagr_2010_last": 1.5372,
+      "last_year": 2024
+     },
+     "wb/AG.PRD.CREL.MT.BR": {
+      "cagr_2000_2010": 4.9127,
+      "cagr_2010_last": 4.4886,
+      "last_year": 2024
+     },
+     "wb/NV.AGR.EMPL.KD.BR": {
+      "cagr_2000_2010": 5.0104,
+      "cagr_2010_last": 4.7194,
+      "last_year": 2025
+     },
+     "bop_goods_exports": {
+      "cagr_2000_2010": 13.8094,
+      "cagr_2010_last": 3.7698,
+      "last_year": 2025
+     },
+     "wb/NY.GDP.PCAP.PP.KD.BR": {
+      "cagr_2000_2010": 2.5764,
+      "cagr_2010_last": 0.69,
+      "last_year": 2025
+     },
+     "ilostat/GDP_205U_NOC_NB.BRA": {
+      "cagr_2000_2010": 1.5186,
+      "cagr_2010_last": 0.3731,
+      "last_year": 2025
+     },
+     "wb/PA.NUS.GDP.PLI.BR": {
+      "cagr_2000_2010": 6.6551,
+      "cagr_2010_last": -3.573,
+      "last_year": 2025
+     },
+     "wb/DSTKMKTXD_M.BRA(year-end)": {
+      "cagr_2000_2010": 18.3616,
+      "cagr_2010_last": -2.1325,
+      "last_year": 2025
+     },
+     "wb/NW.HCA.PC.BR": {
+      "cagr_2000_2010": 3.0004,
+      "cagr_2010_last": 2.1177,
+      "last_year": 2020
+     }
+    },
+    "series": [
+     {
+      "series_id": "oil_production",
+      "source": "IPEAData",
+      "last_date": "2026-07-01"
+     },
+     {
+      "series_id": "bop_goods_exports",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "wb/NY.GDP.PCAP.PP.KD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/DSTKMKTXD_M.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year"
+   },
+   "ols_gdppc": {
+    "value": {
+     "beta_dlogToT": 0.2851,
+     "ci_dlogToT": [
+      0.1421,
+      0.4028
+     ],
+     "beta_dWGI": -2.2254,
+     "ci_dWGI": [
+      -24.17,
+      6.8786
+     ],
+     "r2": 0.3514,
+     "n": 25
+    },
+    "series": [
+     {
+      "series_id": "wb/NY.GDP.PCAP.PP.KD.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_CC_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_GE_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_RL_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_RQ_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_VA_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     },
+     {
+      "series_id": "wb/GOV_WGI_PV_EST.BR",
+      "source": "World Bank (Dateno)",
+      "last_date": "2024-12-31"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year",
+    "note": "low power (n~27); coefficients per 1% ToT change and per 1-unit WGI change"
+   },
+   "converted": false,
+   "summary": "GDP pc PPP CAGR 2.58%/yr 2000-10 vs 0.69%/yr 2010-25; USD equity index 104.9 (Dec 2010) -> 75.9 (Dec 2025); composites 2025 (z, 2010=0): endowment +1.92, institutions -2.16, outcome -0.81"
+  },
+  "3d": {
+   "ear_logcmo_lags": {
+    "value": {
+     "0": {
+      "n": 142,
+      "start": "2015-01-01",
+      "end": "2026-10-01",
+      "pearson": -0.6301,
+      "spearman": -0.5954,
+      "ci95": [
+       -0.8178,
+       -0.3098
+      ],
+      "p_perm": 0.0005
+     },
+     "1": {
+      "n": 141,
+      "start": "2015-01-01",
+      "end": "2026-09-01",
+      "pearson": -0.5461,
+      "spearman": -0.4859,
+      "ci95": [
+       -0.7547,
+       -0.1324
+      ],
+      "p_perm": 0.0005
+     },
+     "2": {
+      "n": 140,
+      "start": "2015-01-01",
+      "end": "2026-08-01",
+      "pearson": -0.4641,
+      "spearman": -0.3702,
+      "ci95": [
+       -0.6916,
+       0.0468
+      ],
+      "p_perm": 0.0005
+     },
+     "3": {
+      "n": 139,
+      "start": "2015-01-01",
+      "end": "2026-07-01",
+      "pearson": -0.4164,
+      "spearman": -0.2834,
+      "ci95": [
+       -0.6689,
+       0.1824
+      ],
+      "p_perm": 0.0005
+     }
+    },
+    "series": [
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "EAR in levels (bounded %); log CMO"
+   },
+   "ear_admin_lags": {
+    "value": {
+     "0": {
+      "n": 140,
+      "start": "2015-01-01",
+      "end": "2026-08-01",
+      "pearson": -0.1782,
+      "spearman": -0.1494,
+      "ci95": [
+       -0.2936,
+       0.1025
+      ],
+      "p_perm": 0.0415
+     },
+     "1": {
+      "n": 139,
+      "start": "2015-01-01",
+      "end": "2026-07-01",
+      "pearson": -0.1761,
+      "spearman": -0.1276
+     },
+     "2": {
+      "n": 138,
+      "start": "2015-01-01",
+      "end": "2026-06-01",
+      "pearson": -0.1747,
+      "spearman": -0.1101
+     },
+     "3": {
+      "n": 137,
+      "start": "2015-01-01",
+      "end": "2026-05-01",
+      "pearson": -0.1754,
+      "spearman": -0.1238,
+      "ci95": [
+       -0.353,
+       0.1158
+      ],
+      "p_perm": 0.0415
+     },
+     "4": {
+      "n": 136,
+      "start": "2015-01-01",
+      "end": "2026-04-01",
+      "pearson": -0.1763,
+      "spearman": -0.1507
+     },
+     "5": {
+      "n": 135,
+      "start": "2015-01-01",
+      "end": "2026-03-01",
+      "pearson": -0.1563,
+      "spearman": -0.1691
+     },
+     "6": {
+      "n": 134,
+      "start": "2015-01-01",
+      "end": "2026-02-01",
+      "pearson": -0.1136,
+      "spearman": -0.17,
+      "ci95": [
+       -0.2339,
+       0.0396
+      ],
+      "p_perm": 0.1904
+     }
+    },
+    "series": [
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "ipca_administered_prices",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "thermal_logcmo": {
+    "value": {
+     "n": 136,
+     "start": "2015-07-01",
+     "end": "2026-10-01",
+     "pearson": 0.5697,
+     "spearman": 0.5877,
+     "ci95": [
+      0.3887,
+      0.76
+     ],
+     "p_perm": 0.0005
+    },
+    "series": [
+     {
+      "series_id": "thermal_generation_share",
+      "source": "ONS",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "low_ear_cmo_ratio": {
+    "value": 3.4655,
+    "series": [
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "note": "cross-check with hypothesis_tests H4 (3.1x)",
+    "n_low": 54,
+    "cmo_low": 427.0829,
+    "cmo_other": 123.2399
+   },
+   "drought_table": {
+    "value": {
+     "by_year": {
+      "2015": {
+       "cmo": 566.716,
+       "thermal": 24.545,
+       "admin": 1.398,
+       "ear_mean": 31.348
+      },
+      "2016": {
+       "cmo": 80.805,
+       "thermal": 18.657,
+       "admin": 0.449,
+       "ear_mean": 44.892
+      },
+      "2017": {
+       "cmo": 350.053,
+       "thermal": 20.955,
+       "admin": 0.646,
+       "ear_mean": 32.585
+      },
+      "2018": {
+       "cmo": 312.386,
+       "thermal": 17.617,
+       "admin": 0.505,
+       "ear_mean": 35.294
+      },
+      "2019": {
+       "cmo": 219.955,
+       "thermal": 17.431,
+       "admin": 0.452,
+       "ear_mean": 39.125
+      },
+      "2020": {
+       "cmo": 176.494,
+       "thermal": 16.205,
+       "admin": 0.22,
+       "ear_mean": 44.329
+      },
+      "2021": {
+       "cmo": 530.419,
+       "thermal": 24.027,
+       "admin": 1.314,
+       "ear_mean": 34.123
+      },
+      "2022": {
+       "cmo": 31.387,
+       "thermal": 12.625,
+       "admin": -0.31,
+       "ear_mean": 62.209
+      },
+      "2023": {
+       "cmo": 0.0,
+       "thermal": 11.139,
+       "admin": 0.732,
+       "ear_mean": 77.489
+      },
+      "2024": {
+       "cmo": 99.86,
+       "thermal": 12.403,
+       "admin": 0.382,
+       "ear_mean": 61.107
+      },
+      "2025": {
+       "cmo": 248.07,
+       "thermal": 12.948,
+       "admin": 0.436,
+       "ear_mean": 61.926
+      },
+      "2026": {
+       "cmo": 230.652,
+       "thermal": 11.382,
+       "admin": 0.334,
+       "ear_mean": 64.485
+      }
+     },
+     "drought_mean_cmo": 482.396,
+     "other_mean_cmo": 155.5121,
+     "drought_mean_admin": 1.1192,
+     "other_mean_admin": 0.3555,
+     "drought_mean_thermal": 23.1759,
+     "other_mean_thermal": 14.4896
+    },
+    "series": [
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "thermal_generation_share",
+      "source": "ONS",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "ipca_administered_prices",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "sql": "SELECT year, value FROM v_annual WHERE series_id = ? AND is_complete AND year <= {y} ORDER BY year",
+    "note": "2015 thermal share covers Jul-Dec only; 2026 partial year"
+   },
+   "ear_min_by_year": {
+    "value": {
+     "2015": 20.2216,
+     "2016": 29.4327,
+     "2017": 17.8075,
+     "2018": 23.5551,
+     "2019": 22.2798,
+     "2020": 23.0648,
+     "2021": 23.6165,
+     "2022": 33.8025,
+     "2023": 58.6516,
+     "2024": 43.6867,
+     "2025": 44.3262,
+     "2026": 45.5719
+    },
+    "series": [
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ]
+   },
+   "ols_interaction": {
+    "value": {
+     "beta_ear": -0.103,
+     "ci_ear": [
+      -0.154,
+      -0.0387
+     ],
+     "beta_ear_x_ws": 0.0006,
+     "ci_ear_x_ws": [
+      -0.0035,
+      0.0041
+     ],
+     "beta_ws": 0.0418,
+     "ci_ws": [
+      -0.147,
+      0.1945
+     ],
+     "r2": 0.4462,
+     "n": 136,
+     "start": "2015-07-01",
+     "end": "2026-10-01"
+    },
+    "series": [
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "wind_solar_generation_share",
+      "source": "ONS",
+      "last_date": "2026-10-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "log CMO ~ EAR + EAR*WS + WS; positive EAR*WS = WS share makes CMO less sensitive to reservoirs"
+   },
+   "subsample_slopes": {
+    "value": {
+     "2015_2021": -0.0654,
+     "2015_2021_n": 84,
+     "2015_2021_r2": 0.3107,
+     "2022_2026": -0.0875,
+     "2022_2026_n": 58,
+     "2022_2026_r2": 0.1677,
+     "ci_2015_2021": [
+      -0.0771,
+      -0.038
+     ],
+     "ci_2022_2026": [
+      -0.1305,
+      -0.0083
+     ],
+     "diff_late_minus_early": -0.022,
+     "diff_ci95": [
+      -0.0755,
+      0.059
+     ]
+    },
+    "series": [
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "slope of log CMO on EAR (per pt of storage); less negative = less sensitive"
+   },
+   "subsample_slopes_levels": {
+    "value": {
+     "2015_2021": {
+      "beta_R$_per_pt": -14.8569,
+      "ci95": [
+       -16.3457,
+       -6.6193
+      ],
+      "n": 84
+     },
+     "2022_2026": {
+      "beta_R$_per_pt": -4.8739,
+      "ci95": [
+       -7.8747,
+       -1.1727
+      ],
+      "n": 58
+     },
+     "months_cmo_below_5": 21
+    },
+    "series": [
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "CMO R$/MWh on EAR, levels; robustness to the CMO floor"
+   },
+   "slope_shrinks": {
+    "value": false,
+    "series": [
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ],
+    "significant": false
+   },
+   "rolling36": {
+    "value": {
+     "first": -0.6616,
+     "last": -0.1926,
+     "min": -0.8069,
+     "max": -0.1926,
+     "last_date": "2026-10-01"
+    },
+    "series": [
+     {
+      "series_id": "stored_energy_ear",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "cmo_power_cost",
+      "source": "ONS",
+      "last_date": "2026-10-02"
+     }
+    ]
+   },
+   "ws_share": {
+    "value": 29.7847,
+    "series": [
+     {
+      "series_id": "wind_solar_generation_share",
+      "source": "ONS",
+      "last_date": "2026-10-01"
+     }
+    ]
+   }
+  },
+  "3e": {
+   "betas": {
+    "value": {
+     "ibovespa_usd": {
+      "brent": {
+       "beta": 0.2637,
+       "ci95": [
+        0.1048,
+        0.3755
+       ],
+       "r2": 0.1181,
+       "n": 320,
+       "rho": 0.3436
+      },
+      "iron_ore": {
+       "beta": 0.1474,
+       "ci95": [
+        0.0184,
+        0.2789
+       ],
+       "r2": 0.026,
+       "n": 151,
+       "rho": 0.1612
+      },
+      "tot": {
+       "beta": 0.2364,
+       "ci95": [
+        -0.2554,
+        0.7814
+       ],
+       "r2": 0.0026,
+       "n": 311,
+       "rho": 0.051
+      },
+      "composite": {
+       "beta": 0.2943,
+       "ci95": [
+        0.1152,
+        0.468
+       ],
+       "r2": 0.0934,
+       "n": 320,
+       "rho": 0.3056
+      }
+     },
+     "PETR": {
+      "brent": {
+       "beta": 0.5233,
+       "ci95": [
+        0.361,
+        0.6846
+       ],
+       "r2": 0.2704,
+       "n": 176,
+       "rho": 0.52
+      },
+      "iron_ore": {
+       "beta": 0.198,
+       "ci95": [
+        -0.033,
+        0.4349
+       ],
+       "r2": 0.0176,
+       "n": 151,
+       "rho": 0.1326
+      },
+      "tot": {
+       "beta": 0.3534,
+       "ci95": [
+        -0.5865,
+        1.6076
+       ],
+       "r2": 0.0031,
+       "n": 167,
+       "rho": 0.0553
+      },
+      "composite": {
+       "beta": 0.6238,
+       "ci95": [
+        0.2196,
+        0.8699
+       ],
+       "r2": 0.1747,
+       "n": 176,
+       "rho": 0.4179
+      }
+     },
+     "VALE": {
+      "brent": {
+       "beta": 0.2027,
+       "ci95": [
+        0.125,
+        0.4617
+       ],
+       "r2": 0.0663,
+       "n": 176,
+       "rho": 0.2575
+      },
+      "iron_ore": {
+       "beta": 0.1533,
+       "ci95": [
+        -0.0538,
+        0.3663
+       ],
+       "r2": 0.0172,
+       "n": 151,
+       "rho": 0.1312
+      },
+      "tot": {
+       "beta": -0.4883,
+       "ci95": [
+        -1.5275,
+        0.4721
+       ],
+       "r2": 0.0094,
+       "n": 167,
+       "rho": -0.0969
+      },
+      "composite": {
+       "beta": 0.2748,
+       "ci95": [
+        0.1024,
+        0.4984
+       ],
+       "r2": 0.0554,
+       "n": 176,
+       "rho": 0.2353
+      }
+     },
+     "SUZB": {
+      "brent": {
+       "beta": 0.1986,
+       "ci95": [
+        0.1138,
+        0.4477
+       ],
+       "r2": 0.0804,
+       "n": 176,
+       "rho": 0.2835
+      },
+      "iron_ore": {
+       "beta": 0.1229,
+       "ci95": [
+        -0.0799,
+        0.2925
+       ],
+       "r2": 0.0167,
+       "n": 151,
+       "rho": 0.1291
+      },
+      "tot": {
+       "beta": 0.4499,
+       "ci95": [
+        0.1068,
+        0.8919
+       ],
+       "r2": 0.0102,
+       "n": 167,
+       "rho": 0.101
+      },
+      "composite": {
+       "beta": 0.2933,
+       "ci95": [
+        0.1341,
+        0.4347
+       ],
+       "r2": 0.0797,
+       "n": 176,
+       "rho": 0.2824
+      }
+     },
+     "PRIO": {
+      "brent": {
+       "beta": 0.7614,
+       "ci95": [
+        0.5849,
+        0.9993
+       ],
+       "r2": 0.2679,
+       "n": 176,
+       "rho": 0.5176
+      },
+      "iron_ore": {
+       "beta": 0.3998,
+       "ci95": [
+        0.1498,
+        0.5969
+       ],
+       "r2": 0.0407,
+       "n": 151,
+       "rho": 0.2017
+      },
+      "tot": {
+       "beta": 0.2691,
+       "ci95": [
+        -0.787,
+        1.603
+       ],
+       "r2": 0.0008,
+       "n": 167,
+       "rho": 0.0284
+      },
+      "composite": {
+       "beta": 0.9716,
+       "ci95": [
+        0.5242,
+        1.2995
+       ],
+       "r2": 0.1983,
+       "n": 176,
+       "rho": 0.4453
+      }
+     },
+     "AXIA": {
+      "brent": {
+       "beta": 0.2723,
+       "ci95": [
+        0.0303,
+        0.3734
+       ],
+       "r2": 0.0673,
+       "n": 176,
+       "rho": 0.2595
+      },
+      "iron_ore": {
+       "beta": 0.2631,
+       "ci95": [
+        0.0421,
+        0.4843
+       ],
+       "r2": 0.0307,
+       "n": 151,
+       "rho": 0.1753
+      },
+      "tot": {
+       "beta": 0.4906,
+       "ci95": [
+        -0.5088,
+        1.8932
+       ],
+       "r2": 0.0053,
+       "n": 167,
+       "rho": 0.0726
+      },
+      "composite": {
+       "beta": 0.42,
+       "ci95": [
+        0.1466,
+        0.6262
+       ],
+       "r2": 0.0728,
+       "n": 176,
+       "rho": 0.2699
+      }
+     },
+     "ITUB": {
+      "brent": {
+       "beta": 0.2376,
+       "ci95": [
+        0.0328,
+        0.3299
+       ],
+       "r2": 0.1045,
+       "n": 176,
+       "rho": 0.3232
+      },
+      "iron_ore": {
+       "beta": 0.184,
+       "ci95": [
+        0.0251,
+        0.3645
+       ],
+       "r2": 0.0286,
+       "n": 151,
+       "rho": 0.1691
+      },
+      "tot": {
+       "beta": 0.1197,
+       "ci95": [
+        -0.5957,
+        1.1559
+       ],
+       "r2": 0.0007,
+       "n": 167,
+       "rho": 0.0255
+      },
+      "composite": {
+       "beta": 0.3546,
+       "ci95": [
+        0.1129,
+        0.4978
+       ],
+       "r2": 0.1058,
+       "n": 176,
+       "rho": 0.3252
+      }
+     },
+     "IBOV_TR_USD": {
+      "brent": {
+       "beta": 0.2815,
+       "ci95": [
+        0.1143,
+        0.3573
+       ],
+       "r2": 0.2053,
+       "n": 176,
+       "rho": 0.4531
+      },
+      "iron_ore": {
+       "beta": 0.1469,
+       "ci95": [
+        0.0183,
+        0.2785
+       ],
+       "r2": 0.0258,
+       "n": 151,
+       "rho": 0.1606
+      },
+      "tot": {
+       "beta": 0.163,
+       "ci95": [
+        -0.4793,
+        1.0396
+       ],
+       "r2": 0.0017,
+       "n": 167,
+       "rho": 0.041
+      },
+      "composite": {
+       "beta": 0.367,
+       "ci95": [
+        0.1315,
+        0.5371
+       ],
+       "r2": 0.1587,
+       "n": 176,
+       "rho": 0.3983
+      }
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     },
+     {
+      "series_id": "iron_ore_unit_value",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     },
+     {
+      "series_id": "wb/TOT.BRA",
+      "source": "World Bank (Dateno)",
+      "last_date": "2025-12-31"
+     },
+     {
+      "series_id": "total_return_usd@PETR",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@VALE",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@SUZB",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@PRIO",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@AXIA",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@ITUB",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "total_return_usd@IBOV",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "monthly log returns; composite = mean z of dlog Brent & dlog iron-ore unit value (2014+), Brent alone before"
+   },
+   "corr_ibov_composite": {
+    "value": {
+     "full": {
+      "n": 320,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": 0.3056,
+      "spearman": 0.2286,
+      "ci95": [
+       0.1098,
+       0.4888
+      ],
+      "p_perm": 0.0005
+     },
+     "pre": {
+      "n": 131,
+      "start": "2000-02-01",
+      "end": "2010-12-01",
+      "pearson": 0.2177,
+      "spearman": 0.1762,
+      "ci95": [
+       -0.093,
+       0.5049
+      ],
+      "p_perm": 0.0125
+     },
+     "post": {
+      "n": 189,
+      "start": "2011-01-01",
+      "end": "2026-09-01",
+      "pearson": 0.3957,
+      "spearman": 0.2631,
+      "ci95": [
+       0.1546,
+       0.5767
+      ],
+      "p_perm": 0.0005
+     },
+     "pre2012": {
+      "n": 155,
+      "start": "2000-02-01",
+      "end": "2012-12-01",
+      "pearson": 0.2353,
+      "spearman": 0.2058,
+      "ci95": [
+       -0.0292,
+       0.51
+      ],
+      "p_perm": 0.0015
+     },
+     "post2012": {
+      "n": 165,
+      "start": "2013-01-01",
+      "end": "2026-09-01",
+      "pearson": 0.3947,
+      "spearman": 0.2434,
+      "ci95": [
+       0.1289,
+       0.5877
+      ],
+      "p_perm": 0.0005
+     },
+     "ex2020": {
+      "n": 308,
+      "start": "2000-02-01",
+      "end": "2026-09-01",
+      "pearson": 0.2334,
+      "spearman": 0.204,
+      "ci95": [
+       0.0583,
+       0.4091
+      ],
+      "p_perm": 0.0005
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     },
+     {
+      "series_id": "iron_ore_unit_value",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "ibov_brent_beta_pre_post": {
+    "value": {
+     "2000_2010": {
+      "beta": 0.2118,
+      "ci95": [
+       -0.0908,
+       0.4589
+      ],
+      "r2": 0.0474,
+      "n": 131
+     },
+     "2011_2026": {
+      "beta": 0.2867,
+      "ci95": [
+       0.1292,
+       0.371
+      ],
+      "r2": 0.1971,
+      "n": 189
+     },
+     "2013_2026": {
+      "beta": 0.2784,
+      "ci95": [
+       0.1085,
+       0.3598
+      ],
+      "r2": 0.2056,
+      "n": 165
+     }
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "interaction_ibov_brent": {
+    "value": {
+     "beta_x": 0.2118,
+     "beta_x_ci": [
+      -0.1127,
+      0.4746
+     ],
+     "beta_post_x": 0.0749,
+     "beta_post_x_ci": [
+      -0.2311,
+      0.4035
+     ],
+     "r2": 0.1224,
+     "n": 320
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     }
+    ]
+   },
+   "decomposition": {
+    "value": {
+     "usd_total": {
+      "beta_composite": 0.367,
+      "ci95": [
+       0.1315,
+       0.5371
+      ],
+      "r2": 0.1587,
+      "n": 176
+     },
+     "brl_local": {
+      "beta_composite": 0.2569,
+      "ci95": [
+       0.0717,
+       0.395
+      ],
+      "r2": 0.1822,
+      "n": 176
+     },
+     "fx_brl_vs_usd": {
+      "beta_composite": 0.0927,
+      "ci95": [
+       0.0309,
+       0.1562
+      ],
+      "r2": 0.0465,
+      "n": 320
+     }
+    },
+    "series": [
+     {
+      "series_id": "total_return_usd@IBOV",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "total_return_brl@IBOV",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brl_usd",
+      "source": "Banco Central (SGS)",
+      "last_date": "2026-10-02"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     },
+     {
+      "series_id": "iron_ore_unit_value",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2",
+    "note": "USD beta ~= local beta + FX beta (log returns are additive)"
+   },
+   "up_down": {
+    "value": {
+     "mean_ibov_up_pct": 1.9141,
+     "mean_ibov_down_pct": -1.5785,
+     "mean_comp_up_pct": 7.4796,
+     "mean_comp_down_pct": -8.9218,
+     "up_capture": 0.2559,
+     "down_capture": 0.1769,
+     "n_up": 184,
+     "n_down": 136,
+     "asymmetry_ratio": 0.6913
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     },
+     {
+      "series_id": "iron_ore_unit_value",
+      "source": "Derived",
+      "last_date": "2026-08-01"
+     }
+    ],
+    "sql": "SELECT series_id, date_trunc('month', date) AS ym, CASE WHEN series_id IN ('ibovespa_usd','brl_usd','brent_usd','wb/DSTKMKTXD_M.BRA') THEN arg_max(value, date) ELSE avg(value) END AS v FROM v_observations WHERE date <= current_date AND series_id IN (...) GROUP BY 1,2"
+   },
+   "rolling60_beta": {
+    "value": {
+     "ibov_last": 0.0913,
+     "ibov_min": -0.1855,
+     "ibov_max": 0.6012,
+     "ibov_mean_pre": 0.132,
+     "ibov_mean_post": 0.3683,
+     "itub_last": 0.0429,
+     "last_date": "2026-09-01"
+    },
+    "series": [
+     {
+      "series_id": "ibovespa_usd",
+      "source": "Derived",
+      "last_date": "2026-10-01"
+     },
+     {
+      "series_id": "brent_usd",
+      "source": "IPEAData",
+      "last_date": "2026-09-29"
+     },
+     {
+      "series_id": "total_return_usd@ITUB",
+      "source": "Derived",
+      "last_date": "2026-10-02"
+     }
+    ]
+   },
+   "cites": {
+    "H5": "US$100 in Jan 2012 \u2192 Petrobras $325, Vale $140, Ibovespa $99 (Oct 2026, dividends reinvested)",
+    "H6": "\u03c1(Suzano, BRL weakening) = +0.18; \u03c1(Ita\u00fa, BRL weakening) = -0.57 over 177 months"
+   },
+   "hedge": true,
+   "classification": "partial hedge",
+   "summary": "Ibov USD on composite: beta 0.29 (CI 0.12,0.47), rho 0.31 (CI 0.11,0.49, n=320) -> 'partial hedge'; pre/post-2010 Brent beta 0.21 vs 0.29"
+  },
+  "china_share": {
+   "first": 18.3828,
+   "first_date": "2014-12-01",
+   "last": 29.5837,
+   "last_date": "2026-08-01",
+   "trend_pts_yr": 1.0542,
+   "ns_first": 71.4039,
+   "ns_last": 75.8647,
+   "series": [
+    {
+     "series_id": "exports_to_china",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "exports_total",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "exports_to_us",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    },
+    {
+     "series_id": "exports_to_eu",
+     "source": "ComexStat (MDIC)",
+     "last_date": "2026-08-01"
+    }
+   ]
+  }
+ },
+ "s4_verdict": {
+  "pillars": {
+   "physical": {
+    "score": 0.5,
+    "n_total": 19,
+    "n_testable": 13,
+    "coverage": 0.6842,
+    "label": "Partial",
+    "counts": {
+     "Partial": 9,
+     "Supported": 4
+    }
+   },
+   "institutional": {
+    "score": 0.3214,
+    "n_total": 15,
+    "n_testable": 14,
+    "coverage": 0.9333,
+    "label": "Refuted",
+    "counts": {
+     "Partial": 7,
+     "Supported": 7
+    }
+   },
+   "market": {
+    "score": 0.6875,
+    "n_total": 10,
+    "n_testable": 8,
+    "coverage": 0.8,
+    "label": "Partial",
+    "counts": {
+     "Supported": 4,
+     "Partial": 3,
+     "Refuted": 1
+    }
+   }
+  },
+  "physical_sensitivity": {
+   "pro_claims_only": 0.6,
+   "status_T_only": 0.5,
+   "note_truth_rate (S=1,P=.5,R=0, ignoring thesis direction)": 0.6538
+  },
+  "physical_gt_institutional_supported": false,
+  "physical_minus_institutional": 0.1786,
+  "investment_thesis": {
+   "endowment_converted": false,
+   "equity_hedge": true
+  },
+  "overall": "Holds only partly for the physical column (score 0.50, below the 0.75 bar); institutional column refuted; returns not delivered post-2010",
+  "scoring_note": "thesis_score per claim: pro-thesis claim Supported=1/Partial=.5/Refuted=0; for weaknesses the note concedes (con) the score is inverted, so a pillar score measures how far the evidence favours the 'new America' thesis in that column. Untestable excluded from the denominator."
+ },
+ "claim_map": [
+  {
+   "claim_id": "E1",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "Oil production rising (pre-salt)",
+   "status": "T",
+   "statistic": "trend 5.1%/yr 2000-10 vs 4.1%/yr 2011-25; net energy imports 23.6% (2000) -> -13.7% (2023)",
+   "threshold": "post-2010 trend > 0 and net imports < 0",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "oil_production;wb/EG.IMP.CONS.ZS.BR",
+   "last_dates": "2026-07-01;2023-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "E2",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "One of the cleanest grids",
+   "status": "P",
+   "statistic": "renewable electricity 84.7% (2010) -> 77.4% (2021); WS share 2025 cited in E4",
+   "threshold": ">= 75% and not falling",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wb/EG.ELC.RNEW.ZS.BR",
+   "last_dates": "2021-12-31",
+   "note": "Level true; series stale (2021) -> Partial; 'one of the cleanest' ranking needs peers (untestable)"
+  },
+  {
+   "claim_id": "E3a",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "Hydro is core but fragile (drought -> power cost)",
+   "status": "T",
+   "statistic": "CMO 3.47x higher in months with EAR<40%; drought years 2015/2017/2021 mean CMO 482 vs 156 R$/MWh",
+   "threshold": "CMO ratio > 2x in low-EAR months",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "stored_energy_ear;cmo_power_cost;wb/EG.ELC.HYRO.ZS.BR",
+   "last_dates": "2026-10-02;2026-10-02;2024-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "E3b",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "2021 drought worst in 91 years",
+   "status": "P",
+   "statistic": "national EAR 2021 min 23.6% ranks #6 lowest of 12 years (2015-2026); 2017 min 17.8%",
+   "threshold": "2021 in top-2 stress years",
+   "verdict": "Partial",
+   "thesis_dir": "con",
+   "thesis_score": 0.5,
+   "series_ids": "stored_energy_ear;cmo_power_cost",
+   "last_dates": "2026-10-02;2026-10-02",
+   "note": "'91 years' refers to SE/CO inflows, not in warehouse; on national EAR and CMO, 2021 is not the sample extreme"
+  },
+  {
+   "claim_id": "E4",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "Wind+solar now significant; diversification makes the thesis sturdier",
+   "status": "T",
+   "statistic": "WS share 2025 29.8%; EAR->logCMO slope 2015-21 -0.065 vs 2022-26 -0.087",
+   "threshold": "share >= 20% and EAR->CMO sensitivity smaller in 2022-26",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wind_solar_generation_share;stored_energy_ear;cmo_power_cost",
+   "last_dates": "2026-10-01;2026-10-02;2026-10-02",
+   "note": "log slope did not shrink (CMO ~0 floor in 2022-23); levels slope fell ~2/3 but confounded by full reservoirs since 2022"
+  },
+  {
+   "claim_id": "E5",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "Cane ethanol E30 / flex-fuel",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "wb/EG.USE.CRNW.ZS.BR",
+   "last_dates": "2024-12-31",
+   "note": "no ethanol series; proxy combustible renewables % energy only"
+  },
+  {
+   "claim_id": "E6",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "Caatinga solar",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "",
+   "last_dates": "",
+   "note": "no regional data"
+  },
+  {
+   "claim_id": "E7",
+   "area": "Energy",
+   "pillar": "physical",
+   "claim": "EU CBAM favours Brazilian charcoal / clean steel",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "exports_to_eu",
+   "last_dates": "2026-08-01",
+   "note": "no steel/charcoal series"
+  },
+  {
+   "claim_id": "W1",
+   "area": "Water",
+   "pillar": "physical",
+   "claim": "Huge freshwater; withdrawals far below renewal",
+   "status": "T",
+   "statistic": "withdrawals 1.20% of internal resources (2022); slope +0.010 pts/yr",
+   "threshold": "< 5% and flat",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "wb/ER.H2O.FWTL.ZS.BR",
+   "last_dates": "2022-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "W2",
+   "area": "Water",
+   "pillar": "physical",
+   "claim": "Contrast with Ogallala / North China Plain / Punjab",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "",
+   "last_dates": "",
+   "note": "no peer data"
+  },
+  {
+   "claim_id": "A1",
+   "area": "Agro",
+   "pillar": "physical",
+   "claim": "Grain output 47 Mt (1977) -> 354 Mt with far smaller area growth",
+   "status": "T",
+   "statistic": "cereals 31 -> 139 Mt; yield share of output growth 115% (1977-2010), 35% (2010-24), 82% (1977-2024)",
+   "threshold": "yield share > 50% in both windows",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wb/AG.PRD.CREL.MT.BR;wb/AG.LND.CREL.HA.BR;wb/AG.YLD.CREL.KG.BR",
+   "last_dates": "2024-12-31;2024-12-31;2024-12-31",
+   "note": "WB cereals only (soy excluded); the 47->354 Mt CONAB 'gr\u00e3os' levels are not in the warehouse; post-2010 growth is mostly AREA (second-crop corn)"
+  },
+  {
+   "claim_id": "A2",
+   "area": "Agro",
+   "pillar": "physical",
+   "claim": "#1 exporter of soy, beef, sugar, coffee, OJ, chicken, cotton",
+   "status": "P",
+   "statistic": "soy $23.3bn->$43.5bn; beef $5.7bn->$16.5bn; coffee $6.1bn->$14.9bn; sugar $9.5bn->$14.1bn",
+   "threshold": "export values growing (world rank untestable)",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "soy_exports;beef_exports;coffee_exports;sugar_exports",
+   "last_dates": "2026-08-01;2026-08-01;2026-08-01;2026-08-01",
+   "note": "no OJ/chicken/cotton series; world rank needs peers"
+  },
+  {
+   "claim_id": "A3",
+   "area": "Agro",
+   "pillar": "physical",
+   "claim": "Northern frontier / Arco Norte ports",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "",
+   "last_dates": "",
+   "note": "no port/regional data"
+  },
+  {
+   "claim_id": "A4",
+   "area": "Agro",
+   "pillar": "physical",
+   "claim": "Hidden dependency on imported fertilizer",
+   "status": "T",
+   "statistic": "fertilizer imports $4.6bn (2014) -> $7.8bn (2025), trend +9.6%/yr",
+   "threshold": "imports rising",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "fertilizer_imports",
+   "last_dates": "2026-08-01",
+   "note": ""
+  },
+  {
+   "claim_id": "M1",
+   "area": "Minerals",
+   "pillar": "physical",
+   "claim": "Niobium dominance",
+   "status": "P",
+   "statistic": "niobium exports $1.74bn (2014) -> $2.66bn (2025), trend +4.7%/yr",
+   "threshold": "USD exports large/growing (world share untestable)",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "niobium_exports",
+   "last_dates": "2026-08-01",
+   "note": ""
+  },
+  {
+   "claim_id": "M2",
+   "area": "Minerals",
+   "pillar": "physical",
+   "claim": "#2 rare-earth reserves",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "",
+   "last_dates": "",
+   "note": "no reserves data"
+  },
+  {
+   "claim_id": "M3",
+   "area": "Minerals",
+   "pillar": "physical",
+   "claim": "High-grade iron ore",
+   "status": "P",
+   "statistic": "H2: Oil export tonnes +8.2%/yr vs iron ore +1.0%/yr since 2016; pre-salt = 79% of oil output (Aug 2026); H3: \u03c1(Vale revenue, iron-ore US$/t) = 0.77 over 42 quarters; tonnes trend +1.0%/yr",
+   "threshold": "volume/price evidence (grade untestable)",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "iron_ore_exports_kg;iron_ore_unit_value",
+   "last_dates": "2026-08-01;2026-08-01",
+   "note": "cites hypothesis_tests H2/H3"
+  },
+  {
+   "claim_id": "M4",
+   "area": "Minerals",
+   "pillar": "physical",
+   "claim": "Lithium",
+   "status": "P",
+   "statistic": "lithium natural capital $2m (1995) -> $174m (2020)",
+   "threshold": "rising",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wb/NW.NCA.MLIT.TO.BR",
+   "last_dates": "2020-12-31",
+   "note": "stale (2020) -> Partial at most"
+  },
+  {
+   "claim_id": "M5",
+   "area": "Minerals",
+   "pillar": "physical",
+   "claim": "Brazil as hedge vs China processing dominance",
+   "status": "P",
+   "statistic": "China share of exports 18.4% (12m to 2014-12-01) -> 29.6% (12m to 2026-08-01): China is Brazil's buyer, not a rival",
+   "threshold": "reframed: dependence on China as buyer",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "exports_to_china;exports_total",
+   "last_dates": "2026-08-01;2026-08-01",
+   "note": ""
+  },
+  {
+   "claim_id": "C1",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Credit/GDP ~30% (2008) -> ~54% now; room to grow",
+   "status": "T",
+   "statistic": "BCB credit/GDP 39.7% (Dec 2008) -> 55.4% (Aug 2026); WB broader def 45.8% -> 75.1%",
+   "threshold": "path rising; quoted levels match",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "credit_gdp;wb/FS.AST.PRVT.GD.ZS.BR",
+   "last_dates": "2026-08-01;2025-12-31",
+   "note": "direction right; '~30% in 2008' is wrong (39.7%); 30% matches 2000-04 (27.3%/25.5%)"
+  },
+  {
+   "claim_id": "C2",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Household debt rising / stretched",
+   "status": "T",
+   "statistic": "debt/income 31.7% (2010) -> 49.9% (Jul 2026); debt service 28.7% (series max 28.7%)",
+   "threshold": "DSR at/near series max",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "household_debt_income;household_debt_service_ratio",
+   "last_dates": "2026-07-01;2026-07-01",
+   "note": ""
+  },
+  {
+   "claim_id": "C3",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Cost of credit is the problem: Selic 14.5%, inflation 5-6%, real 8-11%",
+   "status": "T",
+   "statistic": "Apr 2026: Selic 14.50%, IPCA 12m 4.39% (2026 range 3.81-4.72), ex-ante real 10.7%; lending spread 32.5 pts (2024)",
+   "threshold": "ex-ante real policy rate > 5%",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "real_policy_rate;selic_target;ipca_12m;wb/FR.INR.LNDP.BR",
+   "last_dates": "2026-09-01;2026-10-03;2026-08-01;2024-12-31",
+   "note": "Selic and real-rate numbers correct; 'inflation 5-6%' is too high (IPCA 12m 3.8-4.7% in 2026); 'highest in world' untestable"
+  },
+  {
+   "claim_id": "C4",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Banks super-profitable: wide spreads, concentration",
+   "status": "T",
+   "statistic": "spread 32.5 pts (2024); 5-bank conc 79.4% / 3-bank 38.7->70.4% (2021); bank ROE 13.2% (2021); Ita\u00fa net income/revenue 11.6% (2025)",
+   "threshold": "spread > 20 pts and 5-bank conc > 60%",
+   "verdict": "Partial",
+   "thesis_dir": "con",
+   "thesis_score": 0.5,
+   "series_ids": "wb/FR.INR.LNDP.BR;wb/GFDD.OI.06.BR;wb/GFDD.OI.01.BR;net_income_brl@ITUB;revenue_brl@ITUB",
+   "last_dates": "2024-12-31;2021-12-31;2021-12-31;2026-06-30;2026-06-30",
+   "note": "thresholds met but concentration/ROE series stale (2021) -> Partial"
+  },
+  {
+   "claim_id": "C5",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "BCB buying gold (+43t in 2025), diversifying away from USD",
+   "status": "P",
+   "statistic": "gold $4.1bn (1.2% of reserves, 2020) -> $24.2bn (6.8%, 2025); 2024->25 x2.23",
+   "threshold": "gold share rising sharply",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wb/FI.RES.TOTL.CD.BR;wb/FI.RES.XGLD.CD.BR",
+   "last_dates": "2025-12-31;2025-12-31",
+   "note": "value share rising; tonnage (+43t) untestable (no gold price in warehouse to split price vs volume)"
+  },
+  {
+   "claim_id": "C6",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Pix near-universal",
+   "status": "T",
+   "statistic": "account ownership 55.9% (2011) -> 86.4% (2024); Pix 71.3bn tx in 2025 = 326/person",
+   "threshold": "account > 80% and Pix > 100/person/yr",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "wb/account.t.d.BRA;pix_transactions_count;population",
+   "last_dates": "2024-12-31;2026-09-01;2025-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "C7",
+   "area": "Credit",
+   "pillar": "institutional",
+   "claim": "Hyperinflation as a 'vaccine' against debt",
+   "status": "P",
+   "statistic": "private credit 55.4% of GDP (modest) but gross public debt 82.9% (Aug 2026); r-g +5.1 pts (L3)",
+   "threshold": "low leverage overall",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "credit_gdp;gross_public_debt_gdp;r_minus_g",
+   "last_dates": "2026-08-01;2026-08-01;2026-08-01",
+   "note": "private side fits; public-debt side contradicts"
+  },
+  {
+   "claim_id": "I1",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Inequality persists",
+   "status": "T",
+   "statistic": "Gini 53.7 (2009; no 2010 survey) -> 52.9 (2011) -> 50.3 (2024); slope -0.46/yr 1995-2010 vs -0.16/yr 2011+",
+   "threshold": "Gini > 45 ('persists')",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "wb/SI.POV.GINI.BR",
+   "last_dates": "2024-12-31",
+   "note": "persists in level, but still slowly improving"
+  },
+  {
+   "claim_id": "I2",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Corruption / weak institutions persist",
+   "status": "T",
+   "statistic": "WGI: 4/6 dimensions lower in 2011-24 than 1996-2010; control of corruption -0.02 -> -0.41; rule of law -0.04 -> -0.45",
+   "threshold": "post-2010 WGI mean <= pre-2010",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "wb/GOV_WGI_CC_EST.BR;wb/GOV_WGI_GE_EST.BR;wb/GOV_WGI_RL_EST.BR;wb/GOV_WGI_RQ_EST.BR;wb/GOV_WGI_VA_EST.BR;wb/GOV_WGI_PV_EST.BR",
+   "last_dates": "2024-12-31;2024-12-31;2024-12-31;2024-12-31;2024-12-31;2024-12-31",
+   "note": "worsened, not just persisted"
+  },
+  {
+   "claim_id": "I3",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Hard to do business",
+   "status": "P",
+   "statistic": "Doing Business score 59.1/100 (2019)",
+   "threshold": "score < 65",
+   "verdict": "Partial",
+   "thesis_dir": "con",
+   "thesis_score": 0.5,
+   "series_ids": "wb/IC.BUS.EASE.DFRN.XQ.DB1719.BR",
+   "last_dates": "2019-12-31",
+   "note": "discontinued 2019 -> Partial"
+  },
+  {
+   "claim_id": "I4",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Weak schools",
+   "status": "P",
+   "statistic": "PISA maths 377 (2015); human capital/capita $51,838 (2010) -> $63,922 (2020)",
+   "threshold": "PISA < 420",
+   "verdict": "Partial",
+   "thesis_dir": "con",
+   "thesis_score": 0.5,
+   "series_ids": "wb/LO.PISA.MAT.BR;wb/NW.HCA.PC.BR",
+   "last_dates": "2015-12-31;2020-12-31",
+   "note": "PISA stale (2015) -> Partial"
+  },
+  {
+   "claim_id": "I5",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Tax complexity",
+   "status": "P",
+   "statistic": "tax revenue 15.4% of GDP (2024); compliance-time series end 2019",
+   "threshold": "complexity measure",
+   "verdict": "Partial",
+   "thesis_dir": "con",
+   "thesis_score": 0.5,
+   "series_ids": "wb/GC.TAX.TOTL.GD.ZS.BR;wb/PAY.TAX.COIT.AU.HRS.DB1719.BR",
+   "last_dates": "2024-12-31;2019-12-31",
+   "note": "complexity itself only in stale DB data"
+  },
+  {
+   "claim_id": "I6",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Expensive capital -> low investment",
+   "status": "T",
+   "statistic": "GFCF 20.5% (2010) -> 16.8% (2025); mean 2011-25 minus 1996-2010 = -0.7 pts (CI -2.3, +1.2)",
+   "threshold": "GFCF < 20% and post-2010 mean not higher",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "wb/NE.GDI.FTOT.ZS.BR",
+   "last_dates": "2025-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "I7",
+   "area": "Institutions",
+   "pillar": "institutional",
+   "claim": "Slow start: slavery, plantations, land concentration",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "con",
+   "thesis_score": null,
+   "series_ids": "",
+   "last_dates": "",
+   "note": "historical; no land-Gini"
+  },
+  {
+   "claim_id": "G1",
+   "area": "Trade",
+   "pillar": "market",
+   "claim": "China share of Brazil's trade rising",
+   "status": "T",
+   "statistic": "China share of exports (12m) 18.4% -> 29.6%; trend +1.05 pts/yr; L4 (12m to Aug 2026): US -14.3%, China +19.0%",
+   "threshold": "share rising",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "exports_to_china;exports_total;exports_to_us",
+   "last_dates": "2026-08-01;2026-08-01;2026-08-01",
+   "note": ""
+  },
+  {
+   "claim_id": "G2",
+   "area": "Trade",
+   "pillar": "market",
+   "claim": "Global South share of trade rising",
+   "status": "P",
+   "statistic": "proxy non-US/EU share 71.4% -> 75.9%",
+   "threshold": "proxy rising",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "exports_to_us;exports_to_eu;exports_total",
+   "last_dates": "2026-08-01;2026-08-01;2026-08-01",
+   "note": "only China/US/EU destinations exist"
+  },
+  {
+   "claim_id": "G3",
+   "area": "Trade",
+   "pillar": "market",
+   "claim": "EU-Mercosur deal benefits",
+   "status": "U",
+   "statistic": "",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "exports_to_eu",
+   "last_dates": "2026-08-01",
+   "note": ""
+  },
+  {
+   "claim_id": "R1",
+   "area": "Allocation",
+   "pillar": "market",
+   "claim": "Ibovespa ~+51% in USD in 2025",
+   "status": "T",
+   "statistic": "50.8%",
+   "threshold": "within 2 pts of 51%",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "ibovespa_usd",
+   "last_dates": "2026-10-01",
+   "note": ""
+  },
+  {
+   "claim_id": "R2",
+   "area": "Allocation",
+   "pillar": "market",
+   "claim": "BRL +12-13% vs USD in 2025",
+   "status": "T",
+   "statistic": "12.5%",
+   "threshold": "12-13%",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "brl_usd",
+   "last_dates": "2026-10-02",
+   "note": ""
+  },
+  {
+   "claim_id": "R3",
+   "area": "Allocation",
+   "pillar": "market",
+   "claim": "Foreign B3 inflows R$56.5bn Jan-Apr 2026",
+   "status": "U",
+   "statistic": "no B3 flow series; WB annual portfolio equity net inflows $-17.5bn (2024), $-5.0bn (2025)",
+   "threshold": "",
+   "verdict": "Untestable",
+   "thesis_dir": "pro",
+   "thesis_score": null,
+   "series_ids": "wb/BX.PEF.TOTL.CD.WD.BR",
+   "last_dates": "2025-12-31",
+   "note": "annual WB data shows net OUTflows in 2024-25 (different period/definition)"
+  },
+  {
+   "claim_id": "R4",
+   "area": "Allocation",
+   "pillar": "market",
+   "claim": "Rerating underway",
+   "status": "P",
+   "statistic": "market cap/GDP 70.0% (2010) -> 38.2% (2025); 10y real yield 7.63% (2026 YTD) vs 5.17% avg 2015-24",
+   "threshold": "valuation rising",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "wb/CM.MKT.LCAP.GD.ZS.BR;gov_real_yield_10y",
+   "last_dates": "2025-12-31;2026-10-02",
+   "note": "embi_brazil stale (2024-07)"
+  },
+  {
+   "claim_id": "X3a",
+   "area": "Correlation",
+   "pillar": "market",
+   "claim": "Brazil growth/equity is driven by the commodity cycle (3a)",
+   "status": "T",
+   "statistic": "monthly OLS dlog Ibov USD ~ dlog ToT + dlog Brent R2=0.12; rho(Ibov,Brent)=0.34",
+   "threshold": "R2 > 0.3 (or rho > 0.4)",
+   "verdict": "Partial",
+   "thesis_dir": "pro",
+   "thesis_score": 0.5,
+   "series_ids": "ibovespa_usd;brent_usd;wb/TOT.BRA",
+   "last_dates": "2026-10-01;2026-09-29;2025-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "X3b",
+   "area": "Correlation",
+   "pillar": "institutional",
+   "claim": "Cost of credit is binding (real rate -> credit/activity, 3b)",
+   "status": "T",
+   "statistic": "rho(real rate_t, Y_t+k), most negative lag 6-18m: household credit -0.19 @k=10 (CI -0.64,0.12, n=222); corporate -0.18 @k=7 (CI -0.59,0.08); IBC-Br YoY 0.13 @k=6 (CI -0.15,0.37); post-2010 at same lag: household -0.49 (CI -0.77,-0.07, n=178), corporate -0.42 (CI -0.74,-0.06); delinquency +0.84 @k=9; annual dGFCF beta -0.10 (CI -0.29,-0.01, n=24)",
+   "threshold": "rho < -0.3 at lag 6-18m with CI excluding 0 (>=2 credit/activity series)",
+   "verdict": "Supported",
+   "thesis_dir": "con",
+   "thesis_score": 0.0,
+   "series_ids": "real_policy_rate;household_credit_growth;corporate_credit_growth;ibc_br;delinquency_rate",
+   "last_dates": "2026-09-01;2026-08-01;2026-08-01;2026-07-01;2026-08-01",
+   "note": "binds on credit only in the post-2010 window (full-sample CIs straddle 0, 2008-10 flips sign); activity (IBC-Br) shows no negative response"
+  },
+  {
+   "claim_id": "X3c",
+   "area": "Correlation",
+   "pillar": "market",
+   "claim": "Endowment gains convert into income / USD returns (3c)",
+   "status": "T",
+   "statistic": "GDP pc PPP CAGR 2.58%/yr 2000-10 vs 0.69%/yr 2010-25; USD equity index 104.9 (Dec 2010) -> 75.9 (Dec 2025); composites 2025 (z, 2010=0): endowment +1.92, institutions -2.16, outcome -0.81",
+   "threshold": "GDP pc PPP CAGR post-2010 > pre-2010, or USD equity above 2010 level",
+   "verdict": "Refuted",
+   "thesis_dir": "pro",
+   "thesis_score": 0.0,
+   "series_ids": "wb/NY.GDP.PCAP.PP.KD.BR;wb/DSTKMKTXD_M.BRA",
+   "last_dates": "2025-12-31;2025-12-31",
+   "note": ""
+  },
+  {
+   "claim_id": "X3e",
+   "area": "Correlation",
+   "pillar": "market",
+   "claim": "Brazil equity is a commodity hedge (beta>0, CI excl. 0, 3e)",
+   "status": "T",
+   "statistic": "Ibov USD on composite: beta 0.29 (CI 0.12,0.47), rho 0.31 (CI 0.11,0.49, n=320) -> 'partial hedge'; pre/post-2010 Brent beta 0.21 vs 0.29",
+   "threshold": "beta > 0 with CI excluding 0",
+   "verdict": "Supported",
+   "thesis_dir": "pro",
+   "thesis_score": 1.0,
+   "series_ids": "ibovespa_usd;brent_usd;iron_ore_unit_value",
+   "last_dates": "2026-10-01;2026-09-29;2026-08-01",
+   "note": "rubric met, but rho only 0.31 ('partial hedge') and the domestic control Ita\u00fa has the same composite beta -> largely a global risk-on beta, not a commodity-specific hedge"
+  }
+ ],
+ "series_used": {
+  "beef_exports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Beef exports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "bop_goods_exports": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "BoP goods exports (US$ mn)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "brent_usd": {
+   "source": "IPEAData",
+   "last_date": "2026-09-29",
+   "title": "Brent crude spot price",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "brl_usd": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-10-02",
+   "title": "BRL/USD official exchange rate",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "cmo_power_cost": {
+   "source": "ONS",
+   "last_date": "2026-10-02",
+   "title": "Marginal operating cost (CMO), SE/CO weekly average",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "coffee_exports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Coffee exports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "corporate_credit_growth": {
+   "source": "Derived",
+   "last_date": "2026-08-01",
+   "title": "Corporate credit growth (YoY)",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "credit_gdp": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "Credit to GDP",
+   "role": "canonical",
+   "agg": "last"
+  },
+  "delinquency_rate": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "Delinquency rate (credit)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "exports_to_china": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Exports to China (FOB)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "exports_to_eu": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Exports to the European Union, EU-27 (FOB)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "exports_to_us": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Exports to the United States (FOB)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "exports_total": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Total exports (FOB)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "fertilizer_imports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Fertilizer imports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "gov_real_yield_10y": {
+   "source": "Tesouro Direto",
+   "last_date": "2026-10-02",
+   "title": "Gov real yield ~10y (NTN-B)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "gross_public_debt_gdp": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "Gross general govt debt / GDP",
+   "role": "canonical",
+   "agg": "last"
+  },
+  "household_credit_growth": {
+   "source": "Derived",
+   "last_date": "2026-08-01",
+   "title": "Household credit growth (YoY)",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "household_debt_income": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-07-01",
+   "title": "Household debt-to-income",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "household_debt_service_ratio": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-07-01",
+   "title": "Household debt service ratio (SA)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "hydro_generation_share": {
+   "source": "ONS",
+   "last_date": "2026-10-01",
+   "title": "Hydro generation share",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "ibc_br": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-07-01",
+   "title": "IBC-Br monthly activity index",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "ibovespa_usd": {
+   "source": "Derived",
+   "last_date": "2026-10-01",
+   "title": "Ibovespa in USD",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "ilostat/GDP_205U_NOC_NB.BRA": {
+   "source": "ILO (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Output per worker, GDP constant 2015 US $ -- ILO modelled estimates, Nov. 2025",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "ilostat/SDG_0821_NOC_RT.BRA": {
+   "source": "ILO (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "SDG indicator 8.2.1: Annual growth rate of output per worker, GDP constant 2015 US dollars (%)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "ipca_12m": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "IPCA accumulated 12 months",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "ipca_administered_prices": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-08-01",
+   "title": "IPCA administered prices monthly change",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "iron_ore_exports_kg": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Iron ore exports (net weight)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "iron_ore_unit_value": {
+   "source": "Derived",
+   "last_date": "2026-08-01",
+   "title": "Iron ore export price (US$/t)",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "net_income_brl@ITUB": {
+   "source": "CVM",
+   "last_date": "2026-06-30",
+   "title": "Ita\u00fa Unibanco: Net income attributable to controlling shareholders",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "niobium_exports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Niobium (ferroniobium) exports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "oil_production": {
+   "source": "IPEAData",
+   "last_date": "2026-07-01",
+   "title": "Oil production (avg/day)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "pix_transactions_count": {
+   "source": "Banco Central (Pix)",
+   "last_date": "2026-09-01",
+   "title": "Pix transactions, monthly count (mn)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "population": {
+   "source": "IBGE (SIDRA)",
+   "last_date": "2025-12-31",
+   "title": "Resident population (IBGE projection, 2018 rev.)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "r_minus_g": {
+   "source": "Derived",
+   "last_date": "2026-08-01",
+   "title": "Interest rate on debt minus nominal growth (r-g)",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "real_policy_rate": {
+   "source": "Derived",
+   "last_date": "2026-09-01",
+   "title": "Real policy rate (Selic \u2212 expected IPCA 12m)",
+   "role": "derived",
+   "agg": "mean"
+  },
+  "revenue_brl@ITUB": {
+   "source": "CVM",
+   "last_date": "2026-06-30",
+   "title": "Ita\u00fa Unibanco: Revenue (bank: financial intermediation income)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "selic_target": {
+   "source": "Banco Central (SGS)",
+   "last_date": "2026-10-03",
+   "title": "Selic target rate",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "soy_exports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Soybean exports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "stored_energy_ear": {
+   "source": "ONS",
+   "last_date": "2026-10-02",
+   "title": "Stored energy / EAR (national %)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "sugar_exports": {
+   "source": "ComexStat (MDIC)",
+   "last_date": "2026-08-01",
+   "title": "Sugar exports",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "thermal_generation_share": {
+   "source": "ONS",
+   "last_date": "2026-10-01",
+   "title": "Thermal generation share",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "total_return_brl@IBOV": {
+   "source": "Derived",
+   "last_date": "2026-10-01",
+   "title": "Ibovespa: total return in BRL (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@AXIA": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "Axia (ex-Eletrobras): total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@IBOV": {
+   "source": "Derived",
+   "last_date": "2026-10-01",
+   "title": "Ibovespa: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@ITUB": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "Ita\u00fa Unibanco: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@PETR": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "Petrobras: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@PRIO": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "PRIO: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@SUZB": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "Suzano: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "total_return_usd@VALE": {
+   "source": "Derived",
+   "last_date": "2026-10-02",
+   "title": "Vale: total return in USD (2012=100)",
+   "role": "derived",
+   "agg": "last"
+  },
+  "wb/AG.LND.CREL.HA.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Land under cereal production (hectares)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/AG.LND.FRST.K2.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2023-12-31",
+   "title": "Forest area (sq. km)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/AG.PRD.CREL.MT.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Cereal production (metric tons)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/AG.YLD.CREL.KG.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Cereal yield (kg per hectare)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/BX.PEF.TOTL.CD.WD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Portfolio equity, net inflows (BoP, current US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/CM.MKT.LCAP.GD.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Market capitalization of listed domestic companies (% of GDP)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/DSTKMKTXD_M.BRA": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Stock Markets",
+   "role": "canonical",
+   "agg": "last"
+  },
+  "wb/EG.ELC.HYRO.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Electricity production from hydroelectric sources (% of total)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/EG.ELC.RNEW.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2021-12-31",
+   "title": "Renewable electricity output (% of total electricity output)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/EG.IMP.CONS.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2023-12-31",
+   "title": "Energy imports, net (% of energy use)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/EG.USE.CRNW.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Combustible renewables and waste (% of total energy)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/EN.CLC.SPEI.XD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2023-12-31",
+   "title": "Standardised Precipitation-Evapotranspiration Index",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/ER.H2O.FWTL.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2022-12-31",
+   "title": "Annual freshwater withdrawals, total (% of internal resources)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/FI.RES.TOTL.CD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Total reserves (includes gold, current US$)",
+   "role": "alternate",
+   "agg": "mean"
+  },
+  "wb/FI.RES.XGLD.CD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Total reserves, excluding gold (current US$)",
+   "role": "alternate",
+   "agg": "mean"
+  },
+  "wb/FR.INR.LEND.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Lending interest rate (%)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/FR.INR.LNDP.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Interest rate spread (lending rate minus deposit rate, %)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/FS.AST.PRVT.GD.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Domestic credit to private sector (% of GDP)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GC.TAX.TOTL.GD.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Tax revenue (% of GDP)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GFDD.EI.06.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2021-12-31",
+   "title": "Bank return on equity (%, after tax)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GFDD.OI.01.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2021-12-31",
+   "title": "Bank concentration (%)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GFDD.OI.06.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2021-12-31",
+   "title": "5-bank asset concentration",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_CC_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Control of Corruption - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_GE_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Government Effectiveness - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_PV_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_RL_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Rule of Law - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_RQ_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Regulatory Quality - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/GOV_WGI_VA_EST.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Voice and Accountability - Governance estimate (approx. -2.5 to +2.5)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/IC.BUS.EASE.DFRN.XQ.DB1719.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2019-12-31",
+   "title": "Ease of doing business score (DB17-20 methodology)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/LO.PISA.MAT.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2015-12-31",
+   "title": "PISA: Mean performance on the mathematics scale",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NE.GDI.FTOT.ZS.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Gross fixed capital formation (% of GDP)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NV.AGR.EMPL.KD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Agriculture, forestry, and fishing, value added per worker (constant 2015 US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NW.HCA.PC.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2020-12-31",
+   "title": "Human capital per capita (real chained 2019 US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NW.NCA.MLIT.TO.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2020-12-31",
+   "title": "Nonrenewable natural capital, metals and minerals: lithium (real chained 2019 US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NW.NCA.SSOI.PC.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2020-12-31",
+   "title": "Nonrenewable natural capital per capita, total (real chained 2019 US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NW.NCA.TOTL.PC.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2020-12-31",
+   "title": "Renewable natural capital per capita, total (real chained 2019 US$)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NY.GDP.MKTP.KD.ZG.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "GDP growth (annual %)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NY.GDP.PCAP.PP.KD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "GDP per capita, PPP (constant 2021 international $)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/NYGDPMKTPSAKD_Q.BRA": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "GDP (seas. adj.)",
+   "role": "canonical",
+   "agg": "sum"
+  },
+  "wb/PA.NUS.GDP.PLI.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Price level index (GDP)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/PAY.TAX.COIT.AU.HRS.DB1719.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2019-12-31",
+   "title": "Time to comply with a corporate income tax correction (hours) (DB17-20 methodology)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/PX.REX.REER.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Real effective exchange rate index (2010 = 100)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/SI.POV.GINI.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Gini index",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/TOT.BRA": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2025-12-31",
+   "title": "Terms of Trade",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/TT.PRI.MRCH.XD.WD.BR": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Net barter terms of trade index (2015 = 100)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wb/account.t.d.BRA": {
+   "source": "World Bank (Dateno)",
+   "last_date": "2024-12-31",
+   "title": "Account (% age 15+)",
+   "role": "canonical",
+   "agg": "mean"
+  },
+  "wind_solar_generation_share": {
+   "source": "ONS",
+   "last_date": "2026-10-01",
+   "title": "Wind + solar generation share",
+   "role": "canonical",
+   "agg": "mean"
+  }
+ }
+}

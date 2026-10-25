@@ -1,0 +1,83 @@
+PRE-REGISTRATION: US tariffs on Brazil under Lula III
+Written 2026-10-06, after the section 0 anchors reproduced (results.json "anchors.*", mismatches = []) and after the
+single pull us_ncm_m (Brazil->US by NCM-8, monthly, 2023-01..2026-09, 121,957 rows). No other pull, no estimate
+and no tariff-list mapping had been run when this file was written.
+
+CONVENTIONS
+- Seed 0. OLS by np.linalg.lstsq. Cluster bootstrap by HS4 (2,000 draws) for product panels and by UF for state
+  panels. Placebo by permuting treatment status across HS4 (2,000). Event-study placebo: 2,000 dates >= 90 days
+  from any event; estimation window [-250,-121].
+- CIs reported: 80% and 90%. Headline window for markets: [-5,+5].
+- Verdict rule (every hypothesis): "supports Hx" when the baseline sign matches, >= 80% of robustness cells share
+  that sign, and the 80% cluster-bootstrap CI excludes zero. "Consistent with Hx, not proof" when the CI straddles
+  zero but the sign and the robustness majority match. Otherwise "does not support Hx". The competing H' gets the
+  same rule. Both can fail (null result); that is reported as such.
+- Regimes: R0 <= 2025-03-11; R1 2025-03-12..2025-08-05; R2 2025-08-06..2025-11-12; R3 2025-11-13..2026-02-23;
+  R4 2026-02-24..2026-07-21; R5 >= 2026-07-22. Statuses per NCM: covered (full added rate), exempt (Annex),
+  232 (sectoral). Main control group excludes crude 2709 (exempt but fell for non-tariff reasons).
+- Gross loss by HS4 = 2024 value x (1 - exp(coef)); net = gross x (1 - d).
+
+HYPOTHESES (symmetric pairs)
+
+H1 (small and diffuse): net national loss after diversion <= 0.2% of GDP ($4.6bn/yr) AND no single HS4 lost more
+   than $1bn/yr.
+H1' (concentrated and large): lines at the full rate lost >= 25% of their 2024 value, the top 10 treated HS4 carry
+   >= 70% of the gross loss, and the top 5 states carry >= 75%.
+   Statistic: triple-diff gross loss by HS4 (5.1), diversion-adjusted (5.2).
+
+H2 (commodities divert, manufactures do not): diversion rate d >= 0.6 for the commodity group (0901, 0202, 1602,
+   7201, 7207, 7224, 4703, 1701, 1502, 2401, 2818; crude 2709 as a special case) and d <= 0.3 for the manufactured
+   group (8802, 8807, 8429, 8504, 6403, 6402, 9403, 4409, 4418, 4412, 4407, 4011, 6802, 9306, 7304).
+H2': no difference, |d_comm - d_manuf| < 0.2.
+   Statistic: d_i = clip(dROW_i / |dUS_i|, 0, 1) from the treated-vs-exempt DiD on exports to non-US destinations;
+   cluster bootstrap over HS4 for the group means.
+
+H3 (the US bears the cost on low-substitutability lines): for lines where Brazil's share of US imports > 30%,
+   (i) Brazil's US unit value relative to its ROW unit value did not fall by more than 5% in R2;
+   (ii) US landed unit values from Brazil rose relative to competitors;
+   (iii) the Nov-2025 relief is concentrated on those lines (relieved-value share among >30%-share lines vs
+   <10%-share lines).
+H3' (Brazil absorbed): relative unit values fell >= 5% and the relief list is uncorrelated with the Brazil share.
+   Statistic: unit-value DiD (5.3), Comtrade mirror (5.4), 2x2 revealed-preference table.
+
+H4 (trade-only escalation costs < 1% of GDP; only financial sanctions cross it): in the matrix, rung (c)'s central
+   net loss < $23bn (1% of 2025 GDP) and rung (d) exceeds $23bn only when the financial block is included.
+H4': trade effects alone in rung (c) exceed 1% of GDP because manufactured lines do not divert.
+   Modelling hypothesis: verdict = the computed matrix under the central elasticity set; low/high reported.
+
+H5 (markets treated the tariff as noise): mean CAR of escalation dates on brl_usd, ibovespa_usd,
+   gov_real_yield_10y, Embraer and the exposed-firm basket is inside the placebo 5-95% band, [-5,+5].
+H5': escalation dates have |CAR| beyond the 90th placebo percentile and de-escalation dates the mirror sign, with an
+   exact permutation p < 0.10 for the escalation-vs-de-escalation group difference.
+
+H6 (state concentration without an employment signal): five states carry >= 75% of the treated-line loss, and
+   exposed states' PIM-PF and unemployment do not diverge from unexposed states by more than one cross-state sd
+   after Aug 2025.
+H6': divergence > 1 sd in the direction of the exposure.
+
+H7 (the 2025 fall was mostly not the 40% tariff): crude (exempt) plus Section 232 steel explain >= 50% of the
+   Aug-2025..Jul-2026 fall in US-bound exports (year-on-year, same months).
+H7': lines at the 40% explain >= 50%.
+   Statistic: decomposition of the y/y gap by tariff status.
+
+H8 (revealed preference on the US side): the Nov-2025 relief covered the lines with the highest US CPI salience x
+   Brazil share; relief is predicted by US consumer prices, not by Brazilian concessions.
+H8': relief tracked the Lula-Trump meetings (6 Oct and 26 Oct 2025) and covered lines regardless of CPI salience.
+   Statistic: 2x2 of relieved vs not x (CPI salience high vs low), plus the dates. Note in advance: the date test
+   cannot separate the two (both the meetings and the CPI prints precede 20 Nov); the cross-section is the test.
+
+ROBUSTNESS GRID (5.1)
+HS4 vs NCM-8; log levels vs share of world; with/without crude 2709; with/without 232 lines; pre-period
+Jan 2023-Jun 2025 vs Jan 2024-Jun 2025; drop coffee and beef. 2 x 2 x 2 x 2 x 2 x 2 = up to 64 cells (some collapse).
+
+COVERAGE STOP RULE (computed from the HS6-mapped lists x 2024 US-bound exports)
+R5: full 301+forced-labour 16.5% +/- 3 pts; exempt 52.7% +/- 5; Section 232 24.2% +/- 5 (MDIC, A23).
+R2: full 50% 35.9% +/- 4; 232 19.5% +/- 4 (A04).
+R3 (after Nov relief): 22% +/- 4 at 40% (A10).
+R4 (post-SCOTUS): 46% +/- 5 at no extra tariff (A18).
+A miss beyond tolerance means the mapping is wrong: inspect and fix; if it cannot be fixed, document and continue.
+
+WHAT WOULD CHANGE THE READ
+- If the placebo distribution of the treated-vs-exempt coefficient is wide (rank p > 0.10), the loss estimates are
+  reported as "consistent with", and the escalation matrix uses analogue-bounded elasticities instead.
+- Market CARs from a single country-specific event series are underpowered; null results are the expected default.

@@ -1,0 +1,3730 @@
+{
+ "cmn_target_diffs_vs_plan": {
+  "value": [
+   [
+    2003,
+    4.0,
+    3.25
+   ],
+   [
+    2004,
+    5.5,
+    3.75
+   ]
+  ],
+  "series_id": "cmn_targets",
+  "source": "ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets",
+  "last_date": "",
+  "sql": ""
+ },
+ "T1_wto_splice_ratio": {
+  "value": 1.09489,
+  "series_id": "wto_mfn_simple_avg",
+  "source": "WTO tariff profiles",
+  "last_date": "2025",
+  "sql": ""
+ },
+ "delta.a.delta": {
+  "value": 0.56282,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.perm_p": {
+  "value": 0.11429,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.perm_floor": {
+  "value": 0.02857,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.n_labelings": {
+  "value": 70,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.n_pt": {
+  "value": 4,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.n_non": {
+  "value": 4,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_with_R6": {
+  "value": 0.3938,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_yearweighted": {
+  "value": 0.47895,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.ci80": {
+  "value": [
+   0.21069,
+   0.90844
+  ],
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.ci90": {
+  "value": [
+   0.1054,
+   1.00835
+  ],
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.ci95": {
+  "value": [
+   0.01166,
+   1.07294
+  ],
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_tot": {
+  "value": 0.60912,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.ci80_tot": {
+  "value": [
+   0.26414,
+   0.97685
+  ],
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_tot_start": {
+  "value": 0.53436,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_start_raw": {
+  "value": 0.50177,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_crisis_out": {
+  "value": 0.39288,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_drop_2002_03": {
+  "value": 0.53578,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.delta_term": {
+  "value": 0.37975,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.perm_p_term": {
+  "value": 0.3,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.a.bh_q": {
+  "value": 0.26667,
+  "series_id": "a",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta": {
+  "value": 0.12136,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.perm_p": {
+  "value": 0.77143,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.perm_floor": {
+  "value": 0.05714,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.n_labelings": {
+  "value": 35,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.n_pt": {
+  "value": 4,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.n_non": {
+  "value": 3,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_with_R6": {
+  "value": -0.00964,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_yearweighted": {
+  "value": 0.08915,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.ci80": {
+  "value": [
+   -0.27709,
+   0.53057
+  ],
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.ci90": {
+  "value": [
+   -0.38117,
+   0.64841
+  ],
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.ci95": {
+  "value": [
+   -0.4611,
+   0.77537
+  ],
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_tot": {
+  "value": 0.06618,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.ci80_tot": {
+  "value": [
+   -0.33426,
+   0.4707
+  ],
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_tot_start": {
+  "value": -0.02683,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_start_raw": {
+  "value": 0.0349,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_crisis_out": {
+  "value": 0.0823,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_drop_2002_03": {
+  "value": 0.03792,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.delta_term": {
+  "value": 0.10826,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.perm_p_term": {
+  "value": 0.8,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.b.bh_q": {
+  "value": 0.77143,
+  "series_id": "b",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta": {
+  "value": 0.50066,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.perm_p": {
+  "value": 0.28571,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.perm_floor": {
+  "value": 0.02857,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.n_labelings": {
+  "value": 70,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.n_pt": {
+  "value": 4,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.n_non": {
+  "value": 4,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_with_R6": {
+  "value": 0.26646,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_yearweighted": {
+  "value": 0.42581,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.ci80": {
+  "value": [
+   0.01029,
+   0.96583
+  ],
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.ci90": {
+  "value": [
+   -0.12271,
+   1.08274
+  ],
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.ci95": {
+  "value": [
+   -0.22291,
+   1.20087
+  ],
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_tot": {
+  "value": 0.46423,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.ci80_tot": {
+  "value": [
+   -0.10629,
+   0.97502
+  ],
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_tot_start": {
+  "value": 0.11884,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_start_raw": {
+  "value": 0.19012,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_crisis_out": {
+  "value": 0.4623,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_drop_2002_03": {
+  "value": 0.54711,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.delta_term": {
+  "value": 0.31366,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.perm_p_term": {
+  "value": 0.8,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.c.bh_q": {
+  "value": 0.48,
+  "series_id": "c",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta": {
+  "value": -0.1982,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.perm_p": {
+  "value": 0.57143,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.perm_floor": {
+  "value": 0.02857,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.n_labelings": {
+  "value": 70,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.n_pt": {
+  "value": 4,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.n_non": {
+  "value": 4,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_with_R6": {
+  "value": -0.2868,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_yearweighted": {
+  "value": -0.20638,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.ci80": {
+  "value": [
+   -0.57791,
+   0.17606
+  ],
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.ci90": {
+  "value": [
+   -0.69221,
+   0.2845
+  ],
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.ci95": {
+  "value": [
+   -0.80198,
+   0.36756
+  ],
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_tot": {
+  "value": -0.15802,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.ci80_tot": {
+  "value": [
+   -0.49923,
+   0.19245
+  ],
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_tot_start": {
+  "value": -0.20606,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_start_raw": {
+  "value": -0.23294,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_crisis_out": {
+  "value": -0.21508,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_drop_2002_03": {
+  "value": -0.0722,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.delta_term": {
+  "value": -0.41628,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.perm_p_term": {
+  "value": 0.4,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.d.bh_q": {
+  "value": 0.66667,
+  "series_id": "d",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta": {
+  "value": -0.45342,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.perm_p": {
+  "value": 0.34286,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.perm_floor": {
+  "value": 0.02857,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.n_labelings": {
+  "value": 70,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.n_pt": {
+  "value": 4,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.n_non": {
+  "value": 4,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_with_R6": {
+  "value": -0.24174,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_yearweighted": {
+  "value": -0.40546,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.ci80": {
+  "value": [
+   -0.90861,
+   0.03941
+  ],
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.ci90": {
+  "value": [
+   -1.02807,
+   0.19557
+  ],
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.ci95": {
+  "value": [
+   -1.11638,
+   0.31342
+  ],
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_tot": {
+  "value": -0.37799,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.ci80_tot": {
+  "value": [
+   -0.74923,
+   0.03265
+  ],
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_tot_start": {
+  "value": -0.17933,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_start_raw": {
+  "value": -0.20363,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_crisis_out": {
+  "value": -0.35311,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_drop_2002_03": {
+  "value": -0.45416,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.delta_term": {
+  "value": -0.38742,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.perm_p_term": {
+  "value": 0.4,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.e.bh_q": {
+  "value": 0.48,
+  "series_id": "e",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta": {
+  "value": 0.45166,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.perm_p": {
+  "value": 0.11429,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.perm_floor": {
+  "value": 0.02857,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.n_labelings": {
+  "value": 70,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.n_pt": {
+  "value": 4,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.n_non": {
+  "value": 4,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_with_R6": {
+  "value": 0.19624,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_yearweighted": {
+  "value": 0.34237,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.ci80": {
+  "value": [
+   0.1003,
+   0.76931
+  ],
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.ci90": {
+  "value": [
+   -0.01066,
+   0.86528
+  ],
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.ci95": {
+  "value": [
+   -0.11147,
+   0.93525
+  ],
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_tot": {
+  "value": 0.47706,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.ci80_tot": {
+  "value": [
+   0.11791,
+   0.79923
+  ],
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_tot_start": {
+  "value": 0.31304,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_start_raw": {
+  "value": 0.31017,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_crisis_out": {
+  "value": 0.53808,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_drop_2002_03": {
+  "value": 0.51564,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.delta_term": {
+  "value": 0.42057,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.perm_p_term": {
+  "value": 0.2,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.f.bh_q": {
+  "value": 0.26667,
+  "series_id": "f",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta": {
+  "value": 1.25052,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.perm_p": {
+  "value": 0.1,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.perm_floor": {
+  "value": 0.1,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.n_labelings": {
+  "value": 20,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.n_pt": {
+  "value": 3,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.n_non": {
+  "value": 3,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_with_R6": {
+  "value": 0.72191,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_yearweighted": {
+  "value": 1.19179,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.ci80": {
+  "value": [
+   0.7429,
+   1.63748
+  ],
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.ci90": {
+  "value": [
+   0.58001,
+   1.75086
+  ],
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.ci95": {
+  "value": [
+   0.45482,
+   1.8811
+  ],
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_tot": {
+  "value": 1.32698,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.ci80_tot": {
+  "value": [
+   0.87291,
+   1.68582
+  ],
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_tot_start": {
+  "value": 1.25572,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_start_raw": {
+  "value": 1.1561,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_crisis_out": {
+  "value": 1.27034,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_drop_2002_03": {
+  "value": 1.4241,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.delta_term": {
+  "value": 1.09969,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.perm_p_term": {
+  "value": 0.1,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.perm_floor_term": {
+  "value": 0.2,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.g.bh_q": {
+  "value": 0.26667,
+  "series_id": "g",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta": {
+  "value": 0.25956,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.perm_p": {
+  "value": 0.25714,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.perm_floor": {
+  "value": 0.02857,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.n_labelings": {
+  "value": 70,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.n_pt": {
+  "value": 4,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.n_non": {
+  "value": 4,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_with_R6": {
+  "value": 0.13655,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_yearweighted": {
+  "value": 0.22988,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.ci80": {
+  "value": [
+   0.05035,
+   0.4565
+  ],
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.ci90": {
+  "value": [
+   -0.00491,
+   0.50465
+  ],
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.ci95": {
+  "value": [
+   -0.04589,
+   0.54374
+  ],
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_tot": {
+  "value": 0.29073,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.ci80_tot": {
+  "value": [
+   0.13647,
+   0.44867
+  ],
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_tot_start": {
+  "value": 0.21892,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_start_raw": {
+  "value": 0.21186,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_crisis_out": {
+  "value": 0.23638,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_drop_2002_03": {
+  "value": 0.27407,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.delta_term": {
+  "value": 0.1465,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.perm_p_term": {
+  "value": 0.6,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.ELI.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "ELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.delta": {
+  "value": 0.87406,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.perm_p": {
+  "value": 0.02381,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.perm_floor": {
+  "value": 0.01587,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.n_labelings": {
+  "value": 126,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.n_pt": {
+  "value": 5,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.n_non": {
+  "value": 4,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.delta_with_R6": {
+  "value": 0.87406,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.ci80": {
+  "value": [
+   0.56844,
+   1.27999
+  ],
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.ci90": {
+  "value": [
+   0.47844,
+   1.38428
+  ],
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.ci95": {
+  "value": [
+   0.41098,
+   1.48716
+  ],
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.delta_term": {
+  "value": 1.04713,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.perm_p_term": {
+  "value": 0.1,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FP.perm_floor_term": {
+  "value": 0.1,
+  "series_id": "FP",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FPminusELI.delta": {
+  "value": 0.6145,
+  "series_id": "FPminusELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FPminusELI.ci80": {
+  "value": [
+   0.28933,
+   1.03773
+  ],
+  "series_id": "FPminusELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "delta.FPminusELI.ci95": {
+  "value": [
+   0.10827,
+   1.25339
+  ],
+  "series_id": "FPminusELI",
+  "source": "computed (regime-level Δ PT - non-PT)",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.pt_eli": {
+  "value": {
+   "R3": 0.444,
+   "R4": 0.427,
+   "R5": -0.207,
+   "R9": 0.003
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.rank_R5": {
+  "value": 1,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.median": {
+  "value": 0.21512,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.sd": {
+  "value": 0.32186,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.gap_R5_median": {
+  "value": -0.42162,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.gap_R5_R4": {
+  "value": -0.63383,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.gap_R5_R9": {
+  "value": -0.20941,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.delta_eli_ex_R5": {
+  "value": 0.38401,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.floor_p": {
+  "value": 0.25,
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H2.with_R6": {
+  "value": {
+   "pt_eli": {
+    "R3": 0.444,
+    "R4": 0.427,
+    "R5": -0.207,
+    "R6": -0.391,
+    "R9": -0.054
+   },
+   "sd": 0.37697,
+   "median": -0.05415,
+   "delta_eli_ex_R5": 0.19914
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "sensitivity.rstar_trailing_median": {
+  "value": {
+   "a": 0.56282,
+   "b": 0.18573,
+   "ELI": 0.26818,
+   "R9-R3_b": 0.4755,
+   "R9-R3_a": -1.21812,
+   "scores": {
+    "a": {
+     "R1": -0.253,
+     "R2": -0.31,
+     "R3": 0.85,
+     "R4": 0.359,
+     "R5": 0.28,
+     "R6": null,
+     "R7": -0.386,
+     "R8": -0.182,
+     "R9": -0.368
+    },
+    "b": {
+     "R1": null,
+     "R2": -0.347,
+     "R3": 0.1,
+     "R4": 0.349,
+     "R5": -0.472,
+     "R6": null,
+     "R7": 0.167,
+     "R8": 0.036,
+     "R9": 0.576
+    },
+    "ELI": {
+     "R1": -0.173,
+     "R2": -0.085,
+     "R3": 0.452,
+     "R4": 0.433,
+     "R5": -0.203,
+     "R6": null,
+     "R7": -0.018,
+     "R8": -0.118,
+     "R9": -0.003
+    }
+   }
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "sensitivity.target_2003_adjusted_8.5": {
+  "value": {
+   "a": 0.56282,
+   "b": 0.1357,
+   "ELI": 0.26152,
+   "R9-R3_b": 0.29553,
+   "R9-R3_a": -1.21812,
+   "scores": {
+    "a": {
+     "R1": -0.253,
+     "R2": -0.31,
+     "R3": 0.85,
+     "R4": 0.359,
+     "R5": 0.28,
+     "R6": null,
+     "R7": -0.386,
+     "R8": -0.182,
+     "R9": -0.368
+    },
+    "b": {
+     "R1": null,
+     "R2": -0.283,
+     "R3": 0.248,
+     "R4": 0.289,
+     "R5": -0.542,
+     "R6": null,
+     "R7": 0.237,
+     "R8": 0.044,
+     "R9": 0.544
+    },
+    "ELI": {
+     "R1": -0.173,
+     "R2": -0.074,
+     "R3": 0.477,
+     "R4": 0.423,
+     "R5": -0.214,
+     "R6": null,
+     "R7": -0.006,
+     "R8": -0.116,
+     "R9": -0.009
+    }
+   }
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "sensitivity.net_debt_sgs4513": {
+  "value": {
+   "a": 0.57638,
+   "b": 0.12136,
+   "ELI": 0.26191,
+   "R9-R3_b": 0.5538,
+   "R9-R3_a": -1.27573,
+   "scores": {
+    "a": {
+     "R1": -0.256,
+     "R2": -0.332,
+     "R3": 0.911,
+     "R4": 0.363,
+     "R5": 0.257,
+     "R6": null,
+     "R7": -0.376,
+     "R8": -0.174,
+     "R9": -0.365
+    },
+    "b": {
+     "R1": null,
+     "R2": -0.378,
+     "R3": 0.051,
+     "R4": 0.314,
+     "R5": -0.496,
+     "R6": null,
+     "R7": 0.281,
+     "R8": 0.089,
+     "R9": 0.605
+    },
+    "ELI": {
+     "R1": -0.173,
+     "R2": -0.094,
+     "R3": 0.454,
+     "R4": 0.428,
+     "R5": -0.21,
+     "R6": null,
+     "R7": 0.003,
+     "R8": -0.108,
+     "R9": 0.004
+    }
+   }
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.unga_distance_bra_usa": {
+  "value": {
+   "R1": 3.098,
+   "R2": 2.614,
+   "R3": 2.839,
+   "R4": 2.834,
+   "R5": 3.01,
+   "R6": 2.986,
+   "R7": 2.773,
+   "R8": 2.201,
+   "R9": 2.83
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.unga_idealpoint_brazil": {
+  "value": {
+   "R1": -0.103,
+   "R2": 0.009,
+   "R3": -0.081,
+   "R4": -0.26,
+   "R5": -0.559,
+   "R6": -0.548,
+   "R7": -0.291,
+   "R8": 0.178,
+   "R9": -0.382
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.wb/TX.VAL.MRCH.HI.ZS.BR": {
+  "value": {
+   "R1": 66.59458,
+   "R2": 69.64364,
+   "R3": 65.2582,
+   "R4": 57.1916,
+   "R5": 51.87556,
+   "R6": 50.60619,
+   "R7": 48.14351,
+   "R8": 44.77824,
+   "R9": 42.56117
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.wb/TX.VAL.MRCH.R1.ZS.BR": {
+  "value": {
+   "R1": 4.81111,
+   "R2": 4.58662,
+   "R3": 7.94597,
+   "R4": 12.31452,
+   "R5": 21.38745,
+   "R6": 23.54252,
+   "R7": 26.50942,
+   "R8": 34.32958,
+   "R9": 35.84374
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.wb/AG.LND.PFLS.HA.BR": {
+  "value": {
+   "R1": null,
+   "R2": 1621738.0,
+   "R3": 1803702.66667,
+   "R4": 1098639.8,
+   "R5": 872959.0,
+   "R6": 828840.0,
+   "R7": 2104198.0,
+   "R8": 1595931.5,
+   "R9": 1862227.66667
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.prodes_amazon_km2": {
+  "value": {
+   "R1": 19457.5,
+   "R2": 18825.0,
+   "R3": 24060.66667,
+   "R4": 10662.4,
+   "R5": 5473.0,
+   "R6": 6207.0,
+   "R7": 7458.66667,
+   "R8": 11403.0,
+   "R9": 7104.33333
+  },
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "FP_anchor.rho_FP_vs_unga_distance": {
+  "value": 0.21667,
+  "series_id": "",
+  "source": "UNGA ideal points / WB / INPE (descriptive)",
+  "last_date": "",
+  "sql": ""
+ },
+ "vparty_v2pariglef": {
+  "value": {
+   "PT": {
+    "1994": -2.631,
+    "1998": -2.242,
+    "2002": -1.455,
+    "2006": -1.455,
+    "2010": -1.296,
+    "2014": -1.46,
+    "2018": -1.896
+   },
+   "PSDB": {
+    "1994": 0.386,
+    "1998": 0.932,
+    "2002": 0.871,
+    "2006": 1.09,
+    "2010": 1.09,
+    "2014": 1.521,
+    "2018": 1.431
+   },
+   "PMDB": {
+    "1994": 0.091,
+    "1998": 0.569,
+    "2002": 0.569,
+    "2006": 0.319,
+    "2010": 0.433,
+    "2014": 0.668,
+    "2018": 0.792
+   },
+   "PFL_DEM": {
+    "1994": 1.997,
+    "1998": 1.784,
+    "2002": 1.857,
+    "2006": 1.857,
+    "2010": 2.157,
+    "2014": 2.318,
+    "2018": 1.961
+   },
+   "PSL": {
+    "2018": 3.251
+   }
+  },
+  "series_id": "",
+  "source": "V-Party (ext/series_C.csv)",
+  "last_date": "",
+  "sql": ""
+ },
+ "exact_month_component_z": {
+  "value": {
+   "M1": {
+    "R1": null,
+    "R2": 0.272,
+    "R3": 0.277,
+    "R4": -1.075,
+    "R5": -0.961,
+    "R6": 0.748,
+    "R7": 0.707,
+    "R8": 0.028,
+    "R9": 1.538
+   },
+   "M3": {
+    "R1": null,
+    "R2": -0.585,
+    "R3": -0.058,
+    "R4": 1.128,
+    "R5": 0.325,
+    "R6": -1.441,
+    "R7": -0.281,
+    "R8": -0.371,
+    "R9": -0.04
+   },
+   "M4a": {
+    "R1": null,
+    "R2": -1.356,
+    "R3": -0.584,
+    "R4": 0.953,
+    "R5": -0.371,
+    "R6": -1.011,
+    "R7": 0.892,
+    "R8": 0.403,
+    "R9": -0.464
+   },
+   "M5": {
+    "R1": null,
+    "R2": -0.399,
+    "R3": 0.011,
+    "R4": -0.732,
+    "R5": -1.295,
+    "R6": 0.327,
+    "R7": 1.277,
+    "R8": 0.243,
+    "R9": 1.518
+   },
+   "C1": {
+    "R1": null,
+    "R2": null,
+    "R3": null,
+    "R4": 1.399,
+    "R5": -0.021,
+    "R6": -1.383,
+    "R7": -1.391,
+    "R8": -0.017,
+    "R9": -0.026
+   },
+   "C3": {
+    "R1": -1.768,
+    "R2": -0.412,
+    "R3": -0.421,
+    "R4": 0.117,
+    "R5": 0.234,
+    "R6": -0.124,
+    "R7": 0.598,
+    "R8": 1.354,
+    "R9": 0.626
+   },
+   "C4": {
+    "R1": -1.256,
+    "R2": 0.319,
+    "R3": 0.999,
+    "R4": 1.146,
+    "R5": -0.257,
+    "R6": -1.374,
+    "R7": -1.252,
+    "R8": 0.03,
+    "R9": 0.45
+   },
+   "S2": {
+    "R1": 0.633,
+    "R2": 0.633,
+    "R3": 0.622,
+    "R4": -0.425,
+    "R5": -1.084,
+    "R6": 0.633,
+    "R7": 0.52,
+    "R8": -0.514,
+    "R9": -0.136
+   }
+  },
+  "series_id": "",
+  "source": "monthly components, exact regime dates",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.rho_rhet_ELI_corpusA": {
+  "value": 0.17737,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.perm_p": {
+  "value": 0.4863,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.n_docs": {
+  "value": 18,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.pt_mean_rhet_z": {
+  "value": -0.63355,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.pt_mean_action_z": {
+  "value": 0.43885,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.non_mean_rhet_z": {
+  "value": 0.50684,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.non_mean_action_z": {
+  "value": -0.35108,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.pt_gap_rhet_minus_action": {
+  "value": -1.0724,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.pt_mean_score": {
+  "value": -0.26857,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.non_mean_score": {
+  "value": 0.21536,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.rho_UN_fp_rhet_vs_FPaxis": {
+  "value": 0.41089,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.rho_UN_econ_rhet_vs_ELI": {
+  "value": -0.0776,
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H0.UN_by_regime": {
+  "value": {
+   "rhet_score": {
+    "R1": 0.392,
+    "R2": 0.6,
+    "R3": 0.048,
+    "R4": 0.0,
+    "R5": -0.023,
+    "R6": -0.333,
+    "R7": 0.0,
+    "R8": 0.233,
+    "R9": -0.5
+   },
+   "fp_rhet": {
+    "R1": 0.5,
+    "R2": 0.458,
+    "R3": 0.479,
+    "R4": 0.604,
+    "R5": 0.365,
+    "R6": 0.733,
+    "R7": 0.382,
+    "R8": 0.302,
+    "R9": 0.755
+   },
+   "south_per1k": {
+    "R1": 10.843,
+    "R2": 9.512,
+    "R3": 10.423,
+    "R4": 12.247,
+    "R5": 8.283,
+    "R6": 10.277,
+    "R7": 9.2,
+    "R8": 6.267,
+    "R9": 14.023
+   },
+   "west_per1k": {
+    "R1": 3.376,
+    "R2": 4.087,
+    "R3": 3.767,
+    "R4": 2.713,
+    "R5": 3.876,
+    "R6": 1.581,
+    "R7": 4.046,
+    "R8": 3.328,
+    "R9": 1.981
+   }
+  },
+  "series_id": "",
+  "source": "rhetoric dictionary coding",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_summary": {
+  "value": {
+   "rho": 0.14286,
+   "perm_p": 0.75905,
+   "n": 8
+  },
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_summary_delta_pt": {
+  "value": 0.54406,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_overall": {
+  "value": {
+   "rho": 0.09524,
+   "perm_p": 0.83983,
+   "n": 8
+  },
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_overall_delta_pt": {
+  "value": 1.75504,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_area1~a": {
+  "value": 0.59524,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_area3~b": {
+  "value": 0.42857,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_area4~d": {
+  "value": 0.2619,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_area5~c": {
+  "value": 0.5,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_trade~d": {
+  "value": -0.02381,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_monetary~b": {
+  "value": -0.14286,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_govspend~a": {
+  "value": 0.16667,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_fiscalhealth~a": {
+  "value": null,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_financial~c": {
+  "value": -0.49099,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_investment~e": {
+  "value": -0.1522,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.fraser_summary_annual_rho": {
+  "value": -0.04783,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "H7.heritage_overall_annual_rho": {
+  "value": 0.05,
+  "series_id": "",
+  "source": "Fraser/Heritage vs ELI",
+  "last_date": "",
+  "sql": ""
+ },
+ "pair.R9-R3": {
+  "value": {
+   "a": {
+    "delta": -1.21812,
+    "ci80": [
+     -1.4776,
+     -0.95419
+    ],
+    "ci95": [
+     -1.57725,
+     -0.80744
+    ]
+   },
+   "b": {
+    "delta": 0.5538,
+    "ci80": [
+     0.19507,
+     0.91253
+    ],
+    "ci95": [
+     0.05486,
+     1.10427
+    ]
+   },
+   "c": {
+    "delta": 0.11849,
+    "ci80": [
+     0.02103,
+     0.21181
+    ],
+    "ci95": [
+     -0.02325,
+     0.25689
+    ]
+   },
+   "d": {
+    "delta": -0.54747,
+    "ci80": [
+     -0.88776,
+     -0.20339
+    ],
+    "ci95": [
+     -1.01949,
+     -0.01615
+    ]
+   },
+   "e": {
+    "delta": -0.9586,
+    "ci80": [
+     -1.23269,
+     -0.68451
+    ],
+    "ci95": [
+     -1.41627,
+     -0.49502
+    ]
+   },
+   "f": {
+    "delta": 0.54405,
+    "ci80": [
+     -0.13003,
+     1.19121
+    ],
+    "ci95": [
+     -0.42659,
+     1.41363
+    ]
+   },
+   "g": {
+    "delta": null,
+    "ci80": [
+     -1.033,
+     -0.83759
+    ],
+    "ci95": [
+     -1.08529,
+     -0.79219
+    ]
+   },
+   "ELI": {
+    "delta": -0.44081,
+    "ci80": [
+     -0.57384,
+     -0.33752
+    ],
+    "ci95": [
+     -0.63444,
+     -0.27
+    ]
+   }
+  },
+  "series_id": "",
+  "source": "computed pairwise contrast",
+  "last_date": "",
+  "sql": ""
+ },
+ "pair.R5-R4": {
+  "value": {
+   "a": {
+    "delta": -0.07837,
+    "ci80": [
+     -0.25441,
+     0.08552
+    ],
+    "ci95": [
+     -0.35695,
+     0.15307
+    ]
+   },
+   "b": {
+    "delta": -0.81017,
+    "ci80": [
+     -0.95651,
+     -0.66164
+    ],
+    "ci95": [
+     -1.03348,
+     -0.59009
+    ]
+   },
+   "c": {
+    "delta": -0.86533,
+    "ci80": [
+     -1.13783,
+     -0.59275
+    ],
+    "ci95": [
+     -1.28422,
+     -0.46197
+    ]
+   },
+   "d": {
+    "delta": -0.91338,
+    "ci80": [
+     -1.19896,
+     -0.62173
+    ],
+    "ci95": [
+     -1.32661,
+     -0.46862
+    ]
+   },
+   "e": {
+    "delta": -0.27776,
+    "ci80": [
+     -0.64449,
+     0.10447
+    ],
+    "ci95": [
+     -0.80342,
+     0.30863
+    ]
+   },
+   "f": {
+    "delta": -0.37175,
+    "ci80": [
+     -0.71084,
+     -0.04528
+    ],
+    "ci95": [
+     -0.89645,
+     0.08773
+    ]
+   },
+   "g": {
+    "delta": -0.858,
+    "ci80": [
+     -1.14047,
+     -0.59238
+    ],
+    "ci95": [
+     -1.31201,
+     -0.47364
+    ]
+   },
+   "ELI": {
+    "delta": -0.63383,
+    "ci80": [
+     -0.77024,
+     -0.50029
+    ],
+    "ci95": [
+     -0.83681,
+     -0.43121
+    ]
+   }
+  },
+  "series_id": "",
+  "source": "computed pairwise contrast",
+  "last_date": "",
+  "sql": ""
+ },
+ "pair.R5-R9": {
+  "value": {
+   "a": {
+    "delta": 0.64837,
+    "ci80": [
+     0.47794,
+     0.81245
+    ],
+    "ci95": [
+     0.38567,
+     0.89123
+    ]
+   },
+   "b": {
+    "delta": -1.1007,
+    "ci80": [
+     -1.30302,
+     -0.90927
+    ],
+    "ci95": [
+     -1.41533,
+     -0.82571
+    ]
+   },
+   "c": {
+    "delta": -0.78335,
+    "ci80": [
+     -0.99855,
+     -0.57198
+    ],
+    "ci95": [
+     -1.12052,
+     -0.47837
+    ]
+   },
+   "d": {
+    "delta": -0.57124,
+    "ci80": [
+     -0.86183,
+     -0.26118
+    ],
+    "ci95": [
+     -0.99556,
+     -0.09763
+    ]
+   },
+   "e": {
+    "delta": 0.06571,
+    "ci80": [
+     -0.33531,
+     0.49514
+    ],
+    "ci95": [
+     -0.45056,
+     0.70228
+    ]
+   },
+   "f": {
+    "delta": -0.53528,
+    "ci80": [
+     -1.01476,
+     -0.06698
+    ],
+    "ci95": [
+     -1.20009,
+     0.23519
+    ]
+   },
+   "g": {
+    "delta": null,
+    "ci80": [
+     0.68673,
+     0.97278
+    ],
+    "ci95": [
+     0.64399,
+     1.04877
+    ]
+   },
+   "ELI": {
+    "delta": -0.20941,
+    "ci80": [
+     -0.30656,
+     -0.07651
+    ],
+    "ci95": [
+     -0.36584,
+     -0.01878
+    ]
+   }
+  },
+  "series_id": "",
+  "source": "computed pairwise contrast",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R3": {
+  "value": {
+   "bcb_outcome": -0.18015,
+   "gov_stance_M6": 1.20608,
+   "M1": 0.29992,
+   "M2": -0.31792,
+   "M3": -0.1565,
+   "M4a": -0.70702,
+   "M4b": -0.69135,
+   "M5": -0.02706,
+   "M6": 1.20608
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R4": {
+  "value": {
+   "bcb_outcome": 0.13578,
+   "gov_stance_M6": 1.20608,
+   "M1": -1.02158,
+   "M2": 0.58451,
+   "M3": 1.12843,
+   "M4a": 0.94964,
+   "M4b": 0.36961,
+   "M5": -0.67206,
+   "M6": 1.20608
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R5": {
+  "value": {
+   "bcb_outcome": -0.32659,
+   "gov_stance_M6": -1.34313,
+   "M1": -0.96072,
+   "M2": 0.22733,
+   "M3": 0.32535,
+   "M4a": -0.37148,
+   "M4b": 0.51092,
+   "M5": -1.2946,
+   "M6": -1.34313
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R7": {
+  "value": {
+   "bcb_outcome": 0.43579,
+   "gov_stance_M6": -0.49339,
+   "M1": 0.73467,
+   "M2": 0.36459,
+   "M3": -0.44204,
+   "M4a": 0.60042,
+   "M4b": 0.13152,
+   "M5": 1.15574,
+   "M6": -0.49339
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R8": {
+  "value": {
+   "bcb_outcome": 0.03517,
+   "gov_stance_M6": 0.35634,
+   "M1": 0.02792,
+   "M2": -0.05933,
+   "M3": -0.37065,
+   "M4a": 0.40264,
+   "M4b": 0.26726,
+   "M5": 0.24294,
+   "M6": 0.35634
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "H3.decomp_b.R9": {
+  "value": {
+   "bcb_outcome": 0.65436,
+   "gov_stance_M6": 0.35634,
+   "M1": 1.56376,
+   "M2": 0.3388,
+   "M3": 0.00412,
+   "M4a": -0.45318,
+   "M4b": 0.07747,
+   "M5": 1.55295,
+   "M6": 0.35634
+  },
+  "series_id": "",
+  "source": "computed",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H1": {
+  "value": {
+   "share": 1.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H1_comp": {
+  "value": {
+   "share": 0.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H2": {
+  "value": {
+   "share": 0.75,
+   "n_cells": 144
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H2_rank_min": {
+  "value": {
+   "share": 1.0,
+   "n_cells": 144
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H3": {
+  "value": {
+   "share": 1.0,
+   "n_cells": 144
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H3_comp": {
+  "value": {
+   "share": 0.0,
+   "n_cells": 144
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H4": {
+  "value": {
+   "share": 0.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H4_partial_c": {
+  "value": {
+   "share": 0.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H4_partial_f": {
+  "value": {
+   "share": 1.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H4_comp": {
+  "value": {
+   "share": 0.0,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H5": {
+  "value": {
+   "share": 0.9375,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H5_comp": {
+  "value": {
+   "share": 0.0625,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.H6": {
+  "value": {
+   "share": 0.875,
+   "n_cells": 384
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_a": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": 0.36117,
+   "p10": 0.10945,
+   "p90": 0.53436
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_b": {
+  "value": {
+   "share_same_sign": 0.67708,
+   "n_cells": 384,
+   "median": 0.03827,
+   "p10": -0.21711,
+   "p90": 0.13162
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_c": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": 0.31102,
+   "p10": 0.04782,
+   "p90": 0.49521
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_d": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": -0.25426,
+   "p10": -0.48801,
+   "p90": -0.16078
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_e": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": -0.32149,
+   "p10": -0.46029,
+   "p90": -0.11481
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_f": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": 0.46401,
+   "p10": 0.31928,
+   "p90": 0.59856
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_g": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": 1.25052,
+   "p10": 0.84635,
+   "p90": 1.33033
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_ELI": {
+  "value": {
+   "share_same_sign": 0.9375,
+   "n_cells": 384,
+   "median": 0.2008,
+   "p10": 0.01435,
+   "p90": 0.25854
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "robustness.sign_FP": {
+  "value": {
+   "share_same_sign": 1.0,
+   "n_cells": 384,
+   "median": 0.87406,
+   "p10": 0.66831,
+   "p90": 1.04713
+  },
+  "series_id": "",
+  "source": "robustness_matrix.csv",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.F1": {
+  "value": {
+   "delta": 0.72857,
+   "perm_p": 0.28571,
+   "regime_scores": {
+    "R1": -0.35,
+    "R2": 0.858,
+    "R3": 1.009,
+    "R4": 0.754,
+    "R5": 0.285,
+    "R6": null,
+    "R7": -0.977,
+    "R8": -1.022,
+    "R9": -0.624
+   },
+   "bh_q": 0.61224
+  },
+  "series_id": "primary_balance_gdp; ext:primary_balance_gdp_bcb",
+  "source": "BCB via warehouse primary_balance_gdp (Dec, 12m) 2002+; ext primary_balance_gdp_bcb 1995-2001",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.F2": {
+  "value": {
+   "delta": -0.12032,
+   "perm_p": 0.51429,
+   "regime_scores": {
+    "R1": null,
+    "R2": -0.015,
+    "R3": 0.121,
+    "R4": -0.266,
+    "R5": 0.113,
+    "R6": null,
+    "R7": 0.295,
+    "R8": 0.1,
+    "R9": 0.057
+   },
+   "bh_q": 0.73469
+  },
+  "series_id": "ext:central_govt_primary_spend_brl_bn; wb/FP.CPI.TOTL.BR; wb/NY.GDP.MKTP.KD.ZG.BR",
+  "source": "Tesouro RTN primary spending deflated by CPI minus real GDP growth",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.F3": {
+  "value": {
+   "delta": 0.85851,
+   "perm_p": 0.14286,
+   "regime_scores": {
+    "R1": 0.122,
+    "R2": -1.286,
+    "R3": 1.713,
+    "R4": 0.331,
+    "R5": 0.309,
+    "R6": null,
+    "R7": -0.11,
+    "R8": -0.078,
+    "R9": -0.272
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ext:tax_burden_gdp; ext:tax_burden_gdp_stn",
+  "source": "Receita Federal CTB % GDP change 1996-2010 (2005 break dropped); Tesouro STN general-govt CTB change 2011-2025",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.F4": {
+  "value": {
+   "delta": 0.85814,
+   "perm_p": 0.05714,
+   "regime_scores": {
+    "R1": -0.525,
+    "R2": -0.796,
+    "R3": 0.994,
+    "R4": 0.616,
+    "R5": 0.413,
+    "R6": null,
+    "R7": -0.752,
+    "R8": 0.273,
+    "R9": -0.39
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "gross_public_debt_gdp; net_public_debt_gdp (warehouse); ext:net_public_debt_gdp_bcb",
+  "source": "mean of change in gross (2007+) and net debt % GDP; net=net_public_debt_gdp (warehouse); ext pre-2002 net debt changes",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M1": {
+  "value": {
+   "delta": -0.40766,
+   "perm_p": 0.6,
+   "regime_scores": {
+    "R1": null,
+    "R2": 0.371,
+    "R3": 0.3,
+    "R4": -1.022,
+    "R5": -0.961,
+    "R6": null,
+    "R7": 0.735,
+    "R8": 0.028,
+    "R9": 1.564
+   },
+   "bh_q": 0.75
+  },
+  "series_id": "real_policy_rate; ext:neutral_rate",
+  "source": "real_policy_rate minus r* (BCB/Copom r* interpolated from 2016-01, 10y trailing median before)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M2": {
+  "value": {
+   "delta": 0.4217,
+   "perm_p": 0.4,
+   "regime_scores": {
+    "R1": null,
+    "R2": -0.946,
+    "R3": -0.318,
+    "R4": 0.585,
+    "R5": 0.227,
+    "R6": null,
+    "R7": 0.365,
+    "R8": -0.059,
+    "R9": 0.339
+   },
+   "bh_q": 0.70588
+  },
+  "series_id": "ipca_12m; cmn_targets",
+  "source": "-|Dec IPCA 12m - CMN target| (ext/cmn_targets.csv (BCB historico de metas); 2003/2004 revised in-force targets)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M3": {
+  "value": {
+   "delta": 0.79118,
+   "perm_p": 0.05714,
+   "regime_scores": {
+    "R1": null,
+    "R2": -0.585,
+    "R3": -0.156,
+    "R4": 1.128,
+    "R5": 0.325,
+    "R6": null,
+    "R7": -0.442,
+    "R8": -0.371,
+    "R9": 0.004
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ipca_12m; cmn_targets",
+  "source": "share of months IPCA 12m inside CMN band",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M4a": {
+  "value": {
+   "delta": -0.1285,
+   "perm_p": 0.82857,
+   "regime_scores": {
+    "R1": null,
+    "R2": -1.054,
+    "R3": -0.707,
+    "R4": 0.95,
+    "R5": -0.371,
+    "R6": null,
+    "R7": 0.6,
+    "R8": 0.403,
+    "R9": -0.453
+   },
+   "bh_q": 0.88776
+  },
+  "series_id": "focus_ipca_12m; cmn_targets",
+  "source": "Focus 12m-ahead IPCA expectation minus target (blend)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M4b": {
+  "value": {
+   "delta": 0.45566,
+   "perm_p": 0.51429,
+   "regime_scores": {
+    "R1": null,
+    "R2": -1.566,
+    "R3": -0.691,
+    "R4": 0.37,
+    "R5": 0.511,
+    "R6": null,
+    "R7": 0.132,
+    "R8": 0.267,
+    "R9": 0.077
+   },
+   "bh_q": 0.73469
+  },
+  "series_id": "focus_ipca_12m",
+  "source": "within-year SD of Focus 12m IPCA expectations (daily)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M5": {
+  "value": {
+   "delta": -0.53407,
+   "perm_p": 0.51429,
+   "regime_scores": {
+    "R1": null,
+    "R2": -0.127,
+    "R3": -0.027,
+    "R4": -0.672,
+    "R5": -1.295,
+    "R6": null,
+    "R7": 1.156,
+    "R8": 0.243,
+    "R9": 1.553
+   },
+   "bh_q": 0.73469
+  },
+  "series_id": "selic_target; focus_ipca_12m; neutral_rate; cmn_targets",
+  "source": "Selic - [r* + pi_e + 1.5(pi_e - pi*)]",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.M6": {
+  "value": {
+   "delta": 0.6373,
+   "perm_p": 0.51429,
+   "regime_scores": {
+    "R1": -0.493,
+    "R2": -0.493,
+    "R3": 1.206,
+    "R4": 1.206,
+    "R5": -1.343,
+    "R6": null,
+    "R7": -0.493,
+    "R8": 0.356,
+    "R9": 0.356
+   },
+   "bh_q": 0.73469
+  },
+  "series_id": "coded; facts RA*/RM*",
+  "source": "coded: de jure LC179 (0/1) + de facto (0 pressure /1 replaced /2 protected)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.C1": {
+  "value": {
+   "delta": 1.15651,
+   "perm_p": 0.6,
+   "regime_scores": {
+    "R1": null,
+    "R2": null,
+    "R3": null,
+    "R4": 1.401,
+    "R5": -0.021,
+    "R6": null,
+    "R7": -1.408,
+    "R8": -0.017,
+    "R9": -0.048
+   },
+   "bh_q": 0.75
+  },
+  "series_id": "sgs:20593; sgs:20539",
+  "source": "SGS 20593/20539 earmarked share of credit (2007-03+)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.C2": {
+  "value": {
+   "delta": -1.06124,
+   "perm_p": 0.11429,
+   "regime_scores": {
+    "R1": 0.513,
+    "R2": -0.013,
+    "R3": -0.06,
+    "R4": -1.182,
+    "R5": -1.319,
+    "R6": null,
+    "R7": 0.834,
+    "R8": 1.17,
+    "R9": 0.82
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ext:bndes_disbursements_brl_bn; wb/NY.GDP.MKTP.CN.BR",
+  "source": "BNDES disbursements / nominal GDP",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.C2b": {
+  "value": {
+   "delta": -0.07336,
+   "perm_p": 0.91429,
+   "regime_scores": {
+    "R1": null,
+    "R2": 0.899,
+    "R3": 0.811,
+    "R4": 0.307,
+    "R5": -1.456,
+    "R6": null,
+    "R7": -0.822,
+    "R8": 0.479,
+    "R9": 0.784
+   },
+   "bh_q": 0.94581
+  },
+  "series_id": "ext:bndes_treasury_debt_gdp",
+  "source": "Treasury credits to BNDES, stock % GDP (BCB net-debt table)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.C3": {
+  "value": {
+   "delta": 0.21718,
+   "perm_p": 0.77143,
+   "regime_scores": {
+    "R1": -1.77,
+    "R2": -0.438,
+    "R3": -0.432,
+    "R4": 0.097,
+    "R5": 0.234,
+    "R6": null,
+    "R7": 0.504,
+    "R8": 1.354,
+    "R9": 0.621
+   },
+   "bh_q": 0.85714
+  },
+  "series_id": "sgs:256; sgs:27572; sgs:433; sgs:4189",
+  "source": "TJLP (to 2017) / TLP nominal = (1+Jm)(1+IPCA12m) (2018+) minus Selic (SGS 4189)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.C4": {
+  "value": {
+   "delta": 1.13969,
+   "perm_p": 0.11429,
+   "regime_scores": {
+    "R1": -1.266,
+    "R2": 0.295,
+    "R3": 0.978,
+    "R4": 1.152,
+    "R5": -0.257,
+    "R6": null,
+    "R7": -1.287,
+    "R8": 0.03,
+    "R9": 0.46
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "sgs:2007; sgs:2043",
+  "source": "public-control banks share of credit SGS 2007/(2007+2043)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T1": {
+  "value": {
+   "delta": 1.02662,
+   "perm_p": 0.14286,
+   "regime_scores": {
+    "R1": -1.488,
+    "R2": -1.258,
+    "R3": 0.413,
+    "R4": 0.834,
+    "R5": 0.076,
+    "R6": null,
+    "R7": 0.317,
+    "R8": 0.433,
+    "R9": 0.789
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "wb/TM.TAX.MRCH.WM.AR.ZS.BR; wb/TM.TAX.MRCH.SM.AR.ZS.BR; ext:wto_mfn_simple_avg",
+  "source": "WB applied tariff weighted & simple (z-avg); WTO MFN simple spliced 2023+",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T2": {
+  "value": {
+   "delta": 0.7979,
+   "perm_p": 0.08571,
+   "regime_scores": {
+    "R1": -0.689,
+    "R2": -0.602,
+    "R3": 0.546,
+    "R4": 1.189,
+    "R5": -0.237,
+    "R6": null,
+    "R7": -0.578,
+    "R8": 0.134,
+    "R9": -0.041
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "wb/NE.TRD.GNFS.ZS.BR; wb/TOT.BRA; wb/PX.REX.REER.BR",
+  "source": "trade % GDP residual on log ToT, log REER (OLS 1995-2025)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T3": {
+  "value": {
+   "delta": 0.27837,
+   "perm_p": 0.6,
+   "regime_scores": {
+    "R1": 0.0,
+    "R2": 0.0,
+    "R3": 1.291,
+    "R4": 0.387,
+    "R5": -0.726,
+    "R6": null,
+    "R7": 0.323,
+    "R8": -0.484,
+    "R9": 0.0
+   },
+   "bh_q": 0.75
+  },
+  "series_id": "ext:trade_agreements_sice.csv",
+  "source": "count of trade agreements signed or entering into force per year (OAS SICE Brazil index + Mercosur-Palestine)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T4": {
+  "value": {
+   "delta": -1.87284,
+   "perm_p": 0.02857,
+   "regime_scores": {
+    "R1": 1.243,
+    "R2": 0.173,
+    "R3": -0.898,
+    "R4": -0.898,
+    "R5": -0.898,
+    "R6": null,
+    "R7": 1.243,
+    "R8": 1.243,
+    "R9": -0.898
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ext:local_content.csv",
+  "source": "coded local-content stance per regime (+ = lower)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T5": {
+  "value": {
+   "delta": -0.90377,
+   "perm_p": 0.14286,
+   "regime_scores": {
+    "R1": 0.266,
+    "R2": 0.266,
+    "R3": 0.785,
+    "R4": -0.179,
+    "R5": -1.588,
+    "R6": null,
+    "R7": 0.612,
+    "R8": 0.84,
+    "R9": -0.649
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ext:ad_initiations_brazil",
+  "source": "WTO AD initiations by Brazil",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.T6": {
+  "value": {
+   "delta": -0.49771,
+   "perm_p": 0.66667,
+   "regime_scores": {
+    "R1": null,
+    "R2": null,
+    "R3": null,
+    "R4": null,
+    "R5": -0.62,
+    "R6": null,
+    "R7": 1.061,
+    "R8": -0.423,
+    "R9": 0.263
+   },
+   "bh_q": 0.76923
+  },
+  "series_id": "wb/GC.TAX.INTT.RV.ZS.BR",
+  "source": "WB taxes on international trade % revenue",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.S1": {
+  "value": {
+   "delta": 0.13746,
+   "perm_p": 0.66667,
+   "regime_scores": {
+    "R1": null,
+    "R2": null,
+    "R3": null,
+    "R4": null,
+    "R5": 0.689,
+    "R6": null,
+    "R7": 0.631,
+    "R8": -0.909,
+    "R9": -0.693
+   },
+   "bh_q": 0.76923
+  },
+  "series_id": "revenue_usd_bn@PETR; brent_usd",
+  "source": "FALLBACK: residual of log Petrobras USD revenue on log Brent (2012+); no ANP/Abicom parity series",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.S2": {
+  "value": {
+   "delta": -0.54855,
+   "perm_p": 0.31429,
+   "regime_scores": {
+    "R1": 0.633,
+    "R2": 0.633,
+    "R3": 0.621,
+    "R4": -0.372,
+    "R5": -1.084,
+    "R6": null,
+    "R7": 0.536,
+    "R8": -0.514,
+    "R9": -0.072
+   },
+   "bh_q": 0.62857
+  },
+  "series_id": "sgs:11428; sgs:4449",
+  "source": "-max(0, free 12m - administered 12m) IPCA (SGS 11428, 4449)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.S4": {
+  "value": {
+   "delta": -0.6016,
+   "perm_p": 0.25714,
+   "regime_scores": {
+    "R1": 0.859,
+    "R2": 0.267,
+    "R3": 0.267,
+    "R4": 0.031,
+    "R5": -0.62,
+    "R6": null,
+    "R7": 0.662,
+    "R8": -0.62,
+    "R9": -0.916
+   },
+   "bh_q": 0.59341
+  },
+  "series_id": "coded; facts RA*/RM*",
+  "source": "coded sectoral-intervention events (+1 intervention, -1 liberalisation)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.L1": {
+  "value": {
+   "delta": 0.72698,
+   "perm_p": 0.08571,
+   "regime_scores": {
+    "R1": -0.635,
+    "R2": 0.37,
+    "R3": 0.465,
+    "R4": 0.877,
+    "R5": -0.031,
+    "R6": null,
+    "R7": -0.464,
+    "R8": -0.787,
+    "R9": 0.082
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ilostat/EAR_INEE_NOC_NB.BRA; wb/FP.CPI.TOTL.BR; ext:min_wage_brl; sgs:433",
+  "source": "real minimum-wage growth (ILO nominal / WB CPI; 2025-26 decree values, CPI extended with IPCA)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.L2b": {
+  "value": {
+   "delta": 0.59299,
+   "perm_p": 1.0,
+   "regime_scores": {
+    "R1": null,
+    "R2": null,
+    "R3": null,
+    "R4": -0.625,
+    "R5": -0.405,
+    "R6": null,
+    "R7": -0.398,
+    "R8": -0.185,
+    "R9": 1.934
+   },
+   "bh_q": 1.0
+  },
+  "series_id": "ext:bolsa_familia_spend_brl_bn; wb/NY.GDP.MKTP.CN.BR",
+  "source": "Bolsa Familia/Auxilio Brasil spending % GDP",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.L4": {
+  "value": {
+   "delta": 0.3754,
+   "perm_p": 0.37143,
+   "regime_scores": {
+    "R1": -0.242,
+    "R2": 0.258,
+    "R3": -0.409,
+    "R4": 0.258,
+    "R5": 0.759,
+    "R6": null,
+    "R7": -0.409,
+    "R8": -0.242,
+    "R9": 0.258
+   },
+   "bh_q": 0.69643
+  },
+  "series_id": "coded; facts",
+  "source": "coded labour/pension regulation events",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.X1": {
+  "value": {
+   "delta": 0.72089,
+   "perm_p": 0.14286,
+   "regime_scores": {
+    "R1": null,
+    "R2": -0.237,
+    "R3": 0.026,
+    "R4": 1.295,
+    "R5": -0.076,
+    "R6": null,
+    "R7": -0.313,
+    "R8": -0.87,
+    "R9": -0.254
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "fx_reserves; wb/NY.GDP.MKTP.CD.BR",
+  "source": "change in year-end FX reserves % GDP (USD)",
+  "last_date": "",
+  "sql": ""
+ },
+ "component_delta.X2": {
+  "value": {
+   "delta": 1.75159,
+   "perm_p": 0.02857,
+   "regime_scores": {
+    "R1": -1.346,
+    "R2": -0.305,
+    "R3": 0.881,
+    "R4": 1.371,
+    "R5": 0.769,
+    "R6": null,
+    "R7": -0.663,
+    "R8": -0.663,
+    "R9": null
+   },
+   "bh_q": 0.35714
+  },
+  "series_id": "ext:kaopen",
+  "source": "Chinn-Ito KAOPEN (higher = more open)",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.brent_usd": {
+  "value": "2026-09-29 00:00:00",
+  "series_id": "brent_usd",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.brl_usd": {
+  "value": "2026-10-02 00:00:00",
+  "series_id": "brl_usd",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.credit_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "credit_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.embi_brazil": {
+  "value": "2024-07-30 00:00:00",
+  "series_id": "embi_brazil",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.focus_ipca_12m": {
+  "value": "2026-09-25 00:00:00",
+  "series_id": "focus_ipca_12m",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.focus_selic_12m": {
+  "value": "2026-09-25 00:00:00",
+  "series_id": "focus_selic_12m",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.fx_reserves": {
+  "value": "2026-10-01 00:00:00",
+  "series_id": "fx_reserves",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.gdp_nominal_12m_brl": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "gdp_nominal_12m_brl",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.gov_real_yield_10y": {
+  "value": "2026-10-02 00:00:00",
+  "series_id": "gov_real_yield_10y",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.gross_public_debt_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "gross_public_debt_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.interest_bill_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "interest_bill_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.ipca_12m": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "ipca_12m",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.ipca_administered_prices": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "ipca_administered_prices",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.ipca_monthly": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "ipca_monthly",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.net_public_debt_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "net_public_debt_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.nominal_deficit_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "nominal_deficit_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.primary_balance_gdp": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "primary_balance_gdp",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.real_policy_rate": {
+  "value": "2026-09-01 00:00:00",
+  "series_id": "real_policy_rate",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.selic_target": {
+  "value": "2026-10-03 00:00:00",
+  "series_id": "selic_target",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.unemployment_rate": {
+  "value": "2026-08-01 00:00:00",
+  "series_id": "unemployment_rate",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.wb/REER_M.BRA": {
+  "value": "2024-10-31 00:00:00",
+  "series_id": "wb/REER_M.BRA",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "last_date.wb/TOT.BRA": {
+  "value": "2025-12-31 00:00:00",
+  "series_id": "wb/TOT.BRA",
+  "source": "warehouse v_observations",
+  "last_date": "",
+  "sql": ""
+ },
+ "gaps": {
+  "value": [
+   [
+    "C1",
+    "pre-2007 earmarked share (old methodology) not pulled; C1 starts 2007"
+   ],
+   [
+    "S1",
+    "No pump-price / import-parity gap series (ANP/Abicom) obtained; warehouse fallback used (2012+ only)"
+   ],
+   [
+    "S3",
+    "privatisation proceeds/count series not obtained"
+   ]
+  ],
+  "series_id": "",
+  "source": "executor",
+  "last_date": "",
+  "sql": ""
+ },
+ "rhetoric_audit_sample": {
+  "value": [
+   {
+    "doc_id": "B_UNGA_BRA_2002",
+    "sentence": "otherwise, the credibility of the organization will be undermined in a way that will not only be illegitimate, but that will also give rise to situations of precarious and short-lived stability."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2012",
+    "sentence": "fiscal responsibility is as necessary as growth measures are indispensable, because fiscal consolidation can be sustainable only in a context of economic recovery."
+   },
+   {
+    "doc_id": "A_PSDB_2010_Serra",
+    "sentence": "eu a vi outro dia, na inauguração do rodoanel, quando um dos operários fez questão de me mostrar com orgulho seu nome no mural que eu mandei fazer para exibir a identidade de todos os trabalhadores que fizeram aquela obra espetacular."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2019",
+    "sentence": "the same top-ranking government officials came here, year after year, and made blithe statements about issues that never served brazil’s real interests or contributed to world stability."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_1998",
+    "sentence": "since the advent of economic stability in 1994, brazil has shown renewed dynamism with the strengthening of our domestic market and the outlook for development with social justice."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2003",
+    "sentence": "it is time to call peace by its true name: social justice."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2008",
+    "sentence": "the lack of rules favours adventurers and opportunists, to the detriment of real companies and workers."
+   },
+   {
+    "doc_id": "A_PL_2026_FlavioBolsonaro",
+    "sentence": "um país só se faz respeitar no mundo quando protege primeiro os seus, e quem não garante a segurança aqui dentro não tem autoridade para falar em soberania lá fora."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2007",
+    "sentence": "it calls for social justice, freedom and overcoming the scourges of hunger and poverty."
+   },
+   {
+    "doc_id": "A_PMDB_2015_PonteParaOFuturo",
+    "sentence": "ajustes de emergência implicam sempre em perdas e sofrimentos, repartindo injustamente seus custos e benefícios, sem resolver o problema."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2014",
+    "sentence": "we have not neglected fiscal discipline and monetary stability, and we have striven to protect brazil from external volatility."
+   },
+   {
+    "doc_id": "A_PSB_2014_Marina",
+    "sentence": "faz uma opção resoluta pelo desenvolvimento sustentável, que compreende a qualificação tecnológica da economia nacional, valorização dos nossos ativos ambientais e priorização de temas como infraestrutura e simplificação dos diferentes processos que envolvem a produção de bens e serviços, a fim de criar condições para o aumento de nossa produtividade e competitividade."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2005",
+    "sentence": "thanks to the role played by the g-20, it has been possible to combine trade liberalization with social justice in the context of the multilateral trading system."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2017",
+    "sentence": "we are recovering our fiscal balance, and with it, the credibility of our economy."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2004",
+    "sentence": "coordination among countries from africa, asia and latin america in the group of 20 was decisive for keeping the doha round on the right track of trade liberalization with social justice."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2006",
+    "sentence": "once international trade is free and fair, it will be a valuable tool for wealth creation, income distribution and job creation."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2022",
+    "sentence": "that was only possible thanks to heavy investments in science and innovation, with a view to increasing productivity and sustainability."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_1995",
+    "sentence": "a country’s sovereignty and its capacity to satisfy the needs of its people depend increasingly on good social indicators, political stability, economic competitiveness, and scientific and technological progress, not on military strength."
+   },
+   {
+    "doc_id": "B_UNGA_BRA_1996",
+    "sentence": "the world trade organization and its body of universal rules and regulations for fostering free trade, the european union, the asia-pacific economic cooperation council (apec), the north american free trade agreement (nafta), the organisation for economic cooperation and development (oecd), the group of 7, the association of south-east asian nations (asean), the south african development community"
+   },
+   {
+    "doc_id": "B_UNGA_BRA_2011",
+    "sentence": "i am proud to say that brazil is a driver of peace, stability and prosperity in the region and even beyond it."
+   }
+  ],
+  "series_id": "",
+  "source": "random 20-sentence audit sample",
+  "last_date": "",
+  "sql": ""
+ },
+ "sql.monthly_panel": {
+  "value": "SELECT series_id, date_trunc('month', date) AS ym,\n       CASE WHEN series_id IN ('fx_reserves','brl_usd','brent_usd') THEN arg_max(value, date) ELSE avg(value) END AS v,\n       max(date) AS last_date\nFROM v_observations WHERE date <= current_date AND series_id IN ('selic_target','real_policy_rate','ipca_12m','ipca_monthly','ipca_administered_prices','focus_ipca_12m','focus_selic_12m','primary_balance_gdp','nominal_deficit_gdp','interest_bill_gdp','gross_public_debt_gdp','net_public_debt_gdp','credit_gdp','fx_reserves','brl_usd','brent_usd','embi_brazil','gov_real_yield_10y','wb/TOT.BRA','wb/REER_M.BRA','gdp_nominal_12m_brl','unemployment_rate') GROUP BY 1,2",
+  "series_id": "",
+  "source": "",
+  "last_date": "",
+  "sql": "SELECT series_id, date_trunc('month', date) AS ym,\n       CASE WHEN series_id IN ('fx_reserves','brl_usd','brent_usd') THEN arg_max(value, date) ELSE avg(value) END AS v,\n       max(date) AS last_date\nFROM v_observations WHERE date <= current_date AND series_id IN ('selic_target','real_policy_rate','ipca_12m','ipca_monthly','ipca_administered_prices','focus_ipca_12m','focus_selic_12m','primary_balance_gdp','nominal_deficit_gdp','interest_bill_gdp','gross_public_debt_gdp','net_public_debt_gdp','credit_gdp','fx_reserves','brl_usd','brent_usd','embi_brazil','gov_real_yield_10y','wb/TOT.BRA','wb/REER_M.BRA','gdp_nominal_12m_brl','unemployment_rate') GROUP BY 1,2"
+ },
+ "sql.annual_panel": {
+  "value": "SELECT series_id, year, value, is_complete, agg FROM v_annual\nWHERE year BETWEEN 1995 AND 2026 AND series_id IN ('wb/TM.TAX.MRCH.WM.AR.ZS.BR','wb/TM.TAX.MRCH.SM.AR.ZS.BR','wb/TM.TAX.MANF.WM.AR.ZS.BR','wb/NE.TRD.GNFS.ZS.BR','wb/NE.IMP.GNFS.ZS.BR','wb/GC.TAX.INTT.RV.ZS.BR','wb/GC.TAX.TOTL.GD.ZS.BR','wb/GC.REV.XGRT.GD.ZS.BR','wb/GC.XPN.TRFT.ZS.BR','wb/GC.XPN.TOTL.GD.ZS.BR','wb/NE.CON.GOVT.KD.ZG.BR','wb/NY.GDP.MKTP.KD.ZG.BR','wb/NY.GDP.MKTP.CN.BR','wb/NY.GDP.MKTP.CD.BR','wb/FS.AST.PRVT.GD.ZS.BR','wb/GFDD.EI.08.BR','wb/GFDD.OI.20a.BR','wb/FI.RES.TOTL.MO.BR','wb/PX.REX.REER.BR','wb/TT.PRI.MRCH.XD.WD.BR','ilostat/EAR_INEE_NOC_NB.BRA','wb/FP.CPI.TOTL.BR','wb/per_sa_cc.cov_pop_tot.BRA','wb/GOV_WGI_RQ_EST.BR','wb/TX.VAL.MRCH.HI.ZS.BR','wb/TX.VAL.MRCH.R1.ZS.BR','wb/TX.VAL.MRCH.R3.ZS.BR','wb/TX.VAL.MRCH.R6.ZS.BR','wb/TX.VAL.MRCH.AL.ZS.BR','wb/AG.LND.PFLS.HA.BR','wb/TOT.BRA','wb/SI.POV.GINI.BR','brent_usd')",
+  "series_id": "",
+  "source": "",
+  "last_date": "",
+  "sql": "SELECT series_id, year, value, is_complete, agg FROM v_annual\nWHERE year BETWEEN 1995 AND 2026 AND series_id IN ('wb/TM.TAX.MRCH.WM.AR.ZS.BR','wb/TM.TAX.MRCH.SM.AR.ZS.BR','wb/TM.TAX.MANF.WM.AR.ZS.BR','wb/NE.TRD.GNFS.ZS.BR','wb/NE.IMP.GNFS.ZS.BR','wb/GC.TAX.INTT.RV.ZS.BR','wb/GC.TAX.TOTL.GD.ZS.BR','wb/GC.REV.XGRT.GD.ZS.BR','wb/GC.XPN.TRFT.ZS.BR','wb/GC.XPN.TOTL.GD.ZS.BR','wb/NE.CON.GOVT.KD.ZG.BR','wb/NY.GDP.MKTP.KD.ZG.BR','wb/NY.GDP.MKTP.CN.BR','wb/NY.GDP.MKTP.CD.BR','wb/FS.AST.PRVT.GD.ZS.BR','wb/GFDD.EI.08.BR','wb/GFDD.OI.20a.BR','wb/FI.RES.TOTL.MO.BR','wb/PX.REX.REER.BR','wb/TT.PRI.MRCH.XD.WD.BR','ilostat/EAR_INEE_NOC_NB.BRA','wb/FP.CPI.TOTL.BR','wb/per_sa_cc.cov_pop_tot.BRA','wb/GOV_WGI_RQ_EST.BR','wb/TX.VAL.MRCH.HI.ZS.BR','wb/TX.VAL.MRCH.R1.ZS.BR','wb/TX.VAL.MRCH.R3.ZS.BR','wb/TX.VAL.MRCH.R6.ZS.BR','wb/TX.VAL.MRCH.AL.ZS.BR','wb/AG.LND.PFLS.HA.BR','wb/TOT.BRA','wb/SI.POV.GINI.BR','brent_usd')"
+ }
+}

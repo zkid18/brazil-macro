@@ -1,0 +1,9 @@
+state,headline_ipca_pp,selic_bp,gdp,exports_usd_bn_yr
+ToT +10% (exports study),"-1.1 (reduced-form, Dec/Dec)",reduced-form -500 (2002/2015-driven; not causal),+2.3 to +3.1 GDP-pc growth pts (upper bound); ~+1.5% GDP income,+14 to +22
+ToT -10% (exports study),+1.1,reduced-form +500 (not causal),-2.3 to -3.1 pts (upper bound); ~-1.5% GDP income,-14 to -22
+Hydro best (wet + diversification),-0.3 to 0,-50 to 0,0 to +0.2,0 to +5
+Hydro one drought year,+0.3 to +1.0,0 to +50,-0.1 to -0.5,-5 to +3
+Hydro severe (pass-through),+1.0 to +2.0,+25 to +150,-0.3 to -1.0,-6 to +4
+Hydro worst (rationing tail / suppression 2030),+2.0 to +3.5 or R$40-100bn fiscal,+100 to +300,-1.0 to -2.5,-8 to +2 (plus EU tail -2 to -5)
+Combined: ToT -10% + severe drought,+2.1 to +3.1,+25 to +150 on top of the ToT response,-0.3 to -1.0 on top of ToT,-20 to -28 (central)
+Combined: ToT +10% + wet,-1.1 to -1.4,-50 to 0 on top of ToT,ToT gain + 0 to +0.2,+14 to +27

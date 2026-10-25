@@ -1,0 +1,43 @@
+PETROBRAS STUDY — PLAN (written 2026-10-10, before any results were computed)
+
+Goal: measure how Brazilian governments (left vs right) affect Petrobras, what the Oct 2026 run-off
+(Lula IV vs Flávio Bolsonaro, 25 Oct; first round 4 Oct: Flávio 47.03, Lula 45.16) means for it,
+and test the user's prior that Petrobras is "the most important piece" of the election story.
+
+Terms (defined here; v_politics/v_by_term NOT used):
+  FHC  ..2002-12 (data from 2000-01)   right (centre-right)
+  Lula I-II 2003-01..2010-12          left
+  Dilma 2011-01..2016-08              left
+  Temer 2016-09..2018-12              right (centre-right)
+  Bolsonaro 2019-01..2022-12          right
+  Lula III 2023-01..now               left
+
+Data
+  Warehouse (read-only): share_close_adj_brl@PETR, dividend_per_share_brl@PETR, total_return_usd@PETR,
+    ibovespa_level / ibovespa_usd, total_return_*@IBOV/ITUB/VALE/AXIA, brent_usd, brl_usd, selic_target,
+    v_company_quarterly (PETR), operated_oil_production_kbd@PETR, oil_production, oil_exports,
+    exports_total, primary_balance_gdp, political_events.
+  Extended prices (2000-2011, and 5-9 Oct 2026 after the warehouse cut-off): B3 COTAHIST annual/daily
+    files parsed for PETR4, PETR3, VALE5/VALE3, ITUB4, ELET3, BOVA11; B3 corporate-actions and cash
+    dividends API for PETR (back to 2000) to build a total-return series. Cached in ./cache.
+  Brent after 2026-09-29: FRED DCOILBRENTEU if reachable.
+  Fuel prices: ANP open data (producer/refinery prices of gasoline A and diesel A; pump prices) if
+    downloadable; otherwise documented as a gap.
+  Fiscal: Tesouro Nacional RTN monthly series (dividends received by the Union, natural-resource
+    revenue = royalties + special participation, net federal revenue, primary balance) if downloadable;
+    fall back to Petrobras dividends x Union+BNDES economic stake (external fact).
+  External facts (pricing policy, dividend policy, CEOs, capex plans, candidates' positions) via
+    web, <= 25 searches, logged in external_facts.csv (fact,value,date,url).
+
+Steps
+  1. preregistration.txt (hypotheses, tests, windows, placebo design) — before results.
+  2. fetch.py: download/caching of COTAHIST, B3 dividends/splits, FRED, ANP, Tesouro.
+  3. petrobras_study.py: all analysis -> results.json, CSVs, charts/*.html.
+  4. report.txt (markdown): headline, tables, caveats; every number cites series_id/source/last date.
+
+Execution notes (added after the run)
+  - openpyxl/xlrd are not in the project venv. The Tesouro RTN .xlsx is read with xlsx_lite.py (stdlib).
+    The two ANP producer-price .xls (BIFF) files were converted once to cache/anp_producer_prices.csv using xlrd
+    in a throw-away scratch venv; the analysis itself uses only pandas/numpy/duckdb/plotly.
+  - WebSearch budget was already exhausted for the session; external facts come from WebFetch of known pages,
+    filings reused from the pt_liberalism/exports studies, and a few memory items flagged medium confidence.

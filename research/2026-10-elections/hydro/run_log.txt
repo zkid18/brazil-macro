@@ -1,0 +1,2086 @@
+{
+ "episode_placebo": {
+  "names": [
+   "admin_12m",
+   "headline_12m",
+   "focus_ipca_chg",
+   "selic_chg_bp"
+  ],
+  "episode_mean": [
+   9.19,
+   6.5,
+   0.12,
+   38.38
+  ],
+  "all_months_mean": [
+   6.21,
+   5.28,
+   -0.2,
+   14.63
+  ],
+  "p_one_sided": [
+   0.036,
+   0.0805,
+   0.1755,
+   0.397
+  ],
+  "k": 8,
+  "note": "exploratory; random start months 2015-01..2025-08, 2,000 draws, seed 0"
+ },
+ "W1": {
+  "n_months": 142,
+  "n_episode": 54,
+  "cmo_episode_mean": {
+   "value": 427.0829,
+   "series_id": [
+    "cmo_power_cost"
+   ],
+   "source": [
+    "ONS"
+   ],
+   "last_date": {
+    "cmo_power_cost": "2026-10-02 00:00:00"
+   },
+   "sql": "SELECT series_id, date_trunc('month', date) AS ym, avg(value) AS v, min(value) AS v_min\n        FROM v_observations WHERE date <= current_date AND series_id IN ('stored_energy_ear','cmo_power_cost','hydro_generation_share','thermal_generation_share','wind_solar_generation_share','thermal_dispatch_mwh','electricity_load','hydro_stress_index','ipca_administered_prices','ipca_monthly','ipca_services','ipca_12m','inflation_diffusion','focus_ipca_12m','focus_selic_12m','selic_target','real_policy_rate','brent_usd','generation_gwh@AXIA','generation_share_sin@AXIA','generation_gwh@PETR','generation_share_sin@PETR','gas_production_mm3d','ibc_br','wb/IPTOTSAKD_M.BRA','soy_exports','coffee_exports','sugar_exports','exports_to_eu','total_return_usd@AXIA','total_return_usd@PETR') GROUP BY 1,2 ORDER BY 2,1"
+  },
+  "cmo_other_mean": {
+   "value": 123.2399,
+   "series_id": [
+    "cmo_power_cost"
+   ],
+   "source": [
+    "ONS"
+   ],
+   "last_date": {
+    "cmo_power_cost": "2026-10-02 00:00:00"
+   },
+   "sql": "SELECT series_id, date_trunc('month', date) AS ym, avg(value) AS v, min(value) AS v_min\n        FROM v_observations WHERE date <= current_date AND series_id IN ('stored_energy_ear','cmo_power_cost','hydro_generation_share','thermal_generation_share','wind_solar_generation_share','thermal_dispatch_mwh','electricity_load','hydro_stress_index','ipca_administered_prices','ipca_monthly','ipca_services','ipca_12m','inflation_diffusion','focus_ipca_12m','focus_selic_12m','selic_target','real_policy_rate','brent_usd','generation_gwh@AXIA','generation_share_sin@AXIA','generation_gwh@PETR','generation_share_sin@PETR','gas_production_mm3d','ibc_br','wb/IPTOTSAKD_M.BRA','soy_exports','coffee_exports','sugar_exports','exports_to_eu','total_return_usd@AXIA','total_return_usd@PETR') GROUP BY 1,2 ORDER BY 2,1"
+  },
+  "ratio_nominal": {
+   "value": 3.4655,
+   "series_id": [
+    "cmo_power_cost",
+    "stored_energy_ear"
+   ],
+   "source": [
+    "ONS"
+   ],
+   "last_date": {
+    "cmo_power_cost": "2026-10-02 00:00:00",
+    "stored_energy_ear": "2026-10-02 00:00:00"
+   },
+   "sql": "SELECT series_id, date_trunc('month', date) AS ym, avg(value) AS v, min(value) AS v_min\n        FROM v_observations WHERE date <= current_date AND series_id IN ('stored_energy_ear','cmo_power_cost','hydro_generation_share','thermal_generation_share','wind_solar_generation_share','thermal_dispatch_mwh','electricity_load','hydro_stress_index','ipca_administered_prices','ipca_monthly','ipca_services','ipca_12m','inflation_diffusion','focus_ipca_12m','focus_selic_12m','selic_target','real_policy_rate','brent_usd','generation_gwh@AXIA','generation_share_sin@AXIA','generation_gwh@PETR','generation_share_sin@PETR','gas_production_mm3d','ibc_br','wb/IPTOTSAKD_M.BRA','soy_exports','coffee_exports','sugar_exports','exports_to_eu','total_return_usd@AXIA','total_return_usd@PETR') GROUP BY 1,2 ORDER BY 2,1"
+  },
+  "ratio_nominal_ci90": [
+   1.909940936977762,
+   5.7697695548477235
+  ],
+  "ratio_real": 4.4,
+  "h4_replication_ratio_2016plus_ear_lt40": 3.13,
+  "reg": {
+   "n": 134,
+   "r2": 0.503,
+   "coef_names": [
+    "const",
+    "EAR-50",
+    "WS-15",
+    "(EAR-50)x(WS-15)",
+    "log Brent"
+   ],
+   "b": [
+    4.7946,
+    -0.0688,
+    0.044,
+    0.0007,
+    0.0076
+   ],
+   "ci90": [
+    [
+     1.8803,
+     10.3628
+    ],
+    [
+     -0.077,
+     -0.0458
+    ],
+    [
+     -0.0109,
+     0.061
+    ],
+    [
+     -0.0019,
+     0.0025
+    ],
+    [
+     -1.3188,
+     0.7261
+    ]
+   ],
+   "p_boot": [
+    0.025,
+    0.0,
+    0.184,
+    0.749,
+    0.742
+   ],
+   "note": "log(CMO_real+10). EAR slope at WS=15 is b1; slope at WS=30 is b1 + 15*b3."
+  },
+  "ear_slope_ws15": -0.0688,
+  "ear_slope_ws30": -0.0577,
+  "thermal_share_per_ear_pt": -0.229,
+  "thermal_r2": 0.486,
+  "verdict": "Both agree; D addition not supported (EAR x WS CI includes 0 or wrong sign)",
+  "p_primary": 0.0
+ },
+ "W2W3": {
+  "shock": "S = max(0, 40-EAR)/10 (one unit = 10 pts below 40)",
+  "controls": "Brent 12m log change, own lagged 12m change",
+  "sample": "2015-01 .. 2026-08",
+  "bootstrap": "moving block 12, 1000 draws per horizon",
+  "admin": {
+   "series_id": "ipca_administered_prices",
+   "irf": [
+    {
+     "h": 0,
+     "n": 127,
+     "b": 0.125,
+     "ci90": [
+      -0.1959,
+      0.4649
+     ],
+     "p_boot": 0.522
+    },
+    {
+     "h": 1,
+     "n": 126,
+     "b": 0.1779,
+     "ci90": [
+      -0.3922,
+      0.8581
+     ],
+     "p_boot": 0.62
+    },
+    {
+     "h": 2,
+     "n": 125,
+     "b": 0.1566,
+     "ci90": [
+      -0.6781,
+      1.1492
+     ],
+     "p_boot": 0.74
+    },
+    {
+     "h": 3,
+     "n": 124,
+     "b": 0.1448,
+     "ci90": [
+      -0.9786,
+      1.4788
+     ],
+     "p_boot": 0.84
+    },
+    {
+     "h": 4,
+     "n": 123,
+     "b": 0.158,
+     "ci90": [
+      -1.2189,
+      1.9022
+     ],
+     "p_boot": 0.848
+    },
+    {
+     "h": 5,
+     "n": 122,
+     "b": 0.2936,
+     "ci90": [
+      -1.3119,
+      2.371
+     ],
+     "p_boot": 0.768
+    },
+    {
+     "h": 6,
+     "n": 121,
+     "b": 0.5942,
+     "ci90": [
+      -1.1938,
+      2.8414
+     ],
+     "p_boot": 0.562
+    },
+    {
+     "h": 7,
+     "n": 120,
+     "b": 0.8539,
+     "ci90": [
+      -0.8993,
+      2.9742
+     ],
+     "p_boot": 0.436
+    },
+    {
+     "h": 8,
+     "n": 119,
+     "b": 0.9579,
+     "ci90": [
+      -0.7426,
+      2.796
+     ],
+     "p_boot": 0.346
+    },
+    {
+     "h": 9,
+     "n": 118,
+     "b": 0.9213,
+     "ci90": [
+      -0.8179,
+      2.5939
+     ],
+     "p_boot": 0.362
+    },
+    {
+     "h": 10,
+     "n": 117,
+     "b": 0.759,
+     "ci90": [
+      -0.9671,
+      2.3974
+     ],
+     "p_boot": 0.48
+    },
+    {
+     "h": 11,
+     "n": 116,
+     "b": 0.5712,
+     "ci90": [
+      -1.1742,
+      2.1361
+     ],
+     "p_boot": 0.582
+    },
+    {
+     "h": 12,
+     "n": 115,
+     "b": 0.3704,
+     "ci90": [
+      -1.1989,
+      1.9438
+     ],
+     "p_boot": 0.704
+    }
+   ]
+  },
+  "headline": {
+   "series_id": "ipca_monthly",
+   "irf": [
+    {
+     "h": 0,
+     "n": 127,
+     "b": 0.1113,
+     "ci90": [
+      -0.0428,
+      0.2402
+     ],
+     "p_boot": 0.25
+    },
+    {
+     "h": 1,
+     "n": 126,
+     "b": 0.1944,
+     "ci90": [
+      -0.0568,
+      0.4342
+     ],
+     "p_boot": 0.214
+    },
+    {
+     "h": 2,
+     "n": 125,
+     "b": 0.2358,
+     "ci90": [
+      -0.0907,
+      0.5502
+     ],
+     "p_boot": 0.222
+    },
+    {
+     "h": 3,
+     "n": 124,
+     "b": 0.2354,
+     "ci90": [
+      -0.1681,
+      0.6499
+     ],
+     "p_boot": 0.38
+    },
+    {
+     "h": 4,
+     "n": 123,
+     "b": 0.2275,
+     "ci90": [
+      -0.2906,
+      0.774
+     ],
+     "p_boot": 0.504
+    },
+    {
+     "h": 5,
+     "n": 122,
+     "b": 0.2378,
+     "ci90": [
+      -0.3765,
+      0.9272
+     ],
+     "p_boot": 0.542
+    },
+    {
+     "h": 6,
+     "n": 121,
+     "b": 0.2837,
+     "ci90": [
+      -0.4368,
+      1.0738
+     ],
+     "p_boot": 0.534
+    },
+    {
+     "h": 7,
+     "n": 120,
+     "b": 0.2974,
+     "ci90": [
+      -0.4394,
+      1.2144
+     ],
+     "p_boot": 0.566
+    },
+    {
+     "h": 8,
+     "n": 119,
+     "b": 0.2876,
+     "ci90": [
+      -0.4661,
+      1.1743
+     ],
+     "p_boot": 0.566
+    },
+    {
+     "h": 9,
+     "n": 118,
+     "b": 0.2438,
+     "ci90": [
+      -0.4912,
+      1.051
+     ],
+     "p_boot": 0.64
+    },
+    {
+     "h": 10,
+     "n": 117,
+     "b": 0.2196,
+     "ci90": [
+      -0.4945,
+      1.0163
+     ],
+     "p_boot": 0.702
+    },
+    {
+     "h": 11,
+     "n": 116,
+     "b": 0.2017,
+     "ci90": [
+      -0.5231,
+      1.0247
+     ],
+     "p_boot": 0.73
+    },
+    {
+     "h": 12,
+     "n": 115,
+     "b": 0.2136,
+     "ci90": [
+      -0.5513,
+      1.1064
+     ],
+     "p_boot": 0.694
+    }
+   ]
+  },
+  "services": {
+   "series_id": "ipca_services",
+   "irf": [
+    {
+     "h": 0,
+     "n": 127,
+     "b": 0.099,
+     "ci90": [
+      -0.0074,
+      0.2043
+     ],
+     "p_boot": 0.13
+    },
+    {
+     "h": 1,
+     "n": 126,
+     "b": 0.1918,
+     "ci90": [
+      0.0011,
+      0.375
+     ],
+     "p_boot": 0.1
+    },
+    {
+     "h": 2,
+     "n": 125,
+     "b": 0.261,
+     "ci90": [
+      0.0104,
+      0.4955
+     ],
+     "p_boot": 0.078
+    },
+    {
+     "h": 3,
+     "n": 124,
+     "b": 0.2361,
+     "ci90": [
+      -0.0284,
+      0.4786
+     ],
+     "p_boot": 0.14
+    },
+    {
+     "h": 4,
+     "n": 123,
+     "b": 0.1244,
+     "ci90": [
+      -0.1524,
+      0.3959
+     ],
+     "p_boot": 0.404
+    },
+    {
+     "h": 5,
+     "n": 122,
+     "b": -0.0505,
+     "ci90": [
+      -0.3471,
+      0.3276
+     ],
+     "p_boot": 0.89
+    },
+    {
+     "h": 6,
+     "n": 121,
+     "b": -0.2302,
+     "ci90": [
+      -0.586,
+      0.2409
+     ],
+     "p_boot": 0.408
+    },
+    {
+     "h": 7,
+     "n": 120,
+     "b": -0.3818,
+     "ci90": [
+      -0.83,
+      0.2449
+     ],
+     "p_boot": 0.28
+    },
+    {
+     "h": 8,
+     "n": 119,
+     "b": -0.4914,
+     "ci90": [
+      -0.9989,
+      0.2335
+     ],
+     "p_boot": 0.23
+    },
+    {
+     "h": 9,
+     "n": 118,
+     "b": -0.569,
+     "ci90": [
+      -1.102,
+      0.2525
+     ],
+     "p_boot": 0.218
+    },
+    {
+     "h": 10,
+     "n": 117,
+     "b": -0.6064,
+     "ci90": [
+      -1.1312,
+      0.2364
+     ],
+     "p_boot": 0.204
+    },
+    {
+     "h": 11,
+     "n": 116,
+     "b": -0.6281,
+     "ci90": [
+      -1.1093,
+      0.1867
+     ],
+     "p_boot": 0.2
+    },
+    {
+     "h": 12,
+     "n": 115,
+     "b": -0.6245,
+     "ci90": [
+      -1.1064,
+      0.2011
+     ],
+     "p_boot": 0.216
+    }
+   ]
+  },
+  "focus_ipca": {
+   "series_id": "focus_ipca_12m",
+   "irf": [
+    {
+     "h": 0,
+     "n": 128,
+     "b": 0.0277,
+     "ci90": [
+      -0.0255,
+      0.0791
+     ],
+     "p_boot": 0.378
+    },
+    {
+     "h": 1,
+     "n": 127,
+     "b": 0.0479,
+     "ci90": [
+      -0.0428,
+      0.13
+     ],
+     "p_boot": 0.376
+    },
+    {
+     "h": 2,
+     "n": 126,
+     "b": 0.0623,
+     "ci90": [
+      -0.0588,
+      0.1611
+     ],
+     "p_boot": 0.386
+    },
+    {
+     "h": 3,
+     "n": 125,
+     "b": 0.0693,
+     "ci90": [
+      -0.0964,
+      0.2
+     ],
+     "p_boot": 0.576
+    },
+    {
+     "h": 4,
+     "n": 124,
+     "b": 0.0852,
+     "ci90": [
+      -0.1178,
+      0.2458
+     ],
+     "p_boot": 0.586
+    },
+    {
+     "h": 5,
+     "n": 123,
+     "b": 0.1095,
+     "ci90": [
+      -0.1417,
+      0.3101
+     ],
+     "p_boot": 0.522
+    },
+    {
+     "h": 6,
+     "n": 122,
+     "b": 0.125,
+     "ci90": [
+      -0.1733,
+      0.3448
+     ],
+     "p_boot": 0.528
+    },
+    {
+     "h": 7,
+     "n": 121,
+     "b": 0.1173,
+     "ci90": [
+      -0.1941,
+      0.3595
+     ],
+     "p_boot": 0.618
+    },
+    {
+     "h": 8,
+     "n": 120,
+     "b": 0.1215,
+     "ci90": [
+      -0.2261,
+      0.4057
+     ],
+     "p_boot": 0.644
+    },
+    {
+     "h": 9,
+     "n": 119,
+     "b": 0.1316,
+     "ci90": [
+      -0.2337,
+      0.4344
+     ],
+     "p_boot": 0.652
+    },
+    {
+     "h": 10,
+     "n": 118,
+     "b": 0.165,
+     "ci90": [
+      -0.2109,
+      0.4703
+     ],
+     "p_boot": 0.556
+    },
+    {
+     "h": 11,
+     "n": 117,
+     "b": 0.2062,
+     "ci90": [
+      -0.1816,
+      0.5135
+     ],
+     "p_boot": 0.452
+    },
+    {
+     "h": 12,
+     "n": 116,
+     "b": 0.2418,
+     "ci90": [
+      -0.1539,
+      0.5525
+     ],
+     "p_boot": 0.37
+    }
+   ]
+  },
+  "focus_selic": {
+   "series_id": "focus_selic_12m",
+   "irf": [
+    {
+     "h": 0,
+     "n": 128,
+     "b": 0.2295,
+     "ci90": [
+      0.0706,
+      0.4377
+     ],
+     "p_boot": 0.03
+    },
+    {
+     "h": 1,
+     "n": 127,
+     "b": 0.3735,
+     "ci90": [
+      0.0616,
+      0.77
+     ],
+     "p_boot": 0.058
+    },
+    {
+     "h": 2,
+     "n": 126,
+     "b": 0.4444,
+     "ci90": [
+      -0.0397,
+      1.0364
+     ],
+     "p_boot": 0.126
+    },
+    {
+     "h": 3,
+     "n": 125,
+     "b": 0.4092,
+     "ci90": [
+      -0.2169,
+      1.1202
+     ],
+     "p_boot": 0.258
+    },
+    {
+     "h": 4,
+     "n": 124,
+     "b": 0.245,
+     "ci90": [
+      -0.5294,
+      1.0178
+     ],
+     "p_boot": 0.542
+    },
+    {
+     "h": 5,
+     "n": 123,
+     "b": 0.0825,
+     "ci90": [
+      -0.8517,
+      0.8855
+     ],
+     "p_boot": 0.87
+    },
+    {
+     "h": 6,
+     "n": 122,
+     "b": -0.0278,
+     "ci90": [
+      -1.0251,
+      0.7839
+     ],
+     "p_boot": 0.906
+    },
+    {
+     "h": 7,
+     "n": 121,
+     "b": -0.0737,
+     "ci90": [
+      -1.1618,
+      0.7521
+     ],
+     "p_boot": 0.84
+    },
+    {
+     "h": 8,
+     "n": 120,
+     "b": -0.0629,
+     "ci90": [
+      -1.3068,
+      0.7535
+     ],
+     "p_boot": 0.794
+    },
+    {
+     "h": 9,
+     "n": 119,
+     "b": 0.0294,
+     "ci90": [
+      -1.4538,
+      0.9843
+     ],
+     "p_boot": 0.87
+    },
+    {
+     "h": 10,
+     "n": 118,
+     "b": 0.1566,
+     "ci90": [
+      -1.5338,
+      1.3147
+     ],
+     "p_boot": 0.996
+    },
+    {
+     "h": 11,
+     "n": 117,
+     "b": 0.2796,
+     "ci90": [
+      -1.4779,
+      1.4754
+     ],
+     "p_boot": 0.894
+    },
+    {
+     "h": 12,
+     "n": 116,
+     "b": 0.349,
+     "ci90": [
+      -1.3759,
+      1.4908
+     ],
+     "p_boot": 0.784
+    }
+   ]
+  },
+  "selic_bp": {
+   "series_id": "selic_target",
+   "irf": [
+    {
+     "h": 0,
+     "n": 128,
+     "b": 3.5949,
+     "ci90": [
+      -11.7493,
+      18.2442
+     ],
+     "p_boot": 0.792
+    },
+    {
+     "h": 1,
+     "n": 128,
+     "b": 7.5619,
+     "ci90": [
+      -23.211,
+      34.3495
+     ],
+     "p_boot": 0.766
+    },
+    {
+     "h": 2,
+     "n": 127,
+     "b": 13.8626,
+     "ci90": [
+      -35.1673,
+      56.3343
+     ],
+     "p_boot": 0.716
+    },
+    {
+     "h": 3,
+     "n": 126,
+     "b": 19.7513,
+     "ci90": [
+      -45.997,
+      77.0526
+     ],
+     "p_boot": 0.672
+    },
+    {
+     "h": 4,
+     "n": 125,
+     "b": 23.4093,
+     "ci90": [
+      -57.6693,
+      94.1631
+     ],
+     "p_boot": 0.682
+    },
+    {
+     "h": 5,
+     "n": 124,
+     "b": 25.3103,
+     "ci90": [
+      -70.9998,
+      110.2762
+     ],
+     "p_boot": 0.696
+    },
+    {
+     "h": 6,
+     "n": 123,
+     "b": 21.031,
+     "ci90": [
+      -93.7969,
+      123.7643
+     ],
+     "p_boot": 0.77
+    },
+    {
+     "h": 7,
+     "n": 122,
+     "b": 12.7331,
+     "ci90": [
+      -110.1191,
+      128.2102
+     ],
+     "p_boot": 0.854
+    },
+    {
+     "h": 8,
+     "n": 121,
+     "b": 5.1827,
+     "ci90": [
+      -129.0923,
+      129.3173
+     ],
+     "p_boot": 0.92
+    },
+    {
+     "h": 9,
+     "n": 120,
+     "b": -0.3449,
+     "ci90": [
+      -146.5004,
+      141.7635
+     ],
+     "p_boot": 0.986
+    },
+    {
+     "h": 10,
+     "n": 119,
+     "b": -5.1701,
+     "ci90": [
+      -160.4088,
+      147.3227
+     ],
+     "p_boot": 0.966
+    },
+    {
+     "h": 11,
+     "n": 118,
+     "b": -8.5989,
+     "ci90": [
+      -174.8162,
+      148.1194
+     ],
+     "p_boot": 0.932
+    },
+    {
+     "h": 12,
+     "n": 117,
+     "b": -10.9925,
+     "ci90": [
+      -179.7463,
+      152.5497
+     ],
+     "p_boot": 0.898
+    }
+   ]
+  },
+  "robust": {
+   "drop2015": {
+    "admin": {
+     "h": 12,
+     "n": 115,
+     "b": 0.3704,
+     "ci90": [
+      -1.1989,
+      1.9438
+     ],
+     "p_boot": 0.704
+    },
+    "headline": {
+     "h": 12,
+     "n": 115,
+     "b": 0.2136,
+     "ci90": [
+      -0.5513,
+      1.1064
+     ],
+     "p_boot": 0.694
+    },
+    "focus_ipca": {
+     "h": 12,
+     "n": 116,
+     "b": 0.2418,
+     "ci90": [
+      -0.1539,
+      0.5525
+     ],
+     "p_boot": 0.37
+    },
+    "selic_bp": {
+     "h": 12,
+     "n": 117,
+     "b": -10.9925,
+     "ci90": [
+      -179.7463,
+      152.5497
+     ],
+     "p_boot": 0.898
+    }
+   },
+   "drop2022": {
+    "admin": {
+     "h": 12,
+     "n": 103,
+     "b": -0.1661,
+     "ci90": [
+      -2.0214,
+      1.6807
+     ],
+     "p_boot": 0.91
+    },
+    "headline": {
+     "h": 12,
+     "n": 103,
+     "b": 0.1593,
+     "ci90": [
+      -0.7027,
+      1.1736
+     ],
+     "p_boot": 0.904
+    },
+    "focus_ipca": {
+     "h": 12,
+     "n": 104,
+     "b": 0.1682,
+     "ci90": [
+      -0.2471,
+      0.5057
+     ],
+     "p_boot": 0.632
+    },
+    "selic_bp": {
+     "h": 12,
+     "n": 105,
+     "b": -8.3848,
+     "ci90": [
+      -176.5687,
+      172.4042
+     ],
+     "p_boot": 0.918
+    }
+   },
+   "continuous_ear": {
+    "admin": {
+     "h": 12,
+     "n": 115,
+     "b": 0.559,
+     "ci90": [
+      -0.1359,
+      1.1061
+     ],
+     "p_boot": 0.238
+    },
+    "headline": {
+     "h": 12,
+     "n": 115,
+     "b": 0.1232,
+     "ci90": [
+      -0.264,
+      0.5181
+     ],
+     "p_boot": 0.65
+    },
+    "focus_ipca": {
+     "h": 12,
+     "n": 116,
+     "b": 0.1079,
+     "ci90": [
+      -0.1098,
+      0.3236
+     ],
+     "p_boot": 0.404
+    },
+    "selic_bp": {
+     "h": 12,
+     "n": 117,
+     "b": -18.6924,
+     "ci90": [
+      -97.0248,
+      63.2862
+     ],
+     "p_boot": 0.752
+    }
+   },
+   "no_controls": {
+    "admin": {
+     "h": 12,
+     "n": 127,
+     "b": 0.4942,
+     "ci90": [
+      -1.8753,
+      1.6598
+     ],
+     "p_boot": 0.966
+    },
+    "headline": {
+     "h": 12,
+     "n": 127,
+     "b": 0.7432,
+     "ci90": [
+      -0.2654,
+      1.4679
+     ],
+     "p_boot": 0.326
+    },
+    "focus_ipca": {
+     "h": 12,
+     "n": 128,
+     "b": 0.2203,
+     "ci90": [
+      -0.1449,
+      0.5431
+     ],
+     "p_boot": 0.314
+    },
+    "selic_bp": {
+     "h": 12,
+     "n": 129,
+     "b": 49.9335,
+     "ci90": [
+      -107.0607,
+      213.2689
+     ],
+     "p_boot": 0.588
+    }
+   }
+  },
+  "W2_verdict": "D",
+  "W3_verdict": "D",
+  "focus_peak": {
+   "h": 12,
+   "n": 116,
+   "b": 0.2418,
+   "ci90": [
+    -0.1539,
+    0.5525
+   ],
+   "p_boot": 0.37
+  },
+  "selic_peak": {
+   "h": 5,
+   "n": 124,
+   "b": 25.3103,
+   "ci90": [
+    -70.9998,
+    110.2762
+   ],
+   "p_boot": 0.696
+  },
+  "decomp_2021": {
+   "ipca_12m_jan": 4.56,
+   "ipca_12m_nov": 10.74,
+   "admin_12m_jan": 1.79,
+   "admin_12m_nov": 19.23,
+   "focus_jan": 3.45,
+   "focus_nov": 5.29,
+   "selic_jan": 2.0,
+   "selic_dec_mean": 8.86,
+   "brent_chg_pct_jan_nov": 48.0
+  }
+ },
+ "W4": {
+  "gdp_q_yoy_2000_2002": {
+   "2000-03-31": 3.03,
+   "2000-06-30": 3.93,
+   "2000-09-30": 5.16,
+   "2000-12-31": 4.97,
+   "2001-03-31": 4.24,
+   "2001-06-30": 2.3,
+   "2001-09-30": 0.58,
+   "2001-12-31": -0.93,
+   "2002-03-31": 1.18,
+   "2002-06-30": 1.87,
+   "2002-09-30": 3.85,
+   "2002-12-31": 5.21
+  },
+  "gdp_q_yoy_2021": {
+   "2021-03-31": 3.01,
+   "2021-06-30": 12.26,
+   "2021-09-30": 4.17,
+   "2021-12-31": 1.66
+  },
+  "gdp_q_yoy_2014_2015": {
+   "2014-03-31": 2.87,
+   "2014-06-30": -0.01,
+   "2014-09-30": -0.55,
+   "2014-12-31": -0.18,
+   "2015-03-31": -1.8,
+   "2015-06-30": -2.68,
+   "2015-09-30": -4.22,
+   "2015-12-31": -5.45
+  },
+  "wb_gdp_growth": {
+   "1998": 0.34,
+   "1999": 0.47,
+   "2000": 4.39,
+   "2001": 1.39,
+   "2002": 3.05,
+   "2003": 1.14
+  },
+  "hydro_share_wb": {
+   "1999": 87.5,
+   "2000": 87.2,
+   "2001": 81.5,
+   "2002": 82.8
+  },
+  "elec_kwh_pc": {
+   "1999": 1840.0,
+   "2000": 1906.0,
+   "2001": 1757.0,
+   "2002": 1817.0,
+   "2003": 1895.0
+  },
+  "elec_kwh_pc_2001_pct": -7.8,
+  "gdp_2001_vs_neighbours": -2.33,
+  "ibc_on_S_excl2020": {
+   "n": 117,
+   "b": -1.282,
+   "ci90": [
+    -2.71,
+    -0.099
+   ],
+   "p_boot": 0.076
+  },
+  "ibc_on_S_excl2020_2021": {
+   "n": 105,
+   "b": -0.537,
+   "ci90": [
+    -1.699,
+    0.254
+   ],
+   "p_boot": 0.309
+  },
+  "load_on_S_excl2020_2021": {
+   "n": 107,
+   "b": -0.971,
+   "ci90": [
+    -2.846,
+    0.775
+   ],
+   "p_boot": 0.441
+  },
+  "ibc_episode_vs_other": {
+   "episode": 0.51,
+   "other": 1.41
+  },
+  "verdict": "F",
+  "p_primary": 0.076,
+  "sql": "SELECT date, value FROM v_observations WHERE series_id='wb/NYGDPMKTPSAKD_Q.BRA' ORDER BY date"
+ },
+ "W5": {
+  "cereal_yield_dlog": {
+   "n": 62,
+   "years": [
+    1962,
+    2023
+   ],
+   "b_spei_simple": -1.317,
+   "ci90_simple": [
+    -2.976,
+    0.128
+   ],
+   "p_simple": 0.14,
+   "b_spei_at_1990": -0.962,
+   "b_spei_x_decade": -0.552,
+   "ci90_spei": [
+    -2.991,
+    0.354
+   ],
+   "ci90_interaction": [
+    -1.424,
+    0.285
+   ],
+   "b_spei_at_2020": -2.618,
+   "b_spei_pre2000": 0.03,
+   "b_spei_post2000": -2.669,
+   "exploratory_with_lag": {
+    "b_spei": -1.603,
+    "b_spei_lag1": 1.27,
+    "ci90_lag1": [
+     -0.73,
+     3.248
+    ]
+   }
+  },
+  "agri_va_growth": {
+   "n": 62,
+   "years": [
+    1962,
+    2023
+   ],
+   "b_spei_simple": -0.243,
+   "ci90_simple": [
+    -0.902,
+    0.689
+   ],
+   "p_simple": 0.887,
+   "b_spei_at_1990": -0.18,
+   "b_spei_x_decade": -0.21,
+   "ci90_spei": [
+    -1.039,
+    0.7
+   ],
+   "ci90_interaction": [
+    -0.534,
+    0.468
+   ],
+   "b_spei_at_2020": -0.81,
+   "b_spei_pre2000": 0.105,
+   "b_spei_post2000": -0.582
+  },
+  "verdict": "D",
+  "p_primary": 0.14,
+  "exports_usd": {
+   "soy_exports": {
+    "corr_spei": 0.6,
+    "n_spei": 9,
+    "corr_ear": -0.13,
+    "usd_bn": {
+     "2014": 23.27,
+     "2015": 20.98,
+     "2016": 19.33,
+     "2017": 25.71,
+     "2018": 33.05,
+     "2019": 26.07,
+     "2020": 28.56,
+     "2021": 38.63,
+     "2022": 46.55,
+     "2023": 53.24,
+     "2024": 42.94,
+     "2025": 43.53
+    }
+   },
+   "coffee_exports": {
+    "corr_spei": 0.58,
+    "n_spei": 9,
+    "corr_ear": 0.35,
+    "usd_bn": {
+     "2014": 6.05,
+     "2015": 5.56,
+     "2016": 4.86,
+     "2017": 4.61,
+     "2018": 4.37,
+     "2019": 4.58,
+     "2020": 5.0,
+     "2021": 5.83,
+     "2022": 8.54,
+     "2023": 7.35,
+     "2024": 11.37,
+     "2025": 14.92
+    }
+   },
+   "sugar_exports": {
+    "corr_spei": -0.25,
+    "n_spei": 9,
+    "corr_ear": 0.39,
+    "usd_bn": {
+     "2014": 9.45,
+     "2015": 7.64,
+     "2016": 10.43,
+     "2017": 11.41,
+     "2018": 6.52,
+     "2019": 5.17,
+     "2020": 8.74,
+     "2021": 9.18,
+     "2022": 11.01,
+     "2023": 15.75,
+     "2024": 18.6,
+     "2025": 14.11
+    }
+   }
+  },
+  "yield_yoy_drought_years": {
+   "2012": 12.7,
+   "2015": 7.5,
+   "2016": -17.9,
+   "2017": 22.0,
+   "2019": 10.2,
+   "2021": -16.0,
+   "2023": 8.4
+  },
+  "yield_yoy_2024": -6.5
+ },
+ "W6": {
+  "bands": [
+   {
+    "band": "20-30",
+    "n_2015_21": 21,
+    "n_2022_26": 0,
+    "cmo_real_mean_2015_21": 723.0,
+    "cmo_real_mean_2022_26": null,
+    "cmo_real_median_2015_21": 450.0,
+    "cmo_real_median_2022_26": null
+   },
+   {
+    "band": "30-40",
+    "n_2015_21": 31,
+    "n_2022_26": 0,
+    "cmo_real_mean_2015_21": 595.0,
+    "cmo_real_mean_2022_26": null,
+    "cmo_real_median_2015_21": 371.0,
+    "cmo_real_median_2022_26": null
+   },
+   {
+    "band": "40-50",
+    "n_2015_21": 17,
+    "n_2022_26": 7,
+    "cmo_real_mean_2015_21": 273.0,
+    "cmo_real_mean_2022_26": 249.0,
+    "cmo_real_median_2015_21": 210.0,
+    "cmo_real_median_2022_26": 249.0,
+    "dlog_cmo_late_minus_early": -0.254,
+    "ci90": [
+     -1.139,
+     0.508
+    ],
+    "p_boot": 0.62
+   },
+   {
+    "band": "50-60",
+    "n_2015_21": 11,
+    "n_2022_26": 10,
+    "cmo_real_mean_2015_21": 99.0,
+    "cmo_real_mean_2022_26": 142.0,
+    "cmo_real_median_2015_21": 85.0,
+    "cmo_real_median_2022_26": 40.0,
+    "dlog_cmo_late_minus_early": -0.282,
+    "ci90": [
+     -1.11,
+     0.594
+    ],
+    "p_boot": 0.544
+   },
+   {
+    "band": "60-+",
+    "n_2015_21": 2,
+    "n_2022_26": 39,
+    "cmo_real_mean_2015_21": 116.0,
+    "cmo_real_mean_2022_26": 98.0,
+    "cmo_real_median_2015_21": 116.0,
+    "cmo_real_median_2022_26": 35.0
+   }
+  ],
+  "slopes_full": {
+   "2015-21": {
+    "n": 84,
+    "dlogcmo_per_ear_pt": -0.0578,
+    "brl_per_ear_pt_real": -24.0,
+    "ear_range": [
+     18.5,
+     60.4
+    ]
+   },
+   "2022-26": {
+    "n": 56,
+    "dlogcmo_per_ear_pt": -0.0525,
+    "brl_per_ear_pt_real": -5.27,
+    "ear_range": [
+     43.7,
+     87.4
+    ]
+   }
+  },
+  "slopes_common_support_40_65": {
+   "2015-21": {
+    "n": 30,
+    "dlogcmo_per_ear_pt": -0.091,
+    "cmo_real_mean": 198.0,
+    "ear_mean": 49.0
+   },
+   "2022-26": {
+    "n": 24,
+    "dlogcmo_per_ear_pt": -0.0534,
+    "cmo_real_mean": 171.0,
+    "ear_mean": 55.0
+   }
+  },
+  "cmp_2024_vs_2017_18": {
+   "2024_h2_ear_mean": 53.5,
+   "2024_h2_cmo_real_mean": 218.0,
+   "2024_h2_cmo_nominal_mean": 201.0,
+   "2017_18_ear40_55_n": 6,
+   "2017_18_ear40_55_ear_mean": 43.0,
+   "2017_18_ear40_55_cmo_real_mean": 364.0
+  },
+  "verdict": "Partial",
+  "untestable": "bands 20-30 and 30-40 have no 2022-26 months (declared in advance)",
+  "p_primary": 0.62
+ },
+ "W7": {
+  "annual_fit_2016_2022": {
+   "b": [
+    1.487,
+    0.001,
+    0.674
+   ],
+   "names": [
+    "const",
+    "dCDD",
+    "IBC growth"
+   ],
+   "r2": 0.525,
+   "n": 7
+  },
+  "ibc_only_fit": {
+   "b": [
+    1.421,
+    0.674
+   ],
+   "r2": 0.522
+  },
+  "by_year": {
+   "2016": {
+    "load_g": 0.32,
+    "ibc_g": -4.13,
+    "dcdd": -17.8,
+    "resid_full": 1.63,
+    "resid_ibc_only": 1.68
+   },
+   "2017": {
+    "load_g": 1.83,
+    "ibc_g": 0.78,
+    "dcdd": -174.7,
+    "resid_full": -0.03,
+    "resid_ibc_only": -0.12
+   },
+   "2018": {
+    "load_g": 0.91,
+    "ibc_g": 1.31,
+    "dcdd": -173.0,
+    "resid_full": -1.32,
+    "resid_ibc_only": -1.4
+   },
+   "2019": {
+    "load_g": 2.07,
+    "ibc_g": 1.11,
+    "dcdd": 270.4,
+    "resid_full": -0.39,
+    "resid_ibc_only": -0.09
+   },
+   "2020": {
+    "load_g": -1.83,
+    "ibc_g": -3.94,
+    "dcdd": -186.9,
+    "resid_full": -0.5,
+    "resid_ibc_only": -0.6
+   },
+   "2021": {
+    "load_g": 7.76,
+    "ibc_g": 4.29,
+    "dcdd": -143.8,
+    "resid_full": 3.51,
+    "resid_ibc_only": 3.45
+   },
+   "2022": {
+    "load_g": 0.4,
+    "ibc_g": 2.81,
+    "dcdd": -108.0,
+    "resid_full": -2.89,
+    "resid_ibc_only": -2.92
+   },
+   "2023": {
+    "load_g": 6.89,
+    "ibc_g": 2.62,
+    "dcdd": 459.0,
+    "resid_full": 3.24,
+    "resid_ibc_only": 3.7
+   },
+   "2024": {
+    "load_g": 6.87,
+    "ibc_g": 3.7,
+    "dcdd": 172.7,
+    "resid_full": 2.73,
+    "resid_ibc_only": 2.95
+   },
+   "2025": {
+    "load_g": 0.84,
+    "ibc_g": 2.36,
+    "dcdd": null,
+    "resid_full": null,
+    "resid_ibc_only": -2.17
+   }
+  },
+  "resid_mean_2023_25": 1.27,
+  "verdict_by_rule": "Partial",
+  "monthly_check": {
+   "b": [
+    1.223,
+    0.377
+   ],
+   "r2": 0.119,
+   "n": 68,
+   "resid_mean_by_year": {
+    "2023": 4.58,
+    "2024": 4.35,
+    "2025": -1.32,
+    "2026": -1.75
+   }
+  },
+  "mmgd_windows": {
+   "2023-01..2023-04 (pre-MMGD)": {
+    "resid_pp": -2.95,
+    "load_yoy": -0.2,
+    "ibc_yoy": 4.04
+   },
+   "2023-05..2024-04 (MMGD break in y/y)": {
+    "resid_pp": 8.73,
+    "load_yoy": 10.8,
+    "ibc_yoy": 2.25
+   },
+   "2024-05..2024-12": {
+    "resid_pp": 1.77,
+    "load_yoy": 4.54,
+    "ibc_yoy": 4.1
+   },
+   "2025-01..2026-09": {
+    "resid_pp": -1.48,
+    "load_yoy": 0.51,
+    "ibc_yoy": 2.04
+   }
+  },
+  "cdd": {
+   "2014": 4568.1,
+   "2015": 4890.3,
+   "2016": 4872.5,
+   "2017": 4697.8,
+   "2018": 4524.8,
+   "2019": 4795.2,
+   "2020": 4608.4,
+   "2021": 4464.6,
+   "2022": 4356.5,
+   "2023": 4815.5,
+   "2024": 4988.2
+  },
+  "load_gwmed": {
+   "2015": 61.35,
+   "2016": 61.55,
+   "2017": 62.69,
+   "2018": 63.26,
+   "2019": 64.58,
+   "2020": 63.41,
+   "2021": 68.53,
+   "2022": 68.8,
+   "2023": 73.7,
+   "2024": 78.94,
+   "2025": 79.61,
+   "2026": 80.49
+  },
+  "kwh_pc_growth": {
+   "2016": -1.36,
+   "2017": 0.67,
+   "2018": 1.15,
+   "2019": 0.78,
+   "2020": -1.37,
+   "2021": 3.71,
+   "2022": 2.31,
+   "2023": 4.51,
+   "2024": 5.07
+  },
+  "sql": "SELECT series_id, year(date) AS year, avg(value) AS v, count(*) AS n\n          FROM v_observations WHERE date <= current_date AND series_id IN\n          ('stored_energy_ear','cmo_power_cost','electricity_load','hydro_generation_share','wind_solar_generation_share',\n           'thermal_generation_share','ibc_br','ipca_administered_prices','exports_to_eu','soy_exports','coffee_exports','sugar_exports')\n          GROUP BY 1,2 ORDER BY 1,2"
+ },
+ "W8": {
+  "wb/EN.CLC.SPEI.XD.BR": {
+   "mean_1960_99": 0.16,
+   "mean_2010_on": -1.108,
+   "n": [
+    40,
+    14
+   ],
+   "last_year": 2023,
+   "diff": -1.268,
+   "p_one_sided": 0.0002,
+   "var_ratio": 1.04,
+   "p_var": 0.4468,
+   "direction_ok": true
+  },
+  "wb/EN.CLC.HEAT.XD.BR": {
+   "mean_1960_99": 0.154,
+   "mean_2010_on": 0.718,
+   "n": [
+    39,
+    15
+   ],
+   "last_year": 2024,
+   "diff": 0.564,
+   "p_one_sided": 0.0001,
+   "var_ratio": 6.04,
+   "p_var": 0.0016,
+   "direction_ok": true
+  },
+  "wb/EN.CLC.CDDY.XD.BR": {
+   "mean_1960_99": 4120.595,
+   "mean_2010_on": 4653.233,
+   "n": [
+    40,
+    15
+   ],
+   "last_year": 2024,
+   "diff": 532.638,
+   "p_one_sided": 0.0001,
+   "var_ratio": 0.8,
+   "p_var": 0.696,
+   "direction_ok": true
+  },
+  "n_sig": 3,
+  "verdict": "F",
+  "p_primary": 9.999000099990002e-05,
+  "driest_since_1990": [
+   [
+    2015,
+    -2.56
+   ],
+   [
+    2023,
+    -2.31
+   ],
+   [
+    2016,
+    -2.27
+   ],
+   [
+    2012,
+    -2.01
+   ],
+   [
+    2017,
+    -1.89
+   ],
+   [
+    2019,
+    -1.67
+   ],
+   [
+    1990,
+    -1.2
+   ]
+  ]
+ },
+ "W9": {
+  "generation_gwh@AXIA": {
+   "episode_dev": -1.06,
+   "other_dev": 0.51,
+   "n_episode": 42,
+   "unit": "pct of same-year mean",
+   "episode_mean": 8590.9,
+   "other_mean": 9653.0
+  },
+  "generation_share_sin@AXIA": {
+   "episode_dev": -0.49,
+   "other_dev": 0.23,
+   "n_episode": 42,
+   "unit": "pts vs same-year mean",
+   "episode_mean": 18.1,
+   "other_mean": 18.6
+  },
+  "generation_gwh@PETR": {
+   "episode_dev": 16.22,
+   "other_dev": -7.83,
+   "n_episode": 42,
+   "unit": "pct of same-year mean",
+   "episode_mean": 1987.8,
+   "other_mean": 816.7
+  },
+  "generation_share_sin@PETR": {
+   "episode_dev": 0.45,
+   "other_dev": -0.22,
+   "n_episode": 42,
+   "unit": "pts vs same-year mean",
+   "episode_mean": 4.2,
+   "other_mean": 1.6
+  },
+  "annual_gwh": {
+   "generation_gwh@AXIA": {
+    "2016": 91213.0,
+    "2017": 94635.0,
+    "2018": 97652.0,
+    "2019": 107946.0,
+    "2020": 126436.0,
+    "2021": 112247.0,
+    "2022": 131168.0,
+    "2023": 118579.0,
+    "2024": 119948.0,
+    "2025": 110894.0,
+    "2026": 89908.0
+   },
+   "generation_gwh@PETR": {
+    "2016": 17906.0,
+    "2017": 25902.0,
+    "2018": 17868.0,
+    "2019": 16767.0,
+    "2020": 14262.0,
+    "2021": 28100.0,
+    "2022": 7517.0,
+    "2023": 5363.0,
+    "2024": 6628.0,
+    "2025": 7154.0,
+    "2026": 7077.0
+   }
+  },
+  "total_return_usd@AXIA": {
+   "n": 129,
+   "b_ret_per_ear_pt": -0.301,
+   "ci90": [
+    -0.777,
+    0.083
+   ],
+   "p_boot": 0.193
+  },
+  "total_return_usd@PETR": {
+   "n": 129,
+   "b_ret_per_ear_pt": -0.149,
+   "ci90": [
+    -0.819,
+    0.226
+   ],
+   "p_boot": 0.43
+  },
+  "verdict": "descriptive"
+ },
+ "W10": {
+  "frls_mha": {
+   "2002": 3.51,
+   "2003": 3.25,
+   "2004": 3.85,
+   "2005": 3.49,
+   "2006": 2.88,
+   "2007": 2.62,
+   "2008": 2.44,
+   "2009": 1.82,
+   "2010": 2.69,
+   "2011": 1.92,
+   "2012": 2.92,
+   "2013": 1.95,
+   "2014": 2.69,
+   "2015": 2.22,
+   "2016": 5.38,
+   "2017": 4.52,
+   "2018": 2.95,
+   "2019": 2.7,
+   "2020": 3.29,
+   "2021": 2.99,
+   "2022": 3.31,
+   "2023": 2.81,
+   "2024": 4.39,
+   "2025": 2.87
+  },
+  "pfls_mha": {
+   "2002": 1.62,
+   "2003": 1.57,
+   "2004": 2.02,
+   "2005": 1.82,
+   "2006": 1.42,
+   "2007": 1.15,
+   "2008": 1.08,
+   "2009": 0.7,
+   "2010": 1.15,
+   "2011": 0.8,
+   "2012": 1.12,
+   "2013": 0.63,
+   "2014": 0.94,
+   "2015": 0.83,
+   "2016": 2.83,
+   "2017": 2.13,
+   "2018": 1.35,
+   "2019": 1.36,
+   "2020": 1.7,
+   "2021": 1.55,
+   "2022": 1.77,
+   "2023": 1.14,
+   "2024": 2.82,
+   "2025": 1.63
+  },
+  "eu_usd_bn": {
+   "2014": 36.2,
+   "2015": 28.8,
+   "2016": 27.1,
+   "2017": 30.2,
+   "2018": 34.3,
+   "2019": 30.0,
+   "2020": 27.7,
+   "2021": 36.5,
+   "2022": 50.9,
+   "2023": 46.3,
+   "2024": 48.3,
+   "2025": 49.8
+  },
+  "eu_growth": {
+   "2015": -22.7,
+   "2016": -6.0,
+   "2017": 10.8,
+   "2018": 12.6,
+   "2019": -13.4,
+   "2020": -8.1,
+   "2021": 27.8,
+   "2022": 33.1,
+   "2023": -9.5,
+   "2024": 4.1,
+   "2025": 3.1
+  },
+  "corr_frls_spei_2002_23": -0.4,
+  "corr_eu_growth_frls_2015_25": 0.15,
+  "eu_growth_fire_years": 3.0,
+  "eu_growth_other_years": 2.9,
+  "fire_years": [
+   2016,
+   2017,
+   2024
+  ],
+  "verdict": "descriptive"
+ },
+ "W11": {
+  "annual": {
+   "2015": {
+    "admin": 16.77,
+    "S_mean": 0.871
+   },
+   "2016": {
+    "admin": 5.39,
+    "S_mean": 0.224
+   },
+   "2017": {
+    "admin": 7.75,
+    "S_mean": 0.765
+   },
+   "2018": {
+    "admin": 6.06,
+    "S_mean": 0.594
+   },
+   "2019": {
+    "admin": 5.42,
+    "S_mean": 0.495
+   },
+   "2020": {
+    "admin": 2.64,
+    "S_mean": 0.457
+   },
+   "2021": {
+    "admin": 15.77,
+    "S_mean": 0.69
+   },
+   "2022": {
+    "admin": -3.72,
+    "S_mean": 0.0
+   },
+   "2023": {
+    "admin": 8.79,
+    "S_mean": 0.0
+   },
+   "2024": {
+    "admin": 4.58,
+    "S_mean": 0.0
+   },
+   "2025": {
+    "admin": 5.23,
+    "S_mean": 0.0
+   }
+  },
+  "ols": {
+   "b": [
+    4.184,
+    9.906,
+    -5.954
+   ],
+   "names": [
+    "const",
+    "S_mean",
+    "election_2018_2022"
+   ],
+   "r2": 0.582,
+   "n": 11
+  },
+  "ols_no_dummy": {
+   "b": [
+    2.811,
+    10.686
+   ],
+   "r2": 0.405
+  },
+  "resid_2022_no_dummy": -6.53,
+  "admin_per_unit_S": {
+   "2015": 19.25,
+   "2017": 10.13,
+   "2018": 10.21,
+   "2021": 22.86,
+   "2022": null
+  },
+  "admin_2021_2022_avg": 6.02,
+  "admin_2023": 8.79,
+  "verdict": "Both agree (quantified with external fiscal-cost facts)"
+ },
+ "scenarios": {
+  "n_rows": 18,
+  "ep_gap_admin_pp": 2.98,
+  "ep_gap_headline_pp": 1.22,
+  "cross_table": [
+   {
+    "state": "ToT +10% (exports study)",
+    "headline_ipca_pp": "-1.1 (reduced-form, Dec/Dec)",
+    "selic_bp": "reduced-form -500 (2002/2015-driven; not causal)",
+    "gdp": "+2.3 to +3.1 GDP-pc growth pts (upper bound); ~+1.5% GDP income",
+    "exports_usd_bn_yr": "+14 to +22"
+   },
+   {
+    "state": "ToT -10% (exports study)",
+    "headline_ipca_pp": "+1.1",
+    "selic_bp": "reduced-form +500 (not causal)",
+    "gdp": "-2.3 to -3.1 pts (upper bound); ~-1.5% GDP income",
+    "exports_usd_bn_yr": "-14 to -22"
+   },
+   {
+    "state": "Hydro best (wet + diversification)",
+    "headline_ipca_pp": "-0.3 to 0",
+    "selic_bp": "-50 to 0",
+    "gdp": "0 to +0.2",
+    "exports_usd_bn_yr": "0 to +5"
+   },
+   {
+    "state": "Hydro one drought year",
+    "headline_ipca_pp": "+0.3 to +1.0",
+    "selic_bp": "0 to +50",
+    "gdp": "-0.1 to -0.5",
+    "exports_usd_bn_yr": "-5 to +3"
+   },
+   {
+    "state": "Hydro severe (pass-through)",
+    "headline_ipca_pp": "+1.0 to +2.0",
+    "selic_bp": "+25 to +150",
+    "gdp": "-0.3 to -1.0",
+    "exports_usd_bn_yr": "-6 to +4"
+   },
+   {
+    "state": "Hydro worst (rationing tail / suppression 2030)",
+    "headline_ipca_pp": "+2.0 to +3.5 or R$40-100bn fiscal",
+    "selic_bp": "+100 to +300",
+    "gdp": "-1.0 to -2.5",
+    "exports_usd_bn_yr": "-8 to +2 (plus EU tail -2 to -5)"
+   },
+   {
+    "state": "Combined: ToT -10% + severe drought",
+    "headline_ipca_pp": "+2.1 to +3.1",
+    "selic_bp": "+25 to +150 on top of the ToT response",
+    "gdp": "-0.3 to -1.0 on top of ToT",
+    "exports_usd_bn_yr": "-20 to -28 (central)"
+   },
+   {
+    "state": "Combined: ToT +10% + wet",
+    "headline_ipca_pp": "-1.1 to -1.4",
+    "selic_bp": "-50 to 0 on top of ToT",
+    "gdp": "ToT gain + 0 to +0.2",
+    "exports_usd_bn_yr": "+14 to +27"
+   }
+  ]
+ },
+ "bh": {
+  "W1": {
+   "p": 0.0,
+   "q": 0.0
+  },
+  "W4": {
+   "p": 0.076,
+   "q": 0.1773
+  },
+  "W5": {
+   "p": 0.14,
+   "q": 0.245
+  },
+  "W6": {
+   "p": 0.62,
+   "q": 0.704
+  },
+  "W8": {
+   "p": 0.0001,
+   "q": 0.0003
+  },
+  "W2": {
+   "p": 0.704,
+   "q": 0.704
+  },
+  "W3": {
+   "p": 0.37,
+   "q": 0.518
+  }
+ },
+ "run_utc": "2026-10-05T21:24:07.361933+00:00"
+}
+        start         end  days  min_ear  cmo_mean  cmo_max  thermal_share_mean  admin_ipca_12m_after  headline_ipca_12m_after  focus_ipca_change_12m  selic_change_bp_12m  brent_change_pct_12m
+0  2015-01-01  2015-07-14   195     20.2     905.0   2159.0                25.2                 16.77                    10.19                   0.37                255.0                 -39.2
+1  2015-08-08  2016-01-26   172     27.5     147.0    260.0                23.9                  8.26                     8.41                  -0.08                 47.0                 -20.8
+2  2016-09-24  2017-05-21   240     30.5     208.0    472.0                18.0                  6.12                     2.43                  -0.97               -500.0                  13.9
+3  2017-07-18  2018-03-08   234     17.8     412.0    861.0                21.5                 11.20                     4.31                  -0.16               -375.0                  59.8
+4  2018-07-16  2019-03-15   243     25.1     351.0    785.0                17.2                  3.71                     3.32                  -0.71                  0.0                 -13.8
+5  2019-09-13  2020-02-24   165     22.3     257.0    362.0                19.7                  1.16                     2.42                  -0.66               -396.0                 -24.2
+6  2020-10-01  2021-03-04   155     23.1     309.0    744.0                20.4                 14.75                     9.80                   1.59                352.0                  82.8
+7  2021-06-25  2022-01-08   198     23.6     793.0   3044.0                26.7                 11.53                    11.15                   1.60                924.0                  65.1
