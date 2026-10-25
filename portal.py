@@ -132,7 +132,8 @@ def write_dims(cat: pd.DataFrame) -> dict:
     mem = pd.read_parquet(mem_p) if mem_p.exists() else pd.DataFrame(columns=["series_id", "member_id", "breakdown", "n_dims"])
     have = set(cat.series_id)
     tables_of = {}
-    for r in mem.sort_values(["series_id", "n_dims", "member_id"]).itertuples():
+    # the series' own table first: it is what the chart shows before a table is picked
+    for r in mem.assign(_m=mem.member_id != mem.series_id).sort_values(["series_id", "_m", "n_dims", "member_id"]).itertuples():
         if r.series_id in have:
             tables_of.setdefault(r.series_id, []).append((r.member_id, r.breakdown))
     d = pd.read_parquet(dp)
@@ -168,7 +169,7 @@ def write_dims(cat: pd.DataFrame) -> dict:
     ids, n = {}, 0
     for sid in sorted(have):
         members = tables_of.get(sid) or ([(sid, "")] if sid in groups else [])
-        tabs = [t for m, lbl in members if m in groups and (t := table(groups[m], lbl))]
+        tabs = [dict(t, id=m) for m, lbl in members if m in groups and (t := table(groups[m], lbl))]
         if not tabs:
             continue
         (out_dir / f"{n}.json").write_text(json.dumps(dict(tables=tabs), separators=(",", ":"), ensure_ascii=False))
@@ -259,6 +260,11 @@ def main():
                                 hits=[dict(t=h.get("title"), u=h.get("url"), p=h.get("publisher"),
                                            f=h.get("formats", [])[:4]) for h in c.get("hits", [])[:5]]))
     have = set(cat.series_id)
+    # merged ILO tables -> their family series, so old links open the family page on that table
+    mem_p = GOLD / "series_members.parquet"
+    mem = pd.read_parquet(mem_p) if mem_p.exists() else pd.DataFrame(columns=["series_id", "member_id"])
+    mem = mem[(mem.series_id != mem.member_id) & mem.series_id.isin(have) & ~mem.member_id.isin(have)]
+    aliases = dict(zip(mem.member_id, mem.series_id))
     curated = []
     for c in CURATED:
         charts = [dict(c2, s=[x for x in c2["s"] if x in have]) for c2 in c["charts"]]
@@ -276,6 +282,7 @@ def main():
         sources=cat.groupby("source").size().sort_values(ascending=False).to_dict(),
         reconciliation=json.loads(rec.to_json(orient="records")) if not rec.empty else [],
         missing=missing,
+        aliases=aliases,
         tests=json.loads(hyp[["hyp_id", "title", "verdict", "evidence"]].to_json(orient="records")) if not hyp.empty else [],
         registry_total=int(len(reg)),
         registry_done=int(len(cov) - len(missing)) if not cov.empty else None,

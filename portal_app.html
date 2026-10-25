@@ -492,7 +492,7 @@ async function showCurated(id){
   $('#kpis').innerHTML = (await Promise.all(c.kpis.map(kpiHTML))).join('');
   c.charts.forEach(async (ch, i) => { const r = await multiChart($('#cc' + i), ch.s, 320); if (r) $('#cn' + i).textContent = 'Different units, so each series has its own panel.'; });
 }
-let stab = 'chart', plotIds = [], plotDraw = null, plotMode = 'auto', dimState = null;
+let stab = 'chart', plotIds = [], plotDraw = null, plotMode = 'auto', dimState = null, pendingTable = null;
 const DIM_NAME = {Ec2: 'Economic activity (detailed)', Oc2: 'Occupation (detailed)', How: 'Hours worked', Jbt: 'Job type', Skn: 'Skill',
   Wbl: 'Working-age band', Chl: 'Children in household', Ins: 'Institutional sector', Ste: 'Status in employment', Ifl: 'Informality'};
 const SCHEME_NAME = {ISCO08: 'ISCO-08', ISCO88: 'ISCO-88', ISIC4: 'ISIC Rev. 4', ISIC3: 'ISIC Rev. 3', SKILL: 'skill level', SECTOR: 'broad sector',
@@ -506,8 +506,11 @@ async function loadDims(s){
   const pickScheme = dm => { const sc = [...new Set(dm.schemes)].filter(Boolean);
     return sc.sort((a, b) => (SCHEME_ORDER.indexOf(a) + 99) % 99 - (SCHEME_ORDER.indexOf(b) + 99) % 99)[0] || ''; };
   dimState = {T: D.tables, tab: 0, active: false};
-  setTable(0);
+  const want = D.tables.findIndex(t => t.id && t.id === pendingTable); pendingTable = null;
+  setTable(Math.max(0, want));
+  dimState.active = want > 0;
   renderDimbar();
+  if (want > 0 && plotDraw) plotDraw();
 }
 function setTable(i){
   const D = dimState.T[i]; dimState.tab = i; dimState.D = D; dimState.split = -1;
@@ -579,6 +582,8 @@ function renderPlotbar(){
 function pickSearch(qq){ return searchCat(qq, 14).map(r => r[0]).filter(x => !plotIds.includes(x.id)).slice(0, 10); }
 async function showSeries(id){
   const s = BY.get(id), v = $('#view');
+  const fam = !s && (META.aliases || {})[id];   // a breakdown table merged into its family series
+  if (fam && BY.has(fam)) { pendingTable = id; location.replace('#' + toHash(fam)); return; }
   if (!s) { crumbs([['Datasets']]); v.innerHTML = `<h1>Dataset not found</h1><p class="lede">No series <code>${esc(id)}</code> in this build. Search the catalogue on the left.</p>`; return; }
   crumbs([[s.dset, null], [s.tp, null], [s.t]]);
   plotMode = 'auto'; stab = 'chart';
