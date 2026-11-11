@@ -36,11 +36,12 @@ run(){  # run <adapter> [args...] — logged, time-limited, never fatal
 # ---- 1. ingest (SKIP_INGEST=1 rebuilds from the current bronze only — for testing the build/swap)
 if [ "${SKIP_INGEST:-0}" != 1 ]; then
 NATIVE=(bcb_sgs bcb_focus bcb_olinda caged ibge_sidra ipeadata comexstat tesouro_bonds ons_energy ons_plants
-        anp_production b3_market cvm_financials datasus_tabnet who_mortality)
+        anp_production b3_market cvm_financials datasus_tabnet who_mortality tesouro_rtn)
 for a in "${NATIVE[@]}"; do run "$a"; done
 if [ "$MODE" != daily ]; then
   if [ "$MODE" = monthly ]; then run worldbank_bulk --max-age 25; run ilostat_bulk --refresh
   else run worldbank_bulk; run ilostat_bulk; fi
+  run imf_fiscal_monitor
 fi
 if [ "$MODE" = monthly ]; then
   run ilo_codelists

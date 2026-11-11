@@ -1,0 +1,27 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2001-12-31,39.802298880455,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2002-12-31,44.494777006307,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2003-12-31,41.288172947237,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2004-12-31,39.680679611754,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2005-12-31,41.870308971143,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2006-12-31,42.562799640828,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2007-12-31,40.356250377881,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2008-12-31,39.915579280052,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2009-12-31,40.536594018831,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2010-12-31,39.515876696013,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2011-12-31,39.367254065286,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2012-12-31,39.309501642716,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2013-12-31,39.780145698114,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2014-12-31,41.426431560963,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2015-12-31,46.19085074601,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2016-12-31,45.502924163738,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2017-12-31,44.297324424944,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2018-12-31,44.180659472656,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2019-12-31,43.042876399214,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2020-12-31,46.178421990398,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2021-12-31,40.370988751028,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2022-12-31,43.445330898147,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2023-12-31,45.309295470962,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2024-12-31,45.656342496299,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2025-12-31,46.934805032268,pct_gdp
+gg_expenditure_gdp,General government expenditure / GDP (IMF),fiscal,imf_fm,annual,2026-12-31,48.664022440688,pct_gdp

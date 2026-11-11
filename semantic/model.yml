@@ -94,11 +94,13 @@ metrics:   # named measures and how to compute them
   usd_total_return: "series total_return_usd@<ENTITY>, Jan 2012 = 100, dividends reinvested"
   export_unit_value: "series *_unit_value (US$/t) = FOB value / net weight"
   hydro_stress_index: "0.5 × (100 − EAR%) + 0.5 × thermal share% (0–100, higher = stress)"
+  cg_shares_of_gdp: "series cg_*_gdp = 12-month sum of the Treasury monthly line (cg_*_brl, R$ mn) / gdp_nominal_12m_brl × 100"
+  gg_peer_median: "series gg_*_em_peers = median of the emerging G20 members other than Brazil (ARG, CHN, IND, IDN, MEX, RUS, SAU, ZAF, TUR), IMF Fiscal Monitor"
 
 starter_series:
   rates_prices: [selic_target, ipca_12m, focus_ipca_12m, gov_real_yield_10y, brl_usd]
   activity_jobs: [ibc_br, unemployment_rate, caged_net_hires, retail_sales_volume, wb/NY.GDP.MKTP.KD.ZG.BR]
-  fiscal: [gross_public_debt_gdp, primary_balance_gdp, interest_bill_gdp, r_minus_g]
+  fiscal: [gross_public_debt_gdp, primary_balance_gdp, interest_bill_gdp, r_minus_g, cg_net_revenue_gdp, cg_expense_gdp, gg_revenue_gdp, gg_revenue_gdp_em_peers]
   external: [exports_total, china_export_share, current_account_usd, fx_reserves]
   energy: [oil_production, presalt_share, brent_usd, stored_energy_ear, cmo_power_cost]
   companies: [total_return_usd@PETR, revenue_usd_bn@VALE, operated_oil_production_kbd@PETR]
@@ -121,3 +123,4 @@ rules_for_agents:
   - "Use v_annual to compare series of different frequencies; never mix units on one axis without rebasing."
   - "World Bank population series include projections beyond the current year; filter date <= current_date."
   - "Recent DATASUS months are preliminary; monthly CAGED is not seasonally adjusted."
+  - "Three fiscal perimeters, do not mix them: gg_* = general government incl. states and municipalities (IMF, annual; the latest year is an IMF estimate); cg_* = central government, above the line (Treasury, monthly); primary_balance_gdp / nominal_deficit_gdp = consolidated public sector, below the line (central bank). wb/GC.* = central government (World Bank, annual)."

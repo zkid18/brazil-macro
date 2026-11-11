@@ -1,0 +1,27 @@
+metric_id,metric_name,theme,source_id,freq,date,value,unit
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2001-12-31,-3.4680406697445,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2002-12-31,-4.1485192619529,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2003-12-31,-5.4006824035078,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2004-12-31,-2.9549917417874,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2005-12-31,-3.3635707898083,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2006-12-31,-4.8684388312754,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2007-12-31,-2.6601902091283,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2008-12-31,-2.3929713378095,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2009-12-31,-4.2304586772516,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2010-12-31,-3.5537450557575,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2011-12-31,-2.7413265090118,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2012-12-31,-2.3513260542405,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2013-12-31,-3.4221326645272,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2014-12-31,-6.2749316586314,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2015-12-31,-9.2813770589285,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2016-12-31,-7.9906140693328,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2017-12-31,-7.9696713340627,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2018-12-31,-6.9901381779928,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2019-12-31,-4.8585262031945,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2020-12-31,-11.636888086394,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2021-12-31,-2.6307488777397,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2022-12-31,-3.9646956457963,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2023-12-31,-7.7124401351544,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2024-12-31,-6.2971276954923,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2025-12-31,-7.4288045757745,pct_gdp
+gg_overall_balance_gdp,"General government overall balance / GDP (IMF, +=surplus)",fiscal,imf_fm,annual,2026-12-31,-8.1186162935564,pct_gdp

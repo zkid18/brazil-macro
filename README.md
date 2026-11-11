@@ -42,6 +42,9 @@ Brazil-specific series:
 - **IBGE:** prices, labour, retail, population.
 - **Trade and energy:** ComexStat for trade; ANP and ONS for oil, gas and power.
 - **Markets and companies:** Tesouro for bond yields; B3 and CVM for companies.
+- **Public finances:** the Treasury's monthly central-government results (revenue by tax,
+  spending by category) and the IMF Fiscal Monitor for general government, with an
+  emerging-market peer median.
 - **Health:** DATASUS and WHO.
 - **Politics:** a calendar of presidential terms and events, so any series can be read
   against who was governing.
