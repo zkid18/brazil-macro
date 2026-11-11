@@ -137,6 +137,22 @@ def _emit(silver, metric_id, name, theme, unit, values, freq="monthly", source="
     })
 
 
+# (derived id, Treasury RTN inputs summed, title) — 12-month sums as % of GDP
+CG_SHARES = [
+    ("cg_net_revenue_gdp", ["cg_net_revenue_brl"], "Central government net revenue / GDP (12m)"),
+    ("cg_tax_revenue_gdp", ["cg_revenue_rfb_brl", "cg_revenue_rgps_brl"],
+     "Central government taxes and social security contributions, gross of sharing with states / GDP (12m)"),
+    ("cg_nontax_revenue_gdp", ["cg_revenue_nontax_brl"],
+     "Central government non-tax revenue (dividends, royalties) / GDP (12m)"),
+    ("cg_expense_gdp", ["cg_expense_total_brl"], "Central government primary spending / GDP (12m)"),
+    ("cg_expense_pensions_gdp", ["cg_expense_pensions_brl"], "Central government pension spending / GDP (12m)"),
+    ("cg_expense_discretionary_gdp", ["cg_expense_discretionary_brl"],
+     "Central government discretionary spending / GDP (12m)"),
+    ("cg_primary_result_gdp", ["cg_primary_result_brl"],
+     "Central government primary result / GDP (12m, +=surplus)"),
+]
+
+
 def derive_native_series(silver) -> list:
     """Monthly series derived from native BCB SGS inputs (appended to silver)."""
     out = []
@@ -205,6 +221,19 @@ def derive_native_series(silver) -> list:
         rr = (sel.resample("MS").mean() - fip.resample("MS").mean()).dropna()
         out.append(_emit(silver, "real_policy_rate", "Real policy rate (Selic − expected IPCA 12m)",
                          "macro_policy", "pct_pa", rr))
+    # central government (Treasury RTN, monthly R$ mn flows) -> 12-month sum / nominal GDP 12m.
+    # Shows whether a fiscal adjustment lands on revenue or on spending.
+    ngdp = _series(silver, "gdp_nominal_12m_brl")
+    if ngdp is not None:
+        for mid, parts, name in CG_SHARES:
+            ser = [_series(silver, p) for p in parts]
+            if any(x is None for x in ser):
+                continue
+            flow = pd.concat(ser, axis=1).dropna().sum(axis=1)
+            full = flow.index.to_series().diff().dt.days.fillna(31).le(31).astype(float)
+            r12 = flow.rolling(12).sum()[full.rolling(12).min().eq(1)]  # all 12 months present
+            share = (r12 / ngdp.reindex(r12.index) * 100).dropna()
+            out.append(_emit(silver, mid, name, "fiscal", "pct_gdp", share))
     # oil_production_yoy = YoY % change of monthly oil production
     oil = _series(silver, "oil_production")
     if oil is not None and len(oil) > 12:

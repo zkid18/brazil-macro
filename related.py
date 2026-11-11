@@ -55,6 +55,13 @@ LINEAGE = {
     "real_policy_rate": ["selic_target", "focus_ipca_12m"],
     "nominal_gdp_growth": ["gdp_nominal_12m_brl"],
     "r_minus_g": ["implicit_interest_rate", "nominal_gdp_growth"],
+    "cg_net_revenue_gdp": ["cg_net_revenue_brl", "gdp_nominal_12m_brl"],
+    "cg_tax_revenue_gdp": ["cg_revenue_rfb_brl", "cg_revenue_rgps_brl", "gdp_nominal_12m_brl"],
+    "cg_nontax_revenue_gdp": ["cg_revenue_nontax_brl", "gdp_nominal_12m_brl"],
+    "cg_expense_gdp": ["cg_expense_total_brl", "gdp_nominal_12m_brl"],
+    "cg_expense_pensions_gdp": ["cg_expense_pensions_brl", "gdp_nominal_12m_brl"],
+    "cg_expense_discretionary_gdp": ["cg_expense_discretionary_brl", "gdp_nominal_12m_brl"],
+    "cg_primary_result_gdp": ["cg_primary_result_brl", "gdp_nominal_12m_brl"],
     "total_return_usd@IBOV": ["ibovespa_level", "brl_usd"],
     "total_return_brl@IBOV": ["ibovespa_level"],
 }

@@ -74,6 +74,7 @@ SOURCE_NAME = {
     "b3_cotahist": "B3", "b3_dividends": "B3", "b3_ibov_portfolio": "B3", "cvm_itr_dfp": "CVM",
     "derived": "Derived", "dateno_wb": "World Bank (Dateno)", "dateno_ilostat": "ILO (Dateno)", "epe_ben": "World Bank (Dateno)",
     "datasus_sim": "DATASUS (SIM)", "who_mdb": "WHO Mortality Database",
+    "tesouro_rtn": "Tesouro Nacional (RTN)", "imf_fm": "IMF (Fiscal Monitor)",
 }
 ENTITY_NAME = {"BR": "Brazil", "PETR": "Petrobras", "VALE": "Vale", "AXIA": "Axia (ex-Eletrobras)",
                "SUZB": "Suzano", "PRIO": "PRIO", "ITUB": "Itaú Unibanco", "IBOV": "Ibovespa"}
@@ -298,6 +299,8 @@ NATIVE_DATASET = {
     "ONS": "ONS — power system operator", "Tesouro Direto": "Tesouro Direto — bond prices",
     "B3": "B3 — prices, dividends, Ibovespa", "CVM": "CVM — company filings (ITR/DFP)",
     "DATASUS (SIM)": "DATASUS — mortality register (SIM)", "WHO Mortality Database": "WHO Mortality Database",
+    "Tesouro Nacional (RTN)": "Tesouro Nacional — monthly central government results",
+    "IMF (Fiscal Monitor)": "IMF Fiscal Monitor — general government",
     "Derived": "Brazil Monitoring — derived",
 }
 
@@ -307,7 +310,7 @@ NATIVE_DATASET = {
 FLOW_NATIVE = re.compile(r"^(exports_.*|imports_.*|.*_exports(_kg)?|.*_imports|beef_exports_to_china|trade_balance|"
                          r"current_account_usd|bop_goods_.*|caged_net_hires|deaths_.*|homicide_deaths|suicide_deaths|"
                          r"traffic_deaths|infant_deaths|vehicle_.*|pix_transactions_.*|revenue_.*|ebit_brl|net_income_.*|"
-                         r"capex_brl|dividends_paid_brl|dividend_per_share_brl|generation_gwh)$")
+                         r"capex_brl|dividends_paid_brl|dividend_per_share_brl|generation_gwh|cg_.*_brl)$")
 STOCK_NATIVE = re.compile(r"(balance$|_gdp$|_debt_brl|net_debt|gross_public_debt|net_public_debt|cash_brl|fx_reserves|"
                           r"_12m_brl$|share_close|total_return|ibovespa_level|^population$)")
 
